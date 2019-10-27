@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A80EF04F236611FF00CD7500 /* CwlCatchException.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A03B1BDC120BF8147D6CAE /* CwlCatchException.framework */; };
-		A80EF050236611FF00CD7500 /* CwlPreconditionTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB40D5F7D4245CF4E8E9285 /* CwlPreconditionTesting.framework */; };
-		A80EF051236611FF00CD7500 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F29A7EEB44CE26EE3C8A383 /* Nimble.framework */; };
-		A80EF052236611FF00CD7500 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5FC2F3EA760E80E2B18550 /* Quick.framework */; };
-		A80EF0542366122D00CD7500 /* CwlCatchException.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2A03B1BDC120BF8147D6CAE /* CwlCatchException.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A80EF0552366122D00CD7500 /* CwlPreconditionTesting.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CB40D5F7D4245CF4E8E9285 /* CwlPreconditionTesting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A80EF0562366122D00CD7500 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9F29A7EEB44CE26EE3C8A383 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A80EF0572366122D00CD7500 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE5FC2F3EA760E80E2B18550 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		20773527832D3F21A42C0CEB /* Nimble.framework in Accio */ = {isa = PBXBuildFile; fileRef = 086D8CBB2D205654EFFDE031 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3663409ACADA13D5C46463BD /* CwlCatchException.framework in Accio */ = {isa = PBXBuildFile; fileRef = 7F709730E014A0C7E2F4682A /* CwlCatchException.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		47E5B2671C1428239C303964 /* CwlPreconditionTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37528C6C61D79F2F26A142F /* CwlPreconditionTesting.framework */; };
+		5CCE70EED886355715869446 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6E2CDCDE9F172D9C12C47E /* Quick.framework */; };
+		7E0D518E56783CDF1F86D72A /* CwlPreconditionTesting.framework in Accio */ = {isa = PBXBuildFile; fileRef = C37528C6C61D79F2F26A142F /* CwlPreconditionTesting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AE186769F8CC91E6D11EBA8 /* Quick.framework in Accio */ = {isa = PBXBuildFile; fileRef = 4A6E2CDCDE9F172D9C12C47E /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9C7F185CF12747550BFC061A /* CwlCatchException.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F709730E014A0C7E2F4682A /* CwlCatchException.framework */; };
 		A86E10342365DAB800D3FF94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E10332365DAB800D3FF94 /* AppDelegate.swift */; };
 		A86E10362365DAB800D3FF94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E10352365DAB800D3FF94 /* ContentView.swift */; };
 		A86E10382365DAB800D3FF94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86E10372365DAB800D3FF94 /* Assets.xcassets */; };
@@ -22,6 +21,7 @@
 		A86E103E2365DAB900D3FF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86E103C2365DAB900D3FF94 /* Main.storyboard */; };
 		A86E104A2365DAB900D3FF94 /* Mac_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E10492365DAB900D3FF94 /* Mac_AppTests.swift */; };
 		B0820D32267C42E7304E43E9 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4EAC67DB787821A5A10484D /* ReSwift.framework */; };
+		E5CB3D21624CAFABAB12A3EA /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 086D8CBB2D205654EFFDE031 /* Nimble.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,24 +35,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		A80EF0532366121E00CD7500 /* CopyFiles */ = {
+		BD6D6118569C63DA841A8A41 /* Accio */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A80EF0542366122D00CD7500 /* CwlCatchException.framework in CopyFiles */,
-				A80EF0552366122D00CD7500 /* CwlPreconditionTesting.framework in CopyFiles */,
-				A80EF0562366122D00CD7500 /* Nimble.framework in CopyFiles */,
-				A80EF0572366122D00CD7500 /* Quick.framework in CopyFiles */,
+				3663409ACADA13D5C46463BD /* CwlCatchException.framework in Accio */,
+				7E0D518E56783CDF1F86D72A /* CwlPreconditionTesting.framework in Accio */,
+				20773527832D3F21A42C0CEB /* Nimble.framework in Accio */,
+				9AE186769F8CC91E6D11EBA8 /* Quick.framework in Accio */,
 			);
+			name = Accio;
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0CB40D5F7D4245CF4E8E9285 /* CwlPreconditionTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = CwlPreconditionTesting.framework; path = Dependencies/macOS/CwlPreconditionTesting.framework; sourceTree = "<group>"; };
-		9F29A7EEB44CE26EE3C8A383 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Nimble.framework; path = Dependencies/macOS/Nimble.framework; sourceTree = "<group>"; };
+		086D8CBB2D205654EFFDE031 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Nimble.framework; path = Dependencies/macOS/Nimble.framework; sourceTree = "<group>"; };
+		4A6E2CDCDE9F172D9C12C47E /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Quick.framework; path = Dependencies/macOS/Quick.framework; sourceTree = "<group>"; };
+		7F709730E014A0C7E2F4682A /* CwlCatchException.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = CwlCatchException.framework; path = Dependencies/macOS/CwlCatchException.framework; sourceTree = "<group>"; };
 		A86E10302365DAB800D3FF94 /* Mac-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mac-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86E10332365DAB800D3FF94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A86E10352365DAB800D3FF94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,8 +66,7 @@
 		A86E10492365DAB900D3FF94 /* Mac_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mac_AppTests.swift; sourceTree = "<group>"; };
 		A86E104B2365DAB900D3FF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4EAC67DB787821A5A10484D /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ReSwift.framework; path = Dependencies/macOS/ReSwift.framework; sourceTree = "<group>"; };
-		DE5FC2F3EA760E80E2B18550 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Quick.framework; path = Dependencies/macOS/Quick.framework; sourceTree = "<group>"; };
-		E2A03B1BDC120BF8147D6CAE /* CwlCatchException.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = CwlCatchException.framework; path = Dependencies/macOS/CwlCatchException.framework; sourceTree = "<group>"; };
+		C37528C6C61D79F2F26A142F /* CwlPreconditionTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = CwlPreconditionTesting.framework; path = Dependencies/macOS/CwlPreconditionTesting.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +82,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A80EF04F236611FF00CD7500 /* CwlCatchException.framework in Frameworks */,
-				A80EF050236611FF00CD7500 /* CwlPreconditionTesting.framework in Frameworks */,
-				A80EF051236611FF00CD7500 /* Nimble.framework in Frameworks */,
-				A80EF052236611FF00CD7500 /* Quick.framework in Frameworks */,
+				5CCE70EED886355715869446 /* Quick.framework in Frameworks */,
+				9C7F185CF12747550BFC061A /* CwlCatchException.framework in Frameworks */,
+				47E5B2671C1428239C303964 /* CwlPreconditionTesting.framework in Frameworks */,
+				E5CB3D21624CAFABAB12A3EA /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,19 +95,27 @@
 		7272CE1B281E23D3503A55CA /* Mac-App */ = {
 			isa = PBXGroup;
 			children = (
-				E2A03B1BDC120BF8147D6CAE /* CwlCatchException.framework */,
-				0CB40D5F7D4245CF4E8E9285 /* CwlPreconditionTesting.framework */,
-				9F29A7EEB44CE26EE3C8A383 /* Nimble.framework */,
-				DE5FC2F3EA760E80E2B18550 /* Quick.framework */,
 				B4EAC67DB787821A5A10484D /* ReSwift.framework */,
 			);
 			name = "Mac-App";
+			sourceTree = "<group>";
+		};
+		900E127CB1AEEF1BFED39139 /* Mac-AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F709730E014A0C7E2F4682A /* CwlCatchException.framework */,
+				C37528C6C61D79F2F26A142F /* CwlPreconditionTesting.framework */,
+				086D8CBB2D205654EFFDE031 /* Nimble.framework */,
+				4A6E2CDCDE9F172D9C12C47E /* Quick.framework */,
+			);
+			name = "Mac-AppTests";
 			sourceTree = "<group>";
 		};
 		A32733B20D2195C9C08233D9 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
 				7272CE1B281E23D3503A55CA /* Mac-App */,
+				900E127CB1AEEF1BFED39139 /* Mac-AppTests */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
@@ -198,7 +206,7 @@
 				A86E10412365DAB900D3FF94 /* Sources */,
 				A86E10422365DAB900D3FF94 /* Frameworks */,
 				A86E10432365DAB900D3FF94 /* Resources */,
-				A80EF0532366121E00CD7500 /* CopyFiles */,
+				BD6D6118569C63DA841A8A41 /* Accio */,
 			);
 			buildRules = (
 			);
@@ -275,6 +283,7 @@
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Dependencies/macOS/ReSwift.framework",
 			);
 			name = Accio;
 			outputPaths = (
