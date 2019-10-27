@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		414D1301A549AAA7C140F03E /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5FC2F3EA760E80E2B18550 /* Quick.framework */; };
 		A86E10342365DAB800D3FF94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E10332365DAB800D3FF94 /* AppDelegate.swift */; };
 		A86E10362365DAB800D3FF94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E10352365DAB800D3FF94 /* ContentView.swift */; };
 		A86E10382365DAB800D3FF94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86E10372365DAB800D3FF94 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		A86E10492365DAB900D3FF94 /* Mac_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mac_AppTests.swift; sourceTree = "<group>"; };
 		A86E104B2365DAB900D3FF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4EAC67DB787821A5A10484D /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ReSwift.framework; path = Dependencies/macOS/ReSwift.framework; sourceTree = "<group>"; };
+		DE5FC2F3EA760E80E2B18550 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Dependencies/macOS/Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0820D32267C42E7304E43E9 /* ReSwift.framework in Frameworks */,
+				414D1301A549AAA7C140F03E /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		7272CE1B281E23D3503A55CA /* Mac-App */ = {
 			isa = PBXGroup;
 			children = (
+				DE5FC2F3EA760E80E2B18550 /* Quick.framework */,
 				B4EAC67DB787821A5A10484D /* ReSwift.framework */,
 			);
 			name = "Mac-App";
@@ -230,10 +234,12 @@
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Dependencies/macOS/Quick.framework",
 				"$(SRCROOT)/Dependencies/macOS/ReSwift.framework",
 			);
 			name = Accio;
 			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Quick.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
