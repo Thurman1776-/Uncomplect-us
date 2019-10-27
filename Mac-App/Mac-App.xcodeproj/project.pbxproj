@@ -13,6 +13,7 @@
 		A86E103B2365DAB800D3FF94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86E103A2365DAB800D3FF94 /* Preview Assets.xcassets */; };
 		A86E103E2365DAB900D3FF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86E103C2365DAB900D3FF94 /* Main.storyboard */; };
 		A86E104A2365DAB900D3FF94 /* Mac_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E10492365DAB900D3FF94 /* Mac_AppTests.swift */; };
+		B0820D32267C42E7304E43E9 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4EAC67DB787821A5A10484D /* ReSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		A86E10452365DAB900D3FF94 /* Mac-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mac-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86E10492365DAB900D3FF94 /* Mac_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mac_AppTests.swift; sourceTree = "<group>"; };
 		A86E104B2365DAB900D3FF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4EAC67DB787821A5A10484D /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ReSwift.framework; path = Dependencies/macOS/ReSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0820D32267C42E7304E43E9 /* ReSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,12 +60,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7272CE1B281E23D3503A55CA /* Mac-App */ = {
+			isa = PBXGroup;
+			children = (
+				B4EAC67DB787821A5A10484D /* ReSwift.framework */,
+			);
+			name = "Mac-App";
+			sourceTree = "<group>";
+		};
+		A32733B20D2195C9C08233D9 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				7272CE1B281E23D3503A55CA /* Mac-App */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
 		A86E10272365DAB800D3FF94 = {
 			isa = PBXGroup;
 			children = (
 				A86E10322365DAB800D3FF94 /* Mac-App */,
 				A86E10482365DAB900D3FF94 /* Mac-AppTests */,
 				A86E10312365DAB800D3FF94 /* Products */,
+				A32733B20D2195C9C08233D9 /* Dependencies */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +136,7 @@
 				A86E102C2365DAB800D3FF94 /* Sources */,
 				A86E102D2365DAB800D3FF94 /* Frameworks */,
 				A86E102E2365DAB800D3FF94 /* Resources */,
+				4C0F50C25C76EA19CC319483 /* Accio */,
 			);
 			buildRules = (
 			);
@@ -201,6 +222,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C0F50C25C76EA19CC319483 /* Accio */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Dependencies/macOS/ReSwift.framework",
+			);
+			name = Accio;
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A86E102C2365DAB800D3FF94 /* Sources */ = {
@@ -364,6 +404,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Mac-App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dependencies/macOS",
+				);
 				INFOPLIST_FILE = "Mac-App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -385,6 +429,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Mac-App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dependencies/macOS",
+				);
 				INFOPLIST_FILE = "Mac-App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
