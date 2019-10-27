@@ -1,11 +1,3 @@
-//
-//  Mac_AppTests.swift
-//  Mac-AppTests
-//
-//  Created by Daniel GARCÍA on 27.10.19.
-//  Copyright © 2019 Acphut Werkstatt. All rights reserved.
-//
-
 import XCTest
 @testable import Mac_App
 

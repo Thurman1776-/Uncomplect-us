@@ -1,11 +1,3 @@
-//
-//  ContentView.swift
-//  Mac-App
-//
-//  Created by Daniel GARCÍA on 27.10.19.
-//  Copyright © 2019 Acphut Werkstatt. All rights reserved.
-//
-
 import SwiftUI
 
 struct ContentView: View {
