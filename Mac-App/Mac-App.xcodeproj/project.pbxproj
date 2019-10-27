@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0017F98FEA242B59E835C487 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F29A7EEB44CE26EE3C8A383 /* Nimble.framework */; };
 		414D1301A549AAA7C140F03E /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5FC2F3EA760E80E2B18550 /* Quick.framework */; };
+		8EEB50E7A65A6F89A32FFEBD /* CwlCatchException.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A03B1BDC120BF8147D6CAE /* CwlCatchException.framework */; };
 		A86E10342365DAB800D3FF94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E10332365DAB800D3FF94 /* AppDelegate.swift */; };
 		A86E10362365DAB800D3FF94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E10352365DAB800D3FF94 /* ContentView.swift */; };
 		A86E10382365DAB800D3FF94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86E10372365DAB800D3FF94 /* Assets.xcassets */; };
@@ -15,6 +17,7 @@
 		A86E103E2365DAB900D3FF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86E103C2365DAB900D3FF94 /* Main.storyboard */; };
 		A86E104A2365DAB900D3FF94 /* Mac_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E10492365DAB900D3FF94 /* Mac_AppTests.swift */; };
 		B0820D32267C42E7304E43E9 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4EAC67DB787821A5A10484D /* ReSwift.framework */; };
+		DD789B47647BE2695376A57D /* CwlPreconditionTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB40D5F7D4245CF4E8E9285 /* CwlPreconditionTesting.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CB40D5F7D4245CF4E8E9285 /* CwlPreconditionTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; lastKnownFileType = wrapper.framework; name = CwlPreconditionTesting.framework; path = Dependencies/macOS/CwlPreconditionTesting.framework; sourceTree = "<group>"; };
+		9F29A7EEB44CE26EE3C8A383 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Dependencies/macOS/Nimble.framework; sourceTree = "<group>"; };
 		A86E10302365DAB800D3FF94 /* Mac-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mac-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86E10332365DAB800D3FF94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A86E10352365DAB800D3FF94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +46,7 @@
 		A86E104B2365DAB900D3FF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4EAC67DB787821A5A10484D /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ReSwift.framework; path = Dependencies/macOS/ReSwift.framework; sourceTree = "<group>"; };
 		DE5FC2F3EA760E80E2B18550 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Dependencies/macOS/Quick.framework; sourceTree = "<group>"; };
+		E2A03B1BDC120BF8147D6CAE /* CwlCatchException.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; lastKnownFileType = wrapper.framework; name = CwlCatchException.framework; path = Dependencies/macOS/CwlCatchException.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +56,9 @@
 			files = (
 				B0820D32267C42E7304E43E9 /* ReSwift.framework in Frameworks */,
 				414D1301A549AAA7C140F03E /* Quick.framework in Frameworks */,
+				8EEB50E7A65A6F89A32FFEBD /* CwlCatchException.framework in Frameworks */,
+				DD789B47647BE2695376A57D /* CwlPreconditionTesting.framework in Frameworks */,
+				0017F98FEA242B59E835C487 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +75,9 @@
 		7272CE1B281E23D3503A55CA /* Mac-App */ = {
 			isa = PBXGroup;
 			children = (
+				E2A03B1BDC120BF8147D6CAE /* CwlCatchException.framework */,
+				0CB40D5F7D4245CF4E8E9285 /* CwlPreconditionTesting.framework */,
+				9F29A7EEB44CE26EE3C8A383 /* Nimble.framework */,
 				DE5FC2F3EA760E80E2B18550 /* Quick.framework */,
 				B4EAC67DB787821A5A10484D /* ReSwift.framework */,
 			);
@@ -234,11 +246,17 @@
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Dependencies/macOS/CwlCatchException.framework",
+				"$(SRCROOT)/Dependencies/macOS/CwlPreconditionTesting.framework",
+				"$(SRCROOT)/Dependencies/macOS/Nimble.framework",
 				"$(SRCROOT)/Dependencies/macOS/Quick.framework",
 				"$(SRCROOT)/Dependencies/macOS/ReSwift.framework",
 			);
 			name = Accio;
 			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CwlCatchException.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CwlPreconditionTesting.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nimble.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Quick.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReSwift.framework",
 			);
