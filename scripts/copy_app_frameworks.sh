@@ -5,5 +5,4 @@ IFS=$'\n\t'
 export SCRIPT_INPUT_FILE_0=${SRCROOT}"/Dependencies/macOS/ReSwift.framework"
 export SCRIPT_INPUT_FILE_COUNT=1
 
-echo doingStuff
 /usr/local/bin/carthage copy-frameworks
