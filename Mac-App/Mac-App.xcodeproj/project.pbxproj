@@ -19,7 +19,6 @@
 		A86E10382365DAB800D3FF94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86E10372365DAB800D3FF94 /* Assets.xcassets */; };
 		A86E103B2365DAB800D3FF94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86E103A2365DAB800D3FF94 /* Preview Assets.xcassets */; };
 		A86E103E2365DAB900D3FF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86E103C2365DAB900D3FF94 /* Main.storyboard */; };
-		A86E104A2365DAB900D3FF94 /* Mac_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E10492365DAB900D3FF94 /* Mac_AppTests.swift */; };
 		B0820D32267C42E7304E43E9 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4EAC67DB787821A5A10484D /* ReSwift.framework */; };
 		E5CB3D21624CAFABAB12A3EA /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 086D8CBB2D205654EFFDE031 /* Nimble.framework */; };
 /* End PBXBuildFile section */
@@ -63,7 +62,6 @@
 		A86E103F2365DAB900D3FF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A86E10402365DAB900D3FF94 /* Mac_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mac_App.entitlements; sourceTree = "<group>"; };
 		A86E10452365DAB900D3FF94 /* Mac-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mac-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A86E10492365DAB900D3FF94 /* Mac_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mac_AppTests.swift; sourceTree = "<group>"; };
 		A86E104B2365DAB900D3FF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4EAC67DB787821A5A10484D /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ReSwift.framework; path = Dependencies/macOS/ReSwift.framework; sourceTree = "<group>"; };
 		C37528C6C61D79F2F26A142F /* CwlPreconditionTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = CwlPreconditionTesting.framework; path = Dependencies/macOS/CwlPreconditionTesting.framework; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 		A86E10482365DAB900D3FF94 /* Mac-AppTests */ = {
 			isa = PBXGroup;
 			children = (
-				A86E10492365DAB900D3FF94 /* Mac_AppTests.swift */,
 				A86E104B2365DAB900D3FF94 /* Info.plist */,
 			);
 			path = "Mac-AppTests";
@@ -309,7 +306,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A86E104A2365DAB900D3FF94 /* Mac_AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
