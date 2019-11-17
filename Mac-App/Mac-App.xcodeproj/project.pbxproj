@@ -19,7 +19,10 @@
 		A86E10382365DAB800D3FF94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86E10372365DAB800D3FF94 /* Assets.xcassets */; };
 		A86E103B2365DAB800D3FF94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86E103A2365DAB800D3FF94 /* Preview Assets.xcassets */; };
 		A86E103E2365DAB900D3FF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86E103C2365DAB900D3FF94 /* Main.storyboard */; };
+		A8F8D28723818A4C005E295E /* Bash+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F8D28623818A4C005E295E /* Bash+Error.swift */; };
+		A8F8D28923819061005E295E /* BashSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F8D28823819061005E295E /* BashSpec.swift */; };
 		A8FD4ABB23807C3F00124ACD /* Commandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD4ABA23807C3F00124ACD /* Commandable.swift */; };
+		A8FD4ABD23807C7600124ACD /* Bash.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD4ABC23807C7600124ACD /* Bash.swift */; };
 		B0820D32267C42E7304E43E9 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4EAC67DB787821A5A10484D /* ReSwift.framework */; };
 		E5CB3D21624CAFABAB12A3EA /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 086D8CBB2D205654EFFDE031 /* Nimble.framework */; };
 /* End PBXBuildFile section */
@@ -64,7 +67,10 @@
 		A86E10402365DAB900D3FF94 /* Mac_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mac_App.entitlements; sourceTree = "<group>"; };
 		A86E10452365DAB900D3FF94 /* Mac-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mac-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86E104B2365DAB900D3FF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8F8D28623818A4C005E295E /* Bash+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bash+Error.swift"; sourceTree = "<group>"; };
+		A8F8D28823819061005E295E /* BashSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BashSpec.swift; sourceTree = "<group>"; };
 		A8FD4ABA23807C3F00124ACD /* Commandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commandable.swift; sourceTree = "<group>"; };
+		A8FD4ABC23807C7600124ACD /* Bash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bash.swift; sourceTree = "<group>"; };
 		B4EAC67DB787821A5A10484D /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ReSwift.framework; path = Dependencies/macOS/ReSwift.framework; sourceTree = "<group>"; };
 		C37528C6C61D79F2F26A142F /* CwlPreconditionTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = CwlPreconditionTesting.framework; path = Dependencies/macOS/CwlPreconditionTesting.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,6 +179,7 @@
 		A86E10482365DAB900D3FF94 /* Mac-AppTests */ = {
 			isa = PBXGroup;
 			children = (
+				A8F8D28823819061005E295E /* BashSpec.swift */,
 				A86E104B2365DAB900D3FF94 /* Info.plist */,
 			);
 			path = "Mac-AppTests";
@@ -182,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				A8FD4ABA23807C3F00124ACD /* Commandable.swift */,
+				A8FD4ABC23807C7600124ACD /* Bash.swift */,
+				A8F8D28623818A4C005E295E /* Bash+Error.swift */,
 			);
 			path = CommandLine;
 			sourceTree = "<group>";
@@ -310,6 +319,8 @@
 			files = (
 				A8FD4ABB23807C3F00124ACD /* Commandable.swift in Sources */,
 				A86E10362365DAB800D3FF94 /* ContentView.swift in Sources */,
+				A8FD4ABD23807C7600124ACD /* Bash.swift in Sources */,
+				A8F8D28723818A4C005E295E /* Bash+Error.swift in Sources */,
 				A86E10342365DAB800D3FF94 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8F8D28923819061005E295E /* BashSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
