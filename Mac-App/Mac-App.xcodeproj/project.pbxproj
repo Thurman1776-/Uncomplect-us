@@ -19,6 +19,7 @@
 		A86E10382365DAB800D3FF94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86E10372365DAB800D3FF94 /* Assets.xcassets */; };
 		A86E103B2365DAB800D3FF94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86E103A2365DAB800D3FF94 /* Preview Assets.xcassets */; };
 		A86E103E2365DAB900D3FF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86E103C2365DAB900D3FF94 /* Main.storyboard */; };
+		A8E3748423871B2800CF8625 /* Bash+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E3748323871B2800CF8625 /* Bash+Constants.swift */; };
 		A8F8D28723818A4C005E295E /* Bash+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F8D28623818A4C005E295E /* Bash+Error.swift */; };
 		A8F8D28923819061005E295E /* BashSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F8D28823819061005E295E /* BashSpec.swift */; };
 		A8FD4ABB23807C3F00124ACD /* Commandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD4ABA23807C3F00124ACD /* Commandable.swift */; };
@@ -67,6 +68,7 @@
 		A86E10402365DAB900D3FF94 /* Mac_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mac_App.entitlements; sourceTree = "<group>"; };
 		A86E10452365DAB900D3FF94 /* Mac-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mac-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86E104B2365DAB900D3FF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8E3748323871B2800CF8625 /* Bash+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bash+Constants.swift"; sourceTree = "<group>"; };
 		A8F8D28623818A4C005E295E /* Bash+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bash+Error.swift"; sourceTree = "<group>"; };
 		A8F8D28823819061005E295E /* BashSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BashSpec.swift; sourceTree = "<group>"; };
 		A8FD4ABA23807C3F00124ACD /* Commandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commandable.swift; sourceTree = "<group>"; };
@@ -185,9 +187,18 @@
 			path = "Mac-AppTests";
 			sourceTree = "<group>";
 		};
+		A8E3748223871B0800CF8625 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A8E3748323871B2800CF8625 /* Bash+Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		A8FD4AB923807C1C00124ACD /* CommandLine */ = {
 			isa = PBXGroup;
 			children = (
+				A8E3748223871B0800CF8625 /* Constants */,
 				A8FD4ABA23807C3F00124ACD /* Commandable.swift */,
 				A8FD4ABC23807C7600124ACD /* Bash.swift */,
 				A8F8D28623818A4C005E295E /* Bash+Error.swift */,
@@ -318,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8FD4ABB23807C3F00124ACD /* Commandable.swift in Sources */,
+				A8E3748423871B2800CF8625 /* Bash+Constants.swift in Sources */,
 				A86E10362365DAB800D3FF94 /* ContentView.swift in Sources */,
 				A8FD4ABD23807C7600124ACD /* Bash.swift in Sources */,
 				A8F8D28723818A4C005E295E /* Bash+Error.swift in Sources */,

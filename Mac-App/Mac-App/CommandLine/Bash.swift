@@ -56,21 +56,14 @@ public struct Bash: Commandable {
 
     private func runCommand(command: String, arguments: [String] = []) -> Swift.Result<String, Bash.Error> {
 
-        // Special cases
-        var updatedArguments = arguments
-
-        let enviromentVars = arguments.filter { $0.contains("$HOME") }
-        if enviromentVars.count > 0 {
-            // For now HOME is the only case
-            guard let homeDir = ProcessInfo.processInfo.environment["HOME"] else {
-                return .failure(.enviromentVariableNotFound(terminationCode: -1))
-            }
-
-            if let indexOfStringToReplace = updatedArguments.firstIndex(of: enviromentVars.first!),
-                let argumentWithEnvVar = enviromentVars.first(where: { $0.contains("$HOME")  }) {
-                updatedArguments.remove(at: indexOfStringToReplace)
-                updatedArguments.insert(argumentWithEnvVar.replacingOccurrences(of: "$HOME", with: homeDir), at: indexOfStringToReplace)
-            }
+        // Handle special cases
+        let updatedArguments: [String]
+        let result = updateEnvironmentVariablesIfNeeded(arguments)
+        switch result {
+        case let .success(value):
+            updatedArguments = value
+        case let .failure(error):
+            return .failure(error)
         }
 
         let exitCode = executeCommandIfAvailable(command, arguments: updatedArguments)
@@ -98,6 +91,27 @@ public struct Bash: Commandable {
         } catch let nserror as NSError {
             return .failure(.unexpectedError(nserror))
         }
+    }
+
+    // MARK: Helpers
+
+    private func updateEnvironmentVariablesIfNeeded(_ arguments: [String]) -> Swift.Result<[String], Bash.Error> {
+
+        var newArguments = arguments
+
+        // For now only $HOME is needed/considered as a special case
+        if let homeEnv = arguments.first(where: { $0.contains(Bash.Constants.HOME) }),
+            let replaceableIndex = arguments.firstIndex(of: homeEnv) {
+
+            guard let homeDir = ProcessInfo.processInfo.environment["HOME"] else {
+                return .failure(.enviromentVariableNotFound(terminationCode: -12))
+            }
+
+            newArguments.remove(at: replaceableIndex)
+            newArguments.insert(homeEnv.replacingOccurrences(of: Bash.Constants.HOME, with: homeDir), at: replaceableIndex)
+        }
+
+        return .success(newArguments)
     }
 
     private func executeCommandIfAvailable(_ command: String, arguments: [String] = []) -> Int32 {
