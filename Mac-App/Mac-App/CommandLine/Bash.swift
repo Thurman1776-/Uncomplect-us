@@ -24,6 +24,12 @@ public struct Bash: Commandable {
                 os_log("Command did not generate output! -> %s", type: .error, value)
             case let .unexpectedError(error):
                 os_log("Something odd went wrong! -> %s", type: .error, error.localizedDescription)
+            case let .enviromentVariableNotFound(terminationCode: code):
+                os_log("""
+                Enviroment variable could not be found
+                This will cause the application to not work appropriately. Have your default env vars changed?
+                Termination code -> %s
+                """, type: .error, String(code))
             }
         }
 

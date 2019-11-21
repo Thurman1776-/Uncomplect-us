@@ -5,5 +5,6 @@ extension Bash {
         case commandDoesNotExist(terminationCode: Int32)
         case noOutputFor(command: String)
         case unexpectedError(NSError)
+        case enviromentVariableNotFound(terminationCode: Int32)
     }
 }
