@@ -33,7 +33,7 @@ final class BashSpec: QuickSpec {
                     expect(result).notTo(beNil())
                 }
 
-                fit("finds itself in derived data") {
+                it("finds itself in derived data") {
                     let sut = Bash()
                     let result = sut.execute(command: "find", arguments: ["$HOME/Library/Developer/Xcode/DerivedData", "-name", "*Mac-App*"])
                     expect(result).notTo(beNil())
