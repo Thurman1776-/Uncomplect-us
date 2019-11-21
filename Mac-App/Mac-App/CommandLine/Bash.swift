@@ -56,7 +56,24 @@ public struct Bash: Commandable {
 
     private func runCommand(command: String, arguments: [String] = []) -> Swift.Result<String, Bash.Error> {
 
-        let exitCode = executeCommandIfAvailable(command, arguments: arguments)
+        // Special cases
+        var updatedArguments = arguments
+
+        let enviromentVars = arguments.filter { $0.contains("$HOME") }
+        if enviromentVars.count > 0 {
+            // For now HOME is the only case
+            guard let homeDir = ProcessInfo.processInfo.environment["HOME"] else {
+                return .failure(.enviromentVariableNotFound(terminationCode: -1))
+            }
+
+            if let indexOfStringToReplace = updatedArguments.firstIndex(of: enviromentVars.first!),
+                let argumentWithEnvVar = enviromentVars.first(where: { $0.contains("$HOME")  }) {
+                updatedArguments.remove(at: indexOfStringToReplace)
+                updatedArguments.insert(argumentWithEnvVar.replacingOccurrences(of: "$HOME", with: homeDir), at: indexOfStringToReplace)
+            }
+        }
+
+        let exitCode = executeCommandIfAvailable(command, arguments: updatedArguments)
         guard
             exitCode == 0 else {
             return .failure(.commandDoesNotExist(terminationCode: exitCode))

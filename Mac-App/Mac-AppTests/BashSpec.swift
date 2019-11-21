@@ -19,10 +19,23 @@ final class BashSpec: QuickSpec {
                 }
             }
 
-            context("given the command & the option exist") {
-                it("Returns valid output") {
+            context("given the command and the option exist") {
+
+                it("lists files in current directory") {
                     let sut = Bash()
-                    let result = sut.execute(command: "ls", arguments: ["-l"])
+                    let result = sut.execute(command: "ls", arguments: ["-lh"])
+                    expect(result).notTo(beNil())
+                }
+
+                it("prints current working directory") {
+                    let sut = Bash()
+                    let result = sut.execute(command: "pwd", arguments: ["-L"])
+                    expect(result).notTo(beNil())
+                }
+
+                fit("finds itself in derived data") {
+                    let sut = Bash()
+                    let result = sut.execute(command: "find", arguments: ["$HOME/Library/Developer/Xcode/DerivedData", "-name", "*Mac-App*"])
                     expect(result).notTo(beNil())
                 }
             }
