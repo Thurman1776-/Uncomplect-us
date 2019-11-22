@@ -42,6 +42,28 @@ final class BashSpec: QuickSpec {
                     expect(result).notTo(beNil())
                 }
             }
+
+            context("given a full valid path to object files exists for itself") {
+                // Command in shell
+
+                // find ~/Library/Developer/Xcode/DerivedData -depth 1 -name "*Mac-App*"
+                // -type d -exec find {} -name "i386" -o -name "armv*" -o -name "x86_64" -type d \;
+                it("correctly finds all occurances") {
+                    let sut = Bash()
+                    let result = sut.execute(
+                        command: "find", arguments: ["$HOME/Library/Developer/Xcode/DerivedData",
+                                                     "-name", "*Mac-App*",
+                                                     "-type", "d",
+                                                     "-exec", "find", "{}",
+                                                     "-name", "i386",
+                                                     "-o", "-name", "armv*",
+                                                     "-o", "-name", "x86_64",
+                                                     "-type", "d", ";"]
+                    )
+
+                    expect(result).notTo(beNil())
+                }
+            }
         }
     }
 }
