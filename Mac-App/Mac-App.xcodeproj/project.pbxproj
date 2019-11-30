@@ -181,7 +181,7 @@
 		A86E10482365DAB900D3FF94 /* Mac-AppTests */ = {
 			isa = PBXGroup;
 			children = (
-				A8F8D28823819061005E295E /* BashSpec.swift */,
+				A8E374882392D3ED00CF8625 /* CommandLine */,
 				A86E104B2365DAB900D3FF94 /* Info.plist */,
 			);
 			path = "Mac-AppTests";
@@ -193,6 +193,14 @@
 				A8E3748323871B2800CF8625 /* Bash+Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		A8E374882392D3ED00CF8625 /* CommandLine */ = {
+			isa = PBXGroup;
+			children = (
+				A8F8D28823819061005E295E /* BashSpec.swift */,
+			);
+			path = CommandLine;
 			sourceTree = "<group>";
 		};
 		A8FD4AB923807C1C00124ACD /* CommandLine */ = {
