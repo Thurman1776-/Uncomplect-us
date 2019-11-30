@@ -25,12 +25,14 @@ final class BashSpec: QuickSpec {
                     let sut = Bash()
                     let result = sut.execute(command: "ls", arguments: ["-lh"])
                     expect(result).notTo(beNil())
+                    expect(result).notTo(beEmpty())
                 }
 
                 it("prints current working directory") {
                     let sut = Bash()
                     let result = sut.execute(command: "pwd", arguments: ["-L"])
                     expect(result).notTo(beNil())
+                    expect(result).notTo(beEmpty())
                 }
 
                 it("finds itself in derived data") {
@@ -40,6 +42,7 @@ final class BashSpec: QuickSpec {
                         arguments: ["$HOME/Library/Developer/Xcode/DerivedData", "-name", "*Mac-App*"]
                     )
                     expect(result).notTo(beNil())
+                    expect(result).notTo(beEmpty())
                 }
             }
 
@@ -62,6 +65,7 @@ final class BashSpec: QuickSpec {
                     )
 
                     expect(result).notTo(beNil())
+                    expect(result).notTo(beEmpty())
                 }
             }
         }

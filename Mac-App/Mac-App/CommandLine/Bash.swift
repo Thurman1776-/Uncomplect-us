@@ -69,12 +69,12 @@ public struct Bash: Commandable {
         let exitCode = executeCommandIfAvailable(command, arguments: updatedArguments)
         guard
             exitCode == 0 else {
-            return .failure(.commandDoesNotExist(terminationCode: exitCode))
+                return .failure(.commandDoesNotExist(terminationCode: exitCode))
         }
 
         let process = Process()
         process.executableURL = URL(fileURLWithPath: command)
-        process.arguments = arguments
+        process.arguments = updatedArguments
 
         do {
             let pipe = Pipe()
