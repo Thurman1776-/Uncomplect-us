@@ -1,19 +1,18 @@
 import Foundation
 
-//Ruby implementation
-// def find_project_output_directory(derived_data_paths, project_prefix, project_suffix_pattern, target_names, verbose)
-
-// Command to execute
-//find ~/Library/Developer/Xcode/DerivedData -depth 1 -name "Client-*" -type d -exec find {} -name "i386" -o -name "armv*" -o -name "x86_64" -type d \;
+/// Finds dependency files (.swiftdeps) for the given project name
+/// - Parameter derivedDataPaths: Location for Xcode derived data output. Use $HOME instead of Tilde Expansion [~]. Default value to default Xcode settings
+/// - Parameter projectName: Project to be searched for
+/// - Parameter targetNames: Search for particular target [NOT SUPPORTED YET]
+/// - Parameter bash: Object conforming to Commandable protocol that executes CL commands
 
 func findProjectOutputDirectory(
     derivedDataPaths: [URL] = [URL(fileURLWithPath: "$HOME/Library/Developer/Xcode/DerivedData"),
                                URL(fileURLWithPath: "$HOME/Library/Caches/appCode*/DerivedData")],
     projectName: String,
     targetNames: [String] = [],
-    verbose: Bool = false,
     bash: Commandable = Bash()
-) -> [URL] // Consider propagating up Bash.Error. What would that look like?
+) -> [URL] // TODO: Consider propagating up Bash.Error. What would that look like?
 {
     guard derivedDataPaths.count > 1 else {
         fatalError("At least one path is needed!")
@@ -34,9 +33,7 @@ func findProjectOutputDirectory(
     if let commandOutput = bash.execute(command: "find", arguments: arguments) {
         var paths: [URL] = []
         for path in trimOutput(commandOutput) {
-            if let url = contentsOfDirectory(at: path) {
-                paths.append(url)
-            }
+            if let urls = contentsOfDirectory(at: path) { urls.forEach { paths.append($0) } }
         }
 
         return paths
@@ -45,10 +42,13 @@ func findProjectOutputDirectory(
     return []
 }
 
-private func trimOutput(_ output: String) -> [String] {
-    []
-}
+private func trimOutput(_ output: String) -> [String] { output.split(separator: "\n").map(String.init) }
 
-func contentsOfDirectory(using fileManager: FileManager = .default, at path: String) -> URL? {
-    nil
+private func contentsOfDirectory(using fileManager: FileManager = .default, at path: String) -> [URL]? {
+    try? fileManager
+        .contentsOfDirectory(
+            at: URL(fileURLWithPath: path),
+            includingPropertiesForKeys: nil,
+            options: .skipsHiddenFiles
+    )
 }
