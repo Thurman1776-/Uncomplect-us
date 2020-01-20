@@ -19,9 +19,11 @@
 		A86E10382365DAB800D3FF94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86E10372365DAB800D3FF94 /* Assets.xcassets */; };
 		A86E103B2365DAB800D3FF94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86E103A2365DAB800D3FF94 /* Preview Assets.xcassets */; };
 		A86E103E2365DAB900D3FF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86E103C2365DAB900D3FF94 /* Main.storyboard */; };
+		A8B6E0C923C61F4E00D536AE /* FindProjectOutputDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B6E0C823C61F4E00D536AE /* FindProjectOutputDirectory.swift */; };
 		A8E3748423871B2800CF8625 /* Bash+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E3748323871B2800CF8625 /* Bash+Constants.swift */; };
 		A8E374872392D38E00CF8625 /* CLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E374862392D38E00CF8625 /* CLParser.swift */; };
 		A8E3748B2392D44200CF8625 /* CLIParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E3748A2392D44200CF8625 /* CLIParserSpec.swift */; };
+		A8F23E1C23D57E2F00B002FA /* FindProjectOutputDirectorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F23E1B23D57E2F00B002FA /* FindProjectOutputDirectorySpec.swift */; };
 		A8F8D28723818A4C005E295E /* Bash+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F8D28623818A4C005E295E /* Bash+Error.swift */; };
 		A8F8D28923819061005E295E /* BashSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F8D28823819061005E295E /* BashSpec.swift */; };
 		A8FD4ABB23807C3F00124ACD /* Commandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD4ABA23807C3F00124ACD /* Commandable.swift */; };
@@ -70,9 +72,11 @@
 		A86E10402365DAB900D3FF94 /* Mac_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mac_App.entitlements; sourceTree = "<group>"; };
 		A86E10452365DAB900D3FF94 /* Mac-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mac-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86E104B2365DAB900D3FF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8B6E0C823C61F4E00D536AE /* FindProjectOutputDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindProjectOutputDirectory.swift; sourceTree = "<group>"; };
 		A8E3748323871B2800CF8625 /* Bash+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bash+Constants.swift"; sourceTree = "<group>"; };
 		A8E374862392D38E00CF8625 /* CLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLParser.swift; sourceTree = "<group>"; };
 		A8E3748A2392D44200CF8625 /* CLIParserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLIParserSpec.swift; sourceTree = "<group>"; };
+		A8F23E1B23D57E2F00B002FA /* FindProjectOutputDirectorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindProjectOutputDirectorySpec.swift; sourceTree = "<group>"; };
 		A8F8D28623818A4C005E295E /* Bash+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bash+Error.swift"; sourceTree = "<group>"; };
 		A8F8D28823819061005E295E /* BashSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BashSpec.swift; sourceTree = "<group>"; };
 		A8FD4ABA23807C3F00124ACD /* Commandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commandable.swift; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 		A86E10322365DAB800D3FF94 /* Mac-App */ = {
 			isa = PBXGroup;
 			children = (
+				A8B6E0C723C61F1D00D536AE /* FileSystem */,
 				A8E374852392D36800CF8625 /* Parsers */,
 				A8FD4AB923807C1C00124ACD /* CommandLine */,
 				A86E10332365DAB800D3FF94 /* AppDelegate.swift */,
@@ -186,11 +191,20 @@
 		A86E10482365DAB900D3FF94 /* Mac-AppTests */ = {
 			isa = PBXGroup;
 			children = (
+				A8F23E1A23D57E1300B002FA /* FileSystem */,
 				A8E374892392D42E00CF8625 /* Parsers */,
 				A8E374882392D3ED00CF8625 /* CommandLine */,
 				A86E104B2365DAB900D3FF94 /* Info.plist */,
 			);
 			path = "Mac-AppTests";
+			sourceTree = "<group>";
+		};
+		A8B6E0C723C61F1D00D536AE /* FileSystem */ = {
+			isa = PBXGroup;
+			children = (
+				A8B6E0C823C61F4E00D536AE /* FindProjectOutputDirectory.swift */,
+			);
+			path = FileSystem;
 			sourceTree = "<group>";
 		};
 		A8E3748223871B0800CF8625 /* Constants */ = {
@@ -223,6 +237,14 @@
 				A8E3748A2392D44200CF8625 /* CLIParserSpec.swift */,
 			);
 			path = Parsers;
+			sourceTree = "<group>";
+		};
+		A8F23E1A23D57E1300B002FA /* FileSystem */ = {
+			isa = PBXGroup;
+			children = (
+				A8F23E1B23D57E2F00B002FA /* FindProjectOutputDirectorySpec.swift */,
+			);
+			path = FileSystem;
 			sourceTree = "<group>";
 		};
 		A8FD4AB923807C1C00124ACD /* CommandLine */ = {
@@ -360,6 +382,7 @@
 			files = (
 				A8FD4ABB23807C3F00124ACD /* Commandable.swift in Sources */,
 				A8E3748423871B2800CF8625 /* Bash+Constants.swift in Sources */,
+				A8B6E0C923C61F4E00D536AE /* FindProjectOutputDirectory.swift in Sources */,
 				A86E10362365DAB800D3FF94 /* ContentView.swift in Sources */,
 				A8FD4ABD23807C7600124ACD /* Bash.swift in Sources */,
 				A8F8D28723818A4C005E295E /* Bash+Error.swift in Sources */,
@@ -372,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8F23E1C23D57E2F00B002FA /* FindProjectOutputDirectorySpec.swift in Sources */,
 				A8E3748B2392D44200CF8625 /* CLIParserSpec.swift in Sources */,
 				A8F8D28923819061005E295E /* BashSpec.swift in Sources */,
 			);
