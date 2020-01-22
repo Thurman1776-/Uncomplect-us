@@ -1,11 +1,10 @@
-import Quick
-import Nimble
 @testable import Mac_App
+import Nimble
+import Quick
 
 final class ProjectOutputSpec: QuickSpec {
     override func spec() {
         describe("ProjectOutputSpec") {
-
             context("Given derived data paths for the project exists") {
                 it("returns located folders containing dependency files as valid URLs") {
                     let output = findProjectOutputDirectory(projectName: "Mac-App")

@@ -1,12 +1,11 @@
-import Quick
-import Nimble
 @testable import Mac_App
+import Nimble
+import Quick
 
 final class CLParserSpec: QuickSpec {
     override func spec() {
         describe("CLParserSpec") {
             context("given it takes a valid input") {
-
                 it("returns a fully mapped array version exluding tests paths") {
                     let result = parseCommandLineOutput(execFindCommand())
 
@@ -17,7 +16,6 @@ final class CLParserSpec: QuickSpec {
             }
 
             context("given it takes an invalid input") {
-
                 it("returns an empty array") {
                     let result = parseCommandLineOutput("")
 

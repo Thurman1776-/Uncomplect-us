@@ -13,7 +13,7 @@ let package = Package(
         .target(
             name: "Mac-App",
             dependencies: [
-                "ReSwift"
+                "ReSwift",
             ],
             path: "Mac-App"
         ),
@@ -21,9 +21,9 @@ let package = Package(
             name: "Mac-AppTests",
             dependencies: [
                 "Quick",
-                "Nimble"
+                "Nimble",
             ],
             path: "Mac-AppTests"
-        )
+        ),
     ]
 )

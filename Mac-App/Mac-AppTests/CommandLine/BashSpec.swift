@@ -1,6 +1,6 @@
-import Quick
-import Nimble
 @testable import Mac_App
+import Nimble
+import Quick
 
 final class BashSpec: QuickSpec {
     override func spec() {
@@ -20,7 +20,6 @@ final class BashSpec: QuickSpec {
             }
 
             context("given the command and the option exist") {
-
                 it("lists files in current directory") {
                     let sut = Bash()
                     let result = sut.execute(command: "ls", arguments: ["-lh"])
@@ -71,4 +70,3 @@ final class BashSpec: QuickSpec {
         }
     }
 }
-

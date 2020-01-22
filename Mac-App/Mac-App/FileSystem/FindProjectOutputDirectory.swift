@@ -9,11 +9,10 @@ import Foundation
 func findProjectOutputDirectory(
     derivedDataPaths: [URL] = [URL(fileURLWithPath: "$HOME/Library/Developer/Xcode/DerivedData"),
                                URL(fileURLWithPath: "$HOME/Library/Caches/appCode*/DerivedData")],
-    projectName: String,
-    targetNames: [String] = [],
+    projectName _: String,
+    targetNames _: [String] = [],
     bash: Commandable = Bash()
-) -> [URL] // TODO: Consider propagating up Bash.Error. What would that look like?
-{
+) -> [URL] { // TODO: Consider propagating up Bash.Error. What would that look like?
     guard derivedDataPaths.count > 1 else {
         fatalError("At least one path is needed!")
     }
@@ -27,7 +26,7 @@ func findProjectOutputDirectory(
         "-name", "i386",
         "-o", "-name", "armv*",
         "-o", "-name", "x86_64",
-        "-type", "d", ";"
+        "-type", "d", ";",
     ]
 
     if let commandOutput = bash.execute(command: "find", arguments: arguments) {
@@ -50,5 +49,5 @@ private func contentsOfDirectory(using fileManager: FileManager = .default, at p
             at: URL(fileURLWithPath: path),
             includingPropertiesForKeys: nil,
             options: .skipsHiddenFiles
-    )
+        )
 }
