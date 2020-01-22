@@ -10,14 +10,15 @@ public struct Bash: Commandable {
             arguments: ["-l", "-c", "which \(command)"]
         )
 
+        // swiftformat:disable indent
         func handleCommandError(_ error: Bash.Error) {
             switch error {
             case let .commandDoesNotExist(terminationCode: code):
                 os_log("""
-                Command could not be found!
-                This will cause the application to not work appropriately. Have your built-in executables location
-                changed?
-                Termination code -> %s
+                    Command could not be found!
+                    This will cause the application to not work appropriately. Have your built-in executables location
+                    changed?
+                    Termination code -> %s
                     """, type: .error, String(code))
             case let .noOutputFor(command: value):
                 os_log("Command did not generate output! -> %s", type: .error, value)
