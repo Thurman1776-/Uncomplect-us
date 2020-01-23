@@ -15,6 +15,7 @@ class DependencyTreeGenerator
     @options = options
     @options[:derived_data_project_pattern] = '*-*' unless @options[:derived_data_project_pattern]
 
+    # TODO: Might need to exclude this prefixes as well 
     @exclusion_prefixes = @options[:exclusion_prefixes] ? @options[:exclusion_prefixes] : 'NS|UI|CA|CG|CI|CF'
     @object_files_directories = @options[:search_directories]
   end
@@ -114,6 +115,8 @@ class DependencyTreeGenerator
     return tree_from_object_files_directory
   end
 
+# Currently only focusing on this function
+  
   def tree_from_object_files_directory
     tree = DependencyTree.new
 
@@ -145,6 +148,11 @@ class DependencyTreeGenerator
     )
     generator.generate_dependencies
   end
+
+  # This is the beggining of all
+  # dependencies_to_s -> build_dependency_tree -> 
+  # generate_depdendency_tree -> attempts to generate tree by reading first sourcekitten code, then AST files
+  # finally from object files
 
   def dependencies_to_s
     tree = build_dependency_tree

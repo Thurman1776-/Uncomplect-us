@@ -28,6 +28,8 @@ def find_project_output_directory(derived_data_paths, project_prefix, project_su
 
   filtered_by_target_paths = paths
 
+  # Only if target name is provided, else uses project name
+
   if target_names != nil && target_names.length > 0
     filtered_by_target_paths = paths.find_all { |path| 
        target_names.any? { |target| /#{target}[^\.]*\.build\/Objects-normal/.match path }
