@@ -1,12 +1,12 @@
 import Foundation
 
-/// Finds dependency files (.swiftdeps) for the given project name
+/// Performs a shallow search of the specified project's directory and returns URLs for the contained items (.swiftdeps)
 /// - Parameter derivedDataPaths: Location for Xcode derived data output. Use $HOME instead of Tilde Expansion [~]. Default value to default Xcode settings
 /// - Parameter projectName: Project to be searched for
 /// - Parameter targetNames: Search for particular target [NOT SUPPORTED YET]
 /// - Parameter bash: Object conforming to Commandable protocol that executes CL commands
 
-func findProjectOutputDirectory(
+public func findProjectOutputDirectory(
     derivedDataPaths: [URL] = [URL(fileURLWithPath: "$HOME/Library/Developer/Xcode/DerivedData"),
                                URL(fileURLWithPath: "$HOME/Library/Caches/appCode*/DerivedData")],
     projectName _: String,

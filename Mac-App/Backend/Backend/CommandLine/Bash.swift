@@ -2,6 +2,10 @@ import Foundation
 import OSLog
 
 public struct Bash: Commandable {
+    // MARK: - Initialisers
+
+    public init() {}
+
     // MARK: - Public API
 
     public func execute(command: String, arguments: [String]) -> String? {
