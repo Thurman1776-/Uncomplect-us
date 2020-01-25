@@ -1,4 +1,4 @@
-@testable import Mac_App
+@testable import Backend
 import Nimble
 import Quick
 

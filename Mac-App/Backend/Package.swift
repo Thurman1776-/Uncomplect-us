@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Mac-App",
+    name: "Backend",
     products: [],
     dependencies: [
         .package(url: "https://github.com/ReSwift/ReSwift.git", .upToNextMajor(from: "5.0.0")),
@@ -11,19 +11,19 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Mac-App",
+            name: "Backend",
             dependencies: [
                 "ReSwift",
             ],
-            path: "Mac-App"
+            path: "Backend"
         ),
         .target(
-            name: "Mac-AppTests",
+            name: "BackendTests",
             dependencies: [
                 "Quick",
                 "Nimble",
             ],
-            path: "Mac-AppTests"
+            path: "BackendTests"
         ),
     ]
 )

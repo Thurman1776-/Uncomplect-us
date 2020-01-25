@@ -7,9 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06E2FC25FC7EE2E889173070 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28855F46A4EC65D5ECE0955E /* Nimble.framework */; };
+		27E97B35FB80DD98519DF008 /* CwlPreconditionTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFEE7E84BA333690941FA0A0 /* CwlPreconditionTesting.framework */; };
+		519AB329056AB567432FDAF7 /* CwlCatchException.framework in Accio */ = {isa = PBXBuildFile; fileRef = 9630BDA30D9CD7865E05CE8D /* CwlCatchException.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		61130044FABE7561B68DEED4 /* Quick.framework in Accio */ = {isa = PBXBuildFile; fileRef = 17A892613B802C921192B6A3 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		66E89AD4BD74A3D517558DDC /* CwlCatchException.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9630BDA30D9CD7865E05CE8D /* CwlCatchException.framework */; };
+		91FA8BC9456EA57494C961D0 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */; };
+		987E9CB59EFC3AEACD688A03 /* Nimble.framework in Accio */ = {isa = PBXBuildFile; fileRef = 28855F46A4EC65D5ECE0955E /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A831004223DC9E4400460A12 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A831003823DC9E4400460A12 /* Backend.framework */; };
 		A831004723DC9E4400460A12 /* BackendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A831004623DC9E4400460A12 /* BackendTests.swift */; };
 		A831004923DC9E4400460A12 /* Backend.h in Headers */ = {isa = PBXBuildFile; fileRef = A831003B23DC9E4400460A12 /* Backend.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8CAE99A23DCABB500242ADF /* FindProjectOutputDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99023DCAB9F00242ADF /* FindProjectOutputDirectory.swift */; };
+		A8CAE99B23DCABB900242ADF /* CLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99223DCABA000242ADF /* CLParser.swift */; };
+		A8CAE99C23DCABBE00242ADF /* Bash+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99423DCABA000242ADF /* Bash+Constants.swift */; };
+		A8CAE99D23DCABC100242ADF /* Commandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99623DCABA000242ADF /* Commandable.swift */; };
+		A8CAE99E23DCABC400242ADF /* Bash.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99723DCABA000242ADF /* Bash.swift */; };
+		A8CAE99F23DCABC700242ADF /* Bash+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99823DCABA000242ADF /* Bash+Error.swift */; };
+		A8CAE9A623DCABD800242ADF /* FindProjectOutputDirectorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE9A023DCABD000242ADF /* FindProjectOutputDirectorySpec.swift */; };
+		A8CAE9A723DCABDD00242ADF /* CLIParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE9A223DCABD000242ADF /* CLIParserSpec.swift */; };
+		A8CAE9A823DCABE100242ADF /* BashSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE9A423DCABD000242ADF /* BashSpec.swift */; };
+		B4781C80CFFF0A0C5893DF4E /* CwlPreconditionTesting.framework in Accio */ = {isa = PBXBuildFile; fileRef = CFEE7E84BA333690941FA0A0 /* CwlPreconditionTesting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		FAFD5D6D8AFB5A7A53C1C7D9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A892613B802C921192B6A3 /* Quick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,13 +40,43 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6356CDB8F68E7DFC50FE9279 /* Accio */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstSubfolderSpec = 10;
+			files = (
+				519AB329056AB567432FDAF7 /* CwlCatchException.framework in Accio */,
+				B4781C80CFFF0A0C5893DF4E /* CwlPreconditionTesting.framework in Accio */,
+				987E9CB59EFC3AEACD688A03 /* Nimble.framework in Accio */,
+				61130044FABE7561B68DEED4 /* Quick.framework in Accio */,
+			);
+			name = Accio;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		17A892613B802C921192B6A3 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Quick.framework; path = Dependencies/macOS/Quick.framework; sourceTree = "<group>"; };
+		28855F46A4EC65D5ECE0955E /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Nimble.framework; path = Dependencies/macOS/Nimble.framework; sourceTree = "<group>"; };
+		43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ReSwift.framework; path = Dependencies/macOS/ReSwift.framework; sourceTree = "<group>"; };
+		9630BDA30D9CD7865E05CE8D /* CwlCatchException.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = CwlCatchException.framework; path = Dependencies/macOS/CwlCatchException.framework; sourceTree = "<group>"; };
 		A831003823DC9E4400460A12 /* Backend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Backend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A831003B23DC9E4400460A12 /* Backend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Backend.h; sourceTree = "<group>"; };
 		A831003C23DC9E4400460A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A831004123DC9E4400460A12 /* BackendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A831004623DC9E4400460A12 /* BackendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendTests.swift; sourceTree = "<group>"; };
 		A831004823DC9E4400460A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8CAE99023DCAB9F00242ADF /* FindProjectOutputDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindProjectOutputDirectory.swift; sourceTree = "<group>"; };
+		A8CAE99223DCABA000242ADF /* CLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLParser.swift; sourceTree = "<group>"; };
+		A8CAE99423DCABA000242ADF /* Bash+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bash+Constants.swift"; sourceTree = "<group>"; };
+		A8CAE99623DCABA000242ADF /* Commandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commandable.swift; sourceTree = "<group>"; };
+		A8CAE99723DCABA000242ADF /* Bash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bash.swift; sourceTree = "<group>"; };
+		A8CAE99823DCABA000242ADF /* Bash+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bash+Error.swift"; sourceTree = "<group>"; };
+		A8CAE9A023DCABD000242ADF /* FindProjectOutputDirectorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindProjectOutputDirectorySpec.swift; sourceTree = "<group>"; };
+		A8CAE9A223DCABD000242ADF /* CLIParserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLIParserSpec.swift; sourceTree = "<group>"; };
+		A8CAE9A423DCABD000242ADF /* BashSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BashSpec.swift; sourceTree = "<group>"; };
+		CFEE7E84BA333690941FA0A0 /* CwlPreconditionTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = CwlPreconditionTesting.framework; path = Dependencies/macOS/CwlPreconditionTesting.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91FA8BC9456EA57494C961D0 /* ReSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +93,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				A831004223DC9E4400460A12 /* Backend.framework in Frameworks */,
+				FAFD5D6D8AFB5A7A53C1C7D9 /* Quick.framework in Frameworks */,
+				66E89AD4BD74A3D517558DDC /* CwlCatchException.framework in Frameworks */,
+				27E97B35FB80DD98519DF008 /* CwlPreconditionTesting.framework in Frameworks */,
+				06E2FC25FC7EE2E889173070 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D53CC87ED3200CD4593921C /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				F1446E14D33D82B1889EC63D /* Backend */,
+				C5AABCE6DE5DDE2C8F025E7C /* BackendTests */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
 		A831002E23DC9E4400460A12 = {
 			isa = PBXGroup;
 			children = (
 				A831003A23DC9E4400460A12 /* Backend */,
 				A831004523DC9E4400460A12 /* BackendTests */,
 				A831003923DC9E4400460A12 /* Products */,
+				8D53CC87ED3200CD4593921C /* Dependencies */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +134,9 @@
 		A831003A23DC9E4400460A12 /* Backend */ = {
 			isa = PBXGroup;
 			children = (
+				A8CAE99123DCAB9F00242ADF /* FileSystem */,
+				A8CAE99323DCABA000242ADF /* Parsers */,
+				A8CAE99923DCABA000242ADF /* CommandLine */,
 				A831003B23DC9E4400460A12 /* Backend.h */,
 				A831003C23DC9E4400460A12 /* Info.plist */,
 			);
@@ -80,10 +146,91 @@
 		A831004523DC9E4400460A12 /* BackendTests */ = {
 			isa = PBXGroup;
 			children = (
+				A8CAE9A123DCABD000242ADF /* FileSystem */,
+				A8CAE9A323DCABD000242ADF /* Parsers */,
+				A8CAE9A523DCABD000242ADF /* CommandLine */,
 				A831004623DC9E4400460A12 /* BackendTests.swift */,
 				A831004823DC9E4400460A12 /* Info.plist */,
 			);
 			path = BackendTests;
+			sourceTree = "<group>";
+		};
+		A8CAE99123DCAB9F00242ADF /* FileSystem */ = {
+			isa = PBXGroup;
+			children = (
+				A8CAE99023DCAB9F00242ADF /* FindProjectOutputDirectory.swift */,
+			);
+			path = FileSystem;
+			sourceTree = "<group>";
+		};
+		A8CAE99323DCABA000242ADF /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				A8CAE99223DCABA000242ADF /* CLParser.swift */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		A8CAE99523DCABA000242ADF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A8CAE99423DCABA000242ADF /* Bash+Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		A8CAE99923DCABA000242ADF /* CommandLine */ = {
+			isa = PBXGroup;
+			children = (
+				A8CAE99523DCABA000242ADF /* Constants */,
+				A8CAE99623DCABA000242ADF /* Commandable.swift */,
+				A8CAE99723DCABA000242ADF /* Bash.swift */,
+				A8CAE99823DCABA000242ADF /* Bash+Error.swift */,
+			);
+			path = CommandLine;
+			sourceTree = "<group>";
+		};
+		A8CAE9A123DCABD000242ADF /* FileSystem */ = {
+			isa = PBXGroup;
+			children = (
+				A8CAE9A023DCABD000242ADF /* FindProjectOutputDirectorySpec.swift */,
+			);
+			path = FileSystem;
+			sourceTree = "<group>";
+		};
+		A8CAE9A323DCABD000242ADF /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				A8CAE9A223DCABD000242ADF /* CLIParserSpec.swift */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		A8CAE9A523DCABD000242ADF /* CommandLine */ = {
+			isa = PBXGroup;
+			children = (
+				A8CAE9A423DCABD000242ADF /* BashSpec.swift */,
+			);
+			path = CommandLine;
+			sourceTree = "<group>";
+		};
+		C5AABCE6DE5DDE2C8F025E7C /* BackendTests */ = {
+			isa = PBXGroup;
+			children = (
+				9630BDA30D9CD7865E05CE8D /* CwlCatchException.framework */,
+				CFEE7E84BA333690941FA0A0 /* CwlPreconditionTesting.framework */,
+				28855F46A4EC65D5ECE0955E /* Nimble.framework */,
+				17A892613B802C921192B6A3 /* Quick.framework */,
+			);
+			name = BackendTests;
+			sourceTree = "<group>";
+		};
+		F1446E14D33D82B1889EC63D /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */,
+			);
+			name = Backend;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +255,7 @@
 				A831003423DC9E4400460A12 /* Sources */,
 				A831003523DC9E4400460A12 /* Frameworks */,
 				A831003623DC9E4400460A12 /* Resources */,
+				262A9F624B12F411E35E920A /* Accio */,
 			);
 			buildRules = (
 			);
@@ -125,6 +273,7 @@
 				A831003D23DC9E4400460A12 /* Sources */,
 				A831003E23DC9E4400460A12 /* Frameworks */,
 				A831003F23DC9E4400460A12 /* Resources */,
+				6356CDB8F68E7DFC50FE9279 /* Accio */,
 			);
 			buildRules = (
 			);
@@ -190,11 +339,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		262A9F624B12F411E35E920A /* Accio */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Dependencies/macOS/ReSwift.framework",
+			);
+			name = Accio;
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A831003423DC9E4400460A12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8CAE99A23DCABB500242ADF /* FindProjectOutputDirectory.swift in Sources */,
+				A8CAE99B23DCABB900242ADF /* CLParser.swift in Sources */,
+				A8CAE99E23DCABC400242ADF /* Bash.swift in Sources */,
+				A8CAE99C23DCABBE00242ADF /* Bash+Constants.swift in Sources */,
+				A8CAE99F23DCABC700242ADF /* Bash+Error.swift in Sources */,
+				A8CAE99D23DCABC100242ADF /* Commandable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +376,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8CAE9A623DCABD800242ADF /* FindProjectOutputDirectorySpec.swift in Sources */,
 				A831004723DC9E4400460A12 /* BackendTests.swift in Sources */,
+				A8CAE9A823DCABE100242ADF /* BashSpec.swift in Sources */,
+				A8CAE9A723DCABDD00242ADF /* CLIParserSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +522,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dependencies/macOS",
+				);
 				INFOPLIST_FILE = Backend/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -368,6 +549,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dependencies/macOS",
+				);
 				INFOPLIST_FILE = Backend/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -385,8 +570,13 @@
 		A831005023DC9E4400460A12 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dependencies/macOS",
+				);
 				INFOPLIST_FILE = BackendTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -402,8 +592,13 @@
 		A831005123DC9E4400460A12 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dependencies/macOS",
+				);
 				INFOPLIST_FILE = BackendTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
