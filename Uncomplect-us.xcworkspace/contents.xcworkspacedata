@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <FileRef
-      location = "group:Mac-App/Mac-App.xcodeproj">
-   </FileRef>
+   <Group
+      location = "group:Mac-App/../Uncomplect-us"
+      name = "Uncomplect-us">
+      <FileRef
+         location = "group:Mac-App/Mac-App.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>
