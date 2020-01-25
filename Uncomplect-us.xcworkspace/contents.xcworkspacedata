@@ -5,6 +5,9 @@
       location = "group:Mac-App/../Uncomplect-us"
       name = "Uncomplect-us">
       <FileRef
+         location = "group:Mac-App/Backend/Backend.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:Mac-App/Mac-App.xcodeproj">
       </FileRef>
    </Group>
