@@ -270,6 +270,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A831004F23DC9E4400460A12 /* Build configuration list for PBXNativeTarget "BackendTests" */;
 			buildPhases = (
+				A8CAE9AB23DCAF8300242ADF /* Run SwiftFormat */,
 				A831003D23DC9E4400460A12 /* Sources */,
 				A831003E23DC9E4400460A12 /* Frameworks */,
 				A831003F23DC9E4400460A12 /* Resources */,
@@ -355,6 +356,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		A8CAE9AB23DCAF8300242ADF /* Run SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftFormat";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ../BuildTools\n#swift package update #Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\nswift run -c release swiftformat \"$SRCROOT\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
