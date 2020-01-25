@@ -143,18 +143,9 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A82B3EF823DC8E4900C2B7EB /* Uncomplect-us */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Uncomplect-us";
-			path = "../Uncomplect-us";
-			sourceTree = "<group>";
-		};
 		A86E10272365DAB800D3FF94 = {
 			isa = PBXGroup;
 			children = (
-				A82B3EF823DC8E4900C2B7EB /* Uncomplect-us */,
 				A86E10322365DAB800D3FF94 /* Mac-App */,
 				A86E10482365DAB900D3FF94 /* Mac-AppTests */,
 				A86E10312365DAB800D3FF94 /* Products */,
