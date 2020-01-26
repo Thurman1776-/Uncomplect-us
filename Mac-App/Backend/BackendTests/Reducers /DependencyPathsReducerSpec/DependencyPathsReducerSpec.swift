@@ -7,25 +7,27 @@ final class DependencyPathsReducerSpec: QuickSpec {
         describe("DependencyPathsReducerSpec") {
             let dependencyPathsState = DependencyPathsState.initialState
 
-            context("when DependencyPathsAction.append gets dispatched with no paths found") {
-                it("appends no paths") {
-                    let newState = dependencyPathsReducer(
-                        action: DependencyPathsAction.append(paths: []),
-                        state: dependencyPathsState
-                    )
+            context("when DependencyPathsAction.append gets dispatched") {
+                context("given there are no paths found") {
+                    it("appends no paths") {
+                        let newState = dependencyPathsReducer(
+                            action: DependencyPathsAction.append(paths: []),
+                            state: dependencyPathsState
+                        )
 
-                    expect(newState.paths).to(beEmpty())
+                        expect(newState.paths).to(beEmpty())
+                    }
                 }
-            }
 
-            context("when DependencyPathsAction.append gets dispatched with paths found") {
-                it("it appends paths") {
-                    let newState = dependencyPathsReducer(
-                        action: DependencyPathsAction.append(paths: [URL(string: "www.coolio.com")!]),
-                        state: dependencyPathsState
-                    )
+                context("given there are paths found") {
+                    it("it appends paths") {
+                        let newState = dependencyPathsReducer(
+                            action: DependencyPathsAction.append(paths: [URL(string: "www.coolio.com")!]),
+                            state: dependencyPathsState
+                        )
 
-                    expect(newState.paths).to(haveCount(1))
+                        expect(newState.paths).to(haveCount(1))
+                    }
                 }
             }
 
