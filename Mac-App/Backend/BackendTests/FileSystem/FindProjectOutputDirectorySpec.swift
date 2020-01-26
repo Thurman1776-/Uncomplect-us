@@ -6,7 +6,7 @@ final class ProjectOutputSpec: QuickSpec {
     override func spec() {
         describe("ProjectOutputSpec") {
             context("Given derived data paths for the project exists") {
-                context("when tests files are skipped") {
+                context("when test files are skipped") {
                     it("returns located folders containing dependency files as valid URLs") {
                         let output = findProjectOutputDirectories(projectName: "Mac-App")
 
@@ -17,7 +17,7 @@ final class ProjectOutputSpec: QuickSpec {
                     }
                 }
 
-                context("when tests files are included") {
+                context("when test files are included") {
                     it("returns located folders containing dependency files (including tests) as valid URLs") {
                         let output = findProjectOutputDirectories(projectName: "Mac-App", excludingTests: false)
 

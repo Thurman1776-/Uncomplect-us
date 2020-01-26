@@ -33,7 +33,7 @@ public func findProjectOutputDirectories(
 
     if let commandOutput = bash.execute(command: "find", arguments: arguments) {
         let filePaths: () -> [String] = {
-            excludingTests ? parseCommandLineOutputSkippingTestsFiles(commandOutput) : trimOutput(commandOutput)
+            excludingTests ? parseCommandLineOutputSkippingTestFiles(commandOutput) : trimOutput(commandOutput)
         }
 
         var paths: [URL] = []
