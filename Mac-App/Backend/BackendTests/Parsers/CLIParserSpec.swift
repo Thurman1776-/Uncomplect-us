@@ -7,17 +7,18 @@ final class CLParserSpec: QuickSpec {
         describe("CLParserSpec") {
             context("given it takes a valid input") {
                 it("returns a fully mapped array version exluding tests paths") {
-                    let result = parseCommandLineOutput(execFindCommand())
+                    let result = parseCommandLineOutputSkippingTestsFiles(execFindCommand())
 
                     expect(result).notTo(beEmpty())
                     let testsPaths = result.filter { $0.lowercased().contains("test") == true }
                     expect(testsPaths).to(beEmpty())
+                    print("Actual output: \(result)")
                 }
             }
 
             context("given it takes an invalid input") {
                 it("returns an empty array") {
-                    let result = parseCommandLineOutput("")
+                    let result = parseCommandLineOutputSkippingTestsFiles("")
 
                     expect(result).to(beEmpty())
                 }

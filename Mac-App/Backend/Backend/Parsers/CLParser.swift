@@ -1,6 +1,6 @@
 import Foundation
 
-func parseCommandLineOutput(_ output: String) -> [String] {
+func parseCommandLineOutputSkippingTestsFiles(_ output: String) -> [String] {
     guard output.isEmpty == false else { return [] }
 
     return output
