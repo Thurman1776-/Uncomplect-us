@@ -1,6 +1,6 @@
 import ReSwift
 
-public struct BackendAPI {
+public enum BackendAPI {
     private static let store: Store<AppState> = Store<AppState>(
         reducer: appReducer,
         state: AppState.initialState
