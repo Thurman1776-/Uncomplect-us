@@ -161,12 +161,12 @@
 		A831004523DC9E4400460A12 /* BackendTests */ = {
 			isa = PBXGroup;
 			children = (
-				A8E7627823DDE77300BFAD48 /* Reducers  */,
-				A8CAE9A123DCABD000242ADF /* FileSystem */,
-				A8CAE9A323DCABD000242ADF /* Parsers */,
-				A8CAE9A523DCABD000242ADF /* CommandLine */,
 				A831004623DC9E4400460A12 /* BackendTests.swift */,
+				A8CAE9A523DCABD000242ADF /* CommandLine */,
+				A8CAE9A123DCABD000242ADF /* FileSystem */,
 				A831004823DC9E4400460A12 /* Info.plist */,
+				A8CAE9A323DCABD000242ADF /* Parsers */,
+				A8E7627823DDE77300BFAD48 /* Reducers  */,
 			);
 			path = BackendTests;
 			sourceTree = "<group>";
