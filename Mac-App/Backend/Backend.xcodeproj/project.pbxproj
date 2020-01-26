@@ -17,7 +17,7 @@
 		A831004223DC9E4400460A12 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A831003823DC9E4400460A12 /* Backend.framework */; };
 		A831004723DC9E4400460A12 /* BackendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A831004623DC9E4400460A12 /* BackendTests.swift */; };
 		A831004923DC9E4400460A12 /* Backend.h in Headers */ = {isa = PBXBuildFile; fileRef = A831003B23DC9E4400460A12 /* Backend.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A8CAE99A23DCABB500242ADF /* FindProjectOutputDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99023DCAB9F00242ADF /* FindProjectOutputDirectory.swift */; };
+		A8CAE99A23DCABB500242ADF /* FindProjectOutputDirectories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99023DCAB9F00242ADF /* FindProjectOutputDirectories.swift */; };
 		A8CAE99B23DCABB900242ADF /* CLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99223DCABA000242ADF /* CLParser.swift */; };
 		A8CAE99C23DCABBE00242ADF /* Bash+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99423DCABA000242ADF /* Bash+Constants.swift */; };
 		A8CAE99D23DCABC100242ADF /* Commandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99623DCABA000242ADF /* Commandable.swift */; };
@@ -67,7 +67,7 @@
 		A831004123DC9E4400460A12 /* BackendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A831004623DC9E4400460A12 /* BackendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendTests.swift; sourceTree = "<group>"; };
 		A831004823DC9E4400460A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8CAE99023DCAB9F00242ADF /* FindProjectOutputDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindProjectOutputDirectory.swift; sourceTree = "<group>"; };
+		A8CAE99023DCAB9F00242ADF /* FindProjectOutputDirectories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindProjectOutputDirectories.swift; sourceTree = "<group>"; };
 		A8CAE99223DCABA000242ADF /* CLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLParser.swift; sourceTree = "<group>"; };
 		A8CAE99423DCABA000242ADF /* Bash+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bash+Constants.swift"; sourceTree = "<group>"; };
 		A8CAE99623DCABA000242ADF /* Commandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commandable.swift; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 		A8CAE99123DCAB9F00242ADF /* FileSystem */ = {
 			isa = PBXGroup;
 			children = (
-				A8CAE99023DCAB9F00242ADF /* FindProjectOutputDirectory.swift */,
+				A8CAE99023DCAB9F00242ADF /* FindProjectOutputDirectories.swift */,
 			);
 			path = FileSystem;
 			sourceTree = "<group>";
@@ -382,7 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8CAE99A23DCABB500242ADF /* FindProjectOutputDirectory.swift in Sources */,
+				A8CAE99A23DCABB500242ADF /* FindProjectOutputDirectories.swift in Sources */,
 				A8CAE99B23DCABB900242ADF /* CLParser.swift in Sources */,
 				A8CAE99E23DCABC400242ADF /* Bash.swift in Sources */,
 				A8CAE99C23DCABBE00242ADF /* Bash+Constants.swift in Sources */,

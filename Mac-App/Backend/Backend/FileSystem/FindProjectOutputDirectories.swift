@@ -5,13 +5,15 @@ import Foundation
 /// - Parameter projectName: Project to be searched for
 /// - Parameter targetNames: Search for particular target [NOT SUPPORTED YET]
 /// - Parameter bash: Object conforming to Commandable protocol that executes CL commands
+/// - Parameter excludingTests: Flag to skip file dependencies in tests [executes faster if `true`]. Defaults to true
 
-public func findProjectOutputDirectory(
+public func findProjectOutputDirectories(
     derivedDataPaths: [URL] = [URL(fileURLWithPath: "$HOME/Library/Developer/Xcode/DerivedData"),
                                URL(fileURLWithPath: "$HOME/Library/Caches/appCode*/DerivedData")],
     projectName _: String,
     targetNames _: [String] = [],
-    bash: Commandable = Bash()
+    bash: Commandable = Bash(),
+    excludingTests: Bool = true
 ) -> [URL] { // TODO: Consider propagating up Bash.Error. What would that look like?
     guard derivedDataPaths.count > 1 else {
         fatalError("At least one path is needed!")
@@ -30,8 +32,12 @@ public func findProjectOutputDirectory(
     ]
 
     if let commandOutput = bash.execute(command: "find", arguments: arguments) {
+        let filePaths: () -> [String] = {
+            excludingTests ? parseCommandLineOutputSkippingTestsFiles(commandOutput) : trimOutput(commandOutput)
+        }
+
         var paths: [URL] = []
-        for path in trimOutput(commandOutput) {
+        for path in filePaths() {
             if let urls = contentsOfDirectory(at: path) { urls.forEach { paths.append($0) } }
         }
 
