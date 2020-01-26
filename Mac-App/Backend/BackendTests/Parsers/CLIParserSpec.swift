@@ -12,7 +12,6 @@ final class CLParserSpec: QuickSpec {
                     expect(result).notTo(beEmpty())
                     let testsPaths = result.filter { $0.lowercased().contains("test") == true }
                     expect(testsPaths).to(beEmpty())
-                    print("Actual output: \(result)")
                 }
             }
 
