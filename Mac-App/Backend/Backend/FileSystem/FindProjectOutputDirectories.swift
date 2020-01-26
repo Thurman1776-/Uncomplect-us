@@ -49,6 +49,8 @@ public func findProjectOutputDirectories(
 
 private func trimOutput(_ output: String) -> [String] { output.split(separator: "\n").map(String.init) }
 
+/// Apple docs - https://developer.apple.com/documentation/foundation/filemanager/1413768-contentsofdirectory
+
 private func contentsOfDirectory(using fileManager: FileManager = .default, at path: String) -> [URL]? {
     try? fileManager
         .contentsOfDirectory(
