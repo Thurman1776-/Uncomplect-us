@@ -29,6 +29,22 @@ final class DependencyPathsReducerSpec: QuickSpec {
                         expect(newState.paths).to(haveCount(1))
                     }
                 }
+
+                context("given there are already paths found") {
+                    it("it appends paths") {
+                        var newState = dependencyPathsReducer(
+                            action: DependencyPathsAction.append(paths: [URL(string: "www.coolio.com")!]),
+                            state: dependencyPathsState
+                        )
+
+                        newState = dependencyPathsReducer(
+                            action: DependencyPathsAction.append(paths: [URL(string: "www.appending.com")!]),
+                            state: newState
+                        )
+
+                        expect(newState.paths).to(haveCount(2))
+                    }
+                }
             }
 
             context("when DependencyPathsAction.remove gets dispatched with path to be removed") {

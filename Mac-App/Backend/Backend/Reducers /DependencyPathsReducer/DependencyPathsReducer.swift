@@ -9,7 +9,7 @@ func dependencyPathsReducer(action: Action, state: DependencyPathsState) -> Depe
 
     switch dependencyPathsAction {
     case let DependencyPathsAction.append(paths: paths):
-        newState.paths = paths
+        newState.paths = newState.paths + paths
     case let DependencyPathsAction.remove(paths: paths):
         let newPaths = newState.paths.filter { paths.contains($0) == false }
         newState.paths = newPaths
