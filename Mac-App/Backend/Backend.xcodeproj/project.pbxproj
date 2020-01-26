@@ -153,7 +153,7 @@
 				A8CAE99123DCAB9F00242ADF /* FileSystem */,
 				A831003C23DC9E4400460A12 /* Info.plist */,
 				A8CAE99323DCABA000242ADF /* Parsers */,
-				A8E7627223DDBC6C00BFAD48 /* Reducers  */,
+				A8E7627223DDBC6C00BFAD48 /* Reducers */,
 			);
 			path = Backend;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 				A8CAE9A123DCABD000242ADF /* FileSystem */,
 				A831004823DC9E4400460A12 /* Info.plist */,
 				A8CAE9A323DCABD000242ADF /* Parsers */,
-				A8E7627823DDE77300BFAD48 /* Reducers  */,
+				A8E7627823DDE77300BFAD48 /* Reducers */,
 			);
 			path = BackendTests;
 			sourceTree = "<group>";
@@ -255,13 +255,13 @@
 			path = BackendAPI;
 			sourceTree = "<group>";
 		};
-		A8E7627223DDBC6C00BFAD48 /* Reducers  */ = {
+		A8E7627223DDBC6C00BFAD48 /* Reducers */ = {
 			isa = PBXGroup;
 			children = (
 				A8E7627523DDBCC800BFAD48 /* DependencyPathsReducer */,
 				A8E7627323DDBC8000BFAD48 /* AppReducer.swift */,
 			);
-			path = "Reducers ";
+			path = Reducers;
 			sourceTree = "<group>";
 		};
 		A8E7627523DDBCC800BFAD48 /* DependencyPathsReducer */ = {
@@ -272,12 +272,12 @@
 			path = DependencyPathsReducer;
 			sourceTree = "<group>";
 		};
-		A8E7627823DDE77300BFAD48 /* Reducers  */ = {
+		A8E7627823DDE77300BFAD48 /* Reducers */ = {
 			isa = PBXGroup;
 			children = (
 				A8E7627923DDE77E00BFAD48 /* DependencyPathsReducerSpec */,
 			);
-			path = "Reducers ";
+			path = Reducers;
 			sourceTree = "<group>";
 		};
 		A8E7627923DDE77E00BFAD48 /* DependencyPathsReducerSpec */ = {
