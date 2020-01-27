@@ -3,7 +3,8 @@ import ReSwift
 public enum BackendAPI {
     private static let store: Store<AppState> = Store<AppState>(
         reducer: appReducer,
-        state: AppState.initialState
+        state: AppState.initialState,
+        middleware: [findProjectOutputDirsSideEffects()]
     )
 
     public static var state: AppState { store.state }
