@@ -90,6 +90,39 @@ final class DependencyPathsReducerSpec: QuickSpec {
                     expect(newState.paths).to(beEmpty())
                 }
             }
+
+            context("when DependencyPathsAction.findUrls gets dispatched") {
+                it("creates a fresh State") {
+                    let newState = dependencyPathsReducer(
+                        action: DependencyPathsAction.findUrls(for: "Mac-App"),
+                        state: dependencyPathsState
+                    )
+
+                    expect(newState) == dependencyPathsState
+                }
+            }
+
+            context("when DependencyPathsAction.failure gets dispatched") {
+                it("returns previous successful state") {
+                    var newState = dependencyPathsReducer(
+                        action: DependencyPathsAction.append(
+                            paths: [
+                                URL(string: "www.error.com")!,
+                            ]
+                        ),
+                        state: dependencyPathsState
+                    )
+
+                    let expectedOriginalState = newState
+
+                    newState = dependencyPathsReducer(
+                        action: DependencyPathsAction.failure(message: "Some cool error"),
+                        state: newState
+                    )
+
+                    expect(expectedOriginalState) == newState
+                }
+            }
         }
     }
 }

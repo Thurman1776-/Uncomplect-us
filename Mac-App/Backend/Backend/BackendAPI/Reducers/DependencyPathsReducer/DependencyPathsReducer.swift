@@ -8,13 +8,17 @@ func dependencyPathsReducer(action: Action, state: DependencyPathsState) -> Depe
     var newState = state
 
     switch dependencyPathsAction {
-    case let DependencyPathsAction.append(paths: paths):
+    case .findUrls:
+        newState = DependencyPathsState.initialState
+    case let .append(paths: paths):
         newState.paths = newState.paths + paths
-    case let DependencyPathsAction.remove(paths: paths):
+    case let .remove(paths: paths):
         let newPaths = newState.paths.filter { paths.contains($0) == false }
         newState.paths = newPaths
-    case DependencyPathsAction.reset:
+    case .reset:
         newState.paths = []
+    case .failure:
+        return newState
     }
 
     return newState
