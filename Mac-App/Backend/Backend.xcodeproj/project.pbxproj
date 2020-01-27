@@ -151,7 +151,6 @@
 				A8CAE99123DCAB9F00242ADF /* FileSystem */,
 				A831003C23DC9E4400460A12 /* Info.plist */,
 				A8CAE99323DCABA000242ADF /* Parsers */,
-				A8E7627223DDBC6C00BFAD48 /* Reducers */,
 			);
 			path = Backend;
 			sourceTree = "<group>";
@@ -159,11 +158,11 @@
 		A831004523DC9E4400460A12 /* BackendTests */ = {
 			isa = PBXGroup;
 			children = (
+				A8F12EF623DF63DF001EB945 /* Backend */,
 				A8CAE9A523DCABD000242ADF /* CommandLine */,
 				A8CAE9A123DCABD000242ADF /* FileSystem */,
 				A831004823DC9E4400460A12 /* Info.plist */,
 				A8CAE9A323DCABD000242ADF /* Parsers */,
-				A8E7627823DDE77300BFAD48 /* Reducers */,
 			);
 			path = BackendTests;
 			sourceTree = "<group>";
@@ -248,6 +247,8 @@
 			isa = PBXGroup;
 			children = (
 				A8E7627023DDBBB700BFAD48 /* BackendAPI.swift */,
+				A8F12EF523DF63B1001EB945 /* Middleware */,
+				A8E7627223DDBC6C00BFAD48 /* Reducers */,
 			);
 			path = BackendAPI;
 			sourceTree = "<group>";
@@ -283,6 +284,21 @@
 				A8E7627A23DDE79000BFAD48 /* DependencyPathsReducerSpec.swift */,
 			);
 			path = DependencyPathsReducerSpec;
+			sourceTree = "<group>";
+		};
+		A8F12EF523DF63B1001EB945 /* Middleware */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Middleware;
+			sourceTree = "<group>";
+		};
+		A8F12EF623DF63DF001EB945 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				A8E7627823DDE77300BFAD48 /* Reducers */,
+			);
+			path = Backend;
 			sourceTree = "<group>";
 		};
 		C5AABCE6DE5DDE2C8F025E7C /* BackendTests */ = {
