@@ -16,7 +16,7 @@ public func findProjectOutputDirectories(
     excludingTests: Bool = true
 ) -> [URL] { // TODO: Consider propagating up Bash.Error. What would that look like?
     guard derivedDataPaths.count > 1 else {
-        fatalError("At least one path is needed!")
+        preconditionFailure("At least one path is needed!")
     }
 
     let derivedDataPath = derivedDataPaths[0].relativeString
