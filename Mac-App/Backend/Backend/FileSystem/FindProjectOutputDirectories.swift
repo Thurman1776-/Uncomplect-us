@@ -1,5 +1,7 @@
 import Foundation
 
+private let _Self = "Mac-App"
+
 /// Performs a shallow search of the specified project's directory and returns URLs for the contained items (.swiftdeps)
 /// - Parameter derivedDataPaths: Location for Xcode derived data output. Use $HOME instead of Tilde Expansion [~]. Default value to default Xcode settings
 /// - Parameter projectName: Project to be searched for
@@ -10,7 +12,7 @@ import Foundation
 public func findProjectOutputDirectories(
     derivedDataPaths: [URL] = [URL(fileURLWithPath: "$HOME/Library/Developer/Xcode/DerivedData"),
                                URL(fileURLWithPath: "$HOME/Library/Caches/appCode*/DerivedData")],
-    projectName _: String,
+    projectName: String,
     targetNames _: [String] = [],
     bash: Commandable = Bash(),
     excludingTests: Bool = true
@@ -20,9 +22,10 @@ public func findProjectOutputDirectories(
     }
 
     let derivedDataPath = derivedDataPaths[0].relativeString
+    let projName = projectName.isEmpty == true ? _Self : projectName
     let arguments = [
         derivedDataPath,
-        "-name", "*Mac-App*",
+        "-name", "*\(projName)*",
         "-type", "d",
         "-exec", "find", "{}",
         "-name", "i386",
@@ -46,6 +49,8 @@ public func findProjectOutputDirectories(
 
     return []
 }
+
+// MARK: Helpers
 
 private func trimOutput(_ output: String) -> [String] { output.split(separator: "\n").map(String.init) }
 
