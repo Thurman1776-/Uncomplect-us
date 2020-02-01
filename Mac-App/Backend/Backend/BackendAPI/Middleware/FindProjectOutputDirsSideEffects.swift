@@ -13,12 +13,10 @@ func findProjectOutputDirsSideEffects() -> Middleware<AppState> {
                     DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async {
                         let urls = findProjectOutputDirectories(projectName: project)
 
-                        DispatchQueue.main.async {
-                            if urls.isEmpty == false {
-                                dispatchFuction(DependencyPathsAction.append(paths: urls))
-                            } else {
-                                dispatchFuction(DependencyPathsAction.failure(message: "No paths were found!"))
-                            }
+                        if urls.isEmpty == false {
+                            dispatchFuction(DependencyPathsAction.append(paths: urls))
+                        } else {
+                            dispatchFuction(DependencyPathsAction.failure(message: "No paths were found!"))
                         }
                     }
                 default: break
