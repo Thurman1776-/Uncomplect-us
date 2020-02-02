@@ -7,7 +7,7 @@ final class CLParserSpec: QuickSpec {
         describe("CLParserSpec") {
             context("given it takes a valid input") {
                 it("returns a fully mapped array version exluding tests paths") {
-                    let result = parseCommandLineOutputSkippingTestFiles(execFindCommand())
+                    let result = parseCommandLineOutputSkippingTestFiles(execDefaultFindCommand())
 
                     expect(result).notTo(beEmpty())
                     let testsPaths = result.filter { $0.lowercased().contains("test") == true }
@@ -24,17 +24,4 @@ final class CLParserSpec: QuickSpec {
             }
         }
     }
-}
-
-private func execFindCommand() -> String {
-    return Bash().execute(
-        command: "find", arguments: ["$HOME/Library/Developer/Xcode/DerivedData",
-                                     "-name", "*Mac-App*",
-                                     "-type", "d",
-                                     "-exec", "find", "{}",
-                                     "-name", "i386",
-                                     "-o", "-name", "armv*",
-                                     "-o", "-name", "x86_64",
-                                     "-type", "d", ";"]
-    )!
 }

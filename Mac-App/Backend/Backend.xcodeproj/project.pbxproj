@@ -32,6 +32,7 @@
 		A8E7627723DDBCE200BFAD48 /* DependencyPathsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7627623DDBCE200BFAD48 /* DependencyPathsReducer.swift */; };
 		A8E7627B23DDE79000BFAD48 /* DependencyPathsReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7627A23DDE79000BFAD48 /* DependencyPathsReducerSpec.swift */; };
 		A8F12EF823DF6427001EB945 /* FindProjectOutputDirsSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F12EF723DF6427001EB945 /* FindProjectOutputDirsSideEffects.swift */; };
+		A8F7626A23E6A5590014DEB9 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7626923E6A5590014DEB9 /* TestUtils.swift */; };
 		B33D522CFB40DE4CF75B827C /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073CD94B1BFD29B335961A59 /* Yams.framework */; };
 		B4781C80CFFF0A0C5893DF4E /* CwlPreconditionTesting.framework in Accio */ = {isa = PBXBuildFile; fileRef = CFEE7E84BA333690941FA0A0 /* CwlPreconditionTesting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FAFD5D6D8AFB5A7A53C1C7D9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A892613B802C921192B6A3 /* Quick.framework */; };
@@ -90,6 +91,7 @@
 		A8E7627623DDBCE200BFAD48 /* DependencyPathsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyPathsReducer.swift; sourceTree = "<group>"; };
 		A8E7627A23DDE79000BFAD48 /* DependencyPathsReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyPathsReducerSpec.swift; sourceTree = "<group>"; };
 		A8F12EF723DF6427001EB945 /* FindProjectOutputDirsSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindProjectOutputDirsSideEffects.swift; sourceTree = "<group>"; };
+		A8F7626923E6A5590014DEB9 /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		CFEE7E84BA333690941FA0A0 /* CwlPreconditionTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = CwlPreconditionTesting.framework; path = Dependencies/macOS/CwlPreconditionTesting.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +165,7 @@
 		A831004523DC9E4400460A12 /* BackendTests */ = {
 			isa = PBXGroup;
 			children = (
+				A8F7626823E6A53F0014DEB9 /* Shared */,
 				A8F12EF623DF63DF001EB945 /* Backend */,
 				A8CAE9A523DCABD000242ADF /* CommandLine */,
 				A8CAE9A123DCABD000242ADF /* FileSystem */,
@@ -305,6 +308,14 @@
 				A8E7627823DDE77300BFAD48 /* Reducers */,
 			);
 			path = Backend;
+			sourceTree = "<group>";
+		};
+		A8F7626823E6A53F0014DEB9 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A8F7626923E6A5590014DEB9 /* TestUtils.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		C5AABCE6DE5DDE2C8F025E7C /* BackendTests */ = {
@@ -498,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8CAE9A623DCABD800242ADF /* FindProjectOutputDirectorySpec.swift in Sources */,
+				A8F7626A23E6A5590014DEB9 /* TestUtils.swift in Sources */,
 				A8CAE9A823DCABE100242ADF /* BashSpec.swift in Sources */,
 				A8CAE9A723DCABDD00242ADF /* CLIParserSpec.swift in Sources */,
 				A8E7627B23DDE79000BFAD48 /* DependencyPathsReducerSpec.swift in Sources */,
