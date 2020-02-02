@@ -5,6 +5,7 @@ import ReSwift
 
 func appReducer(action: Action, state: AppState!) -> AppState {
     return AppState(
-        dependencyPathsState: dependencyPathsReducer(action: action, state: state.dependencyPathsState)
+        dependencyPathsState: dependencyPathsReducer(action: action, state: state.dependencyPathsState),
+        swiftDepsState: swiftDepsReducer(action: action, state: state.swiftDepsState)
     )
 }
