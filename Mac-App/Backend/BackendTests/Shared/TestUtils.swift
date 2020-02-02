@@ -12,3 +12,5 @@ func execDefaultFindCommand() -> String {
                                      "-type", "d", ";"]
     )!
 }
+
+let BackendTestsBundle = Bundle(identifier: "Acphut.Werkstatt.BackendTests")!
