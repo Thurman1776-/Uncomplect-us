@@ -24,6 +24,7 @@ let package = Package(
             dependencies: [
                 "Quick",
                 "Nimble",
+                "Yams",
             ],
             path: "BackendTests"
         ),

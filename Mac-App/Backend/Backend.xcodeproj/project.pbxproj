@@ -13,6 +13,7 @@
 		61130044FABE7561B68DEED4 /* Quick.framework in Accio */ = {isa = PBXBuildFile; fileRef = 17A892613B802C921192B6A3 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		66E89AD4BD74A3D517558DDC /* CwlCatchException.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9630BDA30D9CD7865E05CE8D /* CwlCatchException.framework */; };
 		91FA8BC9456EA57494C961D0 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */; };
+		961818E76009BE3E450B26B4 /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA32A46831C17A7C83A1CF1 /* Yams.framework */; };
 		987E9CB59EFC3AEACD688A03 /* Nimble.framework in Accio */ = {isa = PBXBuildFile; fileRef = 28855F46A4EC65D5ECE0955E /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A8199C5123E6CA73000B89F6 /* SwiftDeps.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8199C5023E6CA73000B89F6 /* SwiftDeps.swift */; };
 		A831004223DC9E4400460A12 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A831003823DC9E4400460A12 /* Backend.framework */; };
@@ -38,6 +39,7 @@
 		A8F7626A23E6A5590014DEB9 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7626923E6A5590014DEB9 /* TestUtils.swift */; };
 		B33D522CFB40DE4CF75B827C /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073CD94B1BFD29B335961A59 /* Yams.framework */; };
 		B4781C80CFFF0A0C5893DF4E /* CwlPreconditionTesting.framework in Accio */ = {isa = PBXBuildFile; fileRef = CFEE7E84BA333690941FA0A0 /* CwlPreconditionTesting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F982DD1447C7D404E4881F9E /* Yams.framework in Accio */ = {isa = PBXBuildFile; fileRef = CDA32A46831C17A7C83A1CF1 /* Yams.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FAFD5D6D8AFB5A7A53C1C7D9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A892613B802C921192B6A3 /* Quick.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,7 @@
 				B4781C80CFFF0A0C5893DF4E /* CwlPreconditionTesting.framework in Accio */,
 				987E9CB59EFC3AEACD688A03 /* Nimble.framework in Accio */,
 				61130044FABE7561B68DEED4 /* Quick.framework in Accio */,
+				F982DD1447C7D404E4881F9E /* Yams.framework in Accio */,
 			);
 			name = Accio;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +101,7 @@
 		A8F12EF723DF6427001EB945 /* FindProjectOutputDirsSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindProjectOutputDirsSideEffects.swift; sourceTree = "<group>"; };
 		A8F7626623E6A3CA0014DEB9 /* YamlParserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamlParserSpec.swift; sourceTree = "<group>"; };
 		A8F7626923E6A5590014DEB9 /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
+		CDA32A46831C17A7C83A1CF1 /* Yams.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; lastKnownFileType = wrapper.framework; name = Yams.framework; path = Dependencies/macOS/Yams.framework; sourceTree = "<group>"; };
 		CFEE7E84BA333690941FA0A0 /* CwlPreconditionTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = CwlPreconditionTesting.framework; path = Dependencies/macOS/CwlPreconditionTesting.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +124,7 @@
 				66E89AD4BD74A3D517558DDC /* CwlCatchException.framework in Frameworks */,
 				27E97B35FB80DD98519DF008 /* CwlPreconditionTesting.framework in Frameworks */,
 				06E2FC25FC7EE2E889173070 /* Nimble.framework in Frameworks */,
+				961818E76009BE3E450B26B4 /* Yams.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +363,7 @@
 				CFEE7E84BA333690941FA0A0 /* CwlPreconditionTesting.framework */,
 				28855F46A4EC65D5ECE0955E /* Nimble.framework */,
 				17A892613B802C921192B6A3 /* Quick.framework */,
+				CDA32A46831C17A7C83A1CF1 /* Yams.framework */,
 			);
 			name = BackendTests;
 			sourceTree = "<group>";
