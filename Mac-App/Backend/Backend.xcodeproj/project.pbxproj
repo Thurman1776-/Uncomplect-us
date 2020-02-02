@@ -14,6 +14,7 @@
 		66E89AD4BD74A3D517558DDC /* CwlCatchException.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9630BDA30D9CD7865E05CE8D /* CwlCatchException.framework */; };
 		91FA8BC9456EA57494C961D0 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */; };
 		987E9CB59EFC3AEACD688A03 /* Nimble.framework in Accio */ = {isa = PBXBuildFile; fileRef = 28855F46A4EC65D5ECE0955E /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A8199C5123E6CA73000B89F6 /* SwiftDeps.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8199C5023E6CA73000B89F6 /* SwiftDeps.swift */; };
 		A831004223DC9E4400460A12 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A831003823DC9E4400460A12 /* Backend.framework */; };
 		A831004923DC9E4400460A12 /* Backend.h in Headers */ = {isa = PBXBuildFile; fileRef = A831003B23DC9E4400460A12 /* Backend.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A8CAE99A23DCABB500242ADF /* FindProjectOutputDirectories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99023DCAB9F00242ADF /* FindProjectOutputDirectories.swift */; };
@@ -65,11 +66,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		073CD94B1BFD29B335961A59 /* Yams.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; lastKnownFileType = wrapper.framework; name = Yams.framework; path = Dependencies/macOS/Yams.framework; sourceTree = "<group>"; };
+		073CD94B1BFD29B335961A59 /* Yams.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Yams.framework; path = Dependencies/macOS/Yams.framework; sourceTree = "<group>"; };
 		17A892613B802C921192B6A3 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Quick.framework; path = Dependencies/macOS/Quick.framework; sourceTree = "<group>"; };
 		28855F46A4EC65D5ECE0955E /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Nimble.framework; path = Dependencies/macOS/Nimble.framework; sourceTree = "<group>"; };
 		43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ReSwift.framework; path = Dependencies/macOS/ReSwift.framework; sourceTree = "<group>"; };
 		9630BDA30D9CD7865E05CE8D /* CwlCatchException.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = CwlCatchException.framework; path = Dependencies/macOS/CwlCatchException.framework; sourceTree = "<group>"; };
+		A8199C5023E6CA73000B89F6 /* SwiftDeps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDeps.swift; sourceTree = "<group>"; };
 		A831003823DC9E4400460A12 /* Backend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Backend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A831003B23DC9E4400460A12 /* Backend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Backend.h; sourceTree = "<group>"; };
 		A831003C23DC9E4400460A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,6 +129,14 @@
 				C5AABCE6DE5DDE2C8F025E7C /* BackendTests */,
 			);
 			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		A8199C4F23E6CA57000B89F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A8199C5023E6CA73000B89F6 /* SwiftDeps.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A831002E23DC9E4400460A12 = {
@@ -254,6 +264,7 @@
 		A8E7626F23DDBBA400BFAD48 /* BackendAPI */ = {
 			isa = PBXGroup;
 			children = (
+				A8199C4F23E6CA57000B89F6 /* Models */,
 				A8E7627023DDBBB700BFAD48 /* BackendAPI.swift */,
 				A8F12EF523DF63B1001EB945 /* Middleware */,
 				A8E7627223DDBC6C00BFAD48 /* Reducers */,
@@ -492,6 +503,7 @@
 				A8CAE99A23DCABB500242ADF /* FindProjectOutputDirectories.swift in Sources */,
 				A8CAE99B23DCABB900242ADF /* CLParser.swift in Sources */,
 				A8E7626B23DDB9F000BFAD48 /* AppState.swift in Sources */,
+				A8199C5123E6CA73000B89F6 /* SwiftDeps.swift in Sources */,
 				A8CAE99E23DCABC400242ADF /* Bash.swift in Sources */,
 				A8E7627423DDBC8000BFAD48 /* AppReducer.swift in Sources */,
 				A8E7627723DDBCE200BFAD48 /* DependencyPathsReducer.swift in Sources */,
