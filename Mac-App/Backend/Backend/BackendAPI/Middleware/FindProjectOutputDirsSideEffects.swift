@@ -15,6 +15,7 @@ func findProjectOutputDirsSideEffects() -> Middleware<AppState> {
 
                         if urls.isEmpty == false {
                             dispatchFuction(DependencyPathsAction.append(paths: urls))
+                            dispatchFuction(SwiftDepsAction.parseFrom(paths: urls))
                         } else {
                             dispatchFuction(DependencyPathsAction.failure(message: "No paths were found!"))
                         }
