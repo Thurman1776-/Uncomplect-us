@@ -10,7 +10,7 @@ func findProjectOutputDirsSideEffects() -> Middleware<AppState> {
 
                 switch action {
                 case let DependencyPathsAction.findUrls(for: project):
-                    DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async {
+                    DispatchQueue.global(qos: .userInitiated).async {
                         let urls = findProjectOutputDirectories(projectName: project)
 
                         if urls.isEmpty == false {
