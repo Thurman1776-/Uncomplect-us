@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8199C5823E70C97000B89F6 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8199C5723E70C97000B89F6 /* Backend.framework */; };
 		A86E10342365DAB800D3FF94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E10332365DAB800D3FF94 /* AppDelegate.swift */; };
 		A86E10362365DAB800D3FF94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E10352365DAB800D3FF94 /* ContentView.swift */; };
 		A86E10382365DAB800D3FF94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86E10372365DAB800D3FF94 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A8199C5723E70C97000B89F6 /* Backend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Backend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86E10302365DAB800D3FF94 /* Mac-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mac-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86E10332365DAB800D3FF94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A86E10352365DAB800D3FF94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8199C5823E70C97000B89F6 /* Backend.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +63,7 @@
 		A80EF04E236611FF00CD7500 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A8199C5723E70C97000B89F6 /* Backend.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
