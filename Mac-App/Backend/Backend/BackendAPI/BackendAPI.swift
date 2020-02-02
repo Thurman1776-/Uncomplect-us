@@ -4,7 +4,10 @@ public enum BackendAPI {
     private static let store: Store<AppState> = Store<AppState>(
         reducer: appReducer,
         state: AppState.initialState,
-        middleware: [findProjectOutputDirsSideEffects()]
+        middleware: [
+            findProjectOutputDirsSideEffects(),
+            parseSwiftDepsSideEffects(),
+        ]
     )
 
     public static var state: AppState { store.state }
