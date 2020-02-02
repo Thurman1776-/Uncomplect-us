@@ -111,7 +111,7 @@
 		A8F12EF723DF6427001EB945 /* FindProjectOutputDirsSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindProjectOutputDirsSideEffects.swift; sourceTree = "<group>"; };
 		A8F7626623E6A3CA0014DEB9 /* YamlParserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamlParserSpec.swift; sourceTree = "<group>"; };
 		A8F7626923E6A5590014DEB9 /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
-		CDA32A46831C17A7C83A1CF1 /* Yams.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; lastKnownFileType = wrapper.framework; name = Yams.framework; path = Dependencies/macOS/Yams.framework; sourceTree = "<group>"; };
+		CDA32A46831C17A7C83A1CF1 /* Yams.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Yams.framework; path = Dependencies/macOS/Yams.framework; sourceTree = "<group>"; };
 		CFEE7E84BA333690941FA0A0 /* CwlPreconditionTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = CwlPreconditionTesting.framework; path = Dependencies/macOS/CwlPreconditionTesting.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,12 +203,12 @@
 		A831004523DC9E4400460A12 /* BackendTests */ = {
 			isa = PBXGroup;
 			children = (
-				A8F7626823E6A53F0014DEB9 /* Shared */,
 				A8F12EF623DF63DF001EB945 /* Backend */,
 				A8CAE9A523DCABD000242ADF /* CommandLine */,
 				A8CAE9A123DCABD000242ADF /* FileSystem */,
 				A831004823DC9E4400460A12 /* Info.plist */,
 				A8CAE9A323DCABD000242ADF /* Parsers */,
+				A8F7626823E6A53F0014DEB9 /* Shared */,
 			);
 			path = BackendTests;
 			sourceTree = "<group>";
