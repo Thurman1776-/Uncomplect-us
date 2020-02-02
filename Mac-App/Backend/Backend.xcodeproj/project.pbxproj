@@ -17,6 +17,7 @@
 		A8199C5123E6CA73000B89F6 /* SwiftDeps.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8199C5023E6CA73000B89F6 /* SwiftDeps.swift */; };
 		A831004223DC9E4400460A12 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A831003823DC9E4400460A12 /* Backend.framework */; };
 		A831004923DC9E4400460A12 /* Backend.h in Headers */ = {isa = PBXBuildFile; fileRef = A831003B23DC9E4400460A12 /* Backend.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A85514EF23E5E6AA00D3E7F6 /* YamlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85514EE23E5E6AA00D3E7F6 /* YamlParser.swift */; };
 		A8CAE99A23DCABB500242ADF /* FindProjectOutputDirectories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99023DCAB9F00242ADF /* FindProjectOutputDirectories.swift */; };
 		A8CAE99B23DCABB900242ADF /* CLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99223DCABA000242ADF /* CLParser.swift */; };
 		A8CAE99C23DCABBE00242ADF /* Bash+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99423DCABA000242ADF /* Bash+Constants.swift */; };
@@ -33,6 +34,7 @@
 		A8E7627723DDBCE200BFAD48 /* DependencyPathsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7627623DDBCE200BFAD48 /* DependencyPathsReducer.swift */; };
 		A8E7627B23DDE79000BFAD48 /* DependencyPathsReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7627A23DDE79000BFAD48 /* DependencyPathsReducerSpec.swift */; };
 		A8F12EF823DF6427001EB945 /* FindProjectOutputDirsSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F12EF723DF6427001EB945 /* FindProjectOutputDirsSideEffects.swift */; };
+		A8F7626723E6A3CA0014DEB9 /* YamlParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7626623E6A3CA0014DEB9 /* YamlParserSpec.swift */; };
 		A8F7626A23E6A5590014DEB9 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7626923E6A5590014DEB9 /* TestUtils.swift */; };
 		B33D522CFB40DE4CF75B827C /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073CD94B1BFD29B335961A59 /* Yams.framework */; };
 		B4781C80CFFF0A0C5893DF4E /* CwlPreconditionTesting.framework in Accio */ = {isa = PBXBuildFile; fileRef = CFEE7E84BA333690941FA0A0 /* CwlPreconditionTesting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -77,6 +79,7 @@
 		A831003C23DC9E4400460A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A831004123DC9E4400460A12 /* BackendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A831004823DC9E4400460A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A85514EE23E5E6AA00D3E7F6 /* YamlParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamlParser.swift; sourceTree = "<group>"; };
 		A8CAE99023DCAB9F00242ADF /* FindProjectOutputDirectories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindProjectOutputDirectories.swift; sourceTree = "<group>"; };
 		A8CAE99223DCABA000242ADF /* CLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLParser.swift; sourceTree = "<group>"; };
 		A8CAE99423DCABA000242ADF /* Bash+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bash+Constants.swift"; sourceTree = "<group>"; };
@@ -93,6 +96,7 @@
 		A8E7627623DDBCE200BFAD48 /* DependencyPathsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyPathsReducer.swift; sourceTree = "<group>"; };
 		A8E7627A23DDE79000BFAD48 /* DependencyPathsReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyPathsReducerSpec.swift; sourceTree = "<group>"; };
 		A8F12EF723DF6427001EB945 /* FindProjectOutputDirsSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindProjectOutputDirsSideEffects.swift; sourceTree = "<group>"; };
+		A8F7626623E6A3CA0014DEB9 /* YamlParserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamlParserSpec.swift; sourceTree = "<group>"; };
 		A8F7626923E6A5590014DEB9 /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		CFEE7E84BA333690941FA0A0 /* CwlPreconditionTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = CwlPreconditionTesting.framework; path = Dependencies/macOS/CwlPreconditionTesting.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,6 +189,14 @@
 			path = BackendTests;
 			sourceTree = "<group>";
 		};
+		A85514ED23E5E68000D3E7F6 /* Yaml */ = {
+			isa = PBXGroup;
+			children = (
+				A85514EE23E5E6AA00D3E7F6 /* YamlParser.swift */,
+			);
+			path = Yaml;
+			sourceTree = "<group>";
+		};
 		A8CAE99123DCAB9F00242ADF /* FileSystem */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +208,7 @@
 		A8CAE99323DCABA000242ADF /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
+				A85514ED23E5E68000D3E7F6 /* Yaml */,
 				A8CAE99223DCABA000242ADF /* CLParser.swift */,
 			);
 			path = Parsers;
@@ -231,6 +244,7 @@
 		A8CAE9A323DCABD000242ADF /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
+				A8F7626523E6A3B70014DEB9 /* Yaml */,
 				A8CAE9A223DCABD000242ADF /* CLIParserSpec.swift */,
 			);
 			path = Parsers;
@@ -319,6 +333,14 @@
 				A8E7627823DDE77300BFAD48 /* Reducers */,
 			);
 			path = Backend;
+			sourceTree = "<group>";
+		};
+		A8F7626523E6A3B70014DEB9 /* Yaml */ = {
+			isa = PBXGroup;
+			children = (
+				A8F7626623E6A3CA0014DEB9 /* YamlParserSpec.swift */,
+			);
+			path = Yaml;
 			sourceTree = "<group>";
 		};
 		A8F7626823E6A53F0014DEB9 /* Shared */ = {
@@ -508,6 +530,7 @@
 				A8E7627423DDBC8000BFAD48 /* AppReducer.swift in Sources */,
 				A8E7627723DDBCE200BFAD48 /* DependencyPathsReducer.swift in Sources */,
 				A8CAE99C23DCABBE00242ADF /* Bash+Constants.swift in Sources */,
+				A85514EF23E5E6AA00D3E7F6 /* YamlParser.swift in Sources */,
 				A8E7626E23DDBA6B00BFAD48 /* DependencyPathsState.swift in Sources */,
 				A8CAE99F23DCABC700242ADF /* Bash+Error.swift in Sources */,
 				A8F12EF823DF6427001EB945 /* FindProjectOutputDirsSideEffects.swift in Sources */,
@@ -524,6 +547,7 @@
 				A8F7626A23E6A5590014DEB9 /* TestUtils.swift in Sources */,
 				A8CAE9A823DCABE100242ADF /* BashSpec.swift in Sources */,
 				A8CAE9A723DCABDD00242ADF /* CLIParserSpec.swift in Sources */,
+				A8F7626723E6A3CA0014DEB9 /* YamlParserSpec.swift in Sources */,
 				A8E7627B23DDE79000BFAD48 /* DependencyPathsReducerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

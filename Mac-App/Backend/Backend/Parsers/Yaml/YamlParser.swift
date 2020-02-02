@@ -1,0 +1,22 @@
+import Foundation
+import Yams
+
+func parseSwiftDeps(from urls: [URL]) -> [SwiftDeps] {
+    createYamlNodes(from: urls.compactMap { contentsOfFile(at: $0) }).compactMap(SwiftDeps.init)
+}
+
+private func createYamlNodes(from collection: [String]) -> [Yams.Node] {
+    collection.compactMap { (try? Yams.compose(yaml: $0)) }
+}
+
+private func contentsOfFile(using fileManager: FileManager = .default, at file: URL) -> String? {
+    guard isASwiftDepsFile(file) == true,
+        let data = fileManager.contents(atPath: file.path),
+        let contentsOfFile = String(data: data, encoding: .utf8) else {
+        return nil
+    }
+
+    return contentsOfFile
+}
+
+private func isASwiftDepsFile(_ path: URL) -> Bool { path.pathExtension == "swiftdeps" }
