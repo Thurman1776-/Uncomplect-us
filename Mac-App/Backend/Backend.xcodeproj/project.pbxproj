@@ -21,6 +21,7 @@
 		A831004223DC9E4400460A12 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A831003823DC9E4400460A12 /* Backend.framework */; };
 		A831004923DC9E4400460A12 /* Backend.h in Headers */ = {isa = PBXBuildFile; fileRef = A831003B23DC9E4400460A12 /* Backend.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A85514EF23E5E6AA00D3E7F6 /* YamlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85514EE23E5E6AA00D3E7F6 /* YamlParser.swift */; };
+		A85514F123E6002500D3E7F6 /* SwiftDepsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85514F023E6002500D3E7F6 /* SwiftDepsState.swift */; };
 		A85514F423E6015E00D3E7F6 /* SwiftDepsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85514F323E6015E00D3E7F6 /* SwiftDepsReducer.swift */; };
 		A8CAE99A23DCABB500242ADF /* FindProjectOutputDirectories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99023DCAB9F00242ADF /* FindProjectOutputDirectories.swift */; };
 		A8CAE99B23DCABB900242ADF /* CLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99223DCABA000242ADF /* CLParser.swift */; };
@@ -88,6 +89,7 @@
 		A831004123DC9E4400460A12 /* BackendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A831004823DC9E4400460A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A85514EE23E5E6AA00D3E7F6 /* YamlParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamlParser.swift; sourceTree = "<group>"; };
+		A85514F023E6002500D3E7F6 /* SwiftDepsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDepsState.swift; sourceTree = "<group>"; };
 		A85514F323E6015E00D3E7F6 /* SwiftDepsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDepsReducer.swift; sourceTree = "<group>"; };
 		A8CAE99023DCAB9F00242ADF /* FindProjectOutputDirectories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindProjectOutputDirectories.swift; sourceTree = "<group>"; };
 		A8CAE99223DCABA000242ADF /* CLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLParser.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				A8E7626D23DDBA6B00BFAD48 /* DependencyPathsState.swift */,
+				A85514F023E6002500D3E7F6 /* SwiftDepsState.swift */,
 			);
 			path = DependencyPathsState;
 			sourceTree = "<group>";
@@ -569,6 +572,7 @@
 				A8F12EF823DF6427001EB945 /* FindProjectOutputDirsSideEffects.swift in Sources */,
 				A8CAE99D23DCABC100242ADF /* Commandable.swift in Sources */,
 				A8E7627123DDBBB700BFAD48 /* BackendAPI.swift in Sources */,
+				A85514F123E6002500D3E7F6 /* SwiftDepsState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
