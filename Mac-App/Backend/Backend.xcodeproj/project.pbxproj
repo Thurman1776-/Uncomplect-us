@@ -16,10 +16,12 @@
 		961818E76009BE3E450B26B4 /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA32A46831C17A7C83A1CF1 /* Yams.framework */; };
 		987E9CB59EFC3AEACD688A03 /* Nimble.framework in Accio */ = {isa = PBXBuildFile; fileRef = 28855F46A4EC65D5ECE0955E /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A8199C5123E6CA73000B89F6 /* SwiftDeps.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8199C5023E6CA73000B89F6 /* SwiftDeps.swift */; };
+		A8199C5423E6F3AD000B89F6 /* SwiftDepsReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8199C5323E6F3AD000B89F6 /* SwiftDepsReducerSpec.swift */; };
 		A8199C5623E700A5000B89F6 /* AppDelegateSwiftDepsFixture.swiftDeps in Resources */ = {isa = PBXBuildFile; fileRef = A8199C5523E700A5000B89F6 /* AppDelegateSwiftDepsFixture.swiftDeps */; };
 		A831004223DC9E4400460A12 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A831003823DC9E4400460A12 /* Backend.framework */; };
 		A831004923DC9E4400460A12 /* Backend.h in Headers */ = {isa = PBXBuildFile; fileRef = A831003B23DC9E4400460A12 /* Backend.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A85514EF23E5E6AA00D3E7F6 /* YamlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85514EE23E5E6AA00D3E7F6 /* YamlParser.swift */; };
+		A85514F423E6015E00D3E7F6 /* SwiftDepsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85514F323E6015E00D3E7F6 /* SwiftDepsReducer.swift */; };
 		A8CAE99A23DCABB500242ADF /* FindProjectOutputDirectories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99023DCAB9F00242ADF /* FindProjectOutputDirectories.swift */; };
 		A8CAE99B23DCABB900242ADF /* CLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99223DCABA000242ADF /* CLParser.swift */; };
 		A8CAE99C23DCABBE00242ADF /* Bash+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99423DCABA000242ADF /* Bash+Constants.swift */; };
@@ -78,6 +80,7 @@
 		43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ReSwift.framework; path = Dependencies/macOS/ReSwift.framework; sourceTree = "<group>"; };
 		9630BDA30D9CD7865E05CE8D /* CwlCatchException.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = CwlCatchException.framework; path = Dependencies/macOS/CwlCatchException.framework; sourceTree = "<group>"; };
 		A8199C5023E6CA73000B89F6 /* SwiftDeps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDeps.swift; sourceTree = "<group>"; };
+		A8199C5323E6F3AD000B89F6 /* SwiftDepsReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDepsReducerSpec.swift; sourceTree = "<group>"; };
 		A8199C5523E700A5000B89F6 /* AppDelegateSwiftDepsFixture.swiftDeps */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppDelegateSwiftDepsFixture.swiftDeps; sourceTree = "<group>"; };
 		A831003823DC9E4400460A12 /* Backend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Backend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A831003B23DC9E4400460A12 /* Backend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Backend.h; sourceTree = "<group>"; };
@@ -85,6 +88,7 @@
 		A831004123DC9E4400460A12 /* BackendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A831004823DC9E4400460A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A85514EE23E5E6AA00D3E7F6 /* YamlParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamlParser.swift; sourceTree = "<group>"; };
+		A85514F323E6015E00D3E7F6 /* SwiftDepsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDepsReducer.swift; sourceTree = "<group>"; };
 		A8CAE99023DCAB9F00242ADF /* FindProjectOutputDirectories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindProjectOutputDirectories.swift; sourceTree = "<group>"; };
 		A8CAE99223DCABA000242ADF /* CLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLParser.swift; sourceTree = "<group>"; };
 		A8CAE99423DCABA000242ADF /* Bash+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bash+Constants.swift"; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 		A8199C5223E6F398000B89F6 /* SwiftDepsReducerSpec */ = {
 			isa = PBXGroup;
 			children = (
+				A8199C5323E6F3AD000B89F6 /* SwiftDepsReducerSpec.swift */,
 				A8199C5523E700A5000B89F6 /* AppDelegateSwiftDepsFixture.swiftDeps */,
 			);
 			path = SwiftDepsReducerSpec;
@@ -210,6 +215,14 @@
 				A85514EE23E5E6AA00D3E7F6 /* YamlParser.swift */,
 			);
 			path = Yaml;
+			sourceTree = "<group>";
+		};
+		A85514F223E6013F00D3E7F6 /* SwiftDepsReducer */ = {
+			isa = PBXGroup;
+			children = (
+				A85514F323E6015E00D3E7F6 /* SwiftDepsReducer.swift */,
+			);
+			path = SwiftDepsReducer;
 			sourceTree = "<group>";
 		};
 		A8CAE99123DCAB9F00242ADF /* FileSystem */ = {
@@ -304,6 +317,7 @@
 		A8E7627223DDBC6C00BFAD48 /* Reducers */ = {
 			isa = PBXGroup;
 			children = (
+				A85514F223E6013F00D3E7F6 /* SwiftDepsReducer */,
 				A8E7627523DDBCC800BFAD48 /* DependencyPathsReducer */,
 				A8E7627323DDBC8000BFAD48 /* AppReducer.swift */,
 			);
@@ -321,6 +335,7 @@
 		A8E7627823DDE77300BFAD48 /* Reducers */ = {
 			isa = PBXGroup;
 			children = (
+				A8199C5223E6F398000B89F6 /* SwiftDepsReducerSpec */,
 				A8E7627923DDE77E00BFAD48 /* DependencyPathsReducerSpec */,
 			);
 			path = Reducers;
@@ -550,6 +565,7 @@
 				A85514EF23E5E6AA00D3E7F6 /* YamlParser.swift in Sources */,
 				A8E7626E23DDBA6B00BFAD48 /* DependencyPathsState.swift in Sources */,
 				A8CAE99F23DCABC700242ADF /* Bash+Error.swift in Sources */,
+				A85514F423E6015E00D3E7F6 /* SwiftDepsReducer.swift in Sources */,
 				A8F12EF823DF6427001EB945 /* FindProjectOutputDirsSideEffects.swift in Sources */,
 				A8CAE99D23DCABC100242ADF /* Commandable.swift in Sources */,
 				A8E7627123DDBBB700BFAD48 /* BackendAPI.swift in Sources */,
@@ -561,6 +577,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8CAE9A623DCABD800242ADF /* FindProjectOutputDirectorySpec.swift in Sources */,
+				A8199C5423E6F3AD000B89F6 /* SwiftDepsReducerSpec.swift in Sources */,
 				A8F7626A23E6A5590014DEB9 /* TestUtils.swift in Sources */,
 				A8CAE9A823DCABE100242ADF /* BashSpec.swift in Sources */,
 				A8CAE9A723DCABDD00242ADF /* CLIParserSpec.swift in Sources */,

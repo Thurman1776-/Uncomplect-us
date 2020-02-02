@@ -10,7 +10,6 @@ final class YamlParserSpec: QuickSpec {
                     let output = findProjectOutputDirectories(projectName: "Mac-App")
                     let result = parseSwiftDeps(from: output)
 
-                    print(result)
                     expect(result).notTo(beEmpty())
                 }
             }
