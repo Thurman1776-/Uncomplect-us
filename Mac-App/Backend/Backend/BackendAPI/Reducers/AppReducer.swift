@@ -4,8 +4,9 @@ import ReSwift
 /// `AppState` always starts up with an initial value, so it's fine to unwrap
 
 func appReducer(action: Action, state: AppState!) -> AppState {
-    return AppState(
+    AppState(
         dependencyPathsState: dependencyPathsReducer(action: action, state: state.dependencyPathsState),
-        swiftDepsState: swiftDepsReducer(action: action, state: state.swiftDepsState)
+        swiftDepsState: swiftDepsReducer(action: action, state: state.swiftDepsState),
+        dependencyGraphState: dependencyGraphReducer(action: action, state: state.dependencyGraphState)
     )
 }

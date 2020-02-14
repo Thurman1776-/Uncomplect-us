@@ -3,6 +3,7 @@ import ReSwift
 public struct AppState: StateType {
     public let dependencyPathsState: DependencyPathsState
     public let swiftDepsState: SwiftDepsState
+    public let dependencyGraphState: DependencyGraphState
 }
 
 // MARK: - Initial state
@@ -10,6 +11,7 @@ public struct AppState: StateType {
 extension AppState {
     static let initialState = AppState(
         dependencyPathsState: DependencyPathsState.initialState,
-        swiftDepsState: SwiftDepsState.initialState
+        swiftDepsState: SwiftDepsState.initialState,
+        dependencyGraphState: DependencyGraphState.initialState
     )
 }
