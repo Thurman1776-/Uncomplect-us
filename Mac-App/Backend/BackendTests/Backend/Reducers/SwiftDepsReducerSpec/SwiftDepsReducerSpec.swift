@@ -86,7 +86,7 @@ final class SwiftDepsReducerSpec: QuickSpec {
     }
 }
 
-private extension SwiftDeps {
+extension SwiftDeps {
     static let AppDelegateDeps_Fixture = SwiftDeps(node: loadYamlFixture())!
 
     private static func loadYamlFixture() -> Yams.Node {
