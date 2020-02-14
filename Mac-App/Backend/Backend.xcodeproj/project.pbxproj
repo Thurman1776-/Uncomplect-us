@@ -356,10 +356,10 @@
 		A8E7627223DDBC6C00BFAD48 /* Reducers */ = {
 			isa = PBXGroup;
 			children = (
-				A8E1019C23EF072400C550E2 /* DependencyGraphReducer */,
-				A85514F223E6013F00D3E7F6 /* SwiftDepsReducer */,
-				A8E7627523DDBCC800BFAD48 /* DependencyPathsReducer */,
 				A8E7627323DDBC8000BFAD48 /* AppReducer.swift */,
+				A8E1019C23EF072400C550E2 /* DependencyGraphReducer */,
+				A8E7627523DDBCC800BFAD48 /* DependencyPathsReducer */,
+				A85514F223E6013F00D3E7F6 /* SwiftDepsReducer */,
 			);
 			path = Reducers;
 			sourceTree = "<group>";
@@ -376,8 +376,8 @@
 			isa = PBXGroup;
 			children = (
 				A8D58A8E23F6753100C2AB74 /* DependencyGraphReducerSpec */,
-				A8199C5223E6F398000B89F6 /* SwiftDepsReducerSpec */,
 				A8E7627923DDE77E00BFAD48 /* DependencyPathsReducerSpec */,
+				A8199C5223E6F398000B89F6 /* SwiftDepsReducerSpec */,
 			);
 			path = Reducers;
 			sourceTree = "<group>";
