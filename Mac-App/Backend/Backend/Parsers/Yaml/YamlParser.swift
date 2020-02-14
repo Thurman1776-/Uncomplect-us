@@ -1,7 +1,7 @@
 import Foundation
 import Yams
 
-func parseSwiftDeps(from urls: [URL]) -> [SwiftDeps] {
+func parseYamlUrls(from urls: [URL]) -> [SwiftDeps] {
     createYamlNodes(from: urls.compactMap { contentsOfFile(at: $0) }).compactMap(SwiftDeps.init)
 }
 

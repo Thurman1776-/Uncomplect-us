@@ -8,7 +8,7 @@ final class YamlParserSpec: QuickSpec {
             context("given it takes a valid input") {
                 it("returns correctly parsed Yaml objects") {
                     let output = findProjectOutputDirectories(projectName: "Mac-App")
-                    let result = parseSwiftDeps(from: output)
+                    let result = parseYamlUrls(from: output)
 
                     expect(result).notTo(beEmpty())
                 }
@@ -16,7 +16,7 @@ final class YamlParserSpec: QuickSpec {
 
             context("given it takes an invalid input") {
                 it("returns an empty array") {
-                    let result = parseSwiftDeps(from: [])
+                    let result = parseYamlUrls(from: [])
 
                     expect(result).to(beEmpty())
                 }

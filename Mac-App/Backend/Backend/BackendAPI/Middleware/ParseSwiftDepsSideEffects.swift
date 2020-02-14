@@ -11,7 +11,7 @@ func parseSwiftDepsSideEffects() -> Middleware<AppState> {
                 switch action {
                 case let SwiftDepsAction.parseFrom(paths: url):
                     DispatchQueue.global(qos: .userInitiated).async {
-                        let parsedUrls = parseSwiftDeps(from: url)
+                        let parsedUrls = parseYamlUrls(from: url)
                         dispatchFuction(SwiftDepsAction.set(parsedUrls))
                     }
                 default: break
