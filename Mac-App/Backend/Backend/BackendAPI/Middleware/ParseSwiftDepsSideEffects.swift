@@ -14,6 +14,10 @@ func parseSwiftDepsSideEffects() -> Middleware<AppState> {
                         let parsedUrls = parseYamlUrls(from: url)
                         dispatchFuction(SwiftDepsAction.set(parsedUrls))
                     }
+                case let SwiftDepsAction.set(swiftDeps):
+                    dispatchAsyncOnGlobal {
+                        dispatchFuction(DependencyGraphAction.mapFrom(deps: swiftDeps))
+                    }
                 default: break
                 }
             }
