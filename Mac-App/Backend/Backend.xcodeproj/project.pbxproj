@@ -25,6 +25,7 @@
 		A85514F423E6015E00D3E7F6 /* SwiftDepsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85514F323E6015E00D3E7F6 /* SwiftDepsReducer.swift */; };
 		A85514F623E6030100D3E7F6 /* ParseSwiftDepsSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85514F523E6030100D3E7F6 /* ParseSwiftDepsSideEffects.swift */; };
 		A86348C923F831820053C03D /* SwiftPrimitives.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86348C823F831820053C03D /* SwiftPrimitives.swift */; };
+		A89E0BE223F87DAC0009154E /* DispatchQueue+Shorthands.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89E0BE123F87DAC0009154E /* DispatchQueue+Shorthands.swift */; };
 		A8CAE99A23DCABB500242ADF /* FindProjectOutputDirectories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99023DCAB9F00242ADF /* FindProjectOutputDirectories.swift */; };
 		A8CAE99B23DCABB900242ADF /* CLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99223DCABA000242ADF /* CLParser.swift */; };
 		A8CAE99C23DCABBE00242ADF /* Bash+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99423DCABA000242ADF /* Bash+Constants.swift */; };
@@ -101,6 +102,7 @@
 		A85514F323E6015E00D3E7F6 /* SwiftDepsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDepsReducer.swift; sourceTree = "<group>"; };
 		A85514F523E6030100D3E7F6 /* ParseSwiftDepsSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseSwiftDepsSideEffects.swift; sourceTree = "<group>"; };
 		A86348C823F831820053C03D /* SwiftPrimitives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPrimitives.swift; sourceTree = "<group>"; };
+		A89E0BE123F87DAC0009154E /* DispatchQueue+Shorthands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Shorthands.swift"; sourceTree = "<group>"; };
 		A8CAE99023DCAB9F00242ADF /* FindProjectOutputDirectories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindProjectOutputDirectories.swift; sourceTree = "<group>"; };
 		A8CAE99223DCABA000242ADF /* CLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLParser.swift; sourceTree = "<group>"; };
 		A8CAE99423DCABA000242ADF /* Bash+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bash+Constants.swift"; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				A8CAE99123DCAB9F00242ADF /* FileSystem */,
 				A831003C23DC9E4400460A12 /* Info.plist */,
 				A8CAE99323DCABA000242ADF /* Parsers */,
+				A89E0BE023F87D850009154E /* Shared */,
 			);
 			path = Backend;
 			sourceTree = "<group>";
@@ -242,6 +245,14 @@
 				A85514F323E6015E00D3E7F6 /* SwiftDepsReducer.swift */,
 			);
 			path = SwiftDepsReducer;
+			sourceTree = "<group>";
+		};
+		A89E0BE023F87D850009154E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A89E0BE123F87DAC0009154E /* DispatchQueue+Shorthands.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		A8CAE99123DCAB9F00242ADF /* FileSystem */ = {
@@ -627,6 +638,7 @@
 				A8E7626B23DDB9F000BFAD48 /* AppState.swift in Sources */,
 				A8D58A9323F67F8900C2AB74 /* SwiftDepsParser.swift in Sources */,
 				A85514F623E6030100D3E7F6 /* ParseSwiftDepsSideEffects.swift in Sources */,
+				A89E0BE223F87DAC0009154E /* DispatchQueue+Shorthands.swift in Sources */,
 				A8199C5123E6CA73000B89F6 /* SwiftDeps.swift in Sources */,
 				A8CAE99E23DCABC400242ADF /* Bash.swift in Sources */,
 				A8E7627423DDBC8000BFAD48 /* AppReducer.swift in Sources */,
