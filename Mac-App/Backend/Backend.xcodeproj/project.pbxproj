@@ -34,6 +34,8 @@
 		A8CAE9A723DCABDD00242ADF /* CLIParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE9A223DCABD000242ADF /* CLIParserSpec.swift */; };
 		A8CAE9A823DCABE100242ADF /* BashSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE9A423DCABD000242ADF /* BashSpec.swift */; };
 		A8D58A9023F6754000C2AB74 /* DependencyGraphReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D58A8F23F6754000C2AB74 /* DependencyGraphReducerSpec.swift */; };
+		A8D58A9323F67F8900C2AB74 /* SwiftDepsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D58A9223F67F8900C2AB74 /* SwiftDepsParser.swift */; };
+		A8D58A9623F828F100C2AB74 /* SwiftDepsParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D58A9523F828F100C2AB74 /* SwiftDepsParserSpec.swift */; };
 		A8E1019923EF055600C550E2 /* DependencyGraphState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E1019823EF055600C550E2 /* DependencyGraphState.swift */; };
 		A8E1019B23EF05E600C550E2 /* DependencyTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E1019A23EF05E600C550E2 /* DependencyTree.swift */; };
 		A8E1019E23EF074100C550E2 /* DependencyGraphReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E1019D23EF074100C550E2 /* DependencyGraphReducer.swift */; };
@@ -107,6 +109,8 @@
 		A8CAE9A223DCABD000242ADF /* CLIParserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLIParserSpec.swift; sourceTree = "<group>"; };
 		A8CAE9A423DCABD000242ADF /* BashSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BashSpec.swift; sourceTree = "<group>"; };
 		A8D58A8F23F6754000C2AB74 /* DependencyGraphReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyGraphReducerSpec.swift; sourceTree = "<group>"; };
+		A8D58A9223F67F8900C2AB74 /* SwiftDepsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDepsParser.swift; sourceTree = "<group>"; };
+		A8D58A9523F828F100C2AB74 /* SwiftDepsParserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDepsParserSpec.swift; sourceTree = "<group>"; };
 		A8E1019823EF055600C550E2 /* DependencyGraphState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyGraphState.swift; sourceTree = "<group>"; };
 		A8E1019A23EF05E600C550E2 /* DependencyTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyTree.swift; sourceTree = "<group>"; };
 		A8E1019D23EF074100C550E2 /* DependencyGraphReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyGraphReducer.swift; sourceTree = "<group>"; };
@@ -249,6 +253,7 @@
 		A8CAE99323DCABA000242ADF /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
+				A8D58A9123F67F7200C2AB74 /* SwiftDepsParser */,
 				A85514ED23E5E68000D3E7F6 /* Yaml */,
 				A8CAE99223DCABA000242ADF /* CLParser.swift */,
 			);
@@ -285,6 +290,7 @@
 		A8CAE9A323DCABD000242ADF /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
+				A8D58A9423F828D300C2AB74 /* SwiftDeps */,
 				A8F7626523E6A3B70014DEB9 /* Yaml */,
 				A8CAE9A223DCABD000242ADF /* CLIParserSpec.swift */,
 			);
@@ -305,6 +311,22 @@
 				A8D58A8F23F6754000C2AB74 /* DependencyGraphReducerSpec.swift */,
 			);
 			path = DependencyGraphReducerSpec;
+			sourceTree = "<group>";
+		};
+		A8D58A9123F67F7200C2AB74 /* SwiftDepsParser */ = {
+			isa = PBXGroup;
+			children = (
+				A8D58A9223F67F8900C2AB74 /* SwiftDepsParser.swift */,
+			);
+			path = SwiftDepsParser;
+			sourceTree = "<group>";
+		};
+		A8D58A9423F828D300C2AB74 /* SwiftDeps */ = {
+			isa = PBXGroup;
+			children = (
+				A8D58A9523F828F100C2AB74 /* SwiftDepsParserSpec.swift */,
+			);
+			path = SwiftDeps;
 			sourceTree = "<group>";
 		};
 		A8E1019723EF051F00C550E2 /* DependencyGraphState */ = {
@@ -600,6 +622,7 @@
 				A8CAE99B23DCABB900242ADF /* CLParser.swift in Sources */,
 				A8E1019E23EF074100C550E2 /* DependencyGraphReducer.swift in Sources */,
 				A8E7626B23DDB9F000BFAD48 /* AppState.swift in Sources */,
+				A8D58A9323F67F8900C2AB74 /* SwiftDepsParser.swift in Sources */,
 				A85514F623E6030100D3E7F6 /* ParseSwiftDepsSideEffects.swift in Sources */,
 				A8199C5123E6CA73000B89F6 /* SwiftDeps.swift in Sources */,
 				A8CAE99E23DCABC400242ADF /* Bash.swift in Sources */,
@@ -623,6 +646,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8D58A9623F828F100C2AB74 /* SwiftDepsParserSpec.swift in Sources */,
 				A8CAE9A623DCABD800242ADF /* FindProjectOutputDirectorySpec.swift in Sources */,
 				A8199C5423E6F3AD000B89F6 /* SwiftDepsReducerSpec.swift in Sources */,
 				A8D58A9023F6754000C2AB74 /* DependencyGraphReducerSpec.swift in Sources */,
