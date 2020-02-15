@@ -13,6 +13,8 @@
 		A86E10382365DAB800D3FF94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86E10372365DAB800D3FF94 /* Assets.xcassets */; };
 		A86E103B2365DAB800D3FF94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86E103A2365DAB800D3FF94 /* Preview Assets.xcassets */; };
 		A86E103E2365DAB900D3FF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86E103C2365DAB900D3FF94 /* Main.storyboard */; };
+		A89E0BE423F883AA0009154E /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89E0BE323F883AA0009154E /* ReSwift.framework */; };
+		A89E0BE523F883AA0009154E /* ReSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A89E0BE323F883AA0009154E /* ReSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A8CAE9AA23DCAE7E00242ADF /* Mac-AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE9A923DCAE7E00242ADF /* Mac-AppTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +28,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A89E0BE623F883AA0009154E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A89E0BE523F883AA0009154E /* ReSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A8199C5723E70C97000B89F6 /* Backend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Backend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86E10302365DAB800D3FF94 /* Mac-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mac-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +54,7 @@
 		A86E10402365DAB900D3FF94 /* Mac_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mac_App.entitlements; sourceTree = "<group>"; };
 		A86E10452365DAB900D3FF94 /* Mac-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mac-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86E104B2365DAB900D3FF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A89E0BE323F883AA0009154E /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Backend/Dependencies/macOS/ReSwift.framework; sourceTree = "<group>"; };
 		A8CAE9A923DCAE7E00242ADF /* Mac-AppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Mac-AppTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8199C5823E70C97000B89F6 /* Backend.framework in Frameworks */,
+				A89E0BE423F883AA0009154E /* ReSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +81,7 @@
 		A80EF04E236611FF00CD7500 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A89E0BE323F883AA0009154E /* ReSwift.framework */,
 				A8199C5723E70C97000B89F6 /* Backend.framework */,
 			);
 			name = Frameworks;
@@ -128,6 +147,7 @@
 				A86E102C2365DAB800D3FF94 /* Sources */,
 				A86E102D2365DAB800D3FF94 /* Frameworks */,
 				A86E102E2365DAB800D3FF94 /* Resources */,
+				A89E0BE623F883AA0009154E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -399,7 +419,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Mac-App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Backend/Dependencies/macOS",
+				);
 				INFOPLIST_FILE = "Mac-App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -421,7 +444,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Mac-App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Backend/Dependencies/macOS",
+				);
 				INFOPLIST_FILE = "Mac-App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
