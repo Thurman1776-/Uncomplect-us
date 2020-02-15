@@ -13,7 +13,7 @@ func parseSwiftDeps(_ swiftDeps: [SwiftDeps]) -> [DependencyTree] {
                     .filter { $0 != name }
                     .filter { systemSymbols.contains($0) == false }
                     .filter { $0.contains("NS") == false }
-                    .map { DependencyTree.Dependency(name: $0) }
+                    .map(DependencyTree.Dependency.init)
 
                 result.append(DependencyTree(owner: name, dependencies: deps))
             }
