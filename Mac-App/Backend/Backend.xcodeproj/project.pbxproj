@@ -255,9 +255,9 @@
 		A8CAE99323DCABA000242ADF /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
+				A8CAE99223DCABA000242ADF /* CLParser.swift */,
 				A8D58A9123F67F7200C2AB74 /* SwiftDepsParser */,
 				A85514ED23E5E68000D3E7F6 /* Yaml */,
-				A8CAE99223DCABA000242ADF /* CLParser.swift */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -292,9 +292,9 @@
 		A8CAE9A323DCABD000242ADF /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
+				A8CAE9A223DCABD000242ADF /* CLIParserSpec.swift */,
 				A8D58A9423F828D300C2AB74 /* SwiftDeps */,
 				A8F7626523E6A3B70014DEB9 /* Yaml */,
-				A8CAE9A223DCABD000242ADF /* CLIParserSpec.swift */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
