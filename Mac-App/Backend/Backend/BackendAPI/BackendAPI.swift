@@ -7,6 +7,7 @@ public enum BackendAPI {
         middleware: [
             findProjectOutputDirsSideEffects(),
             parseSwiftDepsSideEffects(),
+            dependencyGraphSideEffects(),
         ]
     )
 
