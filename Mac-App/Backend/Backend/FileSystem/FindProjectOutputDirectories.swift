@@ -1,6 +1,7 @@
 import Foundation
 
 private let _Self = "Mac-App"
+let swiftDepsExtension = "swiftdeps"
 
 /// Performs a shallow search of the specified project's directory and returns URLs for the contained items (.swiftdeps)
 /// - Parameter derivedDataPaths: Location for Xcode derived data output. Use $HOME instead of Tilde Expansion [~]. Default value to default Xcode settings
@@ -41,7 +42,10 @@ public func findProjectOutputDirectories(
 
         var paths: [URL] = []
         for path in filePaths() {
-            if let urls = contentsOfDirectory(at: path) { urls.forEach { paths.append($0) } }
+            if let urls = contentsOfDirectory(at: path) {
+                urls.filter { $0.pathExtension == swiftDepsExtension }
+                    .forEach { paths.append($0) }
+            }
         }
 
         return paths
