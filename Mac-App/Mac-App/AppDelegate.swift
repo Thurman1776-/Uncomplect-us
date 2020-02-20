@@ -35,7 +35,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
 final class TestTransformer: StoreSubscriber, ObservableObject {
     typealias StoreSubscriberStateType = AppState
-    @Published private (set)var tree = [DependencyTree]()
+    @Published private(set) var tree = [DependencyTree]()
 
     func newState(state: AppState) {
         DispatchQueue.main.async {
