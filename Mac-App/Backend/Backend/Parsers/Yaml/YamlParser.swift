@@ -19,4 +19,4 @@ private func contentsOfFile(using fileManager: FileManager = .default, at file: 
     return contentsOfFile
 }
 
-private func isASwiftDepsFile(_ path: URL) -> Bool { path.pathExtension == "swiftdeps" }
+private func isASwiftDepsFile(_ path: URL) -> Bool { path.pathExtension == swiftDepsExtension }
