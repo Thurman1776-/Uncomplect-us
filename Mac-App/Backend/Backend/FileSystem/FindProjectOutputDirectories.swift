@@ -40,15 +40,15 @@ public func findProjectOutputDirectories(
             excludingTests ? parseCommandLineOutputSkippingTestFiles(commandOutput) : trimOutput(commandOutput)
         }
 
-        var paths: [URL] = []
+        var paths: Set<URL> = []
         for path in filePaths() {
             if let urls = contentsOfDirectory(at: path) {
                 urls.filter { $0.pathExtension == swiftDepsExtension }
-                    .forEach { paths.append($0) }
+                    .forEach { paths.insert($0) }
             }
         }
 
-        return paths
+        return Array(paths)
     }
 
     return []
