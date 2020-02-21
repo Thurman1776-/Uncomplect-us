@@ -16,6 +16,7 @@
 		A89E0BE423F883AA0009154E /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89E0BE323F883AA0009154E /* ReSwift.framework */; };
 		A89E0BE523F883AA0009154E /* ReSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A89E0BE323F883AA0009154E /* ReSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A8CAE9AA23DCAE7E00242ADF /* Mac-AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE9A923DCAE7E00242ADF /* Mac-AppTests.swift */; };
+		A8F252602400526200CD12DE /* Frontend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F2525F2400526200CD12DE /* Frontend.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		A86E104B2365DAB900D3FF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A89E0BE323F883AA0009154E /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Backend/Dependencies/macOS/ReSwift.framework; sourceTree = "<group>"; };
 		A8CAE9A923DCAE7E00242ADF /* Mac-AppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Mac-AppTests.swift"; sourceTree = "<group>"; };
+		A8F2525F2400526200CD12DE /* Frontend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Frontend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8F252602400526200CD12DE /* Frontend.framework in Frameworks */,
 				A8199C5823E70C97000B89F6 /* Backend.framework in Frameworks */,
 				A89E0BE423F883AA0009154E /* ReSwift.framework in Frameworks */,
 			);
@@ -81,6 +84,7 @@
 		A80EF04E236611FF00CD7500 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A8F2525F2400526200CD12DE /* Frontend.framework */,
 				A89E0BE323F883AA0009154E /* ReSwift.framework */,
 				A8199C5723E70C97000B89F6 /* Backend.framework */,
 			);
