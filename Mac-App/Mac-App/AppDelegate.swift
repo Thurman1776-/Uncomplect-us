@@ -6,7 +6,6 @@ import SwiftUI
 @NSApplicationMain
 final class AppDelegate: NSObject, NSApplicationDelegate {
     var window: NSWindow!
-    let subscriber = TestTransformer()
 
     func applicationDidFinishLaunching(_: Notification) {
         // Create the SwiftUI view that provides the window contents.
