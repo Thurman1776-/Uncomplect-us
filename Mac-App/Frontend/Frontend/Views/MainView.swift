@@ -10,9 +10,9 @@
 import SwiftUI
 
 public struct MainView: View {
-    @ObservedObject private var viewData: ObservableData<DependencyTreeViewState>
+    @ObservedObject private var viewData: ObservableData<DependencyTreeView.State>
 
-    public init(viewData: ObservableData<DependencyTreeViewState>) {
+    public init(viewData: ObservableData<DependencyTreeView.State>) {
         self.viewData = viewData
     }
 

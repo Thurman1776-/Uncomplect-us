@@ -8,27 +8,30 @@
 
 import Foundation
 
-public struct DependencyTreeViewData: Equatable {
-    public let dependencies: [Dependencies]
+public enum DependencyTreeView { }
 
-    public init(dependencies: [Dependencies]) {
-        self.dependencies = dependencies
-    }
+extension DependencyTreeView {
+    public struct Data: Equatable {
+        public let dependencies: [Dependencies]
 
-    public struct Dependencies: Equatable {
-        let owner: String
-        let dependencies: [String]
-
-        public init(owner: String, dependencies: [String]) {
-            self.owner = owner
+        public init(dependencies: [Dependencies]) {
             self.dependencies = dependencies
         }
+
+        public struct Dependencies: Equatable {
+            let owner: String
+            let dependencies: [String]
+
+            public init(owner: String, dependencies: [String]) {
+                self.owner = owner
+                self.dependencies = dependencies
+            }
+        }
     }
-}
 
-
-public enum DependencyTreeViewState: Equatable {
-    case initial
-    case failure
-    case success(viewData: DependencyTreeViewData)
+    public enum State: Equatable {
+        case initial
+        case failure
+        case success(viewData: Data)
+    }
 }
