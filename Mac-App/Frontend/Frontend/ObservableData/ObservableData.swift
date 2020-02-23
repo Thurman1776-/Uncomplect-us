@@ -29,7 +29,7 @@ open class ObservableData<T: Equatable>: ViewInput, ObservableObject {
         self.publisher = publisher
     }
 
-    /// This triggers a UI update  for any view defining this class as a `@ObservedObject`
+    /// This triggers an UI update  for any view defining this class as a `@ObservedObject`
 
     public func render(_ newData: T) {
         DispatchQueue.main.async {
