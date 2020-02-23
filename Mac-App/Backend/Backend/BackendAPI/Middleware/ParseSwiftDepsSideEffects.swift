@@ -20,7 +20,11 @@ func parseSwiftDepsSideEffects() -> Middleware<AppState> {
                 case let SwiftDepsAction.parseFrom(paths: url):
                     dispatchAsyncOnGlobal {
                         let parsedUrls = parseYamlUrls(from: url)
-                        dispatchFuction(SwiftDepsAction.set(parsedUrls))
+                        if parsedUrls.isEmpty == false {
+                            dispatchFuction(SwiftDepsAction.set(parsedUrls))
+                        } else {
+                            dispatchFuction(DependencyGraphAction.failure(message: "Paths cold not be parsed!"))
+                        }
                     }
                 case let SwiftDepsAction.set(swiftDeps):
                     dispatchAsyncOnGlobal {

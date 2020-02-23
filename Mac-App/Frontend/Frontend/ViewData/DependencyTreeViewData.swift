@@ -31,7 +31,7 @@ extension DependencyTreeView {
 
     public enum State: Equatable {
         case initial
-        case failure
+        case failure(_ failure: String)
         case success(viewData: Data)
     }
 }

@@ -19,8 +19,8 @@ final class MainViewTransformer: StoreSubscriber {
         let viewData = mapAppStateToViewData(state)
         if viewData.dependencies.isEmpty == false {
             transformedData.render(.success(viewData: viewData))
-        } else {
-            transformedData.render(.failure)
+        } else if let failure = state.dependencyGraphState.failure {
+            transformedData.render(.failure(failure))
         }
     }
 
