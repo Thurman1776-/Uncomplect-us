@@ -33,6 +33,8 @@ open class ObservableData<T: Equatable>: ViewInput, ObservableObject {
     /// This triggers a UI update  for any view defining this class as a `@ObservedObject`
 
     public func render(_ newData: T) {
-        self.publisher = newData
+        DispatchQueue.main.async {
+            self.publisher = newData
+        }
     }
 }
