@@ -25,3 +25,10 @@ public struct DependencyTreeViewData: Equatable {
         }
     }
 }
+
+
+public enum DependencyTreeViewState: Equatable {
+    case initial
+    case failure
+    case success(viewData: DependencyTreeViewData)
+}
