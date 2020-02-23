@@ -1,11 +1,10 @@
 //
-//  ObservableData.swift
+//  MainView.swift
 //  Frontend
 //
 //  Created by Daniel GARCÍA on 23.02.20.
 //  Copyright © 2020 Acphut Werkstatt. All rights reserved.
 //
-
 
 import SwiftUI
 
@@ -41,7 +40,6 @@ public struct MainView: View {
         }
     }
 }
-
 
 // MARK: - Live preview
 

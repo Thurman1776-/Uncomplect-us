@@ -10,7 +10,6 @@ import Foundation
 
 // MARK: - View Data building blocks
 
-
 /// `ViewInput` represents a template for observable objects that will emit updates to views via
 /// a `@Publisher`
 /// The publisher is part of the generic class as protocols cannot have property wrappers ☹️
@@ -26,7 +25,7 @@ open class ObservableData<T: Equatable>: ViewInput, ObservableObject {
 
     @Published private(set) var publisher: T
 
-    required public init(publisher: T) {
+    public required init(publisher: T) {
         self.publisher = publisher
     }
 

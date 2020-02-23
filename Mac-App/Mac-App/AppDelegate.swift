@@ -1,6 +1,14 @@
+//
+//  AppDelegate.swift
+//  Mac-App
+//
+//  Created by Daniel GARCÍA on 23.02.20.
+//  Copyright © 2020 Acphut Werkstatt. All rights reserved.
+//
+
 import Backend
-import Frontend
 import Cocoa
+import Frontend
 import SwiftUI
 
 @NSApplicationMain

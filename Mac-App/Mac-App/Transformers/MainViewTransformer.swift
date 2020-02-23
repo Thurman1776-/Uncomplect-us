@@ -7,8 +7,8 @@
 //
 
 import Backend
-import Frontend
 import Cocoa
+import Frontend
 import ReSwift
 
 final class MainViewTransformer: StoreSubscriber {
@@ -28,10 +28,8 @@ final class MainViewTransformer: StoreSubscriber {
         .init(dependencies: appState.dependencyGraphState.tree.map {
             DependencyTreeView.Data.Dependencies(
                 owner: $0.owner,
-                dependencies: $0.dependencies.map({ String($0.name) })
+                dependencies: $0.dependencies.map { String($0.name) }
             )
         })
     }
 }
-
-

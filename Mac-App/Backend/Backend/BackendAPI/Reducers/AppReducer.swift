@@ -1,3 +1,11 @@
+//
+//  AppReducer.swift
+//  Backend
+//
+//  Created by Daniel GARCÍA on 23.02.20.
+//  Copyright © 2020 Acphut Werkstatt. All rights reserved.
+//
+
 import ReSwift
 
 /// Unwrapping `AppState` is needed to avoid echoing of unnecessary optionality but required by `ReSwift` API
