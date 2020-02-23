@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A8199C5823E70C97000B89F6 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8199C5723E70C97000B89F6 /* Backend.framework */; };
+		A8472C9E2402C6190032E702 /* MainViewTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8472C9D2402C6190032E702 /* MainViewTransformer.swift */; };
 		A86E10342365DAB800D3FF94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E10332365DAB800D3FF94 /* AppDelegate.swift */; };
 		A86E10382365DAB800D3FF94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86E10372365DAB800D3FF94 /* Assets.xcassets */; };
 		A86E103B2365DAB800D3FF94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86E103A2365DAB800D3FF94 /* Preview Assets.xcassets */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		A8199C5723E70C97000B89F6 /* Backend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Backend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8472C9D2402C6190032E702 /* MainViewTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTransformer.swift; sourceTree = "<group>"; };
 		A86E10302365DAB800D3FF94 /* Mac-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mac-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86E10332365DAB800D3FF94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A86E10372365DAB800D3FF94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A8472C9C2402C6040032E702 /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				A8472C9D2402C6190032E702 /* MainViewTransformer.swift */,
+			);
+			path = Transformers;
+			sourceTree = "<group>";
+		};
 		A86E10272365DAB800D3FF94 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 		A86E10322365DAB800D3FF94 /* Mac-App */ = {
 			isa = PBXGroup;
 			children = (
+				A8472C9C2402C6040032E702 /* Transformers */,
 				A86E10332365DAB800D3FF94 /* AppDelegate.swift */,
 				A86E10372365DAB800D3FF94 /* Assets.xcassets */,
 				A86E103C2365DAB900D3FF94 /* Main.storyboard */,
@@ -264,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A86E10342365DAB800D3FF94 /* AppDelegate.swift in Sources */,
+				A8472C9E2402C6190032E702 /* MainViewTransformer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
