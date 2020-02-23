@@ -73,7 +73,7 @@ final class DependencyGraphReducerSpec: QuickSpec {
             }
 
             context("when DependencyGraphAction.failure gets dispatched") {
-                it("returns (any) previous successful state") {
+                it("returns (any) previous successful state & attached error") {
                     var sut = dependencyGraphReducer(
                         action: DependencyGraphAction.set([
                             DependencyTree.fixture,
@@ -81,14 +81,15 @@ final class DependencyGraphReducerSpec: QuickSpec {
                         state: graphState
                     )
 
-                    let expectedOriginalState = sut
+                    let originalState = sut
 
                     sut = dependencyGraphReducer(
                         action: DependencyGraphAction.failure(message: "Some terrible error"),
                         state: sut
                     )
 
-                    expect(expectedOriginalState) == sut
+                    expect(sut.tree) == originalState.tree
+                    expect(sut.failure).toNot(beNil())
                 }
             }
         }

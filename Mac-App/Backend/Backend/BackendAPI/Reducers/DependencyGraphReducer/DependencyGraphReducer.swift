@@ -20,6 +20,8 @@ func dependencyGraphReducer(action: Action, state: DependencyGraphState) -> Depe
         newState = DependencyGraphState(tree: deps)
     case .reset:
         newState = DependencyGraphState.initialState
+    case let .failure(message: message):
+        newState.failure = message
     default: break
     }
 

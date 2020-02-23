@@ -12,12 +12,13 @@ import ReSwift
 
 public struct DependencyGraphState: Equatable {
     public var tree: [DependencyTree]
+    public var failure: String?
 }
 
 // MARK: - Initial state
 
 extension DependencyGraphState {
-    static let initialState = DependencyGraphState(tree: [])
+    static let initialState = DependencyGraphState(tree: [], failure: nil)
 }
 
 // MARK: - Actions
