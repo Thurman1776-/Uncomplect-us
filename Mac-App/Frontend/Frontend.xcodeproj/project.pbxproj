@@ -10,6 +10,7 @@
 		A8F2524D23FF0B5000CD12DE /* Frontend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F2524323FF0B5000CD12DE /* Frontend.framework */; };
 		A8F2525223FF0B5000CD12DE /* FrontendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2525123FF0B5000CD12DE /* FrontendTests.swift */; };
 		A8F2525423FF0B5000CD12DE /* Frontend.h in Headers */ = {isa = PBXBuildFile; fileRef = A8F2524623FF0B5000CD12DE /* Frontend.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8F2526424029A2400CD12DE /* ObservableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2526324029A2400CD12DE /* ObservableData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		A8F2524C23FF0B5000CD12DE /* FrontendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrontendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8F2525123FF0B5000CD12DE /* FrontendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontendTests.swift; sourceTree = "<group>"; };
 		A8F2525323FF0B5000CD12DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8F2526324029A2400CD12DE /* ObservableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		A8F2524523FF0B5000CD12DE /* Frontend */ = {
 			isa = PBXGroup;
 			children = (
+				A8F25262240299FD00CD12DE /* ObservableData */,
 				A8F2524623FF0B5000CD12DE /* Frontend.h */,
 				A8F2524723FF0B5000CD12DE /* Info.plist */,
 			);
@@ -84,6 +87,14 @@
 				A8F2525323FF0B5000CD12DE /* Info.plist */,
 			);
 			path = FrontendTests;
+			sourceTree = "<group>";
+		};
+		A8F25262240299FD00CD12DE /* ObservableData */ = {
+			isa = PBXGroup;
+			children = (
+				A8F2526324029A2400CD12DE /* ObservableData.swift */,
+			);
+			path = ObservableData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8F2526424029A2400CD12DE /* ObservableData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
