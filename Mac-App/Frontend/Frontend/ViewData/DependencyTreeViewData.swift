@@ -9,7 +9,7 @@
 import Foundation
 
 public struct DependencyTreeViewData: Equatable {
-    let dependencies: [Dependencies]
+    public let dependencies: [Dependencies]
 
     public init(dependencies: [Dependencies]) {
         self.dependencies = dependencies
