@@ -11,7 +11,7 @@ import Foundation
 // MARK: - View Data building blocks
 
 /// `ViewInput` represents a template for observable objects that will emit updates to views via
-/// a `@Publisher`
+/// a `@Published` property
 /// The publisher is part of the generic class as protocols cannot have property wrappers ☹️
 public protocol ViewInput {
     associatedtype Data: Equatable
