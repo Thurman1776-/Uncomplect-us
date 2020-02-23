@@ -1,4 +1,5 @@
 import Backend
+import Frontend
 import Cocoa
 import ReSwift
 import SwiftUI
@@ -9,7 +10,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_: Notification) {
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView(transformer: subscriber)
+        let contentView = MainView(viewData: subscriber.transformedData)
         BackendAPI.dispatch(DependencyPathsAction.findUrls(for: "Mac-App"))
         BackendAPI.subscribe(subscriber)
 
@@ -30,15 +31,29 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 }
 
-// Testing UI rendering only - Approach still needs to be defined
 
-final class TestTransformer: StoreSubscriber, ObservableObject {
+final class MainViewTransformer: StoreSubscriber {
     typealias StoreSubscriberStateType = AppState
-    @Published private(set) var tree = [DependencyTree]()
+    private(set) var transformedData: ObservableData<DependencyTreeView.State> = .init(publisher: .initial)
 
     func newState(state: AppState) {
-        DispatchQueue.main.async {
-            self.tree = state.dependencyGraphState.tree
+        print(state)
+        let viewData = mapAppStateToViewData(state)
+        if viewData.dependencies.isEmpty == false {
+            transformedData.render(DependencyTreeView.State.success(viewData: viewData))
+        } else {
+            transformedData.render(DependencyTreeView.State.failure)
         }
     }
+
+    private func mapAppStateToViewData(_ appState: AppState) -> DependencyTreeView.Data {
+        .init(dependencies: appState.dependencyGraphState.tree.map {
+            DependencyTreeView.Data.Dependencies(
+                owner: $0.owner,
+                dependencies: $0.dependencies.map({ String($0.name) })
+            )
+        })
+    }
 }
+
+let subscriber = MainViewTransformer()
