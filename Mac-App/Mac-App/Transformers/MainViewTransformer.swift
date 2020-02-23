@@ -16,7 +16,6 @@ final class MainViewTransformer: StoreSubscriber {
     private(set) var transformedData: ObservableData<DependencyTreeView.State> = .init(publisher: .initial)
 
     func newState(state: AppState) {
-        print(state)
         let viewData = mapAppStateToViewData(state)
         if viewData.dependencies.isEmpty == false {
             transformedData.render(DependencyTreeView.State.success(viewData: viewData))
