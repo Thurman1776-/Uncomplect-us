@@ -16,24 +16,24 @@ import Foundation
 public protocol ViewInput {
     associatedtype Data: Equatable
 
-    init(publisher: Data)
+    init(_ data: Data)
     func render(_ newData: Data)
 }
 
 open class ObservableData<T: Equatable>: ViewInput, ObservableObject {
     public typealias Data = T
 
-    @Published private(set) var publisher: T
+    @Published private(set) var data: T
 
-    public required init(publisher: T) {
-        self.publisher = publisher
+    public required init(_ data: T) {
+        self.data = data
     }
 
     /// This triggers an UI update  for any view defining this class as a `@ObservedObject`
 
     public func render(_ newData: T) {
         DispatchQueue.main.async {
-            self.publisher = newData
+            self.data = newData
         }
     }
 }

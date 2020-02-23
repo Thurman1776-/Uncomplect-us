@@ -13,7 +13,7 @@ import ReSwift
 
 final class MainViewTransformer: StoreSubscriber {
     typealias StoreSubscriberStateType = AppState
-    private(set) var transformedData: ObservableData<DependencyTreeView.State> = .init(publisher: .initial)
+    private(set) var transformedData: ObservableData<DependencyTreeView.State> = .init(.initial)
 
     func newState(state: AppState) {
         let viewData = mapAppStateToViewData(state)

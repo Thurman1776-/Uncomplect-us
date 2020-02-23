@@ -16,7 +16,7 @@ public struct MainView: View {
     }
 
     public var body: some View {
-        switch viewData.publisher {
+        switch viewData.data {
         case .initial:
             return AnyView(Text("Processing build files...").frame(maxWidth: .infinity, maxHeight: .infinity))
         case let .success(viewData: data):
