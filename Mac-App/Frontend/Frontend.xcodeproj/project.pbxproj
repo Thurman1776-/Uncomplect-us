@@ -11,6 +11,7 @@
 		A8F2525223FF0B5000CD12DE /* FrontendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2525123FF0B5000CD12DE /* FrontendTests.swift */; };
 		A8F2525423FF0B5000CD12DE /* Frontend.h in Headers */ = {isa = PBXBuildFile; fileRef = A8F2524623FF0B5000CD12DE /* Frontend.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A8F2526424029A2400CD12DE /* ObservableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2526324029A2400CD12DE /* ObservableData.swift */; };
+		A8F2526824029B6500CD12DE /* DependencyTreeViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2526724029B6500CD12DE /* DependencyTreeViewData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		A8F2525123FF0B5000CD12DE /* FrontendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontendTests.swift; sourceTree = "<group>"; };
 		A8F2525323FF0B5000CD12DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8F2526324029A2400CD12DE /* ObservableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableData.swift; sourceTree = "<group>"; };
+		A8F2526724029B6500CD12DE /* DependencyTreeViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyTreeViewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		A8F2524523FF0B5000CD12DE /* Frontend */ = {
 			isa = PBXGroup;
 			children = (
+				A8F2526624029B4E00CD12DE /* ViewData */,
 				A8F25262240299FD00CD12DE /* ObservableData */,
 				A8F2524623FF0B5000CD12DE /* Frontend.h */,
 				A8F2524723FF0B5000CD12DE /* Info.plist */,
@@ -95,6 +98,14 @@
 				A8F2526324029A2400CD12DE /* ObservableData.swift */,
 			);
 			path = ObservableData;
+			sourceTree = "<group>";
+		};
+		A8F2526624029B4E00CD12DE /* ViewData */ = {
+			isa = PBXGroup;
+			children = (
+				A8F2526724029B6500CD12DE /* DependencyTreeViewData.swift */,
+			);
+			path = ViewData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8F2526824029B6500CD12DE /* DependencyTreeViewData.swift in Sources */,
 				A8F2526424029A2400CD12DE /* ObservableData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
