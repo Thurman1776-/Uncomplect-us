@@ -25,8 +25,8 @@ func dependencyPathsReducer(action: Action, state: DependencyPathsState) -> Depe
         newState.paths = newPaths
     case .reset:
         newState.paths = []
-    case .failure:
-        return newState
+    case let .failure(message):
+        newState.failure = message
     }
 
     return newState

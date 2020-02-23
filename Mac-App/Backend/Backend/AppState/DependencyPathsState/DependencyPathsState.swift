@@ -12,12 +12,13 @@ import ReSwift
 
 public struct DependencyPathsState: Equatable {
     public var paths: [URL]
+    public var failure: String?
 }
 
 // MARK: - Initial state
 
 extension DependencyPathsState {
-    static let initialState = DependencyPathsState(paths: [])
+    static let initialState = DependencyPathsState(paths: [], failure: nil)
 }
 
 // MARK: - Actions

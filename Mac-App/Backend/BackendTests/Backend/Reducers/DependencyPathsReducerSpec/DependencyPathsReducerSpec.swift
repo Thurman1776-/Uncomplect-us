@@ -111,7 +111,7 @@ final class DependencyPathsReducerSpec: QuickSpec {
             }
 
             context("when DependencyPathsAction.failure gets dispatched") {
-                it("returns previous successful state") {
+                it("returns previous successful state & attached error") {
                     var newState = dependencyPathsReducer(
                         action: DependencyPathsAction.append(
                             paths: [
@@ -128,7 +128,8 @@ final class DependencyPathsReducerSpec: QuickSpec {
                         state: newState
                     )
 
-                    expect(expectedOriginalState) == newState
+                    expect(newState.paths) == expectedOriginalState.paths
+                    expect(newState.failure).notTo(beNil())
                 }
             }
         }
