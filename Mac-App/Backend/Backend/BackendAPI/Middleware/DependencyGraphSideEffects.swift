@@ -9,7 +9,7 @@
 import ReSwift
 
 func dependencyGraphSideEffects() -> Middleware<AppState> {
-    return { (dispatchFuction: @escaping DispatchFunction, _: @escaping () -> AppState?) in
+    { (dispatchFuction: @escaping DispatchFunction, _: @escaping () -> AppState?) in
         { (next: @escaping DispatchFunction) in
             { action in
 

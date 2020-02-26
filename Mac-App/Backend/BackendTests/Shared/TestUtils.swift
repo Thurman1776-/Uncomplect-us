@@ -9,7 +9,7 @@
 @testable import Backend
 
 func execDefaultFindCommand() -> String {
-    return Bash().execute(
+    Bash().execute(
         command: "find", arguments: ["$HOME/Library/Developer/Xcode/DerivedData",
                                      "-name", "*Mac-App*",
                                      "-type", "d",
