@@ -18,7 +18,14 @@ public struct MainView: View {
     public var body: some View {
         switch viewData.data {
         case .initial:
-            return AnyView(Text("Processing build files...").frame(maxWidth: .infinity, maxHeight: .infinity))
+            return AnyView(
+                VStack {
+                    ActivityIndicator(isAnimating: Binding<Bool>.constant(true), style: .spinning)
+                    Text("Processing build files...")
+                        .bold()
+                        .foregroundColor(.gray)
+                }.frame(maxWidth: .infinity, maxHeight: .infinity)
+            )
         case let .success(viewData: data):
             return AnyView(VStack(alignment: .leading, spacing: 8) {
                 List {
