@@ -9,7 +9,7 @@
 @testable import Mac_App
 import XCTest
 
-class BackendTests: XCTestCase {
+class MacAppTests: XCTestCase {
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
