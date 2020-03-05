@@ -6,14 +6,13 @@ struct ActivityIndicator: NSViewRepresentable {
     @Binding var isAnimating: Bool
     let style: NSProgressIndicator.Style
 
-    func makeNSView(context: NSViewRepresentableContext<ActivityIndicator>) -> NSProgressIndicator {
+    func makeNSView(context _: NSViewRepresentableContext<ActivityIndicator>) -> NSProgressIndicator {
         let progressIndicator = NSProgressIndicator()
         progressIndicator.style = style
         return progressIndicator
     }
 
-    func updateNSView(_ nsView: NSProgressIndicator, context: NSViewRepresentableContext<ActivityIndicator>) {
+    func updateNSView(_ nsView: NSProgressIndicator, context _: NSViewRepresentableContext<ActivityIndicator>) {
         isAnimating ? nsView.startAnimation(self) : nsView.stopAnimation(self)
     }
 }
-
