@@ -16,12 +16,14 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     var window: NSWindow!
 
     func applicationDidFinishLaunching(_: Notification) {
-        // Create the SwiftUI view that provides the window contents.
-        let contentView = MainView(viewData: subscriber.transformedData)
-        BackendAPI.dispatch(DependencyPathsAction.findUrls(for: "Mac-App"))
-        BackendAPI.subscribe(subscriber)
+        let contentView = InputView { value in
+            BackendAPI.dispatch(DependencyPathsAction.findUrls(for: value))
 
-        // Create the window and set the content view.
+            let mainView = MainView(viewData: subscriber.transformedData)
+            self.window.contentView = NSHostingView(rootView: mainView)
+        }
+
+        registerSubscribers()
         window = NSWindow(
             contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
             styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
@@ -36,6 +38,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_: Notification) {
         // Insert code here to tear down your application
     }
+}
+
+private func registerSubscribers() {
+    BackendAPI.subscribe(subscriber)
 }
 
 let subscriber = MainViewTransformer()
