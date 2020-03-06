@@ -26,6 +26,6 @@ public struct InputView: View {
                 gradient: Gradient(colors: [.gray, .blue, .yellow, .blue]),
                 center: .center
             ), width: 1.0
-        ).frame(maxWidth: .infinity, maxHeight: .infinity)
+        )
     }
 }
