@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A8DF67612411639500D0DE02 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF67602411639500D0DE02 /* ActivityIndicator.swift */; };
+		A8DF67642412D9AE00D0DE02 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF67632412D9AE00D0DE02 /* InputView.swift */; };
 		A8F2524D23FF0B5000CD12DE /* Frontend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F2524323FF0B5000CD12DE /* Frontend.framework */; };
 		A8F2525223FF0B5000CD12DE /* FrontendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2525123FF0B5000CD12DE /* FrontendTests.swift */; };
 		A8F2525423FF0B5000CD12DE /* Frontend.h in Headers */ = {isa = PBXBuildFile; fileRef = A8F2524623FF0B5000CD12DE /* Frontend.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		A8DF67602411639500D0DE02 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		A8DF67632412D9AE00D0DE02 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		A8F2524323FF0B5000CD12DE /* Frontend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Frontend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8F2524623FF0B5000CD12DE /* Frontend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Frontend.h; sourceTree = "<group>"; };
 		A8F2524723FF0B5000CD12DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +66,14 @@
 				A8DF67602411639500D0DE02 /* ActivityIndicator.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		A8DF67622412D9A200D0DE02 /* InputView */ = {
+			isa = PBXGroup;
+			children = (
+				A8DF67632412D9AE00D0DE02 /* InputView.swift */,
+			);
+			path = InputView;
 			sourceTree = "<group>";
 		};
 		A8F2523923FF0B5000CD12DE = {
@@ -116,6 +126,7 @@
 		A8F2526524029B4B00CD12DE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A8DF67622412D9A200D0DE02 /* InputView */,
 				A8DF675F2411637700D0DE02 /* Common */,
 				A8F2525D23FF0BF300CD12DE /* MainView.swift */,
 			);
@@ -242,6 +253,7 @@
 			files = (
 				A8DF67612411639500D0DE02 /* ActivityIndicator.swift in Sources */,
 				A8F2526824029B6500CD12DE /* DependencyTreeViewData.swift in Sources */,
+				A8DF67642412D9AE00D0DE02 /* InputView.swift in Sources */,
 				A8F2526424029A2400CD12DE /* ObservableData.swift in Sources */,
 				A8F2525E23FF0BF300CD12DE /* MainView.swift in Sources */,
 			);
