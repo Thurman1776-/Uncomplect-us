@@ -9,3 +9,17 @@
 func dispatchAsyncOnGlobal(with qualityOfService: DispatchQoS.QoSClass = .userInitiated, work: @escaping () -> Void) {
     DispatchQueue.global(qos: qualityOfService).async { work() }
 }
+
+private let _backendQueue = DispatchQueue(
+    label: "Acphut.Werkstatt.Backend",
+    qos: .userInitiated,
+    attributes: DispatchQueue.Attributes.concurrent,
+    autoreleaseFrequency: .inherit
+)
+
+func dispatchAsyncOnBackendQueue(
+    with qualityOfService: DispatchQoS.QoSClass = .userInitiated,
+    work: @escaping () -> Void) {
+
+    _backendQueue.async { work() }
+}
