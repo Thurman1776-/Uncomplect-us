@@ -25,7 +25,7 @@ func findProjectOutputDirsSideEffects() -> Middleware<AppState> {
                             dispatchFuction(DependencyPathsAction.append(paths: urls))
                             dispatchFuction(SwiftDepsAction.parseFrom(paths: urls))
                         } else {
-                            dispatchFuction(DependencyPathsAction.failure(message: "No paths were found!"))
+                            dispatchError("No paths were found!", with: dispatchFuction)
                         }
                     }
                 default: break
@@ -33,4 +33,10 @@ func findProjectOutputDirsSideEffects() -> Middleware<AppState> {
             }
         }
     }
+}
+
+private func dispatchError(_ message: String, with dispatchFuction: @escaping DispatchFunction) {
+    dispatchFuction(DependencyPathsAction.failure(message: message))
+    dispatchFuction(SwiftDepsAction.failure(message: message))
+    dispatchFuction(DependencyGraphAction.failure(message: message))
 }
