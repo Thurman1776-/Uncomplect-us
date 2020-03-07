@@ -21,9 +21,11 @@ public struct MainView: View {
             return AnyView(
                 VStack {
                     ActivityIndicator(isAnimating: Binding<Bool>.constant(true), style: .spinning)
+                        .padding()
                     Text("Processing build files...")
                         .bold()
                         .foregroundColor(.gray)
+                        .padding()
                 }.frame(maxWidth: .infinity, maxHeight: .infinity)
             )
         case let .success(viewData: data):
