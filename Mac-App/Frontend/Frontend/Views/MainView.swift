@@ -42,8 +42,8 @@ public struct MainView: View {
                     }
                 }
             }.frame(maxWidth: .infinity, maxHeight: .infinity))
-        case .failure:
-            return AnyView(Text("Something went wrong").frame(maxWidth: .infinity, maxHeight: .infinity))
+        case let .failure(message):
+            return AnyView(Text(message).frame(maxWidth: .infinity, maxHeight: .infinity))
         }
     }
 }
