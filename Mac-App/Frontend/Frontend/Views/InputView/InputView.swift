@@ -23,9 +23,18 @@ public struct InputView: View {
             onCommit: { self.output(self.input) }
         ).border(
             AngularGradient(
-                gradient: Gradient(colors: [.gray, .blue, .yellow, .blue]),
+                gradient: Gradient(colors: randomColors()),
                 center: .center
             ), width: 1.0
         )
     }
+}
+
+private func randomColors() -> [Color] {
+    var palette: [Color] = []
+    for _ in 0...50 {
+        palette.append([.blue, .yellow, .blue, .blue, .yellow, .blue].randomElement()!)
+    }
+
+    return palette
 }
