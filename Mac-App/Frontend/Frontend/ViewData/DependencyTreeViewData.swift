@@ -15,7 +15,7 @@ extension DependencyTreeView {
         public let dependencies: [Dependencies]
 
         public init(dependencies: [Dependencies]) {
-            self.dependencies = dependencies
+            self.dependencies = dependencies.sorted(by: { $0.dependencies.count > $1.dependencies.count })
         }
 
         public struct Dependencies: Equatable {
