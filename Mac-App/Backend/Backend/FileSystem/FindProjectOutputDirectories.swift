@@ -48,15 +48,7 @@ public func findProjectOutputDirectories(
             excludingTests ? parseCommandLineOutputSkippingTestFiles(commandOutput) : trimOutput(commandOutput)
         }
 
-        var paths: Set<URL> = []
-        for path in filePaths() {
-            if let urls = contentsOfDirectory(at: path) {
-                urls.filter { $0.pathExtension == swiftDepsExtension }
-                    .forEach { paths.insert($0) }
-            }
-        }
-
-        return Array(paths)
+        return parseConcurrently(filePaths())
     }
 
     return []
@@ -75,4 +67,57 @@ private func contentsOfDirectory(using fileManager: FileManager = .default, at p
             includingPropertiesForKeys: nil,
             options: .skipsHiddenFiles
         )
+}
+
+// MARK: Experimental - Leverage multicore processing by splitting work
+
+private func parseSequencially(_ collection: [String]) -> [URL] {
+    var paths: Set<URL> = []
+    for path in collection {
+        if let urls = contentsOfDirectory(at: path) {
+            urls.filter { $0.pathExtension == swiftDepsExtension }
+                .forEach { paths.insert($0) }
+        }
+    }
+
+    return Array(paths)
+}
+
+private func parseConcurrently(_ collection: [String]) -> [URL] {
+    let middleIndex: Double = floor(Double(collection.count / 2))
+    let firstChunk = collection.prefix(upTo: Int(middleIndex))
+    let secondChunk = collection.suffix(from: Int(middleIndex))
+
+    var paths: Set<URL> = []
+    var firstChunkPaths: Set<URL> = []
+    var secondChunkPaths: Set<URL> = []
+
+    let operation = OperationQueue()
+    operation.addOperation {
+        for path in firstChunk {
+            if let urls = contentsOfDirectory(at: path) {
+                urls.filter { $0.pathExtension == swiftDepsExtension }
+                    .forEach { firstChunkPaths.insert($0) }
+            }
+        }
+    }
+
+    operation.addOperation {
+        for path in secondChunk {
+            if let urls = contentsOfDirectory(at: path) {
+                urls.filter { $0.pathExtension == swiftDepsExtension }
+                    .forEach { secondChunkPaths.insert($0) }
+            }
+        }
+    }
+
+    operation.addBarrierBlock {
+        paths = firstChunkPaths.union(secondChunkPaths)
+    }
+
+    operation.maxConcurrentOperationCount = 3
+    operation.qualityOfService = .userInitiated
+    operation.waitUntilAllOperationsAreFinished()
+
+    return Array(paths)
 }
