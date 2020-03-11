@@ -18,8 +18,8 @@ private let _backendQueue = DispatchQueue(
 )
 
 func dispatchAsyncOnBackendQueue(
-    with qualityOfService: DispatchQoS.QoSClass = .userInitiated,
-    work: @escaping () -> Void) {
-
+    with _: DispatchQoS.QoSClass = .userInitiated,
+    work: @escaping () -> Void
+) {
     _backendQueue.async { work() }
 }

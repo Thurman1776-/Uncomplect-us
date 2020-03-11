@@ -32,7 +32,7 @@ public struct InputView: View {
 
 private func randomColors() -> [Color] {
     var palette: [Color] = []
-    for _ in 0...50 {
+    for _ in 0 ... 50 {
         palette.append([.blue, .yellow, .blue, .blue, .yellow, .blue].randomElement()!)
     }
 
