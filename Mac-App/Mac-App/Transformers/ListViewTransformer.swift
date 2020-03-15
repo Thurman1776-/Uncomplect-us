@@ -1,5 +1,5 @@
 //
-//  MainViewTransformer.swift
+//  ListViewTransformer.swift
 //  Mac-App
 //
 //  Created by Daniel GARCÍA on 23.02.20.
@@ -11,7 +11,7 @@ import Cocoa
 import Frontend
 import ReSwift
 
-final class MainViewTransformer: StoreSubscriber {
+final class ListViewTransformer: StoreSubscriber {
     typealias StoreSubscriberStateType = AppState
     private(set) var transformedData: ObservableData<DependencyTreeView.State> = .init(.initial)
 

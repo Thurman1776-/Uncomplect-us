@@ -44,4 +44,4 @@ private func registerSubscribers() {
     BackendAPI.subscribe(subscriber)
 }
 
-let subscriber = MainViewTransformer()
+let subscriber = ListViewTransformer()
