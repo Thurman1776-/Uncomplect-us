@@ -12,7 +12,7 @@
 		A8F2524D23FF0B5000CD12DE /* Frontend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F2524323FF0B5000CD12DE /* Frontend.framework */; };
 		A8F2525223FF0B5000CD12DE /* FrontendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2525123FF0B5000CD12DE /* FrontendTests.swift */; };
 		A8F2525423FF0B5000CD12DE /* Frontend.h in Headers */ = {isa = PBXBuildFile; fileRef = A8F2524623FF0B5000CD12DE /* Frontend.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A8F2525E23FF0BF300CD12DE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2525D23FF0BF300CD12DE /* MainView.swift */; };
+		A8F2525E23FF0BF300CD12DE /* ExpandableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2525D23FF0BF300CD12DE /* ExpandableListView.swift */; };
 		A8F2526424029A2400CD12DE /* ObservableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2526324029A2400CD12DE /* ObservableData.swift */; };
 		A8F2526824029B6500CD12DE /* DependencyTreeViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2526724029B6500CD12DE /* DependencyTreeViewData.swift */; };
 /* End PBXBuildFile section */
@@ -36,7 +36,7 @@
 		A8F2524C23FF0B5000CD12DE /* FrontendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrontendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8F2525123FF0B5000CD12DE /* FrontendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontendTests.swift; sourceTree = "<group>"; };
 		A8F2525323FF0B5000CD12DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8F2525D23FF0BF300CD12DE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A8F2525D23FF0BF300CD12DE /* ExpandableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableListView.swift; sourceTree = "<group>"; };
 		A8F2526324029A2400CD12DE /* ObservableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableData.swift; sourceTree = "<group>"; };
 		A8F2526724029B6500CD12DE /* DependencyTreeViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyTreeViewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,7 +128,7 @@
 			children = (
 				A8DF67622412D9A200D0DE02 /* InputView */,
 				A8DF675F2411637700D0DE02 /* Common */,
-				A8F2525D23FF0BF300CD12DE /* MainView.swift */,
+				A8F2525D23FF0BF300CD12DE /* ExpandableListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -277,7 +277,7 @@
 				A8F2526824029B6500CD12DE /* DependencyTreeViewData.swift in Sources */,
 				A8DF67642412D9AE00D0DE02 /* InputView.swift in Sources */,
 				A8F2526424029A2400CD12DE /* ObservableData.swift in Sources */,
-				A8F2525E23FF0BF300CD12DE /* MainView.swift in Sources */,
+				A8F2525E23FF0BF300CD12DE /* ExpandableListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

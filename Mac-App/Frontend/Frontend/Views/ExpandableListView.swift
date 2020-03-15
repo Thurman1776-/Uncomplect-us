@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  ExpandableListView.swift
 //  Frontend
 //
 //  Created by Daniel GARCÍA on 23.02.20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-public struct MainView: View {
+public struct ExpandableListView: View {
     @ObservedObject private var viewData: ObservableData<DependencyTreeView.State>
 
     public init(viewData: ObservableData<DependencyTreeView.State>) {
