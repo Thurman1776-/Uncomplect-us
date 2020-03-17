@@ -12,6 +12,6 @@ struct DependencyItem: View {
             Text("Dependency count: \(dependency.dependencies.count)")
                 .italic()
                 .foregroundColor(.yellow)
-        }
+        }.contentShape(Rectangle())
     }
 }
