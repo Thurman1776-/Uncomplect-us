@@ -26,7 +26,7 @@ final class ListViewTransformer: StoreSubscriber {
 
     private func mapAppStateToViewData(_ appState: AppState) -> DependencyTreeView.Data {
         .init(dependencies: appState.dependencyGraphState.tree.map {
-            DependencyTreeView.Data.Dependencies(
+            DependencyTreeView.Data.Dependency(
                 owner: $0.owner,
                 dependencies: $0.dependencies.map { String($0.name) }
             )

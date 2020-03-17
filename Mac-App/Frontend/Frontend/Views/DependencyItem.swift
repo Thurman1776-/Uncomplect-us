@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct DependencyItem: View {
-    let dependency: DependencyTreeView.Data.Dependencies
+    let dependency: DependencyTreeView.Data.Dependency
 
     var body: some View {
         VStack(alignment: .leading) {

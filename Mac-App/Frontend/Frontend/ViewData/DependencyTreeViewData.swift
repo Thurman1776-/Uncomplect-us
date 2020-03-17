@@ -12,13 +12,13 @@ public enum DependencyTreeView {}
 
 extension DependencyTreeView {
     public struct Data: Equatable {
-        public let dependencies: [Dependencies]
+        public let dependencies: [Dependency]
 
-        public init(dependencies: [Dependencies]) {
+        public init(dependencies: [Dependency]) {
             self.dependencies = dependencies.sorted(by: { $0.dependencies.count > $1.dependencies.count })
         }
 
-        public struct Dependencies: Equatable, Identifiable {
+        public struct Dependency: Equatable, Identifiable {
             public var id: Int { owner.hashValue }
             let owner: String
             let dependencies: [String]
