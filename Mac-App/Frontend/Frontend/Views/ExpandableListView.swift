@@ -32,21 +32,17 @@ public struct ExpandableListView: View {
             return AnyView(VStack(alignment: .leading, spacing: 8) {
                 List {
                     ForEach(data.dependencies, id: \.id) { node in
-                        VStack(alignment: .leading) {
-                            Text("Owner: \(node.owner)")
-                                .bold()
-                                .foregroundColor(.gray)
-                            Spacer()
-                            Text("Dependency count: \(node.dependencies.count)")
-                                .italic()
-                                .foregroundColor(.yellow)
-                        }
+                        DependencyItem(dependency: node).onTapGesture { self.didTapItem(node) }
                     }
                 }
             }.frame(maxWidth: .infinity, maxHeight: .infinity))
         case let .failure(message):
             return AnyView(Text(message).frame(maxWidth: .infinity, maxHeight: .infinity))
         }
+    }
+
+    func didTapItem(_ item: DependencyTreeView.Data.Dependency) {
+        print("Selected \(item.id)")
     }
 }
 
