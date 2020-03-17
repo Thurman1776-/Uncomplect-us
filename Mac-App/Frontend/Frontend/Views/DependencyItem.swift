@@ -4,7 +4,13 @@ struct DependencyItem: View {
     let dependency: DependencyTreeView.Data.Dependency
     let isExpanded: Bool
 
-    var body: some View { mainContent.contentShape(Rectangle()) }
+    var body: some View {
+        HStack {
+            mainContent
+            Spacer()
+        }
+        .contentShape(Rectangle())
+    }
 
     private var mainContent: some View {
         VStack(alignment: .leading) {
