@@ -15,8 +15,8 @@ struct DependencyItem: View {
 
             VStack(alignment: .leading) {
                 Text("Dependency count: \(dependency.dependencies.count)")
-                .italic()
-                .foregroundColor(.yellow)
+                    .italic()
+                    .foregroundColor(.yellow)
             }
         }
     }
