@@ -36,3 +36,5 @@ extension DependencyTreeView {
         case success(viewData: Data)
     }
 }
+
+extension DependencyTreeView.Data.Dependency: Hashable {}

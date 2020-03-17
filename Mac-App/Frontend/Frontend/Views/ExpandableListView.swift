@@ -10,6 +10,7 @@ import SwiftUI
 
 public struct ExpandableListView: View {
     @ObservedObject private var viewData: ObservableData<DependencyTreeView.State>
+    @State private var selection: Set<DependencyTreeView.Data.Dependency> = []
 
     public init(viewData: ObservableData<DependencyTreeView.State>) {
         self.viewData = viewData
@@ -32,7 +33,10 @@ public struct ExpandableListView: View {
             return AnyView(VStack(alignment: .leading, spacing: 8) {
                 List {
                     ForEach(data.dependencies, id: \.id) { node in
-                        DependencyItem(dependency: node).onTapGesture { self.didTapItem(node) }
+                        DependencyItem(
+                            dependency: node,
+                            isExpanded: self.selection.contains(node)
+                        ).onTapGesture { self.didTapItem(node) }
                     }
                 }
             }.frame(maxWidth: .infinity, maxHeight: .infinity))
@@ -42,7 +46,11 @@ public struct ExpandableListView: View {
     }
 
     func didTapItem(_ item: DependencyTreeView.Data.Dependency) {
-        print("Selected \(item.id)")
+        if selection.contains(item) {
+            selection.remove(item)
+        } else {
+            selection.insert(item)
+        }
     }
 }
 
