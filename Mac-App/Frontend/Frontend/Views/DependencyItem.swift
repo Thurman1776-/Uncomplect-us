@@ -23,10 +23,27 @@ struct DependencyItem: View {
             if isExpanded {
                 VStack(alignment: .leading) {
                     Text("Dependency count: \(dependency.dependencies.count)")
-                        .italic()
-                        .foregroundColor(.yellow)
+                        .font(.footnote)
+                        .foregroundColor(.white)
+                    dependencyList
                 }
             }
         }
     }
+
+
+    private var dependencyList: some View {
+        ForEach(dependency.dependencies, id: \.id) { dep in
+            Text(dep)
+                .font(.body)
+                .italic()
+                .foregroundColor(.yellow)
+        }
+    }
+}
+
+// TODO: Move to shareable framework
+
+extension String: Identifiable {
+    public var id: Int { hashValue }
 }
