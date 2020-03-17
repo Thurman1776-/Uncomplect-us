@@ -18,7 +18,8 @@ extension DependencyTreeView {
             self.dependencies = dependencies.sorted(by: { $0.dependencies.count > $1.dependencies.count })
         }
 
-        public struct Dependencies: Equatable {
+        public struct Dependencies: Equatable, Identifiable {
+            public var id: Int { owner.hashValue }
             let owner: String
             let dependencies: [String]
 

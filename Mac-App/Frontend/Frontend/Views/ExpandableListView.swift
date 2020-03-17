@@ -31,7 +31,7 @@ public struct ExpandableListView: View {
         case let .success(viewData: data):
             return AnyView(VStack(alignment: .leading, spacing: 8) {
                 List {
-                    ForEach(data.dependencies, id: \.owner) { node in
+                    ForEach(data.dependencies, id: \.id) { node in
                         VStack(alignment: .leading) {
                             Text("Owner: \(node.owner)")
                                 .bold()
