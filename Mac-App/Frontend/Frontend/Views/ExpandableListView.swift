@@ -37,6 +37,8 @@ public struct ExpandableListView: View {
                             dependency: node,
                             isExpanded: self.selection.contains(node)
                         ).onTapGesture { self.didTapItem(node) }
+                            .modifier(ListRowModifier())
+                            .animation(.linear(duration: 0.25))
                     }
                 }
             }.frame(maxWidth: .infinity, maxHeight: .infinity))
