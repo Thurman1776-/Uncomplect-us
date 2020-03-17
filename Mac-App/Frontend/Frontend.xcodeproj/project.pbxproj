@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A88160DB2421073300CDB15A /* DependencyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88160DA2421073300CDB15A /* DependencyItem.swift */; };
 		A8DF67612411639500D0DE02 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF67602411639500D0DE02 /* ActivityIndicator.swift */; };
 		A8DF67642412D9AE00D0DE02 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF67632412D9AE00D0DE02 /* InputView.swift */; };
 		A8F2524D23FF0B5000CD12DE /* Frontend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F2524323FF0B5000CD12DE /* Frontend.framework */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A88160DA2421073300CDB15A /* DependencyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyItem.swift; sourceTree = "<group>"; };
 		A8DF67602411639500D0DE02 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		A8DF67632412D9AE00D0DE02 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		A8F2524323FF0B5000CD12DE /* Frontend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Frontend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +131,7 @@
 				A8DF67622412D9A200D0DE02 /* InputView */,
 				A8DF675F2411637700D0DE02 /* Common */,
 				A8F2525D23FF0BF300CD12DE /* ExpandableListView.swift */,
+				A88160DA2421073300CDB15A /* DependencyItem.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8DF67612411639500D0DE02 /* ActivityIndicator.swift in Sources */,
+				A88160DB2421073300CDB15A /* DependencyItem.swift in Sources */,
 				A8F2526824029B6500CD12DE /* DependencyTreeViewData.swift in Sources */,
 				A8DF67642412D9AE00D0DE02 /* InputView.swift in Sources */,
 				A8F2526424029A2400CD12DE /* ObservableData.swift in Sources */,
