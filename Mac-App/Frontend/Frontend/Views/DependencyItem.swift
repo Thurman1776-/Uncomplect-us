@@ -14,17 +14,19 @@ struct DependencyItem: View {
 
     private var mainContent: some View {
         VStack(alignment: .leading) {
-            Text("Owner: \(dependency.owner)")
-                .bold()
-                .font(.headline)
-                .foregroundColor(.gray)
-            Spacer()
+            HStack {
+                Text("Owner: \(dependency.owner)")
+                    .bold()
+                    .font(.headline)
+                    .foregroundColor(.gray)
+                Text("Dependency count: \(dependency.dependencies.count)")
+                .font(.footnote)
+                .foregroundColor(.white)
+                Spacer()
+            }
 
             if isExpanded {
                 VStack(alignment: .leading) {
-                    Text("Dependency count: \(dependency.dependencies.count)")
-                        .font(.footnote)
-                        .foregroundColor(.white)
                     dependencyList
                 }
             }
