@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct MainSplitView: NSViewControllerRepresentable {
+struct MainSplitViewController: NSViewControllerRepresentable {
     typealias NSViewControllerType = NSSplitViewController
 
     // Maybe a good place for @enviroment??
@@ -9,13 +9,13 @@ struct MainSplitView: NSViewControllerRepresentable {
         self.viewData = viewData
     }
 
-    func makeNSViewController(context _: NSViewControllerRepresentableContext<MainSplitView>) -> NSSplitViewController {
+    func makeNSViewController(context _: NSViewControllerRepresentableContext<MainSplitViewController>) -> NSSplitViewController {
         buildSplitViewController(using: viewData)
     }
 
     func updateNSViewController(
         _: NSSplitViewController,
-        context _: NSViewControllerRepresentableContext<MainSplitView>
+        context _: NSViewControllerRepresentableContext<MainSplitViewController>
     ) {}
 }
 

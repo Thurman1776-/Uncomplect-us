@@ -17,7 +17,7 @@
 		A8F2525E23FF0BF300CD12DE /* ExpandableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2525D23FF0BF300CD12DE /* ExpandableListView.swift */; };
 		A8F2526424029A2400CD12DE /* ObservableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2526324029A2400CD12DE /* ObservableData.swift */; };
 		A8F2526824029B6500CD12DE /* DependencyTreeViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2526724029B6500CD12DE /* DependencyTreeViewData.swift */; };
-		A8FECAA22429ED1A0028CC64 /* MainSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA12429ED1A0028CC64 /* MainSplitView.swift */; };
+		A8FECAA22429ED1A0028CC64 /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA12429ED1A0028CC64 /* MainSplitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,7 @@
 		A8F2525D23FF0BF300CD12DE /* ExpandableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableListView.swift; sourceTree = "<group>"; };
 		A8F2526324029A2400CD12DE /* ObservableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableData.swift; sourceTree = "<group>"; };
 		A8F2526724029B6500CD12DE /* DependencyTreeViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyTreeViewData.swift; sourceTree = "<group>"; };
-		A8FECAA12429ED1A0028CC64 /* MainSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitView.swift; sourceTree = "<group>"; };
+		A8FECAA12429ED1A0028CC64 /* MainSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +161,7 @@
 		A8FECAA02429ECD40028CC64 /* MainSplitView */ = {
 			isa = PBXGroup;
 			children = (
-				A8FECAA12429ED1A0028CC64 /* MainSplitView.swift */,
+				A8FECAA12429ED1A0028CC64 /* MainSplitViewController.swift */,
 			);
 			path = MainSplitView;
 			sourceTree = "<group>";
@@ -300,7 +300,7 @@
 			files = (
 				A8DF67612411639500D0DE02 /* ActivityIndicator.swift in Sources */,
 				A88160DB2421073300CDB15A /* DependencyItem.swift in Sources */,
-				A8FECAA22429ED1A0028CC64 /* MainSplitView.swift in Sources */,
+				A8FECAA22429ED1A0028CC64 /* MainSplitViewController.swift in Sources */,
 				A8F2526824029B6500CD12DE /* DependencyTreeViewData.swift in Sources */,
 				A8DF67642412D9AE00D0DE02 /* InputView.swift in Sources */,
 				A88160DD2421480E00CDB15A /* ListRowModifier.swift in Sources */,
