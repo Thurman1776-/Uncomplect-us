@@ -8,9 +8,10 @@
 
 import Foundation
 
-public enum DependencyTreeView {}
+public enum DependencyTreeView {
 
-extension DependencyTreeView {
+    //MARK:- View Data
+
     public struct Data: Equatable {
         public let dependencies: [Dependency]
 
@@ -30,11 +31,14 @@ extension DependencyTreeView {
         }
     }
 
+    //MARK:- View State
+
     public enum State: Equatable {
         case initial
         case failure(_ failure: String)
         case success(viewData: Data)
     }
+
 }
 
 extension DependencyTreeView.Data.Dependency: Hashable {}
