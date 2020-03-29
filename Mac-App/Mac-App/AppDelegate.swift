@@ -19,8 +19,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let contentView = InputView { value in
             BackendAPI.dispatch(DependencyPathsAction.findUrls(for: value))
 
-            let listView = ExpandableListView(viewData: subscriber.transformedData)
-            self.window.contentView = NSHostingView(rootView: listView)
+            let mainSplitView = MainSplitView(viewData: subscriber.transformedData)
+            self.window.contentView = NSHostingView(rootView: mainSplitView)
         }
 
         registerSubscribers()
