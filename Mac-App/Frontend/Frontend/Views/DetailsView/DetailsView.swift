@@ -1,5 +1,5 @@
 //
-//  OptionsView.swift
+//  DetailsView.swift
 //  Frontend
 //
 //  Created by Daniel GARCÍA on 29.03.20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-public struct OptionsView: View {
+public struct DetailsView: View {
     public var body: some View {
         Text("Options will go here")
         .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -32,7 +32,7 @@ struct MainSplitViewController: NSViewControllerRepresentable {
 
 private func buildSplitViewController(using viewData: ObservableData<DependencyTreeView.State>) -> NSSplitViewController {
     let splitViewController = NSSplitViewController()
-    splitViewController.addSplitViewItem(buildOptionsViewItem())
+    splitViewController.addSplitViewItem(buildDetailsViewItem())
     splitViewController.addSplitViewItem(buildContentViewItem(using: viewData))
 
     let splitView = NSSplitView()
@@ -43,8 +43,8 @@ private func buildSplitViewController(using viewData: ObservableData<DependencyT
     return splitViewController
 }
 
-private func buildOptionsViewItem() -> NSSplitViewItem {
-    let hostingController = NSHostingController(rootView: OptionsView())
+private func buildDetailsViewItem() -> NSSplitViewItem {
+    let hostingController = NSHostingController(rootView: DetailsView())
     let splitViewItem = NSSplitViewItem(viewController: hostingController)
     splitViewItem.holdingPriority = .defaultHigh
     splitViewItem.minimumThickness = 120

@@ -19,7 +19,7 @@
 		A8F2526824029B6500CD12DE /* DependencyTreeViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2526724029B6500CD12DE /* DependencyTreeViewData.swift */; };
 		A8FECAA22429ED1A0028CC64 /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA12429ED1A0028CC64 /* MainSplitViewController.swift */; };
 		A8FECAA4243096650028CC64 /* MainSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA3243096650028CC64 /* MainSplitView.swift */; };
-		A8FECAA72430BCAE0028CC64 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA62430BCAE0028CC64 /* OptionsView.swift */; };
+		A8FECAA72430BCAE0028CC64 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA62430BCAE0028CC64 /* DetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,7 @@
 		A8F2526724029B6500CD12DE /* DependencyTreeViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyTreeViewData.swift; sourceTree = "<group>"; };
 		A8FECAA12429ED1A0028CC64 /* MainSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitViewController.swift; sourceTree = "<group>"; };
 		A8FECAA3243096650028CC64 /* MainSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitView.swift; sourceTree = "<group>"; };
-		A8FECAA62430BCAE0028CC64 /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
+		A8FECAA62430BCAE0028CC64 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +141,7 @@
 				A8FECA9F2429EBE80028CC64 /* ExpandableList */,
 				A8DF67622412D9A200D0DE02 /* InputView */,
 				A8FECAA02429ECD40028CC64 /* MainSplitView */,
-				A8FECAA52430BC970028CC64 /* OptionsView */,
+				A8FECAA52430BC970028CC64 /* DetailsView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,12 +172,12 @@
 			path = MainSplitView;
 			sourceTree = "<group>";
 		};
-		A8FECAA52430BC970028CC64 /* OptionsView */ = {
+		A8FECAA52430BC970028CC64 /* DetailsView */ = {
 			isa = PBXGroup;
 			children = (
-				A8FECAA62430BCAE0028CC64 /* OptionsView.swift */,
+				A8FECAA62430BCAE0028CC64 /* DetailsView.swift */,
 			);
-			path = OptionsView;
+			path = DetailsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,7 +315,7 @@
 				A8DF67612411639500D0DE02 /* ActivityIndicator.swift in Sources */,
 				A88160DB2421073300CDB15A /* DependencyItem.swift in Sources */,
 				A8FECAA22429ED1A0028CC64 /* MainSplitViewController.swift in Sources */,
-				A8FECAA72430BCAE0028CC64 /* OptionsView.swift in Sources */,
+				A8FECAA72430BCAE0028CC64 /* DetailsView.swift in Sources */,
 				A8F2526824029B6500CD12DE /* DependencyTreeViewData.swift in Sources */,
 				A8DF67642412D9AE00D0DE02 /* InputView.swift in Sources */,
 				A88160DD2421480E00CDB15A /* ListRowModifier.swift in Sources */,
