@@ -45,8 +45,8 @@ private func buildSplitViewController(using viewData: ObservableData<DependencyT
 }
 
 private func buildOptionsViewItem() -> NSSplitViewItem {
-    let optionsViewController = NSHostingController(rootView: OptionsView())
-    let splitViewItem = NSSplitViewItem(viewController: optionsViewController)
+    let hostingController = NSHostingController(rootView: OptionsView())
+    let splitViewItem = NSSplitViewItem(viewController: hostingController)
 
     return splitViewItem
 }
