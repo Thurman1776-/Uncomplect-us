@@ -19,7 +19,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let contentView = InputView { value in
             BackendAPI.dispatch(DependencyPathsAction.findUrls(for: value))
 
-            let mainSplitView = MainSplitView(viewData: subscriber.transformedData)
+            let mainSplitView = MainSplitView(viewData: listviewSubscriber.transformedData)
             self.window.contentView = NSHostingView(rootView: mainSplitView)
         }
 
@@ -41,7 +41,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 }
 
 private func registerSubscribers() {
-    BackendAPI.subscribe(subscriber)
+    BackendAPI.subscribe(listviewSubscriber)
 }
 
-let subscriber = ListViewTransformer()
+let listviewSubscriber = ListViewTransformer()
