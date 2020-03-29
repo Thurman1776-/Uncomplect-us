@@ -3,21 +3,28 @@ import SwiftUI
 struct MainSplitView: NSViewControllerRepresentable {
     typealias NSViewControllerType = NSSplitViewController
 
-    func makeNSViewController(context: NSViewControllerRepresentableContext<MainSplitView>) -> NSSplitViewController {
-        buildSplitViewController()
+    // Maybe a good place for @enviroment??
+    private var viewData: ObservableData<DependencyTreeView.State>
+    public init(viewData: ObservableData<DependencyTreeView.State>) {
+        self.viewData = viewData
+    }
+
+    func makeNSViewController(context _: NSViewControllerRepresentableContext<MainSplitView>) -> NSSplitViewController {
+        buildSplitViewController(using: viewData)
     }
 
     func updateNSViewController(
-        _ nsViewController: NSSplitViewController,
-        context: NSViewControllerRepresentableContext<MainSplitView>) { }
+        _: NSSplitViewController,
+        context _: NSViewControllerRepresentableContext<MainSplitView>
+    ) {}
 }
 
 // MARK: - Helpers
 
-private func buildSplitViewController() -> NSSplitViewController {
+private func buildSplitViewController(using viewData: ObservableData<DependencyTreeView.State>) -> NSSplitViewController {
     let splitViewController = NSSplitViewController()
     splitViewController.addSplitViewItem(buildOptionsViewItem())
-    splitViewController.addSplitViewItem(buildContentViewItem())
+    splitViewController.addSplitViewItem(buildContentViewItem(using: viewData))
 
     let splitView = NSSplitView()
     splitView.isVertical = true
@@ -36,8 +43,8 @@ private func buildOptionsViewItem() -> NSSplitViewItem {
     return splitViewItem
 }
 
-private func buildContentViewItem() -> NSSplitViewItem {
-    let hostingController = NSHostingController(rootView: ExpandableListView(viewData: .init(.initial)))
+private func buildContentViewItem(using viewData: ObservableData<DependencyTreeView.State>) -> NSSplitViewItem {
+    let hostingController = NSHostingController(rootView: ExpandableListView(viewData: viewData))
     let splitViewItem = NSSplitViewItem(viewController: hostingController)
     return splitViewItem
 }
