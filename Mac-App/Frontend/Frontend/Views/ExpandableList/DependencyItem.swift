@@ -20,8 +20,8 @@ struct DependencyItem: View {
                     .font(.headline)
                     .foregroundColor(.gray)
                 Text("Dependency count: \(dependency.dependencies.count)")
-                .font(.footnote)
-                .foregroundColor(.white)
+                    .font(.footnote)
+                    .foregroundColor(.white)
                 Spacer()
             }
 
@@ -32,7 +32,6 @@ struct DependencyItem: View {
             }
         }
     }
-
 
     private var dependencyList: some View {
         ForEach(dependency.dependencies, id: \.id) { dep in
