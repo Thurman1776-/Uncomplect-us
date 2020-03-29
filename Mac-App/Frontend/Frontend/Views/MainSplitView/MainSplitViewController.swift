@@ -43,10 +43,8 @@ private func buildSplitViewController(using viewData: ObservableData<DependencyT
 }
 
 private func buildOptionsViewItem() -> NSSplitViewItem {
-    // Dummy controller temporarily
-    let emptyViewController = NSViewController()
-    emptyViewController.view.layer?.backgroundColor = .init(gray: 10, alpha: 1.0)
-    let splitViewItem = NSSplitViewItem(viewController: emptyViewController)
+    let optionsViewController = NSHostingController(rootView: OptionsView())
+    let splitViewItem = NSSplitViewItem(viewController: optionsViewController)
 
     return splitViewItem
 }
