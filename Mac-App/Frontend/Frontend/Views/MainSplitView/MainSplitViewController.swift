@@ -11,7 +11,6 @@ import SwiftUI
 struct MainSplitViewController: NSViewControllerRepresentable {
     typealias NSViewControllerType = NSSplitViewController
 
-    // Maybe a good place for @enviroment??
     private var viewData: ObservableData<DependencyTreeView.State>
     public init(viewData: ObservableData<DependencyTreeView.State>) {
         self.viewData = viewData
