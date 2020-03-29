@@ -47,6 +47,8 @@ private func buildSplitViewController(using viewData: ObservableData<DependencyT
 private func buildOptionsViewItem() -> NSSplitViewItem {
     let hostingController = NSHostingController(rootView: OptionsView())
     let splitViewItem = NSSplitViewItem(viewController: hostingController)
+    splitViewItem.holdingPriority = .defaultHigh
+    splitViewItem.minimumThickness = 120
 
     return splitViewItem
 }
@@ -54,5 +56,6 @@ private func buildOptionsViewItem() -> NSSplitViewItem {
 private func buildContentViewItem(using viewData: ObservableData<DependencyTreeView.State>) -> NSSplitViewItem {
     let hostingController = NSHostingController(rootView: ExpandableListView(viewData: viewData))
     let splitViewItem = NSSplitViewItem(viewController: hostingController)
+
     return splitViewItem
 }
