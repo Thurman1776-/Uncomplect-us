@@ -11,6 +11,6 @@ import SwiftUI
 public struct DetailsView: View {
     public var body: some View {
         Text("Options will go here")
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

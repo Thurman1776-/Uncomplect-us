@@ -9,16 +9,25 @@
 import Foundation
 
 public enum ProjectFactsViewData {
-
-    //MARK:- View Data
+    // MARK: - View Data
 
     public struct Data: Equatable {
         public let heaviestDependency: String
         public let totalDependenciesFound: Int
-        public let paths: [String]
+        public let paths: [URL]
+
+        public init(
+            heaviestDependency: String,
+            totalDependenciesFound: Int,
+            paths: [URL]
+        ) {
+            self.heaviestDependency = heaviestDependency
+            self.totalDependenciesFound = totalDependenciesFound
+            self.paths = paths
+        }
     }
 
-    //MARK:- View State
+    // MARK: - View State
 
     public enum State: Equatable {
         case initial
