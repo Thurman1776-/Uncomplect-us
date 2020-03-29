@@ -17,7 +17,9 @@ struct MainSplitViewController: NSViewControllerRepresentable {
         self.viewData = viewData
     }
 
-    func makeNSViewController(context _: NSViewControllerRepresentableContext<MainSplitViewController>) -> NSSplitViewController {
+    func makeNSViewController(
+        context _: NSViewControllerRepresentableContext<MainSplitViewController>
+    ) -> NSSplitViewController {
         buildSplitViewController(using: viewData)
     }
 
