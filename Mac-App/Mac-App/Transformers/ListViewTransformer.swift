@@ -27,6 +27,7 @@ final class ListViewTransformer: StoreSubscriber {
         } else if let failure = newState.dependencyGraphState.failure {
             transformedData.render(.failure(failure))
         }
+        previousState = newState
     }
 
     private func mapAppStateToViewData(_ appState: AppState) -> DependencyTreeView.Data {
