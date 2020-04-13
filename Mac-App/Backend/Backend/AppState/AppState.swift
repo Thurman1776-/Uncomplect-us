@@ -23,3 +23,7 @@ extension AppState {
         dependencyGraphState: DependencyGraphState.initialState
     )
 }
+
+// MARK: - Conformances
+
+extension AppState: Equatable { }
