@@ -17,9 +17,7 @@ final class ListViewTransformer: StoreSubscriber {
     private var previousState: AppState!
 
     func newState(state newState: AppState) {
-        guard previousState != newState else {
-            return
-        }
+        guard previousState != newState else { return }
 
         let viewData = mapAppStateToViewData(newState)
         if viewData.dependencies.isEmpty == false {

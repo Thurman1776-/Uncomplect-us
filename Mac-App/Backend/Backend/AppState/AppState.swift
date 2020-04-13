@@ -26,4 +26,4 @@ extension AppState {
 
 // MARK: - Conformances
 
-extension AppState: Equatable { }
+extension AppState: Equatable {}
