@@ -18,9 +18,9 @@ func parseSwiftDeps(_ swiftDeps: [SwiftDeps]) -> [DependencyTree] {
                 let deps = dep.dependsTopLevel
                     .filter { $0.tag.description != "!private" }
                     .compactMap { (try? $0.represented().string) }
-                    .filter { $0 != name }
-                    .filter { systemSymbols.contains($0) == false }
-                    .filter { $0.contains("NS") == false }
+                    .filterOcurrancesOf(name)
+                    .excludeSystemSymbols()
+                    .excludeSystemSymbolsPrefixes()
                     .map(DependencyTree.Dependency.init)
 
                 result.append(DependencyTree(owner: name, dependencies: deps))

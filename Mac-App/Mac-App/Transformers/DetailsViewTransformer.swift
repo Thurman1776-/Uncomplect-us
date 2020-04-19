@@ -52,4 +52,3 @@ extension DetailsViewTransformer {
         case failure(_ failure: String)
     }
 }
-
