@@ -19,7 +19,7 @@ final class SwiftDepsParserSpec: QuickSpec {
                 beforeEach {
                     // Do not perform same search for each test case as the results are the same
                     // And it is expensive & long
-                    if result.isEmpty == true {
+                    if result.isEmpty {
                         result = parseSwiftDeps(
                             parseYamlUrls(
                                 from: findProjectOutputDirectories(projectName: "Backend")
