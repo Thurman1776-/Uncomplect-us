@@ -6,8 +6,8 @@
 //  Copyright © 2020 Acphut Werkstatt. All rights reserved.
 //
 
-/// Parsing omits private declarations, ocurrances of `Self`, system symbols (see `systemSymbols` declarion)
-/// and objects with `NS` prefix
+/// Parsing omits private declarations, ocurrances of `Self`, system symbols (see `systemSymbols` declaration)
+/// as well as objects with with common framework prefixes: `NS`, `UI` & `CF` (list might need to be updated later)
 
 func parseSwiftDeps(_ swiftDeps: [SwiftDeps]) -> [DependencyTree] {
     var result = [DependencyTree]()
