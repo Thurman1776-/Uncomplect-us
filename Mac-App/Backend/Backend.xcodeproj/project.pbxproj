@@ -20,6 +20,7 @@
 		A8199C5623E700A5000B89F6 /* AppDelegateSwiftDepsFixture.swiftDeps in Resources */ = {isa = PBXBuildFile; fileRef = A8199C5523E700A5000B89F6 /* AppDelegateSwiftDepsFixture.swiftDeps */; };
 		A831004223DC9E4400460A12 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A831003823DC9E4400460A12 /* Backend.framework */; };
 		A831004923DC9E4400460A12 /* Backend.h in Headers */ = {isa = PBXBuildFile; fileRef = A831003B23DC9E4400460A12 /* Backend.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A84DAD31244C7F01005EAB59 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84DAD30244C7F01005EAB59 /* Collection.swift */; };
 		A85514EF23E5E6AA00D3E7F6 /* YamlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85514EE23E5E6AA00D3E7F6 /* YamlParser.swift */; };
 		A85514F123E6002500D3E7F6 /* SwiftDepsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85514F023E6002500D3E7F6 /* SwiftDepsState.swift */; };
 		A85514F423E6015E00D3E7F6 /* SwiftDepsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85514F323E6015E00D3E7F6 /* SwiftDepsReducer.swift */; };
@@ -98,6 +99,7 @@
 		A831003C23DC9E4400460A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A831004123DC9E4400460A12 /* BackendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A831004823DC9E4400460A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A84DAD30244C7F01005EAB59 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		A85514EE23E5E6AA00D3E7F6 /* YamlParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamlParser.swift; sourceTree = "<group>"; };
 		A85514F023E6002500D3E7F6 /* SwiftDepsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDepsState.swift; sourceTree = "<group>"; };
 		A85514F323E6015E00D3E7F6 /* SwiftDepsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDepsReducer.swift; sourceTree = "<group>"; };
@@ -233,6 +235,14 @@
 			path = BackendTests;
 			sourceTree = "<group>";
 		};
+		A84DAD2F244C7EED005EAB59 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A84DAD30244C7F01005EAB59 /* Collection.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A85514ED23E5E68000D3E7F6 /* Yaml */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +262,7 @@
 		A89E0BE023F87D850009154E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A84DAD2F244C7EED005EAB59 /* Extensions */,
 				A89E0BE123F87DAC0009154E /* DispatchQueue+Shorthands.swift */,
 			);
 			path = Shared;
@@ -641,6 +652,7 @@
 				A8E7626B23DDB9F000BFAD48 /* AppState.swift in Sources */,
 				A89E0BDF23F87AD70009154E /* DependencyGraphSideEffects.swift in Sources */,
 				A8D58A9323F67F8900C2AB74 /* SwiftDepsParser.swift in Sources */,
+				A84DAD31244C7F01005EAB59 /* Collection.swift in Sources */,
 				A85514F623E6030100D3E7F6 /* ParseSwiftDepsSideEffects.swift in Sources */,
 				A89E0BE223F87DAC0009154E /* DispatchQueue+Shorthands.swift in Sources */,
 				A8199C5123E6CA73000B89F6 /* SwiftDeps.swift in Sources */,

@@ -14,14 +14,38 @@ final class SwiftDepsParserSpec: QuickSpec {
     override func spec() {
         describe("parseSwiftDeps") {
             context("given it takes a valid input") {
-                it("returns correctly parsed DependencyTree objects") {
-                    let result = parseSwiftDeps(
-                        parseYamlUrls(
-                            from: findProjectOutputDirectories(projectName: "Backend")
-                        )
-                    )
+                var result: [DependencyTree] = []
 
+                beforeEach {
+                    // Do not perform same search for each test case as the results are the same
+                    // And it is expensive & long
+                    if result.isEmpty {
+                        result = parseSwiftDeps(
+                            parseYamlUrls(
+                                from: findProjectOutputDirectories(projectName: "Backend")
+                            )
+                        )
+                    }
+                }
+
+                it("returns correctly parsed DependencyTree objects") {
                     expect(result).notTo(beEmpty())
+                }
+
+                it("does not store the owner name in the dependencies list") {
+                    let randomItem = result.randomElement()!
+                    let randomItemDeps = randomItem.dependencies.map { $0.name }
+                    expect(randomItemDeps.contains(randomItem.owner)).to(beFalse())
+                }
+
+                it("does not include any system/framework symbols") {
+                    let randomItem = result.randomElement()!
+                    let randomItemDeps = randomItem.dependencies.map { $0.name }
+
+                    expect(randomItemDeps.contains(systemSymbols.randomElement()!)).to(beFalse())
+                    expect(randomItemDeps.randomElement()!.contains("UI")).to(beFalse())
+                    expect(randomItemDeps.randomElement()!.contains("NS")).to(beFalse())
+                    expect(randomItemDeps.randomElement()!.contains("CF")).to(beFalse())
                 }
             }
 

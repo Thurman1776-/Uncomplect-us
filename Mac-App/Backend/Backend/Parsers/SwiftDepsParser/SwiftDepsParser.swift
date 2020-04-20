@@ -6,8 +6,8 @@
 //  Copyright © 2020 Acphut Werkstatt. All rights reserved.
 //
 
-/// Parsing omits private declarations, ocurrances of `Self`, system symbols (see `systemSymbols` declarion)
-/// and objects with `NS` prefix
+/// Parsing omits private declarations, ocurrances of `Self`, system symbols (see `systemSymbols` declaration)
+/// as well as objects with with common framework prefixes: `NS`, `UI` & `CF` (list might need to be updated later)
 
 func parseSwiftDeps(_ swiftDeps: [SwiftDeps]) -> [DependencyTree] {
     var result = [DependencyTree]()
@@ -18,9 +18,9 @@ func parseSwiftDeps(_ swiftDeps: [SwiftDeps]) -> [DependencyTree] {
                 let deps = dep.dependsTopLevel
                     .filter { $0.tag.description != "!private" }
                     .compactMap { (try? $0.represented().string) }
-                    .filter { $0 != name }
-                    .filter { systemSymbols.contains($0) == false }
-                    .filter { $0.contains("NS") == false }
+                    .excludeSystemSymbols()
+                    .excludeSystemSymbolsPrefixes()
+                    .filterOcurrancesOf(name)
                     .map(DependencyTree.Dependency.init)
 
                 result.append(DependencyTree(owner: name, dependencies: deps))
