@@ -84,38 +84,37 @@ private func parseSequencially(_ collection: [String]) -> [URL] {
 }
 
 private func parseConcurrently(_ collection: [String]) -> [URL] {
-    let middleIndex: Double = floor(Double(collection.count / 2))
-    let firstChunk = collection.prefix(upTo: Int(middleIndex))
-    let secondChunk = collection.suffix(from: Int(middleIndex))
-
+    let splitCount = 100
     var paths: Set<URL> = []
-    var firstChunkPaths: Set<URL> = []
-    var secondChunkPaths: Set<URL> = []
-
-    let operation = OperationQueue()
-    operation.addOperation {
-        for path in firstChunk {
-            if let urls = contentsOfDirectory(at: path) {
-                urls.filter { $0.pathExtension == swiftDepsExtension }
-                    .forEach { firstChunkPaths.insert($0) }
-            }
-        }
+    
+    let chunks = collection.chunked(into: splitCount)
+    
+    var initialPaths: Array<Set<URL>> = []
+    
+    for _ in 0..<chunks.count {
+        initialPaths.append(Set<URL>())
     }
-
-    operation.addOperation {
-        for path in secondChunk {
-            if let urls = contentsOfDirectory(at: path) {
-                urls.filter { $0.pathExtension == swiftDepsExtension }
-                    .forEach { secondChunkPaths.insert($0) }
+    
+    let operation = OperationQueue()
+    
+    for (index, chunk) in chunks.enumerated() {
+        operation.addOperation {
+            for path in chunk {
+                if let urls = contentsOfDirectory(at: path) {
+                    urls.filter { $0.pathExtension == swiftDepsExtension }
+                        .forEach { initialPaths[index].insert($0) }
+                }
             }
         }
     }
 
     operation.addBarrierBlock {
-        paths = firstChunkPaths.union(secondChunkPaths)
+        for chunk in initialPaths {
+            paths = paths.union(chunk)
+        }
     }
 
-    operation.maxConcurrentOperationCount = 3
+    operation.maxConcurrentOperationCount = chunks.count + 1
     operation.qualityOfService = .userInitiated
     operation.waitUntilAllOperationsAreFinished()
 
