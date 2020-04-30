@@ -54,6 +54,7 @@
 		A8F7626A23E6A5590014DEB9 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7626923E6A5590014DEB9 /* TestUtils.swift */; };
 		B33D522CFB40DE4CF75B827C /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073CD94B1BFD29B335961A59 /* Yams.framework */; };
 		B4781C80CFFF0A0C5893DF4E /* CwlPreconditionTesting.framework in Accio */ = {isa = PBXBuildFile; fileRef = CFEE7E84BA333690941FA0A0 /* CwlPreconditionTesting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		C373D910245B61C400B41AB3 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C373D90F245B61C400B41AB3 /* Array.swift */; };
 		F982DD1447C7D404E4881F9E /* Yams.framework in Accio */ = {isa = PBXBuildFile; fileRef = CDA32A46831C17A7C83A1CF1 /* Yams.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FAFD5D6D8AFB5A7A53C1C7D9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A892613B802C921192B6A3 /* Quick.framework */; };
 /* End PBXBuildFile section */
@@ -131,6 +132,7 @@
 		A8F12EF723DF6427001EB945 /* FindProjectOutputDirsSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindProjectOutputDirsSideEffects.swift; sourceTree = "<group>"; };
 		A8F7626623E6A3CA0014DEB9 /* YamlParserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamlParserSpec.swift; sourceTree = "<group>"; };
 		A8F7626923E6A5590014DEB9 /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
+		C373D90F245B61C400B41AB3 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		CDA32A46831C17A7C83A1CF1 /* Yams.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Yams.framework; path = Dependencies/macOS/Yams.framework; sourceTree = "<group>"; };
 		CFEE7E84BA333690941FA0A0 /* CwlPreconditionTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = CwlPreconditionTesting.framework; path = Dependencies/macOS/CwlPreconditionTesting.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -239,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				A84DAD30244C7F01005EAB59 /* Collection.swift */,
+				C373D90F245B61C400B41AB3 /* Array.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -655,6 +658,7 @@
 				A84DAD31244C7F01005EAB59 /* Collection.swift in Sources */,
 				A85514F623E6030100D3E7F6 /* ParseSwiftDepsSideEffects.swift in Sources */,
 				A89E0BE223F87DAC0009154E /* DispatchQueue+Shorthands.swift in Sources */,
+				C373D910245B61C400B41AB3 /* Array.swift in Sources */,
 				A8199C5123E6CA73000B89F6 /* SwiftDeps.swift in Sources */,
 				A8CAE99E23DCABC400242ADF /* Bash.swift in Sources */,
 				A8E7627423DDBC8000BFAD48 /* AppReducer.swift in Sources */,
