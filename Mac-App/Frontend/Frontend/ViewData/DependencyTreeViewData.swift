@@ -13,9 +13,11 @@ public enum DependencyTreeView {
 
     public struct Data: Equatable {
         public let dependencies: [Dependency]
+        public let failure: String?
 
-        public init(dependencies: [Dependency]) {
+        public init(dependencies: [Dependency], failure: String?) {
             self.dependencies = dependencies.sorted(by: { $0.dependencies.count > $1.dependencies.count })
+            self.failure = failure
         }
 
         public struct Dependency: Equatable, Identifiable {
