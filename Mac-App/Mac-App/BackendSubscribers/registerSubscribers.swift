@@ -21,6 +21,7 @@ private func startListening() {
 }
 
 private func stopListening() {
+    listViewTransformer.stopListening()
     detailsViewTransformer.stopListening()
 }
 
