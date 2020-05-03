@@ -17,7 +17,12 @@ final class DetailsViewTransformer {
     private var cancellable: AnyCancellable = AnyCancellable {}
 
     func startListening() {
-        cancellable = stateObserver.$currentState.sink { [weak self] appState in self?.emitNewData(appState!) }
+        cancellable = stateObserver.$currentState.sink {
+            [weak self] appState in
+
+            precondition(appState != nil, "State observer should always have an initial state provided by the Backed!")
+            self?.emitNewData(appState!)
+        }
     }
 
     func stopListening() {
