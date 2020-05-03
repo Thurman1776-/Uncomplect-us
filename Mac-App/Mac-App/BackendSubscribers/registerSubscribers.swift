@@ -9,13 +9,14 @@
 import Backend
 
 func registerSubscribers() {
-    BackendAPI.subscribe(listViewTransformer)
+    BackendAPI.subscribe(listViewTransformer.stateObserver)
     BackendAPI.subscribe(detailsViewTransformer.stateObserver)
 
     startListening()
 }
 
 private func startListening() {
+    listViewTransformer.startListening()
     detailsViewTransformer.startListening()
 }
 

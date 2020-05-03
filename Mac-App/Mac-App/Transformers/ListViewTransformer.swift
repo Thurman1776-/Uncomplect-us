@@ -7,25 +7,29 @@
 //
 
 import Backend
-import Cocoa
+import Combine
 import Frontend
-import ReSwift
 
-final class ListViewTransformer: StoreSubscriber {
-    typealias StoreSubscriberStateType = AppState
+final class ListViewTransformer {
+    let stateObserver = StateObserver()
     private(set) var transformedData: ObservableData<DependencyTreeView.State> = .init(.initial)
-    private var previousState: AppState!
+    private var cancellable: AnyCancellable = AnyCancellable {}
 
-    func newState(state newState: AppState) {
-        guard previousState != newState else { return }
+    func startListening() {
+        cancellable = stateObserver.$currentState.sink { [weak self] appState in self?.emitNewState(appState!) }
+    }
 
+    func stopListening() {
+        cancellable.cancel()
+    }
+
+    private func emitNewState(_ newState: AppState) {
         let viewData = mapAppStateToViewData(newState)
         if viewData.dependencies.isEmpty == false {
             transformedData.render(.success(viewData: viewData))
         } else if let failure = newState.dependencyGraphState.failure {
             transformedData.render(.failure(failure))
         }
-        previousState = newState
     }
 
     private func mapAppStateToViewData(_ appState: AppState) -> DependencyTreeView.Data {
