@@ -20,7 +20,7 @@ final class DetailsViewTransformer {
         cancellable = stateObserver.$currentState.sink {
             [weak self] appState in
 
-            precondition(appState != nil, "State observer should always have an initial state provided by the Backed!")
+            precondition(appState != nil, "State observer should always have an initial state provided by the Backend!")
             self?.emitNewData(appState!)
         }
     }
