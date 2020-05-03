@@ -6,6 +6,7 @@
 //  Copyright © 2020 Acphut Werkstatt. All rights reserved.
 //
 
+import Combine
 import ReSwift
 
 final class StateObserver<State: StateType & Equatable>: StoreSubscriber {
