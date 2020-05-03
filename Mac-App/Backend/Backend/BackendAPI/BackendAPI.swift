@@ -31,7 +31,7 @@ public enum BackendAPI {
         BackendAPI.store.subscribe(subscriber)
     }
 
-    public static func subscribeToSubstate<SelectedState, S>(
+    public static func subscribe<SelectedState, S>(
         _ subscriber: S,
         transform: ((ReSwift.Subscription<AppState>) -> ReSwift.Subscription<SelectedState>)?
     ) where SelectedState == S.StoreSubscriberStateType, S: ReSwift.StoreSubscriber {
