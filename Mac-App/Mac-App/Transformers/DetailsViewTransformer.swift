@@ -7,14 +7,23 @@
 //
 
 import Backend
+import Combine
 import Frontend
-import ReSwift
 
-final class DetailsViewTransformer: StoreSubscriber {
-    typealias StoreSubscriberStateType = AppState
+final class DetailsViewTransformer {
+    let stateObserver = StateObserver()
     private(set) var transformedData: ObservableData<ProjectFactsViewData.State> = .init(.initial)
+    private var cancellable: AnyCancellable = AnyCancellable {}
 
-    func newState(state: AppState) {
+    func startListening() {
+        cancellable = stateObserver.$currentState.sink { [weak self] appState in self?.emitNewState(appState!) }
+    }
+
+    func stopListening() {
+        cancellable.cancel()
+    }
+
+    private func emitNewState(_ state: AppState) {
         let viewData = mapAppStateToViewData(state)
 
         switch viewData {
