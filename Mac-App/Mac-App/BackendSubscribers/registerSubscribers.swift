@@ -10,16 +10,20 @@ import Backend
 
 func registerSubscribers() {
     BackendAPI.subscribe(listviewSubscriber)
+    BackendAPI.subscribe(detailsViewTransformer.stateObserver)
 
     startListening()
 }
 
 private func startListening() {
+    detailsViewTransformer.startListening()
 }
 
 private func stopListening() {
+    detailsViewTransformer.stopListening()
 }
 
 // MARK: Transformers
 
 let listviewSubscriber = ListViewTransformer()
+let detailsViewTransformer = DetailsViewTransformer()
