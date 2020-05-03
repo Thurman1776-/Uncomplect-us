@@ -9,13 +9,13 @@
 import Backend
 import ReSwift
 
-final class StateObserver: StoreSubscriber {
-    typealias StoreSubscriberStateType = AppState
+final class StateObserver<State: StateType & Equatable>: StoreSubscriber {
+    typealias StoreSubscriberStateType = State
 
     @Published
-    private(set) var currentState: AppState!
+    private(set) var currentState: State!
 
-    func newState(state: AppState) {
+    func newState(state: State) {
         guard currentState != state else { return }
 
         currentState = state

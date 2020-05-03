@@ -7,10 +7,11 @@
 //
 
 import Backend
+import Frontend
 
 func registerSubscribers() {
-    BackendAPI.subscribe(listViewTransformer.stateObserver)
-    BackendAPI.subscribe(detailsViewTransformer.stateObserver)
+    BackendAPI.subscribeToSubstate(listViewTransformer.stateObserver) { $0.select(DependencyTreeView.Data.init) }
+    BackendAPI.subscribeToSubstate(detailsViewTransformer.stateObserver) { $0.select(ProjectFactsViewData.Data.init) }
 
     startListening()
 }
