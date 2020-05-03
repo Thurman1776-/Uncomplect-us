@@ -6,8 +6,8 @@
 //  Copyright © 2020 Acphut Werkstatt. All rights reserved.
 //
 
-import ReSwift
 import Backend
+import ReSwift
 
 final class StateObserver: StoreSubscriber {
     typealias StoreSubscriberStateType = AppState
@@ -21,4 +21,3 @@ final class StateObserver: StoreSubscriber {
         currentState = state
     }
 }
-
