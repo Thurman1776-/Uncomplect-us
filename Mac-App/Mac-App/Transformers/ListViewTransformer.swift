@@ -7,33 +7,51 @@
 //
 
 import Backend
-import Cocoa
+import Combine
 import Frontend
 import ReSwift
 
-final class ListViewTransformer: StoreSubscriber {
-    typealias StoreSubscriberStateType = AppState
+final class ListViewTransformer {
+    let stateObserver = StateObserver<DependencyTreeView.Data>()
     private(set) var transformedData: ObservableData<DependencyTreeView.State> = .init(.initial)
-    private var previousState: AppState!
+    private var cancellable: AnyCancellable = AnyCancellable {}
 
-    func newState(state newState: AppState) {
-        guard previousState != newState else { return }
+    func startListening() {
+        cancellable = stateObserver.$currentState.sink {
+            [weak self] appState in
 
-        let viewData = mapAppStateToViewData(newState)
+            precondition(appState != nil, "State observer should always have an initial state provided by the Backend!")
+            self?.emitNewData(appState!)
+        }
+    }
+
+    func stopListening() {
+        cancellable.cancel()
+    }
+
+    private func emitNewData(_ viewData: DependencyTreeView.Data) {
         if viewData.dependencies.isEmpty == false {
             transformedData.render(.success(viewData: viewData))
-        } else if let failure = newState.dependencyGraphState.failure {
+        } else if let failure = viewData.failure {
             transformedData.render(.failure(failure))
         }
-        previousState = newState
-    }
-
-    private func mapAppStateToViewData(_ appState: AppState) -> DependencyTreeView.Data {
-        .init(dependencies: appState.dependencyGraphState.tree.map {
-            DependencyTreeView.Data.Dependency(
-                owner: $0.owner,
-                dependencies: $0.dependencies.map { String($0.name) }
-            )
-        })
     }
 }
+
+// MARK: - Mapper from AppState to subscriber state (view data for UI)
+
+extension DependencyTreeView.Data {
+    init(appState: AppState) {
+        self.init(
+            dependencies: appState.dependencyGraphState.tree.map {
+                DependencyTreeView.Data.Dependency(
+                    owner: $0.owner,
+                    dependencies: $0.dependencies.map { String($0.name) }
+                )
+            },
+            failure: appState.dependencyGraphState.failure
+        )
+    }
+}
+
+extension DependencyTreeView.Data: StateType {}
