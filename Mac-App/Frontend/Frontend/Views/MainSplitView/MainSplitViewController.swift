@@ -11,8 +11,8 @@ import SwiftUI
 struct MainSplitViewController: NSViewControllerRepresentable {
     typealias NSViewControllerType = NSSplitViewController
 
-    private var viewData: ObservableData<DependencyTreeView.State>
-    public init(viewData: ObservableData<DependencyTreeView.State>) {
+    private var viewData: ObservableData<DependencyTree.State>
+    public init(viewData: ObservableData<DependencyTree.State>) {
         self.viewData = viewData
     }
 
@@ -30,7 +30,7 @@ struct MainSplitViewController: NSViewControllerRepresentable {
 
 // MARK: - Helpers
 
-private func buildSplitViewController(using viewData: ObservableData<DependencyTreeView.State>) -> NSSplitViewController {
+private func buildSplitViewController(using viewData: ObservableData<DependencyTree.State>) -> NSSplitViewController {
     let splitViewController = NSSplitViewController()
     splitViewController.addSplitViewItem(buildDetailsViewItem())
     splitViewController.addSplitViewItem(buildContentViewItem(using: viewData))
@@ -52,7 +52,7 @@ private func buildDetailsViewItem() -> NSSplitViewItem {
     return splitViewItem
 }
 
-private func buildContentViewItem(using viewData: ObservableData<DependencyTreeView.State>) -> NSSplitViewItem {
+private func buildContentViewItem(using viewData: ObservableData<DependencyTree.State>) -> NSSplitViewItem {
     let hostingController = NSHostingController(rootView: ExpandableListView(viewData: viewData))
     let splitViewItem = NSSplitViewItem(viewController: hostingController)
 

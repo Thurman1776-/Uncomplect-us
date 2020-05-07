@@ -12,8 +12,8 @@ import Frontend
 import ReSwift
 
 final class ListViewTransformer {
-    let stateObserver = StateObserver<DependencyTreeView.Data>()
-    private(set) var transformedData: ObservableData<DependencyTreeView.State> = .init(.initial)
+    let stateObserver = StateObserver<Frontend.DependencyTree.Data>()
+    private(set) var transformedData: ObservableData<Frontend.DependencyTree.State> = .init(.initial)
     private var cancellable: AnyCancellable = AnyCancellable {}
 
     func startListening() {
@@ -29,7 +29,7 @@ final class ListViewTransformer {
         cancellable.cancel()
     }
 
-    private func emitNewData(_ viewData: DependencyTreeView.Data) {
+    private func emitNewData(_ viewData: Frontend.DependencyTree.Data) {
         if viewData.dependencies.isEmpty == false {
             transformedData.render(.success(viewData: viewData))
         } else if let failure = viewData.failure {
@@ -40,11 +40,11 @@ final class ListViewTransformer {
 
 // MARK: - Mapper from AppState to subscriber state (view data for UI)
 
-extension DependencyTreeView.Data {
+extension Frontend.DependencyTree.Data {
     init(appState: AppState) {
         self.init(
             dependencies: appState.dependencyGraphState.tree.map {
-                DependencyTreeView.Data.Dependency(
+                DependencyTree.Data.Dependency(
                     owner: $0.owner,
                     dependencies: $0.dependencies.map { String($0.name) }
                 )
@@ -54,4 +54,4 @@ extension DependencyTreeView.Data {
     }
 }
 
-extension DependencyTreeView.Data: StateType {}
+extension Frontend.DependencyTree.Data: StateType {}
