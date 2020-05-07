@@ -20,7 +20,7 @@
 		A8FECAA22429ED1A0028CC64 /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA12429ED1A0028CC64 /* MainSplitViewController.swift */; };
 		A8FECAA4243096650028CC64 /* MainSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA3243096650028CC64 /* MainSplitView.swift */; };
 		A8FECAA72430BCAE0028CC64 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA62430BCAE0028CC64 /* DetailsView.swift */; };
-		A8FECAA92431086D0028CC64 /* ProjectFactsViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA82431086D0028CC64 /* ProjectFactsViewData.swift */; };
+		A8FECAA92431086D0028CC64 /* ProjectDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA82431086D0028CC64 /* ProjectDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		A8FECAA12429ED1A0028CC64 /* MainSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitViewController.swift; sourceTree = "<group>"; };
 		A8FECAA3243096650028CC64 /* MainSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitView.swift; sourceTree = "<group>"; };
 		A8FECAA62430BCAE0028CC64 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
-		A8FECAA82431086D0028CC64 /* ProjectFactsViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFactsViewData.swift; sourceTree = "<group>"; };
+		A8FECAA82431086D0028CC64 /* ProjectDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				A8F2526724029B6500CD12DE /* DependencyTreeViewData.swift */,
-				A8FECAA82431086D0028CC64 /* ProjectFactsViewData.swift */,
+				A8FECAA82431086D0028CC64 /* ProjectDetails.swift */,
 			);
 			path = ViewData;
 			sourceTree = "<group>";
@@ -317,7 +317,7 @@
 			files = (
 				A8DF67612411639500D0DE02 /* ActivityIndicator.swift in Sources */,
 				A88160DB2421073300CDB15A /* DependencyItem.swift in Sources */,
-				A8FECAA92431086D0028CC64 /* ProjectFactsViewData.swift in Sources */,
+				A8FECAA92431086D0028CC64 /* ProjectDetails.swift in Sources */,
 				A8FECAA22429ED1A0028CC64 /* MainSplitViewController.swift in Sources */,
 				A8FECAA72430BCAE0028CC64 /* DetailsView.swift in Sources */,
 				A8F2526824029B6500CD12DE /* DependencyTreeViewData.swift in Sources */,
