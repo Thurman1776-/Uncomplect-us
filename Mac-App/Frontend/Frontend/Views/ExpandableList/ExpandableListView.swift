@@ -56,10 +56,3 @@ public struct ExpandableListView: View {
     }
 }
 
-// MARK: - Live preview
-
-// struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-// }
