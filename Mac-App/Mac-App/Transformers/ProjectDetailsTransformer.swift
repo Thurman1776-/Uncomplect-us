@@ -1,5 +1,5 @@
 //
-//  DetailsViewTransformer.swift
+//  ProjectDetailsTransformer.swift
 //  Mac-App
 //
 //  Created by Daniel GARCÍA on 29.03.20.
@@ -11,7 +11,7 @@ import Combine
 import Frontend
 import ReSwift
 
-final class DetailsViewTransformer {
+final class ProjectDetailsTransformer {
     let stateObserver = StateObserver<ProjectDetails.Data>()
     private(set) var transformedData: ObservableData<ProjectDetails.State> = .init(.initial)
     private var cancellable: AnyCancellable = AnyCancellable {}
@@ -40,7 +40,7 @@ final class DetailsViewTransformer {
         }
     }
 
-    private func mapAppStateToViewData(_ data: ProjectDetails.Data) -> DetailsViewTransformer.Status {
+    private func mapAppStateToViewData(_ data: ProjectDetails.Data) -> ProjectDetailsTransformer.Status {
         guard data.totalDependenciesFound > 0 else {
             return .failure("No paths found!")
         }
@@ -49,7 +49,7 @@ final class DetailsViewTransformer {
     }
 }
 
-extension DetailsViewTransformer {
+extension ProjectDetailsTransformer {
     enum Status {
         case success(_ data: ProjectDetails.Data)
         case failure(_ failure: String)

@@ -11,22 +11,22 @@ import Frontend
 
 func registerSubscribers() {
     BackendAPI.subscribe(listViewTransformer.stateObserver) { $0.select(DependencyTreeView.Data.init) }
-    BackendAPI.subscribe(detailsViewTransformer.stateObserver) { $0.select(ProjectDetails.Data.init) }
+    BackendAPI.subscribe(projectDetailsTransformer.stateObserver) { $0.select(ProjectDetails.Data.init) }
 
     startListening()
 }
 
 private func startListening() {
     listViewTransformer.startListening()
-    detailsViewTransformer.startListening()
+    projectDetailsTransformer.startListening()
 }
 
 private func stopListening() {
     listViewTransformer.stopListening()
-    detailsViewTransformer.stopListening()
+    projectDetailsTransformer.stopListening()
 }
 
 // MARK: Transformers
 
 let listViewTransformer = ListViewTransformer()
-let detailsViewTransformer = DetailsViewTransformer()
+let projectDetailsTransformer = ProjectDetailsTransformer()
