@@ -30,9 +30,9 @@ final class ProjectDetailsTransformer {
     }
 
     private func emitNewData(_ viewData: ProjectDetails.Data) {
-        let viewData = mapAppStateToViewData(viewData)
+        let status = mapViewDataToStatus(viewData)
 
-        switch viewData {
+        switch status {
         case let .failure(failure):
             transformedData.render(.failure(failure))
         case let .success(viewData):
@@ -40,7 +40,7 @@ final class ProjectDetailsTransformer {
         }
     }
 
-    private func mapAppStateToViewData(_ data: ProjectDetails.Data) -> ProjectDetailsTransformer.Status {
+    private func mapViewDataToStatus(_ data: ProjectDetails.Data) -> ProjectDetailsTransformer.Status {
         guard data.totalDependenciesFound > 0 else {
             return .failure("No paths found!")
         }
