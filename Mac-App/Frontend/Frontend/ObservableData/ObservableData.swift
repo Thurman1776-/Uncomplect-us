@@ -7,6 +7,8 @@
 //
 
 import Foundation
+// This should not be imported in Frontend. Testing if this fixes CI problems
+import Combine
 
 // MARK: - View Data building blocks
 
