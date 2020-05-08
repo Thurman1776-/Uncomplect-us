@@ -306,7 +306,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd ../BuildTools\n#swift package update #Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\nif which swiftformat >/dev/null; then\n  swift run -c release swiftformat \"$SRCROOT\"\nelse\n  brew install swiftformat\n  swift run -c release swiftformat \"$SRCROOT\"\nfi\n\n\n";
+			shellScript = "cd ../BuildTools\n#swift package update #Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\nif which swiftformat >/dev/null; then\n  swift run -c release swiftformat \"$SRCROOT\"\nfi\n\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
