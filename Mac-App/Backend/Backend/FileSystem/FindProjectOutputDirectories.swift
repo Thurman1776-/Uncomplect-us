@@ -48,7 +48,7 @@ public func findProjectOutputDirectories(
             excludingTests ? parseCommandLineOutputSkippingTestFiles(commandOutput) : trimOutput(commandOutput)
         }
 
-        return parseSequencially(filePaths())
+        return parseConcurrently(filePaths())
     }
 
     return []

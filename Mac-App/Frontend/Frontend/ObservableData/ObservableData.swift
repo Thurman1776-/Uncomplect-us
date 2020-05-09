@@ -6,9 +6,9 @@
 //  Copyright © 2020 Acphut Werkstatt. All rights reserved.
 //
 
-import Foundation
 // This should not be imported in Frontend. Testing if this fixes CI problems
 import Combine
+import Foundation
 
 // MARK: - View Data building blocks
 
