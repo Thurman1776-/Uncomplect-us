@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct DependencyItem: View {
+struct DependencyItemView: View {
     let dependency: DependencyTree.Data.Dependency
     let isExpanded: Bool
 

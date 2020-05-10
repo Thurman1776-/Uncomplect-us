@@ -33,7 +33,7 @@ public struct ExpandableListView: View {
             return AnyView(VStack(alignment: .leading, spacing: 8) {
                 List {
                     ForEach(data.dependencies, id: \.id) { node in
-                        DependencyItem(
+                        DependencyItemView(
                             dependency: node,
                             isExpanded: self.selection.contains(node)
                         ).onTapGesture { self.didTapItem(node) }
@@ -55,4 +55,3 @@ public struct ExpandableListView: View {
         }
     }
 }
-
