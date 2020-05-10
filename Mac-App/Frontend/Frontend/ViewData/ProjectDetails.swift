@@ -1,5 +1,5 @@
 //
-//  ProjectFactsViewData.swift
+//  ProjectDetails.swift
 //  Frontend
 //
 //  Created by Daniel GARCÍA on 29.03.20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum ProjectFactsViewData {
+public enum ProjectDetails {
     // MARK: - View Data
 
     public struct Data: Equatable {

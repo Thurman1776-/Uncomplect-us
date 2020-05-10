@@ -1,5 +1,5 @@
 //
-//  DependencyTreeView.swift
+//  DependencyTree.swift
 //  Frontend
 //
 //  Created by Daniel GARCÍA on 23.02.20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum DependencyTreeView {
+public enum DependencyTree {
     // MARK: - View Data
 
     public struct Data: Equatable {
@@ -41,4 +41,4 @@ public enum DependencyTreeView {
     }
 }
 
-extension DependencyTreeView.Data.Dependency: Hashable {}
+extension DependencyTree.Data.Dependency: Hashable {}

@@ -9,8 +9,8 @@
 import SwiftUI
 
 public struct MainSplitView: View {
-    private var viewData: ObservableData<DependencyTreeView.State>
-    public init(viewData: ObservableData<DependencyTreeView.State>) {
+    private var viewData: ObservableData<DependencyTree.State>
+    public init(viewData: ObservableData<DependencyTree.State>) {
         self.viewData = viewData
     }
 

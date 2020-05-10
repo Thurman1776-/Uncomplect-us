@@ -19,7 +19,7 @@
 		A89E0BE523F883AA0009154E /* ReSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A89E0BE323F883AA0009154E /* ReSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A8CAE9AA23DCAE7E00242ADF /* Mac-AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE9A923DCAE7E00242ADF /* Mac-AppTests.swift */; };
 		A8F252602400526200CD12DE /* Frontend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F2525F2400526200CD12DE /* Frontend.framework */; };
-		A8FECAAB24310DDC0028CC64 /* DetailsViewTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAAA24310DDC0028CC64 /* DetailsViewTransformer.swift */; };
+		A8FECAAB24310DDC0028CC64 /* ProjectDetailsTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAAA24310DDC0028CC64 /* ProjectDetailsTransformer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +63,7 @@
 		A89E0BE323F883AA0009154E /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Backend/Dependencies/macOS/ReSwift.framework; sourceTree = "<group>"; };
 		A8CAE9A923DCAE7E00242ADF /* Mac-AppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Mac-AppTests.swift"; sourceTree = "<group>"; };
 		A8F2525F2400526200CD12DE /* Frontend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Frontend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8FECAAA24310DDC0028CC64 /* DetailsViewTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewTransformer.swift; sourceTree = "<group>"; };
+		A8FECAAA24310DDC0028CC64 /* ProjectDetailsTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsTransformer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				A8472C9D2402C6190032E702 /* ListViewTransformer.swift */,
-				A8FECAAA24310DDC0028CC64 /* DetailsViewTransformer.swift */,
+				A8FECAAA24310DDC0028CC64 /* ProjectDetailsTransformer.swift */,
 			);
 			path = Transformers;
 			sourceTree = "<group>";
@@ -302,7 +302,7 @@
 				A8743A6F245F28BF00F8BFF2 /* registerSubscribers.swift in Sources */,
 				A8743A72245F2B1B00F8BFF2 /* StateObserver.swift in Sources */,
 				A86E10342365DAB800D3FF94 /* AppDelegate.swift in Sources */,
-				A8FECAAB24310DDC0028CC64 /* DetailsViewTransformer.swift in Sources */,
+				A8FECAAB24310DDC0028CC64 /* ProjectDetailsTransformer.swift in Sources */,
 				A8472C9E2402C6190032E702 /* ListViewTransformer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

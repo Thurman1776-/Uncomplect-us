@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A88160DB2421073300CDB15A /* DependencyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88160DA2421073300CDB15A /* DependencyItem.swift */; };
+		A88160DB2421073300CDB15A /* DependencyItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88160DA2421073300CDB15A /* DependencyItemView.swift */; };
 		A88160DD2421480E00CDB15A /* ListRowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88160DC2421480E00CDB15A /* ListRowModifier.swift */; };
 		A8DF67612411639500D0DE02 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF67602411639500D0DE02 /* ActivityIndicator.swift */; };
 		A8DF67642412D9AE00D0DE02 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF67632412D9AE00D0DE02 /* InputView.swift */; };
@@ -16,11 +16,11 @@
 		A8F2525423FF0B5000CD12DE /* Frontend.h in Headers */ = {isa = PBXBuildFile; fileRef = A8F2524623FF0B5000CD12DE /* Frontend.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A8F2525E23FF0BF300CD12DE /* ExpandableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2525D23FF0BF300CD12DE /* ExpandableListView.swift */; };
 		A8F2526424029A2400CD12DE /* ObservableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2526324029A2400CD12DE /* ObservableData.swift */; };
-		A8F2526824029B6500CD12DE /* DependencyTreeViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2526724029B6500CD12DE /* DependencyTreeViewData.swift */; };
+		A8F2526824029B6500CD12DE /* DependencyTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2526724029B6500CD12DE /* DependencyTree.swift */; };
 		A8FECAA22429ED1A0028CC64 /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA12429ED1A0028CC64 /* MainSplitViewController.swift */; };
 		A8FECAA4243096650028CC64 /* MainSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA3243096650028CC64 /* MainSplitView.swift */; };
 		A8FECAA72430BCAE0028CC64 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA62430BCAE0028CC64 /* DetailsView.swift */; };
-		A8FECAA92431086D0028CC64 /* ProjectFactsViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA82431086D0028CC64 /* ProjectFactsViewData.swift */; };
+		A8FECAA92431086D0028CC64 /* ProjectDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA82431086D0028CC64 /* ProjectDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A88160DA2421073300CDB15A /* DependencyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyItem.swift; sourceTree = "<group>"; };
+		A88160DA2421073300CDB15A /* DependencyItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyItemView.swift; sourceTree = "<group>"; };
 		A88160DC2421480E00CDB15A /* ListRowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowModifier.swift; sourceTree = "<group>"; };
 		A8DF67602411639500D0DE02 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		A8DF67632412D9AE00D0DE02 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
@@ -46,11 +46,11 @@
 		A8F2525323FF0B5000CD12DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8F2525D23FF0BF300CD12DE /* ExpandableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableListView.swift; sourceTree = "<group>"; };
 		A8F2526324029A2400CD12DE /* ObservableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableData.swift; sourceTree = "<group>"; };
-		A8F2526724029B6500CD12DE /* DependencyTreeViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyTreeViewData.swift; sourceTree = "<group>"; };
+		A8F2526724029B6500CD12DE /* DependencyTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyTree.swift; sourceTree = "<group>"; };
 		A8FECAA12429ED1A0028CC64 /* MainSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitViewController.swift; sourceTree = "<group>"; };
 		A8FECAA3243096650028CC64 /* MainSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitView.swift; sourceTree = "<group>"; };
 		A8FECAA62430BCAE0028CC64 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
-		A8FECAA82431086D0028CC64 /* ProjectFactsViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFactsViewData.swift; sourceTree = "<group>"; };
+		A8FECAA82431086D0028CC64 /* ProjectDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,8 +151,8 @@
 		A8F2526624029B4E00CD12DE /* ViewData */ = {
 			isa = PBXGroup;
 			children = (
-				A8F2526724029B6500CD12DE /* DependencyTreeViewData.swift */,
-				A8FECAA82431086D0028CC64 /* ProjectFactsViewData.swift */,
+				A8F2526724029B6500CD12DE /* DependencyTree.swift */,
+				A8FECAA82431086D0028CC64 /* ProjectDetails.swift */,
 			);
 			path = ViewData;
 			sourceTree = "<group>";
@@ -161,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				A8F2525D23FF0BF300CD12DE /* ExpandableListView.swift */,
-				A88160DA2421073300CDB15A /* DependencyItem.swift */,
+				A88160DA2421073300CDB15A /* DependencyItemView.swift */,
 			);
 			path = ExpandableList;
 			sourceTree = "<group>";
@@ -316,11 +316,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8DF67612411639500D0DE02 /* ActivityIndicator.swift in Sources */,
-				A88160DB2421073300CDB15A /* DependencyItem.swift in Sources */,
-				A8FECAA92431086D0028CC64 /* ProjectFactsViewData.swift in Sources */,
+				A88160DB2421073300CDB15A /* DependencyItemView.swift in Sources */,
+				A8FECAA92431086D0028CC64 /* ProjectDetails.swift in Sources */,
 				A8FECAA22429ED1A0028CC64 /* MainSplitViewController.swift in Sources */,
 				A8FECAA72430BCAE0028CC64 /* DetailsView.swift in Sources */,
-				A8F2526824029B6500CD12DE /* DependencyTreeViewData.swift in Sources */,
+				A8F2526824029B6500CD12DE /* DependencyTree.swift in Sources */,
 				A8DF67642412D9AE00D0DE02 /* InputView.swift in Sources */,
 				A88160DD2421480E00CDB15A /* ListRowModifier.swift in Sources */,
 				A8F2526424029A2400CD12DE /* ObservableData.swift in Sources */,
