@@ -11,15 +11,15 @@ import SwiftUI
 struct MainSplitViewController: NSViewControllerRepresentable {
     typealias NSViewControllerType = NSSplitViewController
 
-    private var viewData: ObservableData<DependencyTree.State>
-    public init(viewData: ObservableData<DependencyTree.State>) {
-        self.viewData = viewData
+    private var dependencyTreeState: ObservableData<DependencyTree.State>
+    public init(dependencyTreeState: ObservableData<DependencyTree.State>) {
+        self.dependencyTreeState = dependencyTreeState
     }
 
     func makeNSViewController(
         context _: NSViewControllerRepresentableContext<MainSplitViewController>
     ) -> NSSplitViewController {
-        buildSplitViewController(using: viewData)
+        buildSplitViewController(using: dependencyTreeState)
     }
 
     func updateNSViewController(
@@ -30,10 +30,13 @@ struct MainSplitViewController: NSViewControllerRepresentable {
 
 // MARK: - Helpers
 
-private func buildSplitViewController(using viewData: ObservableData<DependencyTree.State>) -> NSSplitViewController {
+private func buildSplitViewController(
+    using dependencyTreeState: ObservableData<DependencyTree.State>
+) -> NSSplitViewController {
+
     let splitViewController = NSSplitViewController()
     splitViewController.addSplitViewItem(buildDetailsViewItem())
-    splitViewController.addSplitViewItem(buildContentViewItem(using: viewData))
+    splitViewController.addSplitViewItem(buildContentViewItem(using: dependencyTreeState))
 
     let splitView = NSSplitView()
     splitView.isVertical = true
@@ -52,8 +55,13 @@ private func buildDetailsViewItem() -> NSSplitViewItem {
     return splitViewItem
 }
 
-private func buildContentViewItem(using viewData: ObservableData<DependencyTree.State>) -> NSSplitViewItem {
-    let hostingController = NSHostingController(rootView: ExpandableListView(viewData: viewData))
+private func buildContentViewItem(
+    using dependencyTreeState: ObservableData<DependencyTree.State>
+) -> NSSplitViewItem {
+
+    let hostingController = NSHostingController(
+        rootView: ExpandableListView(dependencyTreeState: dependencyTreeState)
+    )
     let splitViewItem = NSSplitViewItem(viewController: hostingController)
 
     return splitViewItem

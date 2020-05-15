@@ -9,12 +9,12 @@
 import SwiftUI
 
 public struct MainSplitView: View {
-    private var viewData: ObservableData<DependencyTree.State>
-    public init(viewData: ObservableData<DependencyTree.State>) {
-        self.viewData = viewData
+    private var dependencyTreeState: ObservableData<DependencyTree.State>
+    public init(dependencyTreeState: ObservableData<DependencyTree.State>) {
+        self.dependencyTreeState = dependencyTreeState
     }
 
     public var body: some View {
-        MainSplitViewController(viewData: viewData)
+        MainSplitViewController(dependencyTreeState: dependencyTreeState)
     }
 }

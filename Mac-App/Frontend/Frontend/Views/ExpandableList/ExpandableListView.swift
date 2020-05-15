@@ -9,15 +9,15 @@
 import SwiftUI
 
 public struct ExpandableListView: View {
-    @ObservedObject private var viewData: ObservableData<DependencyTree.State>
+    @ObservedObject private var dependencyTreeState: ObservableData<DependencyTree.State>
     @State private var selection: Set<DependencyTree.Data.Dependency> = []
 
-    public init(viewData: ObservableData<DependencyTree.State>) {
-        self.viewData = viewData
+    public init(dependencyTreeState: ObservableData<DependencyTree.State>) {
+        self.dependencyTreeState = dependencyTreeState
     }
 
     public var body: some View {
-        switch viewData.data {
+        switch dependencyTreeState.data {
         case .initial:
             return AnyView(
                 VStack {
