@@ -18,10 +18,10 @@ final class ProjectDetailsTransformer {
 
     func startListening() {
         cancellable = stateObserver.$currentState.sink {
-            [weak self] appState in
+            [weak self] projectDetailsState in
 
-            precondition(appState != nil, "State observer should always have an initial state provided by the Backend!")
-            self?.emitNewData(appState!)
+            precondition(projectDetailsState != nil, "State observer should always have an initial state provided by the Backend!")
+            self?.emitNewData(projectDetailsState!)
         }
     }
 
