@@ -27,19 +27,28 @@ public struct DetailsView: View {
         case let .success(viewData: viewData):
             return AnyView(
                 VStack {
-                    Text("Heaviest dependency - \(viewData.heaviestDependency)")
-                        .underline()
-                        .foregroundColor(.red)
+                    Spacer().frame(minHeight: 16, maxHeight: 36)
+                    Text("Heaviest dependency: ")
+                        .foregroundColor(.yellow)
                         .font(.system(.headline))
+                    Text(viewData.heaviestDependency)
+                        .underline()
+                        .font(.system(.subheadline))
+                        .foregroundColor(.red)
+                    Spacer().frame(minHeight: 16, maxHeight: 36)
                     Text("Total dependencies found: \(viewData.totalDependenciesFound)")
                         .bold()
                         .foregroundColor(.white)
                         .font(.system(.body))
+                    Spacer().frame(minHeight: 16, maxHeight: 36)
                     Text("Files scanned: \(viewData.paths.count)")
                         .bold()
                         .foregroundColor(.white)
                         .font(.system(.body))
-                }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                    Spacer().frame(minHeight: 16, maxHeight: 36)
+                }
+                .padding(EdgeInsets(top: 45, leading: 4, bottom: 45, trailing: 4))
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
             )
         case let .failure(errorMessage):
             return
