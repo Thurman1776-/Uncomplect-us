@@ -30,29 +30,11 @@ final class ProjectDetailsTransformer {
     }
 
     private func emitNewState(_ state: ProjectDetails.State) {
-        let status = mapViewDataToStatus(state)
-
-        switch status {
-        case let .failure(failure):
+        if state.paths.isEmpty == false {
+            viewInput.update(to: .success(state: state))
+        } else if let failure = state.failure {
             viewInput.update(to: .failure(failure))
-        case let .success(viewData):
-            viewInput.update(to: .success(viewData: viewData))
         }
-    }
-
-    private func mapViewDataToStatus(_ data: ProjectDetails.State) -> ProjectDetailsTransformer.Status {
-        guard data.totalDependenciesFound > 0 else {
-            return .failure("No paths found!")
-        }
-
-        return .success(data)
-    }
-}
-
-extension ProjectDetailsTransformer {
-    enum Status {
-        case success(_ data: ProjectDetails.State)
-        case failure(_ failure: String)
     }
 }
 

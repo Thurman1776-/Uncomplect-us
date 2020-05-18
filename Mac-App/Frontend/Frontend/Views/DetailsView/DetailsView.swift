@@ -24,7 +24,7 @@ public struct DetailsView: View {
                     isloading: true
                 )
             )
-        case let .success(viewData: viewData):
+        case let .success(state: viewData):
             return AnyView(
                 VStack {
                     Spacer().frame(minHeight: 16, maxHeight: 36)

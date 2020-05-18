@@ -35,6 +35,6 @@ public enum ProjectDetails {
     public enum Status: Equatable {
         case initial
         case failure(_ failure: String)
-        case success(viewData: State)
+        case success(state: State)
     }
 }
