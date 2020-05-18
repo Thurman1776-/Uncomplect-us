@@ -13,7 +13,7 @@ import ReSwift
 
 final class ProjectDetailsTransformer {
     let stateObserver = StateObserver<ProjectDetails.Data>()
-    private(set) var viewInput: Observable<ProjectDetails.State> = .init(.initial)
+    private(set) var viewInput: Observable<ProjectDetails.Status> = .init(.initial)
     private var cancellable: AnyCancellable = AnyCancellable {}
 
     func startListening() {

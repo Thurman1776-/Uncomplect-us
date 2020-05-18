@@ -12,11 +12,11 @@ struct MainSplitViewController: NSViewControllerRepresentable {
     typealias NSViewControllerType = NSSplitViewController
 
     private var dependencyTreeState: Observable<DependencyTree.State>
-    private var projectDetailsState: Observable<ProjectDetails.State>
+    private var projectDetailsState: Observable<ProjectDetails.Status>
 
     public init(
         dependencyTreeState: Observable<DependencyTree.State>,
-        projectDetailsState: Observable<ProjectDetails.State>
+        projectDetailsState: Observable<ProjectDetails.Status>
     ) {
         self.dependencyTreeState = dependencyTreeState
         self.projectDetailsState = projectDetailsState
@@ -38,7 +38,7 @@ struct MainSplitViewController: NSViewControllerRepresentable {
 
 private func makeSplitViewController(
     using dependencyTreeState: Observable<DependencyTree.State>,
-    projectDetailsState: Observable<ProjectDetails.State>
+    projectDetailsState: Observable<ProjectDetails.Status>
 ) -> NSSplitViewController {
     let splitViewController = NSSplitViewController()
     splitViewController.addSplitViewItem(makeDetailsView(using: projectDetailsState))
@@ -53,7 +53,7 @@ private func makeSplitViewController(
 }
 
 private func makeDetailsView(
-    using projectDetailsState: Observable<ProjectDetails.State>
+    using projectDetailsState: Observable<ProjectDetails.Status>
 ) -> NSSplitViewItem {
     let hostingController = NSHostingController(rootView: DetailsView(projectDetailsState: projectDetailsState))
     let splitViewItem = NSSplitViewItem(viewController: hostingController)

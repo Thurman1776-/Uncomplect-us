@@ -27,9 +27,9 @@ public enum ProjectDetails {
         }
     }
 
-    // MARK: - View State
+    // MARK: - View Status
 
-    public enum State: Equatable {
+    public enum Status: Equatable {
         case initial
         case failure(_ failure: String)
         case success(viewData: Data)
