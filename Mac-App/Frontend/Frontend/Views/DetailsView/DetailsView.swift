@@ -9,9 +9,9 @@
 import SwiftUI
 
 public struct DetailsView: View {
-    @ObservedObject private var projectDetailsState: ObservableData<ProjectDetails.State>
+    @ObservedObject private var projectDetailsState: Observable<ProjectDetails.State>
 
-    public init(projectDetailsState: ObservableData<ProjectDetails.State>) {
+    public init(projectDetailsState: Observable<ProjectDetails.State>) {
         self.projectDetailsState = projectDetailsState
     }
 

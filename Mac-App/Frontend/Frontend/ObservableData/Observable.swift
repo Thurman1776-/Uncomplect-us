@@ -20,7 +20,7 @@ public protocol ViewInput {
     func render(_ newData: Data)
 }
 
-open class ObservableData<T: Equatable>: ViewInput, ObservableObject {
+open class Observable<T: Equatable>: ViewInput, ObservableObject {
     public typealias Data = T
 
     @Published private(set) var data: T
