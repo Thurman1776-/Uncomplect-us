@@ -13,7 +13,7 @@ import ReSwift
 
 final class ProjectDetailsTransformer {
     let stateObserver = StateObserver<ProjectDetails.Data>()
-    private(set) var transformedData: Observable<ProjectDetails.State> = .init(.initial)
+    private(set) var viewInput: Observable<ProjectDetails.State> = .init(.initial)
     private var cancellable: AnyCancellable = AnyCancellable {}
 
     func startListening() {
@@ -34,9 +34,9 @@ final class ProjectDetailsTransformer {
 
         switch status {
         case let .failure(failure):
-            transformedData.update(to: .failure(failure))
+            viewInput.update(to: .failure(failure))
         case let .success(viewData):
-            transformedData.update(to: .success(viewData: viewData))
+            viewInput.update(to: .success(viewData: viewData))
         }
     }
 

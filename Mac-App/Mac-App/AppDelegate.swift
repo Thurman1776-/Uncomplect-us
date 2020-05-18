@@ -21,7 +21,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
             let mainSplitView = MainSplitView(
                 dependencyTreeState: listViewTransformer.transformedData,
-                projectDetailsState: projectDetailsTransformer.transformedData
+                projectDetailsState: projectDetailsTransformer.viewInput
             )
             self.window.contentView = NSHostingView(rootView: mainSplitView)
         }
