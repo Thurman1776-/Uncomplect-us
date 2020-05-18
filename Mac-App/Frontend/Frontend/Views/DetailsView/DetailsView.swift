@@ -9,14 +9,14 @@
 import SwiftUI
 
 public struct DetailsView: View {
-    @ObservedObject private var projectDetailsState: Observable<ProjectDetails.Status>
+    @ObservedObject private var projectDetailsStatus: Observable<ProjectDetails.Status>
 
-    public init(projectDetailsState: Observable<ProjectDetails.Status>) {
-        self.projectDetailsState = projectDetailsState
+    public init(projectDetailsStatus: Observable<ProjectDetails.Status>) {
+        self.projectDetailsStatus = projectDetailsStatus
     }
 
     public var body: some View {
-        switch projectDetailsState.input {
+        switch projectDetailsStatus.input {
         case .initial:
             return AnyView(
                 LoadingView(
