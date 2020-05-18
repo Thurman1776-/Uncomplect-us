@@ -20,14 +20,10 @@ public struct ExpandableListView: View {
         switch dependencyTreeState.data {
         case .initial:
             return AnyView(
-                VStack {
-                    ActivityIndicator(isAnimating: true, style: .spinning)
-                        .padding()
-                    Text("Processing build files...")
-                        .bold()
-                        .foregroundColor(.gray)
-                        .padding()
-                }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                LoadingView(
+                    title: "Processing build files...",
+                    isloading: true
+                ).frame(maxWidth: .infinity, maxHeight: .infinity)
             )
         case let .success(viewData: data):
             return AnyView(VStack(alignment: .leading, spacing: 8) {
