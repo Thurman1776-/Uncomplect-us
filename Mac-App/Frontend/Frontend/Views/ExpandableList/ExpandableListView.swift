@@ -21,7 +21,7 @@ public struct ExpandableListView: View {
         case .initial:
             return AnyView(
                 VStack {
-                    ActivityIndicator(isAnimating: Binding<Bool>.constant(true), style: .spinning)
+                    ActivityIndicator(isAnimating: true, style: .spinning)
                         .padding()
                     Text("Processing build files...")
                         .bold()

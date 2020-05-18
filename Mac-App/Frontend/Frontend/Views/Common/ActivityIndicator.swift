@@ -3,7 +3,7 @@ import SwiftUI
 struct ActivityIndicator: NSViewRepresentable {
     typealias NSViewType = NSProgressIndicator
 
-    @Binding var isAnimating: Bool
+    @State var isAnimating: Bool
     let style: NSProgressIndicator.Style
 
     func makeNSView(context _: NSViewRepresentableContext<ActivityIndicator>) -> NSProgressIndicator {
