@@ -21,7 +21,7 @@ final class ProjectDetailsTransformer {
             [weak self] projectDetailsState in
 
             precondition(projectDetailsState != nil, "State observer should always have an initial state provided by the Backend!")
-            self?.emitNewData(projectDetailsState!)
+            self?.emitNewState(projectDetailsState!)
         }
     }
 
@@ -29,8 +29,8 @@ final class ProjectDetailsTransformer {
         cancellable.cancel()
     }
 
-    private func emitNewData(_ viewData: ProjectDetails.State) {
-        let status = mapViewDataToStatus(viewData)
+    private func emitNewState(_ state: ProjectDetails.State) {
+        let status = mapViewDataToStatus(state)
 
         switch status {
         case let .failure(failure):
