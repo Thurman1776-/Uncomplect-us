@@ -34,7 +34,7 @@ struct MainSplitViewController: NSViewControllerRepresentable {
     ) {}
 }
 
-// MARK: - Helpers
+// MARK: - Factory functions
 
 private func makeSplitViewController(
     using dependencyTreeState: ObservableData<DependencyTree.State>,
