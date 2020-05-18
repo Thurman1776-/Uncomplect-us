@@ -9,9 +9,9 @@
 import Foundation
 
 public enum ProjectDetails {
-    // MARK: - View Data
+    // MARK: - View State
 
-    public struct Data: Equatable {
+    public struct State: Equatable {
         public let heaviestDependency: String
         public let totalDependenciesFound: Int
         public let paths: [URL]
@@ -32,6 +32,6 @@ public enum ProjectDetails {
     public enum Status: Equatable {
         case initial
         case failure(_ failure: String)
-        case success(viewData: Data)
+        case success(viewData: State)
     }
 }

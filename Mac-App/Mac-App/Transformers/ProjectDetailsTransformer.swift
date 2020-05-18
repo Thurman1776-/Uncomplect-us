@@ -12,7 +12,7 @@ import Frontend
 import ReSwift
 
 final class ProjectDetailsTransformer {
-    let stateObserver = StateObserver<ProjectDetails.Data>()
+    let stateObserver = StateObserver<ProjectDetails.State>()
     private(set) var viewInput: Observable<ProjectDetails.Status> = .init(.initial)
     private var cancellable: AnyCancellable = AnyCancellable {}
 
@@ -29,7 +29,7 @@ final class ProjectDetailsTransformer {
         cancellable.cancel()
     }
 
-    private func emitNewData(_ viewData: ProjectDetails.Data) {
+    private func emitNewData(_ viewData: ProjectDetails.State) {
         let status = mapViewDataToStatus(viewData)
 
         switch status {
@@ -40,7 +40,7 @@ final class ProjectDetailsTransformer {
         }
     }
 
-    private func mapViewDataToStatus(_ data: ProjectDetails.Data) -> ProjectDetailsTransformer.Status {
+    private func mapViewDataToStatus(_ data: ProjectDetails.State) -> ProjectDetailsTransformer.Status {
         guard data.totalDependenciesFound > 0 else {
             return .failure("No paths found!")
         }
@@ -51,14 +51,14 @@ final class ProjectDetailsTransformer {
 
 extension ProjectDetailsTransformer {
     enum Status {
-        case success(_ data: ProjectDetails.Data)
+        case success(_ data: ProjectDetails.State)
         case failure(_ failure: String)
     }
 }
 
 // MARK: - Mapper from AppState to subscriber state (view data for UI)
 
-extension ProjectDetails.Data {
+extension ProjectDetails.State {
     init(appState: AppState) {
         let heaviestDependency = appState.dependencyGraphState.tree.sorted(by: {
             first, second -> Bool in
@@ -76,4 +76,4 @@ extension ProjectDetails.Data {
     }
 }
 
-extension ProjectDetails.Data: StateType {}
+extension ProjectDetails.State: StateType {}
