@@ -71,7 +71,8 @@ extension ProjectDetails.State {
         self.init(
             heaviestDependency: heaviestDependency ?? "",
             totalDependenciesFound: totalDeps,
-            paths: paths
+            paths: paths,
+            failure: appState.dependencyGraphState.failure
         )
     }
 }

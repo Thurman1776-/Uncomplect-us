@@ -15,15 +15,18 @@ public enum ProjectDetails {
         public let heaviestDependency: String
         public let totalDependenciesFound: Int
         public let paths: [URL]
+        public var failure: String?
 
         public init(
             heaviestDependency: String,
             totalDependenciesFound: Int,
-            paths: [URL]
+            paths: [URL],
+            failure: String?
         ) {
             self.heaviestDependency = heaviestDependency
             self.totalDependenciesFound = totalDependenciesFound
             self.paths = paths
+            self.failure = failure
         }
     }
 
