@@ -16,7 +16,36 @@ public struct DetailsView: View {
     }
 
     public var body: some View {
-        Text("Options will go here")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        switch projectDetailsState.data {
+        case .initial:
+            return AnyView(
+                LoadingView(
+                    title: "Finding relevant stats...",
+                    isloading: true
+                )
+            )
+        case let .success(viewData: viewData):
+            return AnyView(
+                VStack {
+                    Text("Heaviest dependency - \(viewData.heaviestDependency)")
+                        .underline()
+                        .foregroundColor(.red)
+                        .font(.system(.headline))
+                    Text("Total dependencies found: \(viewData.totalDependenciesFound)")
+                        .bold()
+                        .foregroundColor(.white)
+                        .font(.system(.body))
+                    Text("Files scanned: \(viewData.paths.count)")
+                        .bold()
+                        .foregroundColor(.white)
+                        .font(.system(.body))
+                }.frame(maxWidth: .infinity, maxHeight: .infinity)
+            )
+        case let .failure(errorMessage):
+            return
+                AnyView(
+                    Text("Something went wrong! - \(errorMessage)")
+                )
+        }
     }
 }
