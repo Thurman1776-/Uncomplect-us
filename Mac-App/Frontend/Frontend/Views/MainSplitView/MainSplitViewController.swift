@@ -58,7 +58,7 @@ private func makeDetailsView(
     let hostingController = NSHostingController(rootView: DetailsView(projectDetailsState: projectDetailsState))
     let splitViewItem = NSSplitViewItem(viewController: hostingController)
     splitViewItem.holdingPriority = .defaultHigh
-    splitViewItem.minimumThickness = 120
+    splitViewItem.minimumThickness = 140
 
     return splitViewItem
 }
