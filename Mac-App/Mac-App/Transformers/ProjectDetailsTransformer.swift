@@ -34,9 +34,9 @@ final class ProjectDetailsTransformer {
 
         switch status {
         case let .failure(failure):
-            transformedData.render(.failure(failure))
+            transformedData.update(to: .failure(failure))
         case let .success(viewData):
-            transformedData.render(.success(viewData: viewData))
+            transformedData.update(to: .success(viewData: viewData))
         }
     }
 

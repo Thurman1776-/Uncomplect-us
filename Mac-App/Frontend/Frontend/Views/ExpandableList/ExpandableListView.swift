@@ -17,7 +17,7 @@ public struct ExpandableListView: View {
     }
 
     public var body: some View {
-        switch dependencyTreeState.data {
+        switch dependencyTreeState.input {
         case .initial:
             return AnyView(
                 LoadingView(

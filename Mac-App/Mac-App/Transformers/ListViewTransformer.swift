@@ -31,9 +31,9 @@ final class ListViewTransformer {
 
     private func emitNewData(_ viewData: Frontend.DependencyTree.Data) {
         if viewData.dependencies.isEmpty == false {
-            transformedData.render(.success(viewData: viewData))
+            transformedData.update(to: .success(viewData: viewData))
         } else if let failure = viewData.failure {
-            transformedData.render(.failure(failure))
+            transformedData.update(to: .failure(failure))
         }
     }
 }

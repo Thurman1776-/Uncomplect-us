@@ -16,7 +16,7 @@ public struct DetailsView: View {
     }
 
     public var body: some View {
-        switch projectDetailsState.data {
+        switch projectDetailsState.input {
         case .initial:
             return AnyView(
                 LoadingView(
