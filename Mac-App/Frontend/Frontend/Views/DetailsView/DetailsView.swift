@@ -27,7 +27,6 @@ public struct DetailsView: View {
         case let .success(state: viewData):
             return AnyView(
                 VStack {
-                    Spacer().frame(minHeight: 16, maxHeight: 36)
                     Text("Heaviest dependency: ")
                         .foregroundColor(.yellow)
                         .font(.system(.headline))
