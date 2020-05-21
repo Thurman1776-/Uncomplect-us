@@ -25,29 +25,29 @@ public struct DetailsView: View {
                     isloading: true
                 )
             )
-        case let .success(state: viewData):
+        case let .success(state: state):
             return AnyView(
                 VStack {
                     Text("Heaviest dependency: ")
                         .foregroundColor(.yellow)
                         .font(.system(.headline))
-                    Text(viewData.heaviestDependency)
+                    Text(state.heaviestDependency)
                         .underline()
                         .font(.system(.subheadline))
                         .foregroundColor(.red)
                     Spacer().frame(minHeight: 16, maxHeight: 36)
-                    Text("Total dependencies found: \(viewData.totalDependenciesFound)")
+                    Text("Total dependencies found: \(state.totalDependenciesFound)")
                         .bold()
                         .foregroundColor(.white)
                         .font(.system(.body))
                     Spacer().frame(minHeight: 16, maxHeight: 36)
-                    Text("Files scanned: \(viewData.paths.count)")
+                    Text("Files scanned: \(state.paths.count)")
                         .bold()
                         .foregroundColor(.white)
                         .font(.system(.body))
                     Spacer().frame(minHeight: 16, maxHeight: 36)
                     PlainList(
-                        title: viewData.paths.map { String($0.absoluteString) },
+                        title: state.paths.map { String($0.absoluteString) },
                         itemsColor: .yellow
                     )
                 }
