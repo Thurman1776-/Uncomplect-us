@@ -22,6 +22,7 @@ public struct ExpandableListView: View {
             return AnyView(
                 LoadingView(
                     title: "Processing build files...",
+                    titleColor: .gray,
                     isloading: true
                 ).frame(maxWidth: .infinity, maxHeight: .infinity)
             )

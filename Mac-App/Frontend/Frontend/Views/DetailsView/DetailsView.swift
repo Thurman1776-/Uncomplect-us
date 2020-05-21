@@ -21,6 +21,7 @@ public struct DetailsView: View {
             return AnyView(
                 LoadingView(
                     title: "Finding relevant stats...",
+                    titleColor: .gray,
                     isloading: true
                 )
             )

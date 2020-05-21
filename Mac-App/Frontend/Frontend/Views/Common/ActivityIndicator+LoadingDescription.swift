@@ -10,6 +10,7 @@ import SwiftUI
 
 struct LoadingView: View {
     let title: String
+    let titleColor: Color
     @State var isloading: Bool = true
 
     var body: some View {
@@ -18,7 +19,7 @@ struct LoadingView: View {
                 .padding()
             Text("\(title)")
                 .bold()
-                .foregroundColor(.gray)
+                .foregroundColor(titleColor)
                 .padding()
         }
     }
