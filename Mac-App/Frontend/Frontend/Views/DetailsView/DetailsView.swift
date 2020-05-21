@@ -57,7 +57,8 @@ public struct DetailsView: View {
         case let .failure(errorMessage):
             return
                 AnyView(
-                    Text("Something went wrong! - \(errorMessage)")
+                    Text(errorMessage)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                 )
         }
     }
