@@ -46,7 +46,7 @@ public struct DetailsView: View {
                         .font(.system(.body))
                     Spacer().frame(minHeight: 16, maxHeight: 36)
                 }
-                .padding(EdgeInsets(top: 45, leading: 4, bottom: 45, trailing: 4))
+                .padding(EdgeInsets(top: 16, leading: 4, bottom: 16, trailing: 4))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             )
         case let .failure(errorMessage):
