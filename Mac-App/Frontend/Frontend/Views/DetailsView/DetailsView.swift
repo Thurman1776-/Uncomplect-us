@@ -45,6 +45,10 @@ public struct DetailsView: View {
                         .foregroundColor(.white)
                         .font(.system(.body))
                     Spacer().frame(minHeight: 16, maxHeight: 36)
+                    PlainList(
+                        title: viewData.paths.map { String($0.absoluteString) },
+                        itemsColor: .yellow
+                    )
                 }
                 .padding(EdgeInsets(top: 16, leading: 4, bottom: 16, trailing: 4))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
