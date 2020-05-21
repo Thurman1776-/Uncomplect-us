@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A82DDE0F246E5822000259BF /* ActivityIndicator+LoadingDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82DDE0E246E5822000259BF /* ActivityIndicator+LoadingDescription.swift */; };
+		A86ED71C24767B300008B604 /* PlainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86ED71B24767B300008B604 /* PlainList.swift */; };
 		A88160DB2421073300CDB15A /* DependencyItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88160DA2421073300CDB15A /* DependencyItemView.swift */; };
 		A88160DD2421480E00CDB15A /* ListRowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88160DC2421480E00CDB15A /* ListRowModifier.swift */; };
 		A8DF67612411639500D0DE02 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF67602411639500D0DE02 /* ActivityIndicator.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		A82DDE0E246E5822000259BF /* ActivityIndicator+LoadingDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityIndicator+LoadingDescription.swift"; sourceTree = "<group>"; };
+		A86ED71B24767B300008B604 /* PlainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainList.swift; sourceTree = "<group>"; };
 		A88160DA2421073300CDB15A /* DependencyItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyItemView.swift; sourceTree = "<group>"; };
 		A88160DC2421480E00CDB15A /* ListRowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowModifier.swift; sourceTree = "<group>"; };
 		A8DF67602411639500D0DE02 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				A8DF67602411639500D0DE02 /* ActivityIndicator.swift */,
 				A88160DC2421480E00CDB15A /* ListRowModifier.swift */,
 				A82DDE0E246E5822000259BF /* ActivityIndicator+LoadingDescription.swift */,
+				A86ED71B24767B300008B604 /* PlainList.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A86ED71C24767B300008B604 /* PlainList.swift in Sources */,
 				A8DF67612411639500D0DE02 /* ActivityIndicator.swift in Sources */,
 				A88160DB2421073300CDB15A /* DependencyItemView.swift in Sources */,
 				A8FECAA92431086D0028CC64 /* ProjectDetails.swift in Sources */,
