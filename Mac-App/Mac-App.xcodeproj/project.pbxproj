@@ -199,10 +199,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A86E10512365DAB900D3FF94 /* Build configuration list for PBXNativeTarget "Mac-AppTests" */;
 			buildPhases = (
-				A88C9F0D23D8CFD7001CB973 /* Run SwiftFormat */,
 				A86E10412365DAB900D3FF94 /* Sources */,
 				A86E10422365DAB900D3FF94 /* Frameworks */,
 				A86E10432365DAB900D3FF94 /* Resources */,
+				A8237E66247979E4003A5994 /* Run Swiftformat */,
 			);
 			buildRules = (
 			);
@@ -274,7 +274,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A88C9F0D23D8CFD7001CB973 /* Run SwiftFormat */ = {
+		A8237E66247979E4003A5994 /* Run Swiftformat */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -283,14 +283,14 @@
 			);
 			inputPaths = (
 			);
-			name = "Run SwiftFormat";
+			name = "Run Swiftformat";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd BuildTools\n#swift package update #Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\nswift run -c release swiftformat \"$SRCROOT\"\n";
+			shellScript = "${SRCROOT}/../tooling/swiftformat_0-44-11 ${SRCROOT}\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

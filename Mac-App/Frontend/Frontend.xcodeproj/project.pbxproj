@@ -222,7 +222,7 @@
 				A8F2524823FF0B5000CD12DE /* Sources */,
 				A8F2524923FF0B5000CD12DE /* Frameworks */,
 				A8F2524A23FF0B5000CD12DE /* Resources */,
-				A821E8702412F8FD00637AC4 /* Run SwiftFormat */,
+				A8237E68247985D0003A5994 /* Run Swiftformat */,
 			);
 			buildRules = (
 			);
@@ -290,7 +290,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A821E8702412F8FD00637AC4 /* Run SwiftFormat */ = {
+		A8237E68247985D0003A5994 /* Run Swiftformat */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -299,14 +299,14 @@
 			);
 			inputPaths = (
 			);
-			name = "Run SwiftFormat";
+			name = "Run Swiftformat";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd ../BuildTools\n#swift package update #Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\nswift run -c release swiftformat \"$SRCROOT\"\n\n";
+			shellScript = "${SRCROOT}/../../tooling/swiftformat_0-44-11 ${SRCROOT}\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
