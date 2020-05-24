@@ -18,6 +18,7 @@
 		A8199C5123E6CA73000B89F6 /* SwiftDeps.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8199C5023E6CA73000B89F6 /* SwiftDeps.swift */; };
 		A8199C5423E6F3AD000B89F6 /* SwiftDepsReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8199C5323E6F3AD000B89F6 /* SwiftDepsReducerSpec.swift */; };
 		A8199C5623E700A5000B89F6 /* AppDelegateSwiftDepsFixture.swiftDeps in Resources */ = {isa = PBXBuildFile; fileRef = A8199C5523E700A5000B89F6 /* AppDelegateSwiftDepsFixture.swiftDeps */; };
+		A8237E70247A58A1003A5994 /* ReSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A831004223DC9E4400460A12 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A831003823DC9E4400460A12 /* Backend.framework */; };
 		A831004923DC9E4400460A12 /* Backend.h in Headers */ = {isa = PBXBuildFile; fileRef = A831003B23DC9E4400460A12 /* Backend.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A84DAD31244C7F01005EAB59 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84DAD30244C7F01005EAB59 /* Collection.swift */; };
@@ -81,6 +82,16 @@
 				F982DD1447C7D404E4881F9E /* Yams.framework in Accio */,
 			);
 			name = Accio;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8237E6F247A5894003A5994 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A8237E70247A58A1003A5994 /* ReSwift.framework in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -536,6 +547,7 @@
 				A831003F23DC9E4400460A12 /* Resources */,
 				6356CDB8F68E7DFC50FE9279 /* Accio */,
 				A8237E67247984C2003A5994 /* Run Swiftformat */,
+				A8237E6F247A5894003A5994 /* CopyFiles */,
 			);
 			buildRules = (
 			);
