@@ -35,7 +35,7 @@ enum DefaultSearchValues {
 /// - Parameter bash: Object conforming to Commandable protocol that executes CL commands
 /// - Parameter excludingTests: Flag to skip file dependencies in tests [executes faster if `true`]. Defaults to true
 
-public func findProjectOutputDirectories(
+func findProjectOutputDirectories(
     derivedDataPaths: [URL] = [URL(fileURLWithPath: "$HOME/Library/Developer/Xcode/DerivedData"),
                                URL(fileURLWithPath: "$HOME/Library/Caches/appCode*/DerivedData")],
     projectName: String,
