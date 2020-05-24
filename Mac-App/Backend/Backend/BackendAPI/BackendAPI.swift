@@ -13,7 +13,7 @@ public enum BackendAPI {
         reducer: appReducer,
         state: AppState.initialState,
         middleware: [
-            findProjectOutputDirsSideEffects(),
+            findProjectOutputDirsSideEffects(finder: findProjectOutputDirectories),
             parseSwiftDepsSideEffects(),
             dependencyGraphSideEffects(),
         ]
