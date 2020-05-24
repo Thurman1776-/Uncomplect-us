@@ -26,7 +26,6 @@ enum DefaultSearchValues {
     static let excludingTests: Bool = true
 }
 
-
 // MARK: - Internal API
 
 /// Performs a shallow search of the specified project's directory and returns URLs for the contained items (.swiftdeps)
