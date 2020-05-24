@@ -36,12 +36,11 @@ enum DefaultSearchValues {
 /// - Parameter excludingTests: Flag to skip file dependencies in tests [executes faster if `true`]. Defaults to true
 
 func findProjectOutputDirectories(
-    derivedDataPaths: [URL] = [URL(fileURLWithPath: "$HOME/Library/Developer/Xcode/DerivedData"),
-                               URL(fileURLWithPath: "$HOME/Library/Caches/appCode*/DerivedData")],
+    derivedDataPaths: [URL] = DefaultSearchValues.derivedDataPaths,
     projectName: String,
-    targetNames _: [String] = [],
-    bash: Commandable = Bash(),
-    excludingTests: Bool = true
+    targetNames _: [String] = DefaultSearchValues.targetNames,
+    bash: Commandable = DefaultSearchValues.bash,
+    excludingTests: Bool = DefaultSearchValues.excludingTests
 ) -> [URL] { // TODO: Consider propagating up Bash.Error. What would that look like?
     guard derivedDataPaths.count > 1 else {
         preconditionFailure("At least one path is needed!")
