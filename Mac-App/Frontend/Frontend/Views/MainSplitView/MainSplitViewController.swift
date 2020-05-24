@@ -11,15 +11,21 @@ import SwiftUI
 struct MainSplitViewController: NSViewControllerRepresentable {
     typealias NSViewControllerType = NSSplitViewController
 
-    private var viewData: ObservableData<DependencyTree.State>
-    public init(viewData: ObservableData<DependencyTree.State>) {
-        self.viewData = viewData
+    private var dependencyTreeState: Observable<DependencyTree.State>
+    private var projectDetailsStatus: Observable<ProjectDetails.Status>
+
+    public init(
+        dependencyTreeState: Observable<DependencyTree.State>,
+        projectDetailsStatus: Observable<ProjectDetails.Status>
+    ) {
+        self.dependencyTreeState = dependencyTreeState
+        self.projectDetailsStatus = projectDetailsStatus
     }
 
     func makeNSViewController(
         context _: NSViewControllerRepresentableContext<MainSplitViewController>
     ) -> NSSplitViewController {
-        buildSplitViewController(using: viewData)
+        makeSplitViewController(using: dependencyTreeState, projectDetailsStatus: projectDetailsStatus)
     }
 
     func updateNSViewController(
@@ -28,12 +34,15 @@ struct MainSplitViewController: NSViewControllerRepresentable {
     ) {}
 }
 
-// MARK: - Helpers
+// MARK: - Factory functions
 
-private func buildSplitViewController(using viewData: ObservableData<DependencyTree.State>) -> NSSplitViewController {
+private func makeSplitViewController(
+    using dependencyTreeState: Observable<DependencyTree.State>,
+    projectDetailsStatus: Observable<ProjectDetails.Status>
+) -> NSSplitViewController {
     let splitViewController = NSSplitViewController()
-    splitViewController.addSplitViewItem(buildDetailsViewItem())
-    splitViewController.addSplitViewItem(buildContentViewItem(using: viewData))
+    splitViewController.addSplitViewItem(makeDetailsView(using: projectDetailsStatus))
+    splitViewController.addSplitViewItem(makeExpandableList(using: dependencyTreeState))
 
     let splitView = NSSplitView()
     splitView.isVertical = true
@@ -43,17 +52,21 @@ private func buildSplitViewController(using viewData: ObservableData<DependencyT
     return splitViewController
 }
 
-private func buildDetailsViewItem() -> NSSplitViewItem {
-    let hostingController = NSHostingController(rootView: DetailsView())
+private func makeDetailsView(
+    using projectDetailsStatus: Observable<ProjectDetails.Status>
+) -> NSSplitViewItem {
+    let hostingController = NSHostingController(rootView: DetailsView(projectDetailsStatus: projectDetailsStatus))
     let splitViewItem = NSSplitViewItem(viewController: hostingController)
-    splitViewItem.holdingPriority = .defaultHigh
-    splitViewItem.minimumThickness = 120
 
     return splitViewItem
 }
 
-private func buildContentViewItem(using viewData: ObservableData<DependencyTree.State>) -> NSSplitViewItem {
-    let hostingController = NSHostingController(rootView: ExpandableListView(viewData: viewData))
+private func makeExpandableList(
+    using dependencyTreeState: Observable<DependencyTree.State>
+) -> NSSplitViewItem {
+    let hostingController = NSHostingController(
+        rootView: ExpandableListView(dependencyTreeState: dependencyTreeState)
+    )
     let splitViewItem = NSSplitViewItem(viewController: hostingController)
 
     return splitViewItem

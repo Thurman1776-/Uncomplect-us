@@ -14,26 +14,26 @@ import Foundation
 /// a `@Published` property
 /// The publisher is part of the generic class as protocols cannot have property wrappers ☹️
 public protocol ViewInput {
-    associatedtype Data: Equatable
+    associatedtype Input: Equatable
 
-    init(_ data: Data)
-    func render(_ newData: Data)
+    init(_ input: Input)
+    func update(to newInput: Input)
 }
 
-open class ObservableData<T: Equatable>: ViewInput, ObservableObject {
-    public typealias Data = T
+open class Observable<T: Equatable>: ViewInput, ObservableObject {
+    public typealias Input = T
 
-    @Published private(set) var data: T
+    @Published private(set) var input: T
 
-    public required init(_ data: T) {
-        self.data = data
+    public required init(_ input: T) {
+        self.input = input
     }
 
     /// This triggers an UI update  for any view defining this class as a `@ObservedObject`
 
-    public func render(_ newData: T) {
+    public func update(to newInput: T) {
         DispatchQueue.main.async {
-            self.data = newData
+            self.input = newInput
         }
     }
 }

@@ -9,25 +9,22 @@
 import SwiftUI
 
 public struct ExpandableListView: View {
-    @ObservedObject private var viewData: ObservableData<DependencyTree.State>
+    @ObservedObject private var dependencyTreeState: Observable<DependencyTree.State>
     @State private var selection: Set<DependencyTree.Data.Dependency> = []
 
-    public init(viewData: ObservableData<DependencyTree.State>) {
-        self.viewData = viewData
+    public init(dependencyTreeState: Observable<DependencyTree.State>) {
+        self.dependencyTreeState = dependencyTreeState
     }
 
     public var body: some View {
-        switch viewData.data {
+        switch dependencyTreeState.input {
         case .initial:
             return AnyView(
-                VStack {
-                    ActivityIndicator(isAnimating: Binding<Bool>.constant(true), style: .spinning)
-                        .padding()
-                    Text("Processing build files...")
-                        .bold()
-                        .foregroundColor(.gray)
-                        .padding()
-                }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                LoadingView(
+                    title: "Processing build files...",
+                    titleColor: .gray,
+                    isloading: true
+                ).frame(maxWidth: .infinity, maxHeight: .infinity)
             )
         case let .success(viewData: data):
             return AnyView(VStack(alignment: .leading, spacing: 8) {

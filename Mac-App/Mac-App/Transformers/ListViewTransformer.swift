@@ -13,7 +13,7 @@ import ReSwift
 
 final class ListViewTransformer {
     let stateObserver = StateObserver<Frontend.DependencyTree.Data>()
-    private(set) var transformedData: ObservableData<Frontend.DependencyTree.State> = .init(.initial)
+    private(set) var transformedData: Observable<Frontend.DependencyTree.State> = .init(.initial)
     private var cancellable: AnyCancellable = AnyCancellable {}
 
     func startListening() {
@@ -31,9 +31,9 @@ final class ListViewTransformer {
 
     private func emitNewData(_ viewData: Frontend.DependencyTree.Data) {
         if viewData.dependencies.isEmpty == false {
-            transformedData.render(.success(viewData: viewData))
+            transformedData.update(to: .success(viewData: viewData))
         } else if let failure = viewData.failure {
-            transformedData.render(.failure(failure))
+            transformedData.update(to: .failure(failure))
         }
     }
 }
