@@ -15,6 +15,17 @@ typealias ProjectOutputFinderType = ([URL], String, [String], Commandable, Bool)
 private let _Self = "Mac-App"
 let swiftDepsExtension = "swiftdeps"
 
+enum DefaultSearchValues {
+    static let derivedDataPaths: [URL] = [
+        URL(fileURLWithPath: "$HOME/Library/Developer/Xcode/DerivedData"),
+        URL(fileURLWithPath: "$HOME/Library/Caches/appCode*/DerivedData"),
+    ]
+
+    static let targetNames: [String] = []
+    static let bash: Bash = Bash()
+    static let excludingTests: Bool = true
+}
+
 
 // MARK: - Internal API
 
