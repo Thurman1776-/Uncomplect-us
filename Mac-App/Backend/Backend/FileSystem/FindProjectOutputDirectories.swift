@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias ProjectOutputFinderType = ([URL], String, [String], Commandable, Bool) -> [URL]
+
 // MARK: - Constants
 
 private let _Self = "Mac-App"
