@@ -8,6 +8,8 @@
 
 import Foundation
 
+// MARK: - Constants
+
 private let _Self = "Mac-App"
 let swiftDepsExtension = "swiftdeps"
 
