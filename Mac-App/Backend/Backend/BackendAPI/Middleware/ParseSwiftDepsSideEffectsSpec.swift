@@ -75,7 +75,7 @@ final class ParseSwiftDepsSideEffectsSpec: QuickSpec {
                     }
                 }
 
-                context("when at NO url got parsed") {
+                context("when NO url got parsed") {
                     it("dispatches 1 action") {
                         let expectedNumberOfActions = 1
 
