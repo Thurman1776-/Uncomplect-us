@@ -18,7 +18,7 @@
 		A8199C5123E6CA73000B89F6 /* SwiftDeps.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8199C5023E6CA73000B89F6 /* SwiftDeps.swift */; };
 		A8199C5423E6F3AD000B89F6 /* SwiftDepsReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8199C5323E6F3AD000B89F6 /* SwiftDepsReducerSpec.swift */; };
 		A8199C5623E700A5000B89F6 /* AppDelegateSwiftDepsFixture.swiftDeps in Resources */ = {isa = PBXBuildFile; fileRef = A8199C5523E700A5000B89F6 /* AppDelegateSwiftDepsFixture.swiftDeps */; };
-		A8237E6A247A523D003A5994 /* FindProjectOutputDirsSideEffectsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8237E69247A523D003A5994 /* FindProjectOutputDirsSideEffectsTests.swift */; };
+		A8237E6A247A523D003A5994 /* FindProjectOutputDirsSideEffectsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8237E69247A523D003A5994 /* FindProjectOutputDirsSideEffectsSpec.swift */; };
 		A8237E70247A58A1003A5994 /* ReSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A831004223DC9E4400460A12 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A831003823DC9E4400460A12 /* Backend.framework */; };
 		A831004923DC9E4400460A12 /* Backend.h in Headers */ = {isa = PBXBuildFile; fileRef = A831003B23DC9E4400460A12 /* Backend.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -107,7 +107,7 @@
 		A8199C5023E6CA73000B89F6 /* SwiftDeps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDeps.swift; sourceTree = "<group>"; };
 		A8199C5323E6F3AD000B89F6 /* SwiftDepsReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDepsReducerSpec.swift; sourceTree = "<group>"; };
 		A8199C5523E700A5000B89F6 /* AppDelegateSwiftDepsFixture.swiftDeps */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppDelegateSwiftDepsFixture.swiftDeps; sourceTree = "<group>"; };
-		A8237E69247A523D003A5994 /* FindProjectOutputDirsSideEffectsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindProjectOutputDirsSideEffectsTests.swift; sourceTree = "<group>"; };
+		A8237E69247A523D003A5994 /* FindProjectOutputDirsSideEffectsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindProjectOutputDirsSideEffectsSpec.swift; sourceTree = "<group>"; };
 		A831003823DC9E4400460A12 /* Backend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Backend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A831003B23DC9E4400460A12 /* Backend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Backend.h; sourceTree = "<group>"; };
 		A831003C23DC9E4400460A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -458,7 +458,7 @@
 			isa = PBXGroup;
 			children = (
 				A8F12EF723DF6427001EB945 /* FindProjectOutputDirsSideEffects.swift */,
-				A8237E69247A523D003A5994 /* FindProjectOutputDirsSideEffectsTests.swift */,
+				A8237E69247A523D003A5994 /* FindProjectOutputDirsSideEffectsSpec.swift */,
 				A85514F523E6030100D3E7F6 /* ParseSwiftDepsSideEffects.swift */,
 				A8489B95247C35F2005C69B7 /* ParseSwiftDepsSideEffectsSpec.swift */,
 				A89E0BDE23F87AD70009154E /* DependencyGraphSideEffects.swift */,
@@ -699,7 +699,7 @@
 				A8D58A9623F828F100C2AB74 /* SwiftDepsParserSpec.swift in Sources */,
 				A8CAE9A623DCABD800242ADF /* FindProjectOutputDirectorySpec.swift in Sources */,
 				A8199C5423E6F3AD000B89F6 /* SwiftDepsReducerSpec.swift in Sources */,
-				A8237E6A247A523D003A5994 /* FindProjectOutputDirsSideEffectsTests.swift in Sources */,
+				A8237E6A247A523D003A5994 /* FindProjectOutputDirsSideEffectsSpec.swift in Sources */,
 				A8D58A9023F6754000C2AB74 /* DependencyGraphReducerSpec.swift in Sources */,
 				A8F7626A23E6A5590014DEB9 /* TestUtils.swift in Sources */,
 				A8CAE9A823DCABE100242ADF /* BashSpec.swift in Sources */,

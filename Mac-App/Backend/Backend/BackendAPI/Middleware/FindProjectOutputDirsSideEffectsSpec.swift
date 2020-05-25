@@ -11,7 +11,7 @@ import Nimble
 import Quick
 import ReSwift
 
-final class FindProjectOutputDirsSideEffectsTests: QuickSpec {
+final class FindProjectOutputDirsSideEffectsSpec: QuickSpec {
     override func spec() {
         describe("findProjectOutputDirsSideEffects") {
             let sut = findProjectOutputDirsSideEffects
