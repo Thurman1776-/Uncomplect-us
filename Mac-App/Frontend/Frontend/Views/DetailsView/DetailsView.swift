@@ -9,8 +9,57 @@
 import SwiftUI
 
 public struct DetailsView: View {
+    @ObservedObject private var projectDetailsStatus: Observable<ProjectDetails.Status>
+
+    public init(projectDetailsStatus: Observable<ProjectDetails.Status>) {
+        self.projectDetailsStatus = projectDetailsStatus
+    }
+
     public var body: some View {
-        Text("Options will go here")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        switch projectDetailsStatus.input {
+        case .initial:
+            return AnyView(
+                LoadingView(
+                    title: "Finding relevant stats...",
+                    titleColor: .gray,
+                    isloading: true
+                )
+            )
+        case let .success(state: state):
+            return AnyView(
+                VStack {
+                    Text("Heaviest dependency: ")
+                        .foregroundColor(.yellow)
+                        .font(.system(.headline))
+                    Text(state.heaviestDependency)
+                        .underline()
+                        .font(.system(.subheadline))
+                        .foregroundColor(.red)
+                    Spacer().frame(minHeight: 16, maxHeight: 36)
+                    Text("Total dependencies found: \(state.totalDependenciesFound)")
+                        .bold()
+                        .foregroundColor(.white)
+                        .font(.system(.body))
+                    Spacer().frame(minHeight: 16, maxHeight: 36)
+                    Text("Files scanned: \(state.paths.count)")
+                        .bold()
+                        .foregroundColor(.white)
+                        .font(.system(.body))
+                    Spacer().frame(minHeight: 16, maxHeight: 36)
+                    PlainList(
+                        title: state.paths.map { String($0.absoluteString) },
+                        itemsColor: .yellow
+                    )
+                }
+                .padding(EdgeInsets(top: 16, leading: 4, bottom: 16, trailing: 4))
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            )
+        case let .failure(errorMessage):
+            return
+                AnyView(
+                    Text(errorMessage)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                )
+        }
     }
 }

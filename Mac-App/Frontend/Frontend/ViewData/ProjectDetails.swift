@@ -9,29 +9,32 @@
 import Foundation
 
 public enum ProjectDetails {
-    // MARK: - View Data
+    // MARK: - View State
 
-    public struct Data: Equatable {
+    public struct State: Equatable {
         public let heaviestDependency: String
         public let totalDependenciesFound: Int
         public let paths: [URL]
+        public var failure: String?
 
         public init(
             heaviestDependency: String,
             totalDependenciesFound: Int,
-            paths: [URL]
+            paths: [URL],
+            failure: String?
         ) {
             self.heaviestDependency = heaviestDependency
             self.totalDependenciesFound = totalDependenciesFound
             self.paths = paths
+            self.failure = failure
         }
     }
 
-    // MARK: - View State
+    // MARK: - View Status
 
-    public enum State: Equatable {
+    public enum Status: Equatable {
         case initial
         case failure(_ failure: String)
-        case success(viewData: Data)
+        case success(state: State)
     }
 }
