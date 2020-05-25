@@ -1,5 +1,5 @@
 //
-//  FindProjectOutputDirsSideEffectsTests.swift
+//  FindProjectOutputDirsSideEffectsSpec.swift
 //  BackendTests
 //
 //  Created by Daniel GARCÍA on 24.05.20.
