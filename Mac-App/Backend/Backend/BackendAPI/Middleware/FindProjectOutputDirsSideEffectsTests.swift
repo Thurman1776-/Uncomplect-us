@@ -13,7 +13,7 @@ import ReSwift
 
 final class FindProjectOutputDirsSideEffectsTests: QuickSpec {
     override func spec() {
-        describe("findProjectOutputDirsSideEffectsTests") {
+        describe("findProjectOutputDirsSideEffects") {
             let sut = findProjectOutputDirsSideEffects
             var actionRecorder: [Action]!
             var dispatchFuntion: DispatchFunction!
