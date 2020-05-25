@@ -14,7 +14,7 @@ public enum BackendAPI {
         state: AppState.initialState,
         middleware: [
             findProjectOutputDirsSideEffects(finder: findProjectOutputDirectories),
-            parseSwiftDepsSideEffects(),
+            parseSwiftDepsSideEffects(yamlParser: parseYamlUrls(from:)),
             dependencyGraphSideEffects(),
         ]
     )

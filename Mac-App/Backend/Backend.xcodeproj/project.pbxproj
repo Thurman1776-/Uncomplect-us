@@ -22,6 +22,7 @@
 		A8237E70247A58A1003A5994 /* ReSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A831004223DC9E4400460A12 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A831003823DC9E4400460A12 /* Backend.framework */; };
 		A831004923DC9E4400460A12 /* Backend.h in Headers */ = {isa = PBXBuildFile; fileRef = A831003B23DC9E4400460A12 /* Backend.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8489B96247C35F2005C69B7 /* ParseSwiftDepsSideEffectsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8489B95247C35F2005C69B7 /* ParseSwiftDepsSideEffectsSpec.swift */; };
 		A84DAD31244C7F01005EAB59 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84DAD30244C7F01005EAB59 /* Collection.swift */; };
 		A85514EF23E5E6AA00D3E7F6 /* YamlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85514EE23E5E6AA00D3E7F6 /* YamlParser.swift */; };
 		A85514F123E6002500D3E7F6 /* SwiftDepsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85514F023E6002500D3E7F6 /* SwiftDepsState.swift */; };
@@ -112,6 +113,7 @@
 		A831003C23DC9E4400460A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A831004123DC9E4400460A12 /* BackendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A831004823DC9E4400460A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8489B95247C35F2005C69B7 /* ParseSwiftDepsSideEffectsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseSwiftDepsSideEffectsSpec.swift; sourceTree = "<group>"; };
 		A84DAD30244C7F01005EAB59 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		A85514EE23E5E6AA00D3E7F6 /* YamlParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamlParser.swift; sourceTree = "<group>"; };
 		A85514F023E6002500D3E7F6 /* SwiftDepsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDepsState.swift; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 				A8F12EF723DF6427001EB945 /* FindProjectOutputDirsSideEffects.swift */,
 				A8237E69247A523D003A5994 /* FindProjectOutputDirsSideEffectsTests.swift */,
 				A85514F523E6030100D3E7F6 /* ParseSwiftDepsSideEffects.swift */,
+				A8489B95247C35F2005C69B7 /* ParseSwiftDepsSideEffectsSpec.swift */,
 				A89E0BDE23F87AD70009154E /* DependencyGraphSideEffects.swift */,
 			);
 			path = Middleware;
@@ -700,6 +703,7 @@
 				A8D58A9023F6754000C2AB74 /* DependencyGraphReducerSpec.swift in Sources */,
 				A8F7626A23E6A5590014DEB9 /* TestUtils.swift in Sources */,
 				A8CAE9A823DCABE100242ADF /* BashSpec.swift in Sources */,
+				A8489B96247C35F2005C69B7 /* ParseSwiftDepsSideEffectsSpec.swift in Sources */,
 				A8CAE9A723DCABDD00242ADF /* CLIParserSpec.swift in Sources */,
 				A8F7626723E6A3CA0014DEB9 /* YamlParserSpec.swift in Sources */,
 				A8E7627B23DDE79000BFAD48 /* DependencyPathsReducerSpec.swift in Sources */,
