@@ -73,7 +73,7 @@ final class FindProjectOutputDirsSideEffectsSpec: QuickSpec {
                             beTrue(), timeout: 0.2, description: "Expected 2 actions to have been dispatched!"
                         )
 
-                        expect(nextActionRecorder.count == expectedNumberOfActions).toEventually(
+                        expect(nextActionRecorder.isEmpty).toEventually(
                             beFalse(), timeout: 0.2, description: "Side effects must never swallow actions!"
                         )
                     }
@@ -97,7 +97,7 @@ final class FindProjectOutputDirsSideEffectsSpec: QuickSpec {
                             beTrue(), timeout: 0.2, description: "Expected 3 actions to have been dispatched!"
                         )
 
-                        expect(nextActionRecorder.count == expectedNumberOfActions).toEventually(
+                        expect(nextActionRecorder.isEmpty).toEventually(
                             beFalse(), timeout: 0.2, description: "Side effects must never swallow actions!"
                         )
                     }
