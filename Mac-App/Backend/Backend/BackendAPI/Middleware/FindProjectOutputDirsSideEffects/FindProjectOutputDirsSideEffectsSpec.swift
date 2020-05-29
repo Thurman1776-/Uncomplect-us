@@ -40,7 +40,7 @@ final class FindProjectOutputDirsSideEffectsSpec: QuickSpec {
             }
 
             context("when an unrelated/arbitrary action gets dispatched") {
-                it("does not dispatch any action") {
+                it("does not trigger any action") {
                     let sutMiddleware = sut(
                         mockFindProjectOutputDirectories(derivedDataPaths:projectName:targetNames:bash:excludingTests:)
                     )
@@ -57,7 +57,7 @@ final class FindProjectOutputDirsSideEffectsSpec: QuickSpec {
 
             context("when DependencyPathsAction.findUrls action gets dispatched") {
                 context("given there are .swiftdeps files found") {
-                    it("dispatches 2 actions") {
+                    it("triggers 2 actions") {
                         let expectedNumberOfActions = 2
 
                         stubbedUrls = [URL(string: "www.apple.de")!]
@@ -82,7 +82,7 @@ final class FindProjectOutputDirsSideEffectsSpec: QuickSpec {
 
             context("when DependencyPathsAction.findUrls action gets dispatched") {
                 context("given there are NO .swiftdeps files found") {
-                    it("dispatches 3 actions") {
+                    it("trigger 3 actions") {
                         let expectedNumberOfActions = 3
 
                         let sutMiddleware = sut(
@@ -106,7 +106,7 @@ final class FindProjectOutputDirsSideEffectsSpec: QuickSpec {
 
             context("when DependencyPathsAction gets dispatched") {
                 context("and the action is not handled") {
-                    it("does not dispatch any action") {
+                    it("does not trigger any action") {
                         let sutMiddleware = sut(
                             mockFindProjectOutputDirectories(derivedDataPaths:projectName:targetNames:bash:excludingTests:)
                         )

@@ -40,7 +40,7 @@ final class ParseSwiftDepsSideEffectsSpec: QuickSpec {
             }
 
             context("when an unrelated/arbitrary action gets dispatched") {
-                it("does not dispatch any action") {
+                it("does not trigger any action") {
                     let sutMiddleware = sut(mockYamlParser(from:))
                     let sideEffect = sutMiddleware(dispatchFuntion) { AppState.initialState }(nextActionFunction)
                     sideEffect(ArbitraryAction.random)
@@ -55,7 +55,7 @@ final class ParseSwiftDepsSideEffectsSpec: QuickSpec {
 
             context("when SwiftDepsAction.parseFrom action gets dispatched") {
                 context("given at least one url got parsed") {
-                    it("dispatches 1 action") {
+                    it("triggers 1 action") {
                         let expectedNumberOfActions = 1
 
                         stubbedSwiftDeps = [SwiftDeps.AppDelegateDeps_Fixture]
@@ -76,7 +76,7 @@ final class ParseSwiftDepsSideEffectsSpec: QuickSpec {
                 }
 
                 context("when NO url got parsed") {
-                    it("dispatches 1 action") {
+                    it("triggers 1 action") {
                         let expectedNumberOfActions = 1
 
                         stubbedSwiftDeps = []
@@ -98,7 +98,7 @@ final class ParseSwiftDepsSideEffectsSpec: QuickSpec {
             }
 
             context("when SwiftDepsAction.set action gets dispatched") {
-                it("dispatches 1 action") {
+                it("triggers 1 action") {
                     let expectedNumberOfActions = 1
 
                     let sutMiddleware = sut(mockYamlParser(from:))
@@ -119,7 +119,7 @@ final class ParseSwiftDepsSideEffectsSpec: QuickSpec {
 
             context("when SwiftDepsAction gets dispatched") {
                 context("and the action is not handled") {
-                    it("does not dispatch any action") {
+                    it("does not trigger any action") {
                         let sutMiddleware = sut(mockYamlParser(from:))
                         let sideEffect = sutMiddleware(dispatchFuntion) { AppState.initialState }(nextActionFunction)
                         sideEffect(SwiftDepsAction.reset)
