@@ -22,7 +22,7 @@ enum DefaultSearchValues {
     ]
 
     static let targetNames: [String] = []
-    static let bash: Bash = Bash()
+    static var bash: Bash { Bash() }
     static let excludingTests: Bool = true
 }
 
