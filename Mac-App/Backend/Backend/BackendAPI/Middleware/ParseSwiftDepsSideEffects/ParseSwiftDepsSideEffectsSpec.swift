@@ -117,7 +117,7 @@ final class ParseSwiftDepsSideEffectsSpec: QuickSpec {
                 }
             }
 
-            context("when SwiftDepsAction gets dispatched") {
+            context("when SwiftDepsAction.reset gets dispatched") {
                 context("and the action is not handled") {
                     it("does not trigger any action") {
                         let sutMiddleware = sut(mockYamlParser(from:))
