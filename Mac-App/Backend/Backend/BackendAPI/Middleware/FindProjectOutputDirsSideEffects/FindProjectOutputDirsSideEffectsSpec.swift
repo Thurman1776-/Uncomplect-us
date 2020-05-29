@@ -104,7 +104,7 @@ final class FindProjectOutputDirsSideEffectsSpec: QuickSpec {
                 }
             }
 
-            context("when DependencyPathsAction gets dispatched") {
+            context("when DependencyPathsAction.reset gets dispatched") {
                 context("and the action is not handled") {
                     it("does not trigger any action") {
                         let sutMiddleware = sut(
