@@ -237,8 +237,8 @@
 			children = (
 				A831003A23DC9E4400460A12 /* Backend */,
 				A831004523DC9E4400460A12 /* BackendTests */,
-				A831003923DC9E4400460A12 /* Products */,
 				8D53CC87ED3200CD4593921C /* Dependencies */,
+				A831003923DC9E4400460A12 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
