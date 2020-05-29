@@ -9,7 +9,7 @@
 import Foundation
 import OSLog
 
-public struct Bash: Commandable {
+struct Bash: Commandable {
     // MARK: - Initialisers
 
     public init() {}

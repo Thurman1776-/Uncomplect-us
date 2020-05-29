@@ -6,6 +6,6 @@
 //  Copyright © 2020 Acphut Werkstatt. All rights reserved.
 //
 
-public protocol Commandable {
+protocol Commandable {
     func execute(command: String, arguments: [String]) -> String?
 }
