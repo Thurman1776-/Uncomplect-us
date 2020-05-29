@@ -15,7 +15,7 @@ public enum BackendAPI {
         middleware: [
             findProjectOutputDirsSideEffects(finder: findProjectOutputDirectories),
             parseSwiftDepsSideEffects(yamlParser: parseYamlUrls(from:)),
-            dependencyGraphSideEffects(),
+            dependencyGraphSideEffects(parser: parseSwiftDeps(_:)),
         ]
     )
 
