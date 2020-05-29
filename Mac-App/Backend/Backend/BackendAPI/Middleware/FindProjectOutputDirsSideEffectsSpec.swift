@@ -103,6 +103,23 @@ final class FindProjectOutputDirsSideEffectsSpec: QuickSpec {
                     }
                 }
             }
+
+            context("when DependencyPathsAction gets dispatched") {
+                context("and the action is not handled") {
+                    it("does not dispatch any action") {
+                        let sutMiddleware = sut(
+                            mockFindProjectOutputDirectories(derivedDataPaths:projectName:targetNames:bash:excludingTests:)
+                        )
+                        let sideEffect = sutMiddleware(dispatchFuntion) { AppState.initialState }(nextActionFunction)
+                        sideEffect(DependencyPathsAction.reset)
+
+                        expect(actionRecorder.isEmpty).to(beTrue())
+                        expect(nextActionRecorder.isEmpty).to(
+                            beFalse(), description: "Side effects must never swallow actions!"
+                        )
+                    }
+                }
+            }
         }
     }
 }
