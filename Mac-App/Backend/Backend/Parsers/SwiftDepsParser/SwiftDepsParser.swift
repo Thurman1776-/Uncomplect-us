@@ -14,7 +14,7 @@ typealias SwiftDepsParserType = (_ swiftDeps: [SwiftDeps]) -> [DependencyTree]
 /// as well as objects with with common framework prefixes: `NS`, `UI` & `CF` (list might need to be updated later)
 ///
 /// - Parameter swiftDeps: An array of Swift dependencies
-/// - Returns: An array of dependencies mapped in the form of: `[owner -> [Dependencies]]`
+/// - Returns: An array of dependencies mapped in the form of: `owner -> [Dependencies]`
 func parseSwiftDeps(_ swiftDeps: [SwiftDeps]) -> [DependencyTree] {
     var result = [DependencyTree]()
 
