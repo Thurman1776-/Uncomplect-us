@@ -39,7 +39,7 @@ final class DependencyGraphSideEffectsSpec: QuickSpec {
 
             context("when an unrelated action gets dispatched") {
                 it("it does not trigger any action") {
-                    let sutMiddleware = sut(mockswiftDepsParser(_:))
+                    let sutMiddleware = sut(mockSwiftDepsParser)
                     let sutSideEffect = sutMiddleware(dispatchFuntion) { AppState.initialState }(nextActionFunction)
                     sutSideEffect(ArbitraryAction.random)
 
@@ -52,7 +52,7 @@ final class DependencyGraphSideEffectsSpec: QuickSpec {
 
             context("when DependencyGraphAction gets dispatched") {
                 it("triggers 1 action") {
-                    let sutMiddleware = sut(mockswiftDepsParser(_:))
+                    let sutMiddleware = sut(mockSwiftDepsParser)
                     let sutSideEffect = sutMiddleware(dispatchFuntion) { AppState.initialState }(nextActionFunction)
                     sutSideEffect(DependencyGraphAction.mapFrom(deps: []))
 
@@ -66,7 +66,7 @@ final class DependencyGraphSideEffectsSpec: QuickSpec {
             context("when DependencyGraphAction gets dispatched") {
                 context("and the action is not handled") {
                     it("does not trigger any action") {
-                        let sutMiddleware = sut(mockswiftDepsParser(_:))
+                        let sutMiddleware = sut(mockSwiftDepsParser)
                         let sutSideEffect = sutMiddleware(dispatchFuntion) { AppState.initialState }(nextActionFunction)
                         sutSideEffect(DependencyGraphAction.reset)
 
@@ -83,4 +83,4 @@ final class DependencyGraphSideEffectsSpec: QuickSpec {
 
 // MARK: - Mocks & stubs
 
-private func mockswiftDepsParser(_: [SwiftDeps]) -> [DependencyTree] { [] }
+private func mockSwiftDepsParser(_: [SwiftDeps]) -> [DependencyTree] { [] }
