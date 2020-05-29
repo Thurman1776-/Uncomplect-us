@@ -50,7 +50,7 @@ final class DependencyGraphSideEffectsSpec: QuickSpec {
                 }
             }
 
-            context("when DependencyGraphAction gets dispatched") {
+            context("when DependencyGraphAction.mapFrom(deps:) gets dispatched") {
                 it("triggers 1 action") {
                     let sutMiddleware = sut(mockSwiftDepsParser)
                     let sutSideEffect = sutMiddleware(dispatchFuntion) { AppState.initialState }(nextActionFunction)
@@ -63,7 +63,7 @@ final class DependencyGraphSideEffectsSpec: QuickSpec {
                 }
             }
 
-            context("when DependencyGraphAction gets dispatched") {
+            context("when DependencyGraphAction.reset gets dispatched") {
                 context("and the action is not handled") {
                     it("does not trigger any action") {
                         let sutMiddleware = sut(mockSwiftDepsParser)
