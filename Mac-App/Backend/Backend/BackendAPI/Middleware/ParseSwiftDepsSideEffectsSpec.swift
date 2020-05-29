@@ -28,7 +28,7 @@ final class ParseSwiftDepsSideEffectsSpec: QuickSpec {
                 nextActionRecorder = [Action]()
                 nextActionFunction = { nextActionRecorder.append($0) }
 
-                stubbedUrls = []
+                stubbedSwiftDeps = []
             }
 
             afterEach {
@@ -58,7 +58,7 @@ final class ParseSwiftDepsSideEffectsSpec: QuickSpec {
                     it("dispatches 1 action") {
                         let expectedNumberOfActions = 1
 
-                        stubbedUrls = [SwiftDeps.AppDelegateDeps_Fixture]
+                        stubbedSwiftDeps = [SwiftDeps.AppDelegateDeps_Fixture]
                         let sutMiddleware = sut(mockYamlParser(from:))
                         let sideEffect = sutMiddleware(dispatchFuntion) { AppState.initialState }(nextActionFunction)
                         sideEffect(SwiftDepsAction.parseFrom(paths: []))
@@ -79,7 +79,7 @@ final class ParseSwiftDepsSideEffectsSpec: QuickSpec {
                     it("dispatches 1 action") {
                         let expectedNumberOfActions = 1
 
-                        stubbedUrls = []
+                        stubbedSwiftDeps = []
                         let sutMiddleware = sut(mockYamlParser(from:))
                         let sideEffect = sutMiddleware(dispatchFuntion) { AppState.initialState }(nextActionFunction)
                         sideEffect(SwiftDepsAction.parseFrom(paths: []))
@@ -122,5 +122,5 @@ final class ParseSwiftDepsSideEffectsSpec: QuickSpec {
 
 // MARK: - Mocks & stubs
 
-private var stubbedUrls = [SwiftDeps]()
-private func mockYamlParser(from _: [URL]) -> [SwiftDeps] { stubbedUrls }
+private var stubbedSwiftDeps = [SwiftDeps]()
+private func mockYamlParser(from _: [URL]) -> [SwiftDeps] { stubbedSwiftDeps }
