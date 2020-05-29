@@ -205,6 +205,33 @@
 			path = SwiftDepsReducerSpec;
 			sourceTree = "<group>";
 		};
+		A82F42D82481364800A9A321 /* FindProjectOutputDirsSideEffects */ = {
+			isa = PBXGroup;
+			children = (
+				A8F12EF723DF6427001EB945 /* FindProjectOutputDirsSideEffects.swift */,
+				A8237E69247A523D003A5994 /* FindProjectOutputDirsSideEffectsSpec.swift */,
+			);
+			path = FindProjectOutputDirsSideEffects;
+			sourceTree = "<group>";
+		};
+		A82F42D92481365400A9A321 /* ParseSwiftDepsSideEffects */ = {
+			isa = PBXGroup;
+			children = (
+				A85514F523E6030100D3E7F6 /* ParseSwiftDepsSideEffects.swift */,
+				A8489B95247C35F2005C69B7 /* ParseSwiftDepsSideEffectsSpec.swift */,
+			);
+			path = ParseSwiftDepsSideEffects;
+			sourceTree = "<group>";
+		};
+		A82F42DA2481366600A9A321 /* DependencyGraphSideEffects */ = {
+			isa = PBXGroup;
+			children = (
+				A89E0BDE23F87AD70009154E /* DependencyGraphSideEffects.swift */,
+				A82655012480E1CE009B12D8 /* DependencyGraphSideEffectsSpec.swift */,
+			);
+			path = DependencyGraphSideEffects;
+			sourceTree = "<group>";
+		};
 		A831002E23DC9E4400460A12 = {
 			isa = PBXGroup;
 			children = (
@@ -459,12 +486,9 @@
 		A8F12EF523DF63B1001EB945 /* Middleware */ = {
 			isa = PBXGroup;
 			children = (
-				A8F12EF723DF6427001EB945 /* FindProjectOutputDirsSideEffects.swift */,
-				A8237E69247A523D003A5994 /* FindProjectOutputDirsSideEffectsSpec.swift */,
-				A85514F523E6030100D3E7F6 /* ParseSwiftDepsSideEffects.swift */,
-				A8489B95247C35F2005C69B7 /* ParseSwiftDepsSideEffectsSpec.swift */,
-				A89E0BDE23F87AD70009154E /* DependencyGraphSideEffects.swift */,
-				A82655012480E1CE009B12D8 /* DependencyGraphSideEffectsSpec.swift */,
+				A82F42DA2481366600A9A321 /* DependencyGraphSideEffects */,
+				A82F42D82481364800A9A321 /* FindProjectOutputDirsSideEffects */,
+				A82F42D92481365400A9A321 /* ParseSwiftDepsSideEffects */,
 			);
 			path = Middleware;
 			sourceTree = "<group>";
