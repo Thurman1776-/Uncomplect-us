@@ -81,6 +81,6 @@ final class DependencyGraphSideEffectsSpec: QuickSpec {
     }
 }
 
-// MARK: - Mocks & stubs
+// MARK: - Mocks 
 
 private func mockSwiftDepsParser(_: [SwiftDeps]) -> [DependencyTree] { [] }
