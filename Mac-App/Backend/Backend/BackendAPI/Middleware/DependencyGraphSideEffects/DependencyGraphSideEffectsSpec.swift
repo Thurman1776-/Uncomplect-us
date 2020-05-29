@@ -13,7 +13,7 @@ import ReSwift
 
 final class DependencyGraphSideEffectsSpec: QuickSpec {
     override func spec() {
-        describe("DependencyGraphSideEffects") {
+        describe("dependencyGraphSideEffects") {
             let sut = dependencyGraphSideEffects
             var actionRecorder: [Action]!
             var dispatchFuntion: DispatchFunction!
@@ -81,6 +81,6 @@ final class DependencyGraphSideEffectsSpec: QuickSpec {
     }
 }
 
-// MARK: - Mocks 
+// MARK: - Mocks
 
 private func mockSwiftDepsParser(_: [SwiftDeps]) -> [DependencyTree] { [] }
