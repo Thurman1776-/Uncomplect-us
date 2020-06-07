@@ -63,14 +63,14 @@ final class ParseSwiftDepsSideEffectsSpec: QuickSpec {
                         let sideEffect = sutMiddleware(dispatchFuntion) { AppState.initialState }(nextActionFunction)
                         sideEffect(SwiftDepsAction.parseFrom(paths: []))
 
-                        expect(actionRecorder.isEmpty).toEventually(beFalse(), timeout: 0.2)
+                        expect(actionRecorder.isEmpty).toEventually(beFalse(), timeout: timeout)
 
                         expect(actionRecorder.count == expectedNumberOfActions).toEventually(
-                            beTrue(), timeout: 0.2, description: "Expected 1 action to have been dispatched!"
+                            beTrue(), timeout: timeout, description: "Expected 1 action to have been dispatched!"
                         )
 
                         expect(nextActionRecorder.isEmpty).toEventually(
-                            beFalse(), timeout: 0.2, description: "Side effects must never swallow actions!"
+                            beFalse(), timeout: timeout, description: "Side effects must never swallow actions!"
                         )
                     }
                 }
@@ -84,14 +84,14 @@ final class ParseSwiftDepsSideEffectsSpec: QuickSpec {
                         let sideEffect = sutMiddleware(dispatchFuntion) { AppState.initialState }(nextActionFunction)
                         sideEffect(SwiftDepsAction.parseFrom(paths: []))
 
-                        expect(actionRecorder.isEmpty).toEventually(beFalse(), timeout: 0.2)
+                        expect(actionRecorder.isEmpty).toEventually(beFalse(), timeout: timeout)
 
                         expect(actionRecorder.count == expectedNumberOfActions).toEventually(
-                            beTrue(), timeout: 0.2, description: "Expected 1 action to have been dispatched!"
+                            beTrue(), timeout: timeout, description: "Expected 1 action to have been dispatched!"
                         )
 
                         expect(nextActionRecorder.isEmpty).toEventually(
-                            beFalse(), timeout: 0.2, description: "Side effects must never swallow actions!"
+                            beFalse(), timeout: timeout, description: "Side effects must never swallow actions!"
                         )
                     }
                 }
@@ -105,14 +105,14 @@ final class ParseSwiftDepsSideEffectsSpec: QuickSpec {
                     let sideEffect = sutMiddleware(dispatchFuntion) { AppState.initialState }(nextActionFunction)
                     sideEffect(SwiftDepsAction.set([SwiftDeps.AppDelegateDeps_Fixture]))
 
-                    expect(actionRecorder.isEmpty).toEventually(beFalse(), timeout: 0.2)
+                    expect(actionRecorder.isEmpty).toEventually(beFalse(), timeout: timeout)
 
                     expect(actionRecorder.count == expectedNumberOfActions).toEventually(
-                        beTrue(), timeout: 0.2, description: "Expected 1 action to have been dispatched!"
+                        beTrue(), timeout: timeout, description: "Expected 1 action to have been dispatched!"
                     )
 
                     expect(nextActionRecorder.isEmpty).toEventually(
-                        beFalse(), timeout: 0.2, description: "Side effects must never swallow actions!"
+                        beFalse(), timeout: timeout, description: "Side effects must never swallow actions!"
                     )
                 }
             }

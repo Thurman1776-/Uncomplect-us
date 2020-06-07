@@ -67,14 +67,14 @@ final class FindProjectOutputDirsSideEffectsSpec: QuickSpec {
                         let sideEffect = sutMiddleware(dispatchFuntion) { AppState.initialState }(nextActionFunction)
                         sideEffect(DependencyPathsAction.findUrls(for: "i_like_hummus"))
 
-                        expect(actionRecorder.isEmpty).toEventually(beFalse(), timeout: 0.2)
+                        expect(actionRecorder.isEmpty).toEventually(beFalse(), timeout: timeout)
 
                         expect(actionRecorder.count == expectedNumberOfActions).toEventually(
-                            beTrue(), timeout: 0.2, description: "Expected 2 actions to have been dispatched!"
+                            beTrue(), timeout: timeout, description: "Expected 2 actions to have been dispatched!"
                         )
 
                         expect(nextActionRecorder.isEmpty).toEventually(
-                            beFalse(), timeout: 0.2, description: "Side effects must never swallow actions!"
+                            beFalse(), timeout: timeout, description: "Side effects must never swallow actions!"
                         )
                     }
                 }
@@ -91,14 +91,14 @@ final class FindProjectOutputDirsSideEffectsSpec: QuickSpec {
                         let sideEffect = sutMiddleware(dispatchFuntion) { AppState.initialState }(nextActionFunction)
                         sideEffect(DependencyPathsAction.findUrls(for: "i_like_hummus_mit_karotten"))
 
-                        expect(actionRecorder.isEmpty).toEventually(beFalse(), timeout: 0.2)
+                        expect(actionRecorder.isEmpty).toEventually(beFalse(), timeout: timeout)
 
                         expect(actionRecorder.count == expectedNumberOfActions).toEventually(
-                            beTrue(), timeout: 0.2, description: "Expected 3 actions to have been dispatched!"
+                            beTrue(), timeout: timeout, description: "Expected 3 actions to have been dispatched!"
                         )
 
                         expect(nextActionRecorder.isEmpty).toEventually(
-                            beFalse(), timeout: 0.2, description: "Side effects must never swallow actions!"
+                            beFalse(), timeout: timeout, description: "Side effects must never swallow actions!"
                         )
                     }
                 }
