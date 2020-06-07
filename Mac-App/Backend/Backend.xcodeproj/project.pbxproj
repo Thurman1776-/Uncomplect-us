@@ -14,6 +14,7 @@
 		651A859A248CEE7400AD0927 /* DependencyGraphReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D58A8F23F6754000C2AB74 /* DependencyGraphReducerSpec.swift */; };
 		651A859C248CEE9200AD0927 /* DependencyPathsReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7627A23DDE79000BFAD48 /* DependencyPathsReducerSpec.swift */; };
 		651A859E248CEEB500AD0927 /* SwiftDepsReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8199C5323E6F3AD000B89F6 /* SwiftDepsReducerSpec.swift */; };
+		651A85A0248CEFA800AD0927 /* BashSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE9A423DCABD000242ADF /* BashSpec.swift */; };
 		66E89AD4BD74A3D517558DDC /* CwlCatchException.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9630BDA30D9CD7865E05CE8D /* CwlCatchException.framework */; };
 		91FA8BC9456EA57494C961D0 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */; };
 		961818E76009BE3E450B26B4 /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA32A46831C17A7C83A1CF1 /* Yams.framework */; };
@@ -42,7 +43,6 @@
 		A8CAE99F23DCABC700242ADF /* Bash+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99823DCABA000242ADF /* Bash+Error.swift */; };
 		A8CAE9A623DCABD800242ADF /* FindProjectOutputDirectorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE9A023DCABD000242ADF /* FindProjectOutputDirectorySpec.swift */; };
 		A8CAE9A723DCABDD00242ADF /* CLIParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE9A223DCABD000242ADF /* CLIParserSpec.swift */; };
-		A8CAE9A823DCABE100242ADF /* BashSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE9A423DCABD000242ADF /* BashSpec.swift */; };
 		A8D58A9323F67F8900C2AB74 /* SwiftDepsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D58A9223F67F8900C2AB74 /* SwiftDepsParser.swift */; };
 		A8D58A9623F828F100C2AB74 /* SwiftDepsParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D58A9523F828F100C2AB74 /* SwiftDepsParserSpec.swift */; };
 		A8E1019923EF055600C550E2 /* DependencyGraphState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E1019823EF055600C550E2 /* DependencyGraphState.swift */; };
@@ -268,8 +268,6 @@
 		A831004523DC9E4400460A12 /* BackendTests */ = {
 			isa = PBXGroup;
 			children = (
-				A8F12EF623DF63DF001EB945 /* Backend */,
-				A8CAE9A523DCABD000242ADF /* CommandLine */,
 				A8CAE9A123DCABD000242ADF /* FileSystem */,
 				A831004823DC9E4400460A12 /* Info.plist */,
 				A8CAE9A323DCABD000242ADF /* Parsers */,
@@ -344,6 +342,7 @@
 				A8CAE99523DCABA000242ADF /* Constants */,
 				A8CAE99623DCABA000242ADF /* Commandable.swift */,
 				A8CAE99723DCABA000242ADF /* Bash.swift */,
+				A8CAE9A423DCABD000242ADF /* BashSpec.swift */,
 				A8CAE99823DCABA000242ADF /* Bash+Error.swift */,
 			);
 			path = CommandLine;
@@ -365,21 +364,6 @@
 				A8F7626523E6A3B70014DEB9 /* Yaml */,
 			);
 			path = Parsers;
-			sourceTree = "<group>";
-		};
-		A8CAE9A523DCABD000242ADF /* CommandLine */ = {
-			isa = PBXGroup;
-			children = (
-				A8CAE9A423DCABD000242ADF /* BashSpec.swift */,
-			);
-			path = CommandLine;
-			sourceTree = "<group>";
-		};
-		A8D58A8E23F6753100C2AB74 /* DependencyGraphReducerSpec */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DependencyGraphReducerSpec;
 			sourceTree = "<group>";
 		};
 		A8D58A9123F67F7200C2AB74 /* SwiftDepsParser */ = {
@@ -466,23 +450,6 @@
 			path = DependencyPathsReducer;
 			sourceTree = "<group>";
 		};
-		A8E7627823DDE77300BFAD48 /* Reducers */ = {
-			isa = PBXGroup;
-			children = (
-				A8D58A8E23F6753100C2AB74 /* DependencyGraphReducerSpec */,
-				A8E7627923DDE77E00BFAD48 /* DependencyPathsReducerSpec */,
-				A8199C5223E6F398000B89F6 /* SwiftDepsReducerSpec */,
-			);
-			path = Reducers;
-			sourceTree = "<group>";
-		};
-		A8E7627923DDE77E00BFAD48 /* DependencyPathsReducerSpec */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DependencyPathsReducerSpec;
-			sourceTree = "<group>";
-		};
 		A8F12EF523DF63B1001EB945 /* Middleware */ = {
 			isa = PBXGroup;
 			children = (
@@ -491,14 +458,6 @@
 				A82F42D92481365400A9A321 /* ParseSwiftDepsSideEffects */,
 			);
 			path = Middleware;
-			sourceTree = "<group>";
-		};
-		A8F12EF623DF63DF001EB945 /* Backend */ = {
-			isa = PBXGroup;
-			children = (
-				A8E7627823DDE77300BFAD48 /* Reducers */,
-			);
-			path = Backend;
 			sourceTree = "<group>";
 		};
 		A8F7626523E6A3B70014DEB9 /* Yaml */ = {
@@ -512,6 +471,7 @@
 		A8F7626823E6A53F0014DEB9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A8199C5223E6F398000B89F6 /* SwiftDepsReducerSpec */,
 				A8F7626923E6A5590014DEB9 /* TestUtils.swift */,
 			);
 			path = Shared;
@@ -729,8 +689,8 @@
 				A82655022480E1CE009B12D8 /* DependencyGraphSideEffectsSpec.swift in Sources */,
 				A8F7626A23E6A5590014DEB9 /* TestUtils.swift in Sources */,
 				651A859C248CEE9200AD0927 /* DependencyPathsReducerSpec.swift in Sources */,
+				651A85A0248CEFA800AD0927 /* BashSpec.swift in Sources */,
 				651A859A248CEE7400AD0927 /* DependencyGraphReducerSpec.swift in Sources */,
-				A8CAE9A823DCABE100242ADF /* BashSpec.swift in Sources */,
 				A8489B96247C35F2005C69B7 /* ParseSwiftDepsSideEffectsSpec.swift in Sources */,
 				A8CAE9A723DCABDD00242ADF /* CLIParserSpec.swift in Sources */,
 				A8F7626723E6A3CA0014DEB9 /* YamlParserSpec.swift in Sources */,
