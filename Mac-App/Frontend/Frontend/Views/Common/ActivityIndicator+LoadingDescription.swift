@@ -13,6 +13,12 @@ public struct LoadingView: View {
     let titleColor: Color
     @State var isloading: Bool = true
 
+    public init(title: String, titleColor: Color, isloading: Bool) {
+        self.title = title
+        self.titleColor = titleColor
+        self.isloading = isloading
+    }
+
     public var body: some View {
         VStack {
             ActivityIndicator(isAnimating: $isloading, style: .spinning)
