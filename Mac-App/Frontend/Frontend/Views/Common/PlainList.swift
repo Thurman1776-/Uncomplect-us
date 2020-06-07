@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct PlainList: View {
+public struct PlainList: View {
     let title: [String]
     let itemsColor: Color
 

@@ -8,12 +8,12 @@
 
 import SwiftUI
 
-struct LoadingView: View {
+public struct LoadingView: View {
     let title: String
     let titleColor: Color
     @State var isloading: Bool = true
 
-    var body: some View {
+    public var body: some View {
         VStack {
             ActivityIndicator(isAnimating: $isloading, style: .spinning)
                 .padding()

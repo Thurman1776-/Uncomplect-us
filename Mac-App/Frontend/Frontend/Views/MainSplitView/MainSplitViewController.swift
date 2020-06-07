@@ -8,8 +8,8 @@
 
 import SwiftUI
 
-struct MainSplitViewController: NSViewControllerRepresentable {
-    typealias NSViewControllerType = NSSplitViewController
+public struct MainSplitViewController: NSViewControllerRepresentable {
+    public typealias NSViewControllerType = NSSplitViewController
 
     private var dependencyTreeState: Observable<DependencyTree.State>
     private var projectDetailsStatus: Observable<ProjectDetails.Status>
@@ -22,13 +22,13 @@ struct MainSplitViewController: NSViewControllerRepresentable {
         self.projectDetailsStatus = projectDetailsStatus
     }
 
-    func makeNSViewController(
+    public func makeNSViewController(
         context _: NSViewControllerRepresentableContext<MainSplitViewController>
     ) -> NSSplitViewController {
         makeSplitViewController(using: dependencyTreeState, projectDetailsStatus: projectDetailsStatus)
     }
 
-    func updateNSViewController(
+    public func updateNSViewController(
         _: NSSplitViewController,
         context _: NSViewControllerRepresentableContext<MainSplitViewController>
     ) {}

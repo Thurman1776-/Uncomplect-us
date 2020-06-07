@@ -8,8 +8,8 @@
 
 import SwiftUI
 
-struct ListRowModifier: ViewModifier {
-    func body(content: Content) -> some View {
+public struct ListRowModifier: ViewModifier {
+    public func body(content: Content) -> some View {
         Group {
             content
             Divider()

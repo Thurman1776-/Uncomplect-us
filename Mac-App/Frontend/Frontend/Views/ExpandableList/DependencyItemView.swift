@@ -8,11 +8,11 @@
 
 import SwiftUI
 
-struct DependencyItemView: View {
+public struct DependencyItemView: View {
     let dependency: DependencyTree.Data.Dependency
     let isExpanded: Bool
 
-    var body: some View {
+    public var body: some View {
         HStack {
             mainContent
             Spacer()
