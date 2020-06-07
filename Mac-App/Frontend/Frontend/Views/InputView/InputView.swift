@@ -11,11 +11,11 @@ import SwiftUI
 public struct InputView: View {
     @State private var input: String = ""
     private var output: (String) -> Void
-
+    
     public init(output: @escaping (String) -> Void = { _ in }) {
         self.output = output
     }
-
+    
     public var body: some View {
         TextField(
             "Type your project's name...",
@@ -26,7 +26,8 @@ public struct InputView: View {
                 gradient: Gradient(colors: randomColors()),
                 center: .center
             ), width: 1.0
-        ).padding(EdgeInsets(top: 45, leading: 16, bottom: 45, trailing: 16))
+        ).frame(width: 700, height: 50, alignment: .center)
+            .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
     }
 }
 
@@ -35,6 +36,6 @@ private func randomColors() -> [Color] {
     for _ in 0 ... 50 {
         palette.append([.blue, .yellow, .blue, .blue, .yellow, .blue].randomElement()!)
     }
-
+    
     return palette
 }
