@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65DFC668248CF6FF00507F73 /* UI-prototype.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "UI-prototype.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A82DDE0E246E5822000259BF /* ActivityIndicator+LoadingDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityIndicator+LoadingDescription.swift"; sourceTree = "<group>"; };
 		A86ED71B24767B300008B604 /* PlainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainList.swift; sourceTree = "<group>"; };
 		A88160DA2421073300CDB15A /* DependencyItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyItemView.swift; sourceTree = "<group>"; };
@@ -98,6 +99,7 @@
 		A8F2523923FF0B5000CD12DE = {
 			isa = PBXGroup;
 			children = (
+				65DFC668248CF6FF00507F73 /* UI-prototype.playground */,
 				A8F2524523FF0B5000CD12DE /* Frontend */,
 				A8F2525023FF0B5000CD12DE /* FrontendTests */,
 				A8F2524423FF0B5000CD12DE /* Products */,
