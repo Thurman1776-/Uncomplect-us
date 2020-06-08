@@ -8,6 +8,8 @@
 
 @testable import Backend
 
+let timeout: TimeInterval = 0.2
+
 func execDefaultFindCommand() -> String {
     Bash().execute(
         command: "find", arguments: ["$HOME/Library/Developer/Xcode/DerivedData",

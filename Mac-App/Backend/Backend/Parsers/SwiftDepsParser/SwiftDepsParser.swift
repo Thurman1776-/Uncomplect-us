@@ -6,9 +6,15 @@
 //  Copyright © 2020 Acphut Werkstatt. All rights reserved.
 //
 
+typealias SwiftDepsParserType = (_ swiftDeps: [SwiftDeps]) -> [DependencyTree]
+
+/// Parses an array of `SwiftDeps` which represents a simplefied version of `.swiftDeps` YAML files
+///
 /// Parsing omits private declarations, ocurrances of `Self`, system symbols (see `systemSymbols` declaration)
 /// as well as objects with with common framework prefixes: `NS`, `UI` & `CF` (list might need to be updated later)
-
+///
+/// - Parameter swiftDeps: An array of Swift dependencies
+/// - Returns: An array of dependencies mapped in the form of: `owner -> [Dependencies]`
 func parseSwiftDeps(_ swiftDeps: [SwiftDeps]) -> [DependencyTree] {
     var result = [DependencyTree]()
 

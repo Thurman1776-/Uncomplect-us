@@ -13,9 +13,9 @@ public enum BackendAPI {
         reducer: appReducer,
         state: AppState.initialState,
         middleware: [
-            findProjectOutputDirsSideEffects(),
-            parseSwiftDepsSideEffects(),
-            dependencyGraphSideEffects(),
+            findProjectOutputDirsSideEffects(finder: findProjectOutputDirectories),
+            parseSwiftDepsSideEffects(yamlParser: parseYamlUrls(from:)),
+            dependencyGraphSideEffects(parser: parseSwiftDeps(_:)),
         ]
     )
 

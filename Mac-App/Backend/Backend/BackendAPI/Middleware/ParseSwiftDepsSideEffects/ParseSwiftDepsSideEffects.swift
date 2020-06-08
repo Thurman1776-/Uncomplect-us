@@ -8,7 +8,7 @@
 
 import ReSwift
 
-func parseSwiftDepsSideEffects() -> Middleware<AppState> {
+func parseSwiftDepsSideEffects(yamlParser: @escaping YamlParserType) -> Middleware<AppState> {
     { (dispatchFuction: @escaping DispatchFunction, _: @escaping () -> AppState?) in
         { (next: @escaping DispatchFunction) in
             { action in
@@ -19,7 +19,7 @@ func parseSwiftDepsSideEffects() -> Middleware<AppState> {
                 switch action {
                 case let SwiftDepsAction.parseFrom(paths: url):
                     dispatchAsyncOnGlobal {
-                        let parsedUrls = parseYamlUrls(from: url)
+                        let parsedUrls = yamlParser(url)
                         if parsedUrls.isEmpty == false {
                             dispatchFuction(SwiftDepsAction.set(parsedUrls))
                         } else {

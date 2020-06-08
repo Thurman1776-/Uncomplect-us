@@ -8,8 +8,25 @@
 
 import Foundation
 
+typealias ProjectOutputFinderType = ([URL], String, [String], Commandable, Bool) -> [URL]
+
+// MARK: - Constants
+
 private let _Self = "Mac-App"
 let swiftDepsExtension = "swiftdeps"
+
+enum DefaultSearchValues {
+    static let derivedDataPaths: [URL] = [
+        URL(fileURLWithPath: "$HOME/Library/Developer/Xcode/DerivedData"),
+        URL(fileURLWithPath: "$HOME/Library/Caches/appCode*/DerivedData"),
+    ]
+
+    static let targetNames: [String] = []
+    static var bash: Bash { Bash() }
+    static let excludingTests: Bool = true
+}
+
+// MARK: - Internal API
 
 /// Performs a shallow search of the specified project's directory and returns URLs for the contained items (.swiftdeps)
 /// - Parameter derivedDataPaths: Location for Xcode derived data output. Use $HOME instead of Tilde Expansion [~]. Default value to default Xcode settings
@@ -18,13 +35,12 @@ let swiftDepsExtension = "swiftdeps"
 /// - Parameter bash: Object conforming to Commandable protocol that executes CL commands
 /// - Parameter excludingTests: Flag to skip file dependencies in tests [executes faster if `true`]. Defaults to true
 
-public func findProjectOutputDirectories(
-    derivedDataPaths: [URL] = [URL(fileURLWithPath: "$HOME/Library/Developer/Xcode/DerivedData"),
-                               URL(fileURLWithPath: "$HOME/Library/Caches/appCode*/DerivedData")],
+func findProjectOutputDirectories(
+    derivedDataPaths: [URL] = DefaultSearchValues.derivedDataPaths,
     projectName: String,
-    targetNames _: [String] = [],
-    bash: Commandable = Bash(),
-    excludingTests: Bool = true
+    targetNames _: [String] = DefaultSearchValues.targetNames,
+    bash: Commandable = DefaultSearchValues.bash,
+    excludingTests: Bool = DefaultSearchValues.excludingTests
 ) -> [URL] { // TODO: Consider propagating up Bash.Error. What would that look like?
     guard derivedDataPaths.count > 1 else {
         preconditionFailure("At least one path is needed!")
