@@ -23,7 +23,7 @@ public struct DetailsView: View {
                     title: "Finding relevant stats...",
                     titleColor: .gray,
                     isloading: true
-                )
+                ).frame(width: 200, height: 250)
             )
         case let .success(state: state):
             return AnyView(

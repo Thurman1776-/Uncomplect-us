@@ -24,7 +24,7 @@ public struct ExpandableListView: View {
                     title: "Processing build files...",
                     titleColor: .gray,
                     isloading: true
-                ).frame(maxWidth: .infinity, maxHeight: .infinity)
+                ).frame(width: 200, height: 250)
             )
         case let .success(viewData: data):
             return AnyView(
