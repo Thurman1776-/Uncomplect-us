@@ -27,20 +27,26 @@ public struct ExpandableListView: View {
                 ).frame(maxWidth: .infinity, maxHeight: .infinity)
             )
         case let .success(viewData: data):
-            return AnyView(VStack(alignment: .leading, spacing: 8) {
-                List {
-                    ForEach(data.dependencies, id: \.id) { node in
-                        DependencyItemView(
-                            dependency: node,
-                            isExpanded: self.selection.contains(node)
-                        ).onTapGesture { self.didTapItem(node) }
-                            .modifier(ListRowModifier())
-                            .animation(.linear(duration: 0.25))
+            return AnyView(
+                VStack(alignment: .leading, spacing: 8) {
+                    List {
+                        ForEach(data.dependencies, id: \.id) { node in
+                            DependencyItemView(
+                                dependency: node,
+                                isExpanded: self.selection.contains(node)
+                            ).onTapGesture { self.didTapItem(node) }
+                                .modifier(ListRowModifier())
+                                .animation(.linear(duration: 0.25))
+                        }
                     }
                 }
-            }.frame(maxWidth: .infinity, maxHeight: .infinity))
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            )
         case let .failure(message):
-            return AnyView(Text(message).frame(maxWidth: .infinity, maxHeight: .infinity))
+            return AnyView(
+                Text(message)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            )
         }
     }
 
