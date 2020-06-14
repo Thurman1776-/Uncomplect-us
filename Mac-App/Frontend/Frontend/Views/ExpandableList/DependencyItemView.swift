@@ -12,6 +12,11 @@ public struct DependencyItemView: View {
     let dependency: DependencyTree.Data.Dependency
     let isExpanded: Bool
 
+    public init(dependency: DependencyTree.Data.Dependency, isExpanded: Bool) {
+        self.dependency = dependency
+        self.isExpanded = isExpanded
+    }
+
     public var body: some View {
         HStack {
             mainContent
