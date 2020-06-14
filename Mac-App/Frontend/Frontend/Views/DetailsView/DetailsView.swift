@@ -28,24 +28,31 @@ public struct DetailsView: View {
         case let .success(state: state):
             return AnyView(
                 VStack {
-                    Text("Heaviest dependency: ")
-                        .foregroundColor(.lightBlue)
-                        .font(.system(.headline))
-                    Text(state.heaviestDependency)
-                        .underline()
-                        .font(.system(.subheadline))
-                        .foregroundColor(.white)
-                    Spacer().frame(minHeight: 16, maxHeight: 36)
-                    Text("Total dependencies found: \(state.totalDependenciesFound)")
+                    VStack {
+                        Text("Heaviest dependency: ")
+                            .foregroundColor(.lightBlue)
+                            .font(.system(.headline))
+                        Text(state.heaviestDependency)
+                            .underline()
+                            .font(.system(.subheadline))
+                            .foregroundColor(.white)
+                    }
+                    .padding(EdgeInsets(top: 8, leading: 4, bottom: 16, trailing: 4))
+                    
+                    VStack {
+                        Text("Total dependencies found: \(state.totalDependenciesFound)")
                         .bold()
                         .foregroundColor(.lightBlue)
                         .font(.system(.body))
-                    Spacer().frame(minHeight: 16, maxHeight: 36)
+                    }
+                    .padding(EdgeInsets(top: 0, leading: 4, bottom: 16, trailing: 4))
+                    
                     Text("Files scanned: \(state.paths.count)")
                         .bold()
-                        .foregroundColor(.white)
+                        .foregroundColor(.lightGreen)
                         .font(.system(.body))
-                    Spacer().frame(minHeight: 16, maxHeight: 36)
+                        .padding(EdgeInsets(top: 0, leading: 4, bottom: 16, trailing: 4))
+                    
                     PlainList(
                         titles: state.paths.map { String($0.absoluteString) },
                         itemsColor: .yellow
