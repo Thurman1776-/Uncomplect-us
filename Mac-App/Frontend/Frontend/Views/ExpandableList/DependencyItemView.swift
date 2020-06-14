@@ -20,9 +20,7 @@ public struct DependencyItemView: View {
     public var body: some View {
         HStack {
             mainContent
-            Spacer()
-        }
-        .contentShape(Rectangle())
+        }.padding(EdgeInsets(top: 8, leading: 8, bottom: 0, trailing: 8))
     }
 
     private var mainContent: some View {
