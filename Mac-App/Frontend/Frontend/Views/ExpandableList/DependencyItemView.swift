@@ -56,9 +56,3 @@ public struct DependencyItemView: View {
         }
     }
 }
-
-// TODO: Move to shareable framework
-
-extension String: Identifiable {
-    public var id: Int { hashValue }
-}
