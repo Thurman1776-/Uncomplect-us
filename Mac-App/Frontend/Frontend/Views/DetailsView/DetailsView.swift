@@ -47,7 +47,7 @@ public struct DetailsView: View {
                         .font(.system(.body))
                     Spacer().frame(minHeight: 16, maxHeight: 36)
                     PlainList(
-                        title: state.paths.map { String($0.absoluteString) },
+                        titles: state.paths.map { String($0.absoluteString) },
                         itemsColor: .yellow
                     )
                 }
