@@ -29,14 +29,13 @@ public struct DependencyItemView: View {
         VStack(alignment: .leading) {
             HStack {
                 Text("Owner: \(dependency.owner)")
-                    .bold()
                     .font(.headline)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.lightBlue)
                 Text("Dependency count: \(dependency.dependencies.count)")
-                    .font(.footnote)
+                    .font(.caption)
                     .foregroundColor(.white)
-                Spacer()
             }
+            .padding(8)
 
             if isExpanded {
                 VStack(alignment: .leading) {
@@ -44,6 +43,7 @@ public struct DependencyItemView: View {
                 }
             }
         }
+        .background(Color.lightGray)
     }
 
     private var dependencyList: some View {
@@ -52,6 +52,7 @@ public struct DependencyItemView: View {
                 .font(.body)
                 .italic()
                 .foregroundColor(.yellow)
+                .padding(EdgeInsets(top: 8, leading: 8, bottom: 0, trailing: 8))
         }
     }
 }
