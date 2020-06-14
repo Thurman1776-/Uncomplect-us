@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65B9D9D9249647F1000BE76F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B9D9D8249647F1000BE76F /* Extensions.swift */; };
 		A82DDE0F246E5822000259BF /* ActivityIndicator+LoadingDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82DDE0E246E5822000259BF /* ActivityIndicator+LoadingDescription.swift */; };
 		A86ED71C24767B300008B604 /* PlainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86ED71B24767B300008B604 /* PlainList.swift */; };
 		A88160DB2421073300CDB15A /* DependencyItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88160DA2421073300CDB15A /* DependencyItemView.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65B9D9D8249647F1000BE76F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		65DFC668248CF6FF00507F73 /* UI-prototype.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "UI-prototype.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A82DDE0E246E5822000259BF /* ActivityIndicator+LoadingDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityIndicator+LoadingDescription.swift"; sourceTree = "<group>"; };
 		A86ED71B24767B300008B604 /* PlainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainList.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				A88160DC2421480E00CDB15A /* ListRowModifier.swift */,
 				A82DDE0E246E5822000259BF /* ActivityIndicator+LoadingDescription.swift */,
 				A86ED71B24767B300008B604 /* PlainList.swift */,
+				65B9D9D8249647F1000BE76F /* Extensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				A8F2526424029A2400CD12DE /* Observable.swift in Sources */,
 				A8F2525E23FF0BF300CD12DE /* ExpandableListView.swift in Sources */,
 				A8FECAA4243096650028CC64 /* MainSplitView.swift in Sources */,
+				65B9D9D9249647F1000BE76F /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
