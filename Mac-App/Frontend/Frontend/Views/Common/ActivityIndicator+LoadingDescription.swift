@@ -22,7 +22,6 @@ public struct LoadingView: View {
     public var body: some View {
         VStack {
             ActivityIndicator(isAnimating: $isloading, style: .spinning)
-                .background(Color.red)
                 .padding(8)
             Text("\(title)")
                 .bold()
