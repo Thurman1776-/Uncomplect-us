@@ -18,7 +18,7 @@ func parseSwiftDepsSideEffects(yamlParser: @escaping YamlParserType) -> Middlewa
 
                 switch action {
                 case let SwiftDepsAction.parseFrom(paths: url):
-                    dispatchAsyncOnGlobal {
+                    dispatchAsyncOnBackendQueue {
                         let parsedUrls = yamlParser(url)
                         if parsedUrls.isEmpty == false {
                             dispatchFuction(SwiftDepsAction.set(parsedUrls))
@@ -27,7 +27,7 @@ func parseSwiftDepsSideEffects(yamlParser: @escaping YamlParserType) -> Middlewa
                         }
                     }
                 case let SwiftDepsAction.set(swiftDeps):
-                    dispatchAsyncOnGlobal {
+                    dispatchAsyncOnBackendQueue {
                         dispatchFuction(DependencyGraphAction.mapFrom(deps: swiftDeps))
                     }
                 default: break

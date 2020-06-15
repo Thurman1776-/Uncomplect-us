@@ -18,7 +18,7 @@ func dependencyGraphSideEffects(parser: @escaping SwiftDepsParserType) -> Middle
 
                 switch action {
                 case let DependencyGraphAction.mapFrom(swiftDeps):
-                    dispatchAsyncOnGlobal {
+                    dispatchAsyncOnBackendQueue {
                         let parsedSwiftDeps = parser(swiftDeps)
                         dispatchFuction(DependencyGraphAction.set(parsedSwiftDeps))
                     }
