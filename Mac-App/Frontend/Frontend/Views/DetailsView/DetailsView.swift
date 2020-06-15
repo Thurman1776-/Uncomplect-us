@@ -38,21 +38,21 @@ public struct DetailsView: View {
                             .foregroundColor(.white)
                     }
                     .padding(EdgeInsets(top: 8, leading: 4, bottom: 16, trailing: 4))
-                    
+
                     VStack {
                         Text("Total dependencies found: \(state.totalDependenciesFound)")
-                        .bold()
-                        .foregroundColor(.lightBlue)
-                        .font(.system(.body))
+                            .bold()
+                            .foregroundColor(.lightBlue)
+                            .font(.system(.body))
                     }
                     .padding(EdgeInsets(top: 0, leading: 4, bottom: 16, trailing: 4))
-                    
+
                     Text("Files scanned: \(state.paths.count)")
                         .bold()
                         .foregroundColor(.lightGreen)
                         .font(.system(.body))
                         .padding(EdgeInsets(top: 0, leading: 4, bottom: 16, trailing: 4))
-                    
+
                     PlainList(
                         titles: state.paths.map { String($0.absoluteString) },
                         itemsColor: .yellow

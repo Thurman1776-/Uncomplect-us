@@ -9,10 +9,10 @@
 import SwiftUI
 
 public struct DependencyItemView: View {
-    let dependency: DependencyTree.Data.Dependency
+    let dependency: DependencyTree.State.Dependency
     let isExpanded: Bool
 
-    public init(dependency: DependencyTree.Data.Dependency, isExpanded: Bool) {
+    public init(dependency: DependencyTree.State.Dependency, isExpanded: Bool) {
         self.dependency = dependency
         self.isExpanded = isExpanded
     }

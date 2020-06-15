@@ -9,15 +9,15 @@
 import SwiftUI
 
 public struct ExpandableListView: View {
-    @ObservedObject private var dependencyTreeState: Observable<DependencyTree.State>
-    @State private var selection: Set<DependencyTree.Data.Dependency> = []
+    @ObservedObject private var dependencyTreeStatus: Observable<DependencyTree.Status>
+    @State private var selection: Set<DependencyTree.State.Dependency> = []
 
-    public init(dependencyTreeState: Observable<DependencyTree.State>) {
-        self.dependencyTreeState = dependencyTreeState
+    public init(dependencyTreeStatus: Observable<DependencyTree.Status>) {
+        self.dependencyTreeStatus = dependencyTreeStatus
     }
 
     public var body: some View {
-        switch dependencyTreeState.input {
+        switch dependencyTreeStatus.input {
         case .initial:
             return AnyView(
                 LoadingView(
@@ -26,11 +26,11 @@ public struct ExpandableListView: View {
                     isloading: true
                 ).frame(width: 200, height: 250)
             )
-        case let .success(viewData: data):
+        case let .success(state: state):
             return AnyView(
                 VStack(alignment: .leading, spacing: 8) {
                     List {
-                        ForEach(data.dependencies, id: \.id) { node in
+                        ForEach(state.dependencies, id: \.id) { node in
                             DependencyItemView(
                                 dependency: node,
                                 isExpanded: self.selection.contains(node)
@@ -50,7 +50,7 @@ public struct ExpandableListView: View {
         }
     }
 
-    func didTapItem(_ item: DependencyTree.Data.Dependency) {
+    func didTapItem(_ item: DependencyTree.State.Dependency) {
         if selection.contains(item) {
             selection.remove(item)
         } else {

@@ -9,9 +9,9 @@
 import Foundation
 
 public enum DependencyTree {
-    // MARK: - View Data
+    // MARK: - View State
 
-    public struct Data: Equatable {
+    public struct State: Equatable {
         public let dependencies: [Dependency]
         public let failure: String?
 
@@ -32,13 +32,13 @@ public enum DependencyTree {
         }
     }
 
-    // MARK: - View State
+    // MARK: - View Status
 
-    public enum State: Equatable {
+    public enum Status: Equatable {
         case initial
         case failure(_ failure: String)
-        case success(viewData: Data)
+        case success(state: State)
     }
 }
 
-extension DependencyTree.Data.Dependency: Hashable {}
+extension DependencyTree.State.Dependency: Hashable {}
