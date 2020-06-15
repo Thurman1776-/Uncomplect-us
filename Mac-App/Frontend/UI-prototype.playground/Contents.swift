@@ -2,6 +2,16 @@ import Frontend
 import PlaygroundSupport
 import SwiftUI
 
-let loadingView = LoadingView(title: "This is a title", titleColor: Color.green, isloading: true)
+let itemView = DependencyItemView(
+    dependency: DependencyTree.State.Dependency(owner: "Daniel", dependencies: ["orange", "apple", "banana"]),
+    isExpanded: true
+)
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            itemView
+        }
+    }
+}
 
-PlaygroundPage.current.setLiveView(loadingView)
+PlaygroundPage.current.setLiveView(ContentView())
