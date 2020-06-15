@@ -1,5 +1,5 @@
 //
-//  ExpandableListView.swift
+//  DependencyListView.swift
 //  Frontend
 //
 //  Created by Daniel GARCÍA on 23.02.20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-public struct ExpandableListView: View {
+public struct DependencyListView: View {
     @ObservedObject private var dependencyTreeStatus: Observable<DependencyTree.Status>
     @State private var selection: Set<DependencyTree.State.Dependency> = []
 

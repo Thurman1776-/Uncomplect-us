@@ -42,7 +42,7 @@ private func makeSplitViewController(
 ) -> NSSplitViewController {
     let splitViewController = NSSplitViewController()
     splitViewController.addSplitViewItem(makeDetailsView(using: projectDetailsStatus))
-    splitViewController.addSplitViewItem(makeExpandableList(using: dependencyTreeStatus))
+    splitViewController.addSplitViewItem(makeDependencyList(using: dependencyTreeStatus))
 
     let splitView = NSSplitView()
     splitView.isVertical = true
@@ -61,11 +61,11 @@ private func makeDetailsView(
     return splitViewItem
 }
 
-private func makeExpandableList(
+private func makeDependencyList(
     using dependencyTreeStatus: Observable<DependencyTree.Status>
 ) -> NSSplitViewItem {
     let hostingController = NSHostingController(
-        rootView: ExpandableListView(dependencyTreeStatus: dependencyTreeStatus)
+        rootView: DependencyListView(dependencyTreeStatus: dependencyTreeStatus)
     )
     let splitViewItem = NSSplitViewItem(viewController: hostingController)
 
