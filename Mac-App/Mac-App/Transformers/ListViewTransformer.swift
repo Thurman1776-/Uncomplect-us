@@ -12,8 +12,8 @@ import Frontend
 import ReSwift
 
 final class ListViewTransformer {
-    let stateObserver = StateObserver<Frontend.DependencyTree.Data>()
-    private(set) var transformedData: Observable<Frontend.DependencyTree.State> = .init(.initial)
+    let stateObserver = StateObserver<Frontend.DependencyTree.State>()
+    private(set) var viewInput: Observable<Frontend.DependencyTree.Status> = .init(.initial)
     private var cancellable: AnyCancellable = AnyCancellable {}
 
     func startListening() {
@@ -21,7 +21,7 @@ final class ListViewTransformer {
             [weak self] appState in
 
             precondition(appState != nil, "State observer should always have an initial state provided by the Backend!")
-            self?.emitNewData(appState!)
+            self?.emitNewState(appState!)
         }
     }
 
@@ -29,22 +29,22 @@ final class ListViewTransformer {
         cancellable.cancel()
     }
 
-    private func emitNewData(_ viewData: Frontend.DependencyTree.Data) {
-        if viewData.dependencies.isEmpty == false {
-            transformedData.update(to: .success(viewData: viewData))
-        } else if let failure = viewData.failure {
-            transformedData.update(to: .failure(failure))
+    private func emitNewState(_ state: Frontend.DependencyTree.State) {
+        if state.dependencies.isEmpty == false {
+            viewInput.update(to: .success(state: state))
+        } else if let failure = state.failure {
+            viewInput.update(to: .failure(failure))
         }
     }
 }
 
 // MARK: - Mapper from AppState to subscriber state (view data for UI)
 
-extension Frontend.DependencyTree.Data {
+extension Frontend.DependencyTree.State {
     init(appState: AppState) {
         self.init(
             dependencies: appState.dependencyGraphState.tree.map {
-                DependencyTree.Data.Dependency(
+                DependencyTree.State.Dependency(
                     owner: $0.owner,
                     dependencies: $0.dependencies.map { String($0.name) }
                 )
@@ -54,4 +54,4 @@ extension Frontend.DependencyTree.Data {
     }
 }
 
-extension Frontend.DependencyTree.Data: StateType {}
+extension Frontend.DependencyTree.State: StateType {}

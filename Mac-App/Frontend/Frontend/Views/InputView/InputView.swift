@@ -26,7 +26,8 @@ public struct InputView: View {
                 gradient: Gradient(colors: randomColors()),
                 center: .center
             ), width: 1.0
-        ).padding(EdgeInsets(top: 45, leading: 16, bottom: 45, trailing: 16))
+        ).frame(width: 700, height: 50, alignment: .center)
+            .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
     }
 }
 

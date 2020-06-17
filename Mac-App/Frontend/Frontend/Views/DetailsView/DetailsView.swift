@@ -23,31 +23,38 @@ public struct DetailsView: View {
                     title: "Finding relevant stats...",
                     titleColor: .gray,
                     isloading: true
-                )
+                ).frame(width: 200, height: 250)
             )
         case let .success(state: state):
             return AnyView(
                 VStack {
-                    Text("Heaviest dependency: ")
-                        .foregroundColor(.yellow)
-                        .font(.system(.headline))
-                    Text(state.heaviestDependency)
-                        .underline()
-                        .font(.system(.subheadline))
-                        .foregroundColor(.red)
-                    Spacer().frame(minHeight: 16, maxHeight: 36)
-                    Text("Total dependencies found: \(state.totalDependenciesFound)")
-                        .bold()
-                        .foregroundColor(.white)
-                        .font(.system(.body))
-                    Spacer().frame(minHeight: 16, maxHeight: 36)
+                    VStack {
+                        Text("Heaviest dependency: ")
+                            .foregroundColor(.lightBlue)
+                            .font(.system(.headline))
+                        Text(state.heaviestDependency)
+                            .underline()
+                            .font(.system(.subheadline))
+                            .foregroundColor(.white)
+                    }
+                    .padding(EdgeInsets(top: 8, leading: 4, bottom: 16, trailing: 4))
+
+                    VStack {
+                        Text("Total dependencies found: \(state.totalDependenciesFound)")
+                            .bold()
+                            .foregroundColor(.lightBlue)
+                            .font(.system(.body))
+                    }
+                    .padding(EdgeInsets(top: 0, leading: 4, bottom: 16, trailing: 4))
+
                     Text("Files scanned: \(state.paths.count)")
                         .bold()
-                        .foregroundColor(.white)
+                        .foregroundColor(.lightGreen)
                         .font(.system(.body))
-                    Spacer().frame(minHeight: 16, maxHeight: 36)
+                        .padding(EdgeInsets(top: 0, leading: 4, bottom: 16, trailing: 4))
+
                     PlainList(
-                        title: state.paths.map { String($0.absoluteString) },
+                        titles: state.paths.map { String($0.absoluteString) },
                         itemsColor: .yellow
                     )
                 }
