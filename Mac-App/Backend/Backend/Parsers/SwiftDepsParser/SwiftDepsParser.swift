@@ -28,8 +28,11 @@ func parseSwiftDeps(_ swiftDeps: [SwiftDeps]) -> [DependencyTree] {
                     .excludeSystemSymbolsPrefixes()
                     .filterOcurrancesOf(name)
                     .map(DependencyTree.Dependency.init)
-
-                result.append(DependencyTree(owner: name, dependencies: deps))
+                
+                let tree = DependencyTree(owner: name, dependencies: deps)
+                if result.contains(tree) == false {
+                    result.append(tree)
+                }
             }
         }
     }
