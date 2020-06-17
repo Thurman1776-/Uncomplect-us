@@ -22,7 +22,7 @@ public struct DetailsView: View {
                 LoadingView(
                     title: "Finding relevant stats...",
                     titleColor: .gray,
-                    isloading: true
+                    isLoading: true
                 ).frame(width: 200, height: 250)
             )
         case let .success(state: state):
