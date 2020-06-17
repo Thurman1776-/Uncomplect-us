@@ -41,7 +41,6 @@ public struct DependencyItemView: View {
                 }
             }
         }
-        .background(Color.lightGray)
     }
 
     private var dependencyList: some View {
