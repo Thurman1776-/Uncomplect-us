@@ -19,6 +19,15 @@
 		651A85A4248CF03C00AD0927 /* CLIParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE9A223DCABD000242ADF /* CLIParserSpec.swift */; };
 		651A85A6248CF05D00AD0927 /* SwiftDepsParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D58A9523F828F100C2AB74 /* SwiftDepsParserSpec.swift */; };
 		651A85A8248CF07500AD0927 /* YamlParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7626623E6A3CA0014DEB9 /* YamlParserSpec.swift */; };
+		65896D26249CB0EE00257175 /* Project-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D23249CB0EE00257175 /* Project-Debug.xcconfig */; };
+		65896D27249CB0EE00257175 /* Project-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D24249CB0EE00257175 /* Project-Release.xcconfig */; };
+		65896D28249CB0EE00257175 /* Project-Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D25249CB0EE00257175 /* Project-Shared.xcconfig */; };
+		65896D2C249CB11100257175 /* Backend-Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D29249CB11100257175 /* Backend-Shared.xcconfig */; };
+		65896D2D249CB11100257175 /* Backend-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D2A249CB11100257175 /* Backend-Release.xcconfig */; };
+		65896D2E249CB11100257175 /* Backend-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D2B249CB11100257175 /* Backend-Debug.xcconfig */; };
+		65896D32249CB13B00257175 /* BackendTests-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D2F249CB13B00257175 /* BackendTests-Release.xcconfig */; };
+		65896D33249CB13B00257175 /* BackendTests-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D30249CB13B00257175 /* BackendTests-Debug.xcconfig */; };
+		65896D34249CB13B00257175 /* BackendTests-Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D31249CB13B00257175 /* BackendTests-Shared.xcconfig */; };
 		66E89AD4BD74A3D517558DDC /* CwlCatchException.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9630BDA30D9CD7865E05CE8D /* CwlCatchException.framework */; };
 		91FA8BC9456EA57494C961D0 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */; };
 		961818E76009BE3E450B26B4 /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA32A46831C17A7C83A1CF1 /* Yams.framework */; };
@@ -104,6 +113,15 @@
 		17A892613B802C921192B6A3 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Quick.framework; path = Dependencies/macOS/Quick.framework; sourceTree = "<group>"; };
 		28855F46A4EC65D5ECE0955E /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Nimble.framework; path = Dependencies/macOS/Nimble.framework; sourceTree = "<group>"; };
 		43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ReSwift.framework; path = Dependencies/macOS/ReSwift.framework; sourceTree = "<group>"; };
+		65896D23249CB0EE00257175 /* Project-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Debug.xcconfig"; sourceTree = "<group>"; };
+		65896D24249CB0EE00257175 /* Project-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Release.xcconfig"; sourceTree = "<group>"; };
+		65896D25249CB0EE00257175 /* Project-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Shared.xcconfig"; sourceTree = "<group>"; };
+		65896D29249CB11100257175 /* Backend-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Backend-Shared.xcconfig"; sourceTree = "<group>"; };
+		65896D2A249CB11100257175 /* Backend-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Backend-Release.xcconfig"; sourceTree = "<group>"; };
+		65896D2B249CB11100257175 /* Backend-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Backend-Debug.xcconfig"; sourceTree = "<group>"; };
+		65896D2F249CB13B00257175 /* BackendTests-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "BackendTests-Release.xcconfig"; sourceTree = "<group>"; };
+		65896D30249CB13B00257175 /* BackendTests-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "BackendTests-Debug.xcconfig"; sourceTree = "<group>"; };
+		65896D31249CB13B00257175 /* BackendTests-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "BackendTests-Shared.xcconfig"; sourceTree = "<group>"; };
 		9630BDA30D9CD7865E05CE8D /* CwlCatchException.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = CwlCatchException.framework; path = Dependencies/macOS/CwlCatchException.framework; sourceTree = "<group>"; };
 		A8199C5023E6CA73000B89F6 /* SwiftDeps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDeps.swift; sourceTree = "<group>"; };
 		A8199C5323E6F3AD000B89F6 /* SwiftDepsReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDepsReducerSpec.swift; sourceTree = "<group>"; };
@@ -178,6 +196,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65896D19249CAF8200257175 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				65896D23249CB0EE00257175 /* Project-Debug.xcconfig */,
+				65896D24249CB0EE00257175 /* Project-Release.xcconfig */,
+				65896D25249CB0EE00257175 /* Project-Shared.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		65896D1A249CAFB300257175 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				65896D2B249CB11100257175 /* Backend-Debug.xcconfig */,
+				65896D2A249CB11100257175 /* Backend-Release.xcconfig */,
+				65896D29249CB11100257175 /* Backend-Shared.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		65896D1C249CAFF200257175 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				65896D30249CB13B00257175 /* BackendTests-Debug.xcconfig */,
+				65896D2F249CB13B00257175 /* BackendTests-Release.xcconfig */,
+				65896D31249CB13B00257175 /* BackendTests-Shared.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		8D53CC87ED3200CD4593921C /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +282,7 @@
 		A831002E23DC9E4400460A12 = {
 			isa = PBXGroup;
 			children = (
+				65896D19249CAF8200257175 /* Configuration */,
 				A831003A23DC9E4400460A12 /* Backend */,
 				A831004523DC9E4400460A12 /* BackendTests */,
 				8D53CC87ED3200CD4593921C /* Dependencies */,
@@ -253,6 +302,7 @@
 		A831003A23DC9E4400460A12 /* Backend */ = {
 			isa = PBXGroup;
 			children = (
+				65896D1A249CAFB300257175 /* Configuration */,
 				A8E7626923DDB9DF00BFAD48 /* AppState */,
 				A831003B23DC9E4400460A12 /* Backend.h */,
 				A8E7626F23DDBBA400BFAD48 /* BackendAPI */,
@@ -268,6 +318,7 @@
 		A831004523DC9E4400460A12 /* BackendTests */ = {
 			isa = PBXGroup;
 			children = (
+				65896D1C249CAFF200257175 /* Configuration */,
 				A831004823DC9E4400460A12 /* Info.plist */,
 				A8F7626823E6A53F0014DEB9 /* Shared */,
 			);
@@ -562,6 +613,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65896D27249CB0EE00257175 /* Project-Release.xcconfig in Resources */,
+				65896D2D249CB11100257175 /* Backend-Release.xcconfig in Resources */,
+				65896D28249CB0EE00257175 /* Project-Shared.xcconfig in Resources */,
+				65896D2C249CB11100257175 /* Backend-Shared.xcconfig in Resources */,
+				65896D26249CB0EE00257175 /* Project-Debug.xcconfig in Resources */,
+				65896D2E249CB11100257175 /* Backend-Debug.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,7 +626,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65896D33249CB13B00257175 /* BackendTests-Debug.xcconfig in Resources */,
 				A8199C5623E700A5000B89F6 /* AppDelegateSwiftDepsFixture.swiftDeps in Resources */,
+				65896D34249CB13B00257175 /* BackendTests-Shared.xcconfig in Resources */,
+				65896D32249CB13B00257175 /* BackendTests-Release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
