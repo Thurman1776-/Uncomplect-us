@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65358E46249CB4310004510F /* Project-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65358E43249CB4310004510F /* Project-Debug.xcconfig */; };
+		65358E47249CB4310004510F /* Project-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65358E44249CB4310004510F /* Project-Release.xcconfig */; };
+		65358E48249CB4310004510F /* Project-Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65358E45249CB4310004510F /* Project-Shared.xcconfig */; };
+		65358E4C249CB43B0004510F /* Mac-App-Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65358E49249CB43B0004510F /* Mac-App-Shared.xcconfig */; };
+		65358E4D249CB43B0004510F /* Mac-App-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65358E4A249CB43B0004510F /* Mac-App-Debug.xcconfig */; };
+		65358E4E249CB43B0004510F /* Mac-App-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65358E4B249CB43B0004510F /* Mac-App-Release.xcconfig */; };
+		65358E52249CB4440004510F /* Mac-AppTests-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65358E4F249CB4440004510F /* Mac-AppTests-Release.xcconfig */; };
+		65358E53249CB4440004510F /* Mac-AppTests-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65358E50249CB4440004510F /* Mac-AppTests-Debug.xcconfig */; };
+		65358E54249CB4440004510F /* Mac-AppTests-Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65358E51249CB4440004510F /* Mac-AppTests-Shared.xcconfig */; };
 		A8199C5823E70C97000B89F6 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8199C5723E70C97000B89F6 /* Backend.framework */; };
 		A8472C9E2402C6190032E702 /* ListViewTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8472C9D2402C6190032E702 /* ListViewTransformer.swift */; };
 		A86E10342365DAB800D3FF94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E10332365DAB800D3FF94 /* AppDelegate.swift */; };
@@ -47,6 +56,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		65358E43249CB4310004510F /* Project-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Debug.xcconfig"; sourceTree = "<group>"; };
+		65358E44249CB4310004510F /* Project-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Release.xcconfig"; sourceTree = "<group>"; };
+		65358E45249CB4310004510F /* Project-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Shared.xcconfig"; sourceTree = "<group>"; };
+		65358E49249CB43B0004510F /* Mac-App-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Mac-App-Shared.xcconfig"; sourceTree = "<group>"; };
+		65358E4A249CB43B0004510F /* Mac-App-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Mac-App-Debug.xcconfig"; sourceTree = "<group>"; };
+		65358E4B249CB43B0004510F /* Mac-App-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Mac-App-Release.xcconfig"; sourceTree = "<group>"; };
+		65358E4F249CB4440004510F /* Mac-AppTests-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Mac-AppTests-Release.xcconfig"; sourceTree = "<group>"; };
+		65358E50249CB4440004510F /* Mac-AppTests-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Mac-AppTests-Debug.xcconfig"; sourceTree = "<group>"; };
+		65358E51249CB4440004510F /* Mac-AppTests-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Mac-AppTests-Shared.xcconfig"; sourceTree = "<group>"; };
 		A8199C5723E70C97000B89F6 /* Backend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Backend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8472C9D2402C6190032E702 /* ListViewTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewTransformer.swift; sourceTree = "<group>"; };
 		A86E10302365DAB800D3FF94 /* Mac-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mac-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +105,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65358E40249CB3960004510F /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				65358E43249CB4310004510F /* Project-Debug.xcconfig */,
+				65358E44249CB4310004510F /* Project-Release.xcconfig */,
+				65358E45249CB4310004510F /* Project-Shared.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		65358E41249CB39D0004510F /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				65358E4A249CB43B0004510F /* Mac-App-Debug.xcconfig */,
+				65358E4B249CB43B0004510F /* Mac-App-Release.xcconfig */,
+				65358E49249CB43B0004510F /* Mac-App-Shared.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		65358E42249CB3A60004510F /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				65358E50249CB4440004510F /* Mac-AppTests-Debug.xcconfig */,
+				65358E4F249CB4440004510F /* Mac-AppTests-Release.xcconfig */,
+				65358E51249CB4440004510F /* Mac-AppTests-Shared.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		A80EF04E236611FF00CD7500 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +157,7 @@
 		A86E10272365DAB800D3FF94 = {
 			isa = PBXGroup;
 			children = (
+				65358E40249CB3960004510F /* Configuration */,
 				A86E10322365DAB800D3FF94 /* Mac-App */,
 				A86E10482365DAB900D3FF94 /* Mac-AppTests */,
 				A86E10312365DAB800D3FF94 /* Products */,
@@ -128,6 +177,7 @@
 		A86E10322365DAB800D3FF94 /* Mac-App */ = {
 			isa = PBXGroup;
 			children = (
+				65358E41249CB39D0004510F /* Configuration */,
 				A8743A70245F2B0900F8BFF2 /* StateObserver */,
 				A8743A6D245F289D00F8BFF2 /* BackendSubscribers */,
 				A8472C9C2402C6040032E702 /* Transformers */,
@@ -152,6 +202,7 @@
 		A86E10482365DAB900D3FF94 /* Mac-AppTests */ = {
 			isa = PBXGroup;
 			children = (
+				65358E42249CB3A60004510F /* Configuration */,
 				A8CAE9A923DCAE7E00242ADF /* Mac-AppTests.swift */,
 				A86E104B2365DAB900D3FF94 /* Info.plist */,
 			);
@@ -258,9 +309,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65358E4D249CB43B0004510F /* Mac-App-Debug.xcconfig in Resources */,
+				65358E47249CB4310004510F /* Project-Release.xcconfig in Resources */,
+				65358E48249CB4310004510F /* Project-Shared.xcconfig in Resources */,
+				65358E46249CB4310004510F /* Project-Debug.xcconfig in Resources */,
 				A86E103E2365DAB900D3FF94 /* Main.storyboard in Resources */,
+				65358E4C249CB43B0004510F /* Mac-App-Shared.xcconfig in Resources */,
 				A86E103B2365DAB800D3FF94 /* Preview Assets.xcassets in Resources */,
 				A86E10382365DAB800D3FF94 /* Assets.xcassets in Resources */,
+				65358E4E249CB43B0004510F /* Mac-App-Release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +325,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65358E54249CB4440004510F /* Mac-AppTests-Shared.xcconfig in Resources */,
+				65358E53249CB4440004510F /* Mac-AppTests-Debug.xcconfig in Resources */,
+				65358E52249CB4440004510F /* Mac-AppTests-Release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
