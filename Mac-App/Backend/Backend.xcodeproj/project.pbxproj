@@ -19,6 +19,7 @@
 		651A85A4248CF03C00AD0927 /* CLIParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE9A223DCABD000242ADF /* CLIParserSpec.swift */; };
 		651A85A6248CF05D00AD0927 /* SwiftDepsParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D58A9523F828F100C2AB74 /* SwiftDepsParserSpec.swift */; };
 		651A85A8248CF07500AD0927 /* YamlParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7626623E6A3CA0014DEB9 /* YamlParserSpec.swift */; };
+		65358E57249D09EE0004510F /* ConcurrentWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65358E56249D09EE0004510F /* ConcurrentWork.swift */; };
 		66E89AD4BD74A3D517558DDC /* CwlCatchException.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9630BDA30D9CD7865E05CE8D /* CwlCatchException.framework */; };
 		91FA8BC9456EA57494C961D0 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */; };
 		961818E76009BE3E450B26B4 /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA32A46831C17A7C83A1CF1 /* Yams.framework */; };
@@ -104,6 +105,7 @@
 		17A892613B802C921192B6A3 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Quick.framework; path = Dependencies/macOS/Quick.framework; sourceTree = "<group>"; };
 		28855F46A4EC65D5ECE0955E /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Nimble.framework; path = Dependencies/macOS/Nimble.framework; sourceTree = "<group>"; };
 		43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ReSwift.framework; path = Dependencies/macOS/ReSwift.framework; sourceTree = "<group>"; };
+		65358E56249D09EE0004510F /* ConcurrentWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentWork.swift; sourceTree = "<group>"; };
 		9630BDA30D9CD7865E05CE8D /* CwlCatchException.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = CwlCatchException.framework; path = Dependencies/macOS/CwlCatchException.framework; sourceTree = "<group>"; };
 		A8199C5023E6CA73000B89F6 /* SwiftDeps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDeps.swift; sourceTree = "<group>"; };
 		A8199C5323E6F3AD000B89F6 /* SwiftDepsReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDepsReducerSpec.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				A89E0BE123F87DAC0009154E /* DispatchQueue+Shorthands.swift */,
+				65358E56249D09EE0004510F /* ConcurrentWork.swift */,
 			);
 			path = "Helpers ";
 			sourceTree = "<group>";
@@ -652,6 +655,7 @@
 				A8E7627123DDBBB700BFAD48 /* BackendAPI.swift in Sources */,
 				A85514F123E6002500D3E7F6 /* SwiftDepsState.swift in Sources */,
 				A8E1019923EF055600C550E2 /* DependencyGraphState.swift in Sources */,
+				65358E57249D09EE0004510F /* ConcurrentWork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
