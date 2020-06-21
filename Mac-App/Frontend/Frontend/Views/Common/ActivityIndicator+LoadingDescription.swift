@@ -11,17 +11,17 @@ import SwiftUI
 public struct LoadingView: View {
     let title: String
     let titleColor: Color
-    @State var isloading: Bool = true
+    @State var isLoading: Bool = true
 
-    public init(title: String, titleColor: Color, isloading: Bool) {
+    public init(title: String, titleColor: Color, isLoading: Bool) {
         self.title = title
         self.titleColor = titleColor
-        self.isloading = isloading
+        self.isLoading = isLoading
     }
 
     public var body: some View {
         VStack {
-            ActivityIndicator(isAnimating: $isloading, style: .spinning)
+            ActivityIndicator(isAnimating: $isLoading, style: .spinning)
                 .padding(8)
             Text("\(title)")
                 .bold()
