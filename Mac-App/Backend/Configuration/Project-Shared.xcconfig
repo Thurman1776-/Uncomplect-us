@@ -430,7 +430,8 @@ GCC_WARN_UNUSED_VARIABLE = YES
 // unavailable in earlier versions will be weak-linked; your code should check for `null`
 // function pointers or specific system versions before calling newer APIs.
 
-//MACOSX_DEPLOYMENT_TARGET = 10.15
+// ⚠️ Currently not in use as Accio can't read values from this file ⚠️
+// MACOSX_DEPLOYMENT_TARGET = 10.15
 
 
 
@@ -452,6 +453,7 @@ MTL_FAST_MATH = YES
 // the compiler and linker. Additional SDKs can be specified in the `ADDITIONAL_SDKS`
 // setting.
 
+// ⚠️ Currently not in use as Accio can't read values from this file ⚠️
 // SDKROOT = macosx
 
 
