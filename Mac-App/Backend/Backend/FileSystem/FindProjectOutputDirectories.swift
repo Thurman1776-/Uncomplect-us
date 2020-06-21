@@ -85,20 +85,6 @@ private func contentsOfDirectory(using fileManager: FileManager = .default, at p
         )
 }
 
-// MARK: Experimental - Leverage multicore processing by splitting work
-
-private func parseSequencially(_ collection: [String]) -> [URL] {
-    var paths: Set<URL> = []
-    for path in collection {
-        if let urls = contentsOfDirectory(at: path) {
-            urls.filter { $0.pathExtension == swiftDepsExtension }
-                .forEach { paths.insert($0) }
-        }
-    }
-
-    return Array(paths)
-}
-
 private func parseConcurrently(_ collection: [String]) -> [URL] {
     let middleIndex: Double = floor(Double(collection.count / 2))
     let firstChunk = collection.prefix(upTo: Int(middleIndex))
