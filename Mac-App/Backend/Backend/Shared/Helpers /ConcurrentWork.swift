@@ -20,8 +20,8 @@ func splitAndExecuteConcurrently<I: Hashable, O: Hashable>(
     var firstChunkItems: Set<O> = []
     var secondChunkItems: Set<O> = []
 
-    let operation = OperationQueue()
-    operation.addOperation {
+    let operationQueue = OperationQueue()
+    operationQueue.addOperation {
         for item in firstChunk {
             if let _item = transform(item) {
                 firstChunkItems.insert(_item)
@@ -29,7 +29,7 @@ func splitAndExecuteConcurrently<I: Hashable, O: Hashable>(
         }
     }
 
-    operation.addOperation {
+    operationQueue.addOperation {
         for item in secondChunk {
             if let _item = transform(item) {
                 secondChunkItems.insert(_item)
@@ -37,13 +37,13 @@ func splitAndExecuteConcurrently<I: Hashable, O: Hashable>(
         }
     }
 
-    operation.addBarrierBlock {
+    operationQueue.addBarrierBlock {
         allItems = firstChunkItems.union(secondChunkItems)
     }
 
-    operation.maxConcurrentOperationCount = 3
-    operation.qualityOfService = .userInitiated
-    operation.waitUntilAllOperationsAreFinished()
+    operationQueue.maxConcurrentOperationCount = 3
+    operationQueue.qualityOfService = .userInitiated
+    operationQueue.waitUntilAllOperationsAreFinished()
 
     return Array(allItems)
 }
