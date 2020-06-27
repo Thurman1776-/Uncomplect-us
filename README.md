@@ -1,8 +1,10 @@
-## Welcome to GitHub Pages
+# Do you know how much you are complecting your code? 
 
-You can use the [editor on GitHub](https://github.com/Thurman1776-/Uncomplect-us/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This is a Mac App that intents to be a tool to help you [uncomplect](https://www.youtube.com/watch?v=oytL881p-nQ&t=1320s) your objects
+by giving you an indication of which entities show a large amount of dependencies. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This idea is totally taken from [here](https://github.com/PaulTaykalo/objc-dependency-visualizer) but the intention is to take it a step further & make it a tool for developers to track down the most complex objects so it serves
+as a metric to prioritise entities breakdowns. 
 
 ### Markdown
 
@@ -25,13 +27,3 @@ Syntax highlighted code block
 
 [Link](url) and ![Image](src)
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Thurman1776-/Uncomplect-us/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
