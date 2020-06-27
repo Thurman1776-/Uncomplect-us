@@ -8,7 +8,7 @@
 
 import ReSwift
 
-func dependencyGraphSideEffects() -> Middleware<AppState> {
+func dependencyGraphSideEffects(parser: @escaping SwiftDepsParserType) -> Middleware<AppState> {
     { (dispatchFuction: @escaping DispatchFunction, _: @escaping () -> AppState?) in
         { (next: @escaping DispatchFunction) in
             { action in
@@ -18,8 +18,8 @@ func dependencyGraphSideEffects() -> Middleware<AppState> {
 
                 switch action {
                 case let DependencyGraphAction.mapFrom(swiftDeps):
-                    dispatchAsyncOnGlobal {
-                        let parsedSwiftDeps = parseSwiftDeps(swiftDeps)
+                    dispatchAsyncOnBackendQueue {
+                        let parsedSwiftDeps = parser(swiftDeps)
                         dispatchFuction(DependencyGraphAction.set(parsedSwiftDeps))
                     }
                 default: break

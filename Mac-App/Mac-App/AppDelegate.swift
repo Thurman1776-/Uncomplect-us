@@ -20,7 +20,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             BackendAPI.dispatch(DependencyPathsAction.findUrls(for: value))
 
             let mainSplitView = MainSplitView(
-                dependencyTreeState: listViewTransformer.transformedData,
+                dependencyTreeStatus: listViewTransformer.viewInput,
                 projectDetailsStatus: projectDetailsTransformer.viewInput
             )
             self.window.contentView = NSHostingView(rootView: mainSplitView)

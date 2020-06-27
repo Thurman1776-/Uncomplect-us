@@ -8,30 +8,32 @@
 
 import SwiftUI
 
-struct DependencyItemView: View {
-    let dependency: DependencyTree.Data.Dependency
+public struct DependencyItemView: View {
+    let dependency: DependencyTree.State.Dependency
     let isExpanded: Bool
 
-    var body: some View {
+    public init(dependency: DependencyTree.State.Dependency, isExpanded: Bool) {
+        self.dependency = dependency
+        self.isExpanded = isExpanded
+    }
+
+    public var body: some View {
         HStack {
             mainContent
-            Spacer()
-        }
-        .contentShape(Rectangle())
+        }.padding(EdgeInsets(top: 8, leading: 8, bottom: 0, trailing: 8))
     }
 
     private var mainContent: some View {
         VStack(alignment: .leading) {
             HStack {
                 Text("Owner: \(dependency.owner)")
-                    .bold()
                     .font(.headline)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.lightBlue)
                 Text("Dependency count: \(dependency.dependencies.count)")
-                    .font(.footnote)
+                    .font(.caption)
                     .foregroundColor(.white)
-                Spacer()
             }
+            .padding(8)
 
             if isExpanded {
                 VStack(alignment: .leading) {
@@ -47,12 +49,7 @@ struct DependencyItemView: View {
                 .font(.body)
                 .italic()
                 .foregroundColor(.yellow)
+                .padding(EdgeInsets(top: 8, leading: 8, bottom: 0, trailing: 8))
         }
     }
-}
-
-// TODO: Move to shareable framework
-
-extension String: Identifiable {
-    public var id: Int { hashValue }
 }

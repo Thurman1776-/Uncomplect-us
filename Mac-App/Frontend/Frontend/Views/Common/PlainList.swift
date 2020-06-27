@@ -8,13 +8,18 @@
 
 import SwiftUI
 
-struct PlainList: View {
-    let title: [String]
+public struct PlainList: View {
+    let titles: [String]
     let itemsColor: Color
+
+    public init(titles: [String], itemsColor: Color) {
+        self.titles = titles
+        self.itemsColor = itemsColor
+    }
 
     public var body: some View {
         List {
-            ForEach(title, id: \.id) { title in
+            ForEach(titles, id: \.id) { title in
                 Text(title)
                     .font(.caption)
                     .italic()

@@ -8,7 +8,7 @@
 
 import ReSwift
 
-func findProjectOutputDirsSideEffects() -> Middleware<AppState> {
+func findProjectOutputDirsSideEffects(finder: @escaping ProjectOutputFinderType) -> Middleware<AppState> {
     { (dispatchFuction: @escaping DispatchFunction, _: @escaping () -> AppState?) in
         { (next: @escaping DispatchFunction) in
             { action in
@@ -18,8 +18,14 @@ func findProjectOutputDirsSideEffects() -> Middleware<AppState> {
 
                 switch action {
                 case let DependencyPathsAction.findUrls(for: project):
-                    dispatchAsyncOnGlobal {
-                        let urls = findProjectOutputDirectories(projectName: project)
+                    dispatchAsyncOnBackendQueue {
+                        let urls = finder(
+                            DefaultSearchValues.derivedDataPaths,
+                            project,
+                            DefaultSearchValues.targetNames,
+                            DefaultSearchValues.bash,
+                            DefaultSearchValues.excludingTests
+                        )
 
                         if urls.isEmpty == false {
                             dispatchFuction(DependencyPathsAction.append(paths: urls))
