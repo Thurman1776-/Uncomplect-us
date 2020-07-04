@@ -50,7 +50,7 @@ public struct DependencyListView: View {
         }
     }
 
-    func didTapItem(_ item: DependencyTree.State.Dependency) {
+    private func didTapItem(_ item: DependencyTree.State.Dependency) {
         if selection.contains(item) {
             selection.remove(item)
         } else {
