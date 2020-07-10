@@ -28,6 +28,7 @@
 		65896D32249CB13B00257175 /* BackendTests-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D2F249CB13B00257175 /* BackendTests-Release.xcconfig */; };
 		65896D33249CB13B00257175 /* BackendTests-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D30249CB13B00257175 /* BackendTests-Debug.xcconfig */; };
 		65896D34249CB13B00257175 /* BackendTests-Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D31249CB13B00257175 /* BackendTests-Shared.xcconfig */; };
+		65358E57249D09EE0004510F /* ConcurrentWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65358E56249D09EE0004510F /* ConcurrentWork.swift */; };
 		66E89AD4BD74A3D517558DDC /* CwlCatchException.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9630BDA30D9CD7865E05CE8D /* CwlCatchException.framework */; };
 		91FA8BC9456EA57494C961D0 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */; };
 		961818E76009BE3E450B26B4 /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA32A46831C17A7C83A1CF1 /* Yams.framework */; };
@@ -122,6 +123,7 @@
 		65896D2F249CB13B00257175 /* BackendTests-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "BackendTests-Release.xcconfig"; sourceTree = "<group>"; };
 		65896D30249CB13B00257175 /* BackendTests-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "BackendTests-Debug.xcconfig"; sourceTree = "<group>"; };
 		65896D31249CB13B00257175 /* BackendTests-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "BackendTests-Shared.xcconfig"; sourceTree = "<group>"; };
+		65358E56249D09EE0004510F /* ConcurrentWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentWork.swift; sourceTree = "<group>"; };
 		9630BDA30D9CD7865E05CE8D /* CwlCatchException.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = CwlCatchException.framework; path = Dependencies/macOS/CwlCatchException.framework; sourceTree = "<group>"; };
 		A8199C5023E6CA73000B89F6 /* SwiftDeps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDeps.swift; sourceTree = "<group>"; };
 		A8199C5323E6F3AD000B89F6 /* SwiftDepsReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDepsReducerSpec.swift; sourceTree = "<group>"; };
@@ -224,6 +226,15 @@
 				65896D31249CB13B00257175 /* BackendTests-Shared.xcconfig */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		65358E55249D09C80004510F /* Helpers  */ = {
+			isa = PBXGroup;
+			children = (
+				A89E0BE123F87DAC0009154E /* DispatchQueue+Shorthands.swift */,
+				65358E56249D09EE0004510F /* ConcurrentWork.swift */,
+			);
+			path = "Helpers ";
 			sourceTree = "<group>";
 		};
 		8D53CC87ED3200CD4593921C /* Dependencies */ = {
@@ -354,8 +365,8 @@
 		A89E0BE023F87D850009154E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				65358E55249D09C80004510F /* Helpers  */,
 				A84DAD2F244C7EED005EAB59 /* Extensions */,
-				A89E0BE123F87DAC0009154E /* DispatchQueue+Shorthands.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -704,6 +715,7 @@
 				A8E7627123DDBBB700BFAD48 /* BackendAPI.swift in Sources */,
 				A85514F123E6002500D3E7F6 /* SwiftDepsState.swift in Sources */,
 				A8E1019923EF055600C550E2 /* DependencyGraphState.swift in Sources */,
+				65358E57249D09EE0004510F /* ConcurrentWork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

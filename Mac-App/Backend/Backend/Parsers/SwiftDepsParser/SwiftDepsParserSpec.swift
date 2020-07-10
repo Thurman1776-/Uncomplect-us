@@ -29,23 +29,23 @@ final class SwiftDepsParserSpec: QuickSpec {
                 }
 
                 it("returns correctly parsed DependencyTree objects") {
-                    expect(result).notTo(beEmpty())
+                    expect(result).toNotEventually(beEmpty(), timeout: timeout)
                 }
 
                 it("does not store the owner name in the dependencies list") {
                     let randomItem = result.randomElement()!
                     let randomItemDeps = randomItem.dependencies.map { $0.name }
-                    expect(randomItemDeps.contains(randomItem.owner)).to(beFalse())
+                    expect(randomItemDeps.contains(randomItem.owner)).toEventually(beFalse(), timeout: timeout)
                 }
 
                 it("does not include any system/framework symbols") {
                     let randomItem = result.randomElement()!
                     let randomItemDeps = randomItem.dependencies.map { $0.name }
 
-                    expect(randomItemDeps.contains(systemSymbols.randomElement()!)).to(beFalse())
-                    expect(randomItemDeps.randomElement()!.contains("UI")).to(beFalse())
-                    expect(randomItemDeps.randomElement()!.contains("NS")).to(beFalse())
-                    expect(randomItemDeps.randomElement()!.contains("CF")).to(beFalse())
+                    expect(randomItemDeps.contains(systemSymbols.randomElement()!)).toEventually(beFalse(), timeout: timeout)
+                    expect(randomItemDeps.randomElement()!.contains("UI")).toEventually(beFalse(), timeout: timeout)
+                    expect(randomItemDeps.randomElement()!.contains("NS")).toEventually(beFalse(), timeout: timeout)
+                    expect(randomItemDeps.randomElement()!.contains("CF")).toEventually(beFalse(), timeout: timeout)
                 }
             }
 
