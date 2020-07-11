@@ -303,7 +303,6 @@
 		A831002E23DC9E4400460A12 = {
 			isa = PBXGroup;
 			children = (
-				653E150524B9B08B005DD3F1 /* TestPlans */,
 				65896D19249CAF8200257175 /* Configuration */,
 				A831003A23DC9E4400460A12 /* Backend */,
 				A831004523DC9E4400460A12 /* BackendTests */,
@@ -324,11 +323,11 @@
 		A831003A23DC9E4400460A12 /* Backend */ = {
 			isa = PBXGroup;
 			children = (
-				65896D1A249CAFB300257175 /* Configuration */,
 				A8E7626923DDB9DF00BFAD48 /* AppState */,
 				A831003B23DC9E4400460A12 /* Backend.h */,
 				A8E7626F23DDBBA400BFAD48 /* BackendAPI */,
 				A8CAE99923DCABA000242ADF /* CommandLine */,
+				65896D1A249CAFB300257175 /* Configuration */,
 				A8CAE99123DCAB9F00242ADF /* FileSystem */,
 				A831003C23DC9E4400460A12 /* Info.plist */,
 				A8CAE99323DCABA000242ADF /* Parsers */,
@@ -343,6 +342,7 @@
 				65896D1C249CAFF200257175 /* Configuration */,
 				A831004823DC9E4400460A12 /* Info.plist */,
 				A8F7626823E6A53F0014DEB9 /* Shared */,
+				653E150524B9B08B005DD3F1 /* TestPlans */,
 			);
 			path = BackendTests;
 			sourceTree = "<group>";
