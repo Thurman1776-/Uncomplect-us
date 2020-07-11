@@ -17,9 +17,14 @@ public struct SearchBar: View {
         self.placeholder = placeholder
     }
 
+    // FIXME: Remove print statement
     public var body: some View {
         HStack {
-            TextField("\(placeholder)    ", text: $searchText)
+            TextField(
+                "\(placeholder)    ",
+                text: $searchText,
+                onCommit: { print("Searching for: \(self.searchText)") }
+            )
                 .padding(8)
                 .padding(.horizontal, 10)
                 .background(Color.lightGray)
