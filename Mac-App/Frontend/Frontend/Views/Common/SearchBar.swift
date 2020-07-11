@@ -22,7 +22,7 @@ public struct SearchBar: View {
             TextField("\(placeholder)    ", text: $searchText)
                 .padding(8)
                 .padding(.horizontal, 10)
-                .background(Color(.systemGray))
+                .background(Color.lightGray)
                 .cornerRadius(8)
                 .onTapGesture {
                     self.isEditing = true
