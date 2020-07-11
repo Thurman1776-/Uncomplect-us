@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		655AC9FA24B6CC05005D8145 /* SearchableDependencyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655AC9F924B6CC05005D8145 /* SearchableDependencyListView.swift */; };
 		65896CFE249A882600257175 /* Project-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896CFB249A882600257175 /* Project-Release.xcconfig */; };
 		65896CFF249A882600257175 /* Project-Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896CFC249A882600257175 /* Project-Shared.xcconfig */; };
 		65896D00249A882600257175 /* Project-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896CFD249A882600257175 /* Project-Debug.xcconfig */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		655AC9F924B6CC05005D8145 /* SearchableDependencyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableDependencyListView.swift; sourceTree = "<group>"; };
 		65896CFB249A882600257175 /* Project-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Release.xcconfig"; sourceTree = "<group>"; };
 		65896CFC249A882600257175 /* Project-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Shared.xcconfig"; sourceTree = "<group>"; };
 		65896CFD249A882600257175 /* Project-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		655AC9F824B6CBD4005D8145 /* SearchableDependencyListView */ = {
+			isa = PBXGroup;
+			children = (
+				655AC9F924B6CC05005D8145 /* SearchableDependencyListView.swift */,
+			);
+			path = SearchableDependencyListView;
+			sourceTree = "<group>";
+		};
 		65896CFA249A87FD00257175 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +214,7 @@
 		A8F2526524029B4B00CD12DE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				655AC9F824B6CBD4005D8145 /* SearchableDependencyListView */,
 				A8DF675F2411637700D0DE02 /* Common */,
 				A8FECA9F2429EBE80028CC64 /* ExpandableList */,
 				A8DF67622412D9A200D0DE02 /* InputView */,
@@ -395,6 +406,7 @@
 				A88160DB2421073300CDB15A /* DependencyItemView.swift in Sources */,
 				A8FECAA92431086D0028CC64 /* ProjectDetails.swift in Sources */,
 				A8FECAA22429ED1A0028CC64 /* MainSplitViewController.swift in Sources */,
+				655AC9FA24B6CC05005D8145 /* SearchableDependencyListView.swift in Sources */,
 				A82DDE0F246E5822000259BF /* ActivityIndicator+LoadingDescription.swift in Sources */,
 				A8FECAA72430BCAE0028CC64 /* DetailsView.swift in Sources */,
 				A8F2526824029B6500CD12DE /* DependencyTree.swift in Sources */,
