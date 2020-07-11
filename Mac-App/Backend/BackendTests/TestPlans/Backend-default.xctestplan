@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "EA9F8A26-FAF6-4FD8-AD9D-46A940A49738",
+      "name" : "TSAN",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Backend.xcodeproj",
+        "identifier" : "A831004023DC9E4400460A12",
+        "name" : "BackendTests"
+      }
+    }
+  ],
+  "version" : 1
+}
