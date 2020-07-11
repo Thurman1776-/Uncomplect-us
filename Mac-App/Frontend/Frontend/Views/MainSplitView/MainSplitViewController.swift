@@ -65,7 +65,7 @@ private func makeDependencyList(
     using dependencyTreeStatus: Observable<DependencyTree.Status>
 ) -> NSSplitViewItem {
     let hostingController = NSHostingController(
-        rootView: DependencyListView(dependencyTreeStatus: dependencyTreeStatus)
+        rootView: SearchableDependencyListView(dependencyTreeStatus: dependencyTreeStatus)
     )
     let splitViewItem = NSSplitViewItem(viewController: hostingController)
 
