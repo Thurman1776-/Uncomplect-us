@@ -10,16 +10,16 @@ import SwiftUI
 
 public struct SearchableDependencyListView: View {
     @ObservedObject private var dependencyTreeStatus: Observable<DependencyTree.Status>
-    
+
     public init(dependencyTreeStatus: Observable<DependencyTree.Status>) {
         self.dependencyTreeStatus = dependencyTreeStatus
     }
-    
+
     public var body: some View {
         VStack {
             SearchBar(placeholder: "Search dependencies")
                 .padding(8)
-            DependencyListView(dependencyTreeStatus: dependencyTreeStatus)
+            DependencyListView().environmentObject(dependencyTreeStatus)
         }
     }
 }

@@ -9,12 +9,8 @@
 import SwiftUI
 
 public struct DependencyListView: View {
-    @ObservedObject private var dependencyTreeStatus: Observable<DependencyTree.Status>
+    @EnvironmentObject private var dependencyTreeStatus: Observable<DependencyTree.Status>
     @State private var selection: Set<DependencyTree.State.Dependency> = []
-
-    public init(dependencyTreeStatus: Observable<DependencyTree.Status>) {
-        self.dependencyTreeStatus = dependencyTreeStatus
-    }
 
     public var body: some View {
         switch dependencyTreeStatus.input {
