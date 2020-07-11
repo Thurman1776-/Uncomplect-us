@@ -16,6 +16,10 @@ public struct SearchableDependencyListView: View {
     }
     
     public var body: some View {
-        DependencyListView(dependencyTreeStatus: dependencyTreeStatus)
+        VStack {
+            SearchBar(placeholder: "Search dependencies")
+                .padding(8)
+            DependencyListView(dependencyTreeStatus: dependencyTreeStatus)
+        }
     }
 }
