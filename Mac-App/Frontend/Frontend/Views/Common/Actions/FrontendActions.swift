@@ -35,3 +35,8 @@ public extension EnvironmentValues {
     }
 }
 
+// MARK: - App's lifecycle actions
+
+public enum SearchAction: Action {
+    case search(_ text: String)
+}
