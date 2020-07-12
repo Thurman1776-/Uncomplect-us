@@ -43,8 +43,4 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private func configureEnviromentValues() {
         DispatcherKey.defaultValue = DefaultDispatcher.self
     }
-
-    func applicationWillTerminate(_: Notification) {
-        // Insert code here to tear down your application
-    }
 }
