@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		655AC9FA24B6CC05005D8145 /* SearchableDependencyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655AC9F924B6CC05005D8145 /* SearchableDependencyListView.swift */; };
+		656F141F24BB05930019C550 /* FrontendActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F141E24BB05930019C550 /* FrontendActions.swift */; };
 		65896CFE249A882600257175 /* Project-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896CFB249A882600257175 /* Project-Release.xcconfig */; };
 		65896CFF249A882600257175 /* Project-Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896CFC249A882600257175 /* Project-Shared.xcconfig */; };
 		65896D00249A882600257175 /* Project-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896CFD249A882600257175 /* Project-Debug.xcconfig */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		655AC9F924B6CC05005D8145 /* SearchableDependencyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableDependencyListView.swift; sourceTree = "<group>"; };
+		656F141E24BB05930019C550 /* FrontendActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontendActions.swift; sourceTree = "<group>"; };
 		65896CFB249A882600257175 /* Project-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Release.xcconfig"; sourceTree = "<group>"; };
 		65896CFC249A882600257175 /* Project-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Shared.xcconfig"; sourceTree = "<group>"; };
 		65896CFD249A882600257175 /* Project-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +111,14 @@
 			path = SearchableDependencyListView;
 			sourceTree = "<group>";
 		};
+		656F141D24BB05760019C550 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				656F141E24BB05930019C550 /* FrontendActions.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
 		65896CFA249A87FD00257175 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +152,7 @@
 		A8DF675F2411637700D0DE02 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				656F141D24BB05760019C550 /* Actions */,
 				A8DF67602411639500D0DE02 /* ActivityIndicator.swift */,
 				A88160DC2421480E00CDB15A /* ListRowModifier.swift */,
 				A82DDE0E246E5822000259BF /* ActivityIndicator+LoadingDescription.swift */,
@@ -416,6 +427,7 @@
 				A8F2525E23FF0BF300CD12DE /* DependencyListView.swift in Sources */,
 				A8FECAA4243096650028CC64 /* MainSplitView.swift in Sources */,
 				65B9D9D9249647F1000BE76F /* Extensions.swift in Sources */,
+				656F141F24BB05930019C550 /* FrontendActions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
