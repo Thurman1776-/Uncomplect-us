@@ -12,18 +12,18 @@ public struct SearchBar: View {
     private let placeholder: String
     @State private var searchText: String = ""
     @State private var isEditing: Bool = false
+    @Environment(\.dispatcher) var actionDispatcher
 
     public init(placeholder: String) {
         self.placeholder = placeholder
     }
 
-    // FIXME: Remove print statement
     public var body: some View {
         HStack {
             TextField(
                 "\(placeholder)    ",
                 text: $searchText,
-                onCommit: { print("Searching for: \(self.searchText)") }
+                onCommit: { self.dispatchAction() }
             )
             .padding(8)
             .padding(.horizontal, 10)
@@ -34,5 +34,9 @@ public struct SearchBar: View {
                 self.searchText = ""
             }
         }
+    }
+
+    private func dispatchAction() {
+        actionDispatcher.dispatch(SearchAction.search(searchText))
     }
 }
