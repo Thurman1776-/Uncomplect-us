@@ -16,6 +16,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     var window: NSWindow!
 
     func applicationDidFinishLaunching(_: Notification) {
+        configureEnviromentValues()
+
         let contentView = InputView { value in
             BackendAPI.dispatch(DependencyPathsAction.findUrls(for: value))
 
@@ -36,6 +38,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         window.setFrameAutosaveName("Main Window")
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
+    }
+
+    private func configureEnviromentValues() {
+        DispatcherKey.defaultValue = DefaultDispatcher.self
     }
 
     func applicationWillTerminate(_: Notification) {
