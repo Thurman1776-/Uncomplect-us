@@ -25,14 +25,14 @@ public struct SearchBar: View {
                 text: $searchText,
                 onCommit: { print("Searching for: \(self.searchText)") }
             )
-                .padding(8)
-                .padding(.horizontal, 10)
-                .background(Color.lightGray)
-                .cornerRadius(8)
-                .onTapGesture {
-                    self.isEditing = true
-                    self.searchText = ""
-                }
+            .padding(8)
+            .padding(.horizontal, 10)
+            .background(Color.lightGray)
+            .cornerRadius(8)
+            .onTapGesture {
+                self.isEditing = true
+                self.searchText = ""
+            }
         }
     }
 }
