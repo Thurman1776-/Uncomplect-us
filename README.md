@@ -14,4 +14,11 @@ somehow encourages to have an unidirectional data flow.
 The visual representation is quite different from the Ruby project but in the future I plan to have a similar graphical 
 representation of dependencies + tons of other useful features. 
 
+### How to use the tool 
+
+Simply clone & run the Xcode project (current version is 11.4.1)
+
+1 - Enter your project name 
+e.g. [Backend](https://github.com/Thurman1776-/Uncomplect-us/pull/18/commits/43093f107bf6e5a5f6d55ff1f5277f2bea3571eb#diff-db168aa37356d9bc2145c4a2d4086030)
+
 This is a very much WIP, however feedback is always welcome! 
