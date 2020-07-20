@@ -16,7 +16,7 @@ final class ProjectOutputSpec: QuickSpec {
             context("Given derived data paths for the project exists") {
                 context("when test files are skipped") {
                     it("returns located folders containing dependency files as valid URLs") {
-                        let output = findProjectOutputDirectories(projectName: "Mac-App")
+                        let output = findProjectOutputDirectories(projectName: "Backend")
 
                         expect(output).notTo(beEmpty())
 
@@ -27,7 +27,7 @@ final class ProjectOutputSpec: QuickSpec {
 
                 context("when test files are included") {
                     it("returns located folders containing dependency files (including tests) as valid URLs") {
-                        let output = findProjectOutputDirectories(projectName: "Mac-App", excludingTests: false)
+                        let output = findProjectOutputDirectories(projectName: "Backend", excludingTests: false)
 
                         expect(output).notTo(beEmpty())
 
