@@ -7,7 +7,9 @@ by giving you an indication of which entities show a large amount of dependencie
 
 This is basically a re-write of [this project](https://github.com/PaulTaykalo/objc-dependency-visualizer) in Swift 
 as a Mac App. 
-Currently it is serving me as a way to experiment with newest tech such as SwiftUI. 
+Currently it is serving me as a way to experiment with newest tech such as SwiftUI.
+The app is using [ReSwift](https://github.com/ReSwift/ReSwift) that plays nicely with SwiftUI mental model, which 
+somehow encourages to have an unidirectional data flow.  
 
 The visual representation is quite different from the Ruby project but in the future I plan to have a similar graphical 
 representation of dependencies + tons of other useful features. 
