@@ -30,8 +30,8 @@ If brew is not your cup of tea, head over the projects' repos to learn about oth
 ### How to use the tool 
 
 - Jump into the repo folder & paste this on your terminal `cd scripts && sh bootstrap.sh`
-- Simply clone & run the Xcode project
-- That's it!
+- Run the Xcode project
+- Enjoy!
 
 
 
