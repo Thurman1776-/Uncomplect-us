@@ -5,6 +5,8 @@ Complect what? [Rich Hickey explain us what it means](https://www.youtube.com/wa
 This is a tool that intents to help you uncomplect your objects
 by giving you an indication of which entities show a large amount of dependencies & how they are intertwined. 
 
+It is also a great way to learn about a project you might have recently joined. 
+
 This is basically a re-write of [this project](https://github.com/PaulTaykalo/objc-dependency-visualizer) in Swift 
 as a Mac App. 
 Currently it is serving me as a way to experiment with newest tech such as SwiftUI.
