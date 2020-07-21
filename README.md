@@ -20,13 +20,13 @@ Simply clone & run the Xcode project (current version is 11.4.1)
 
 - Enter your project name 
 e.g. Backend 
-![Backend_image](https://github.com/Thurman1776-/Uncomplect-us/pull/18/commits/43093f107bf6e5a5f6d55ff1f5277f2bea3571eb#diff-db168aa37356d9bc2145c4a2d4086030)
+![Backend_image](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Screenshot-1.png)
 - Wait while your project is being scanned 
-![scanned_project](https://github.com/Thurman1776-/Uncomplect-us/pull/18/commits/43093f107bf6e5a5f6d55ff1f5277f2bea3571eb?short_path=7f4e4c0#diff-7f4e4c00093cfee0a5b4faf2e1afacb0) - Please note there's no trackers of any sort sending data anywhere. Everything is local. 
+![scanned_project](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Screenshot-2.png) - Please note there's no trackers of any sort sending data anywhere. Everything is local. 
 - See an overview of the project status 
-![project_status](https://github.com/Thurman1776-/Uncomplect-us/pull/18/commits/43093f107bf6e5a5f6d55ff1f5277f2bea3571eb?short_path=f0d859c#diff-f0d859cec81765960cb24bdae9168838), including paths from files being scanned, largest dependency, and more. 
+![project_status](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Screenshot-3.png), including paths from files being scanned, largest dependency, and more. 
 - Tap on any item to see its dependencies 
-![dependencies](https://github.com/Thurman1776-/Uncomplect-us/pull/18/commits/43093f107bf6e5a5f6d55ff1f5277f2bea3571eb?short_path=0071dc6#diff-0071dc616ba1609f7625ae329ceac245)
+![dependencies](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Screenshot-4.png)
 
 
 This is a very much WIP, however feedback is always welcome! 
