@@ -42,13 +42,19 @@ e.g. Backend
 ![Backend_image](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Screenshot-1.png)
 
 #### Wait while your project is being scanned 
-![scanned_project](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Screenshot-2.png) - Please note there's no trackers of any sort sending data anywhere. Everything is local. 
+> Please note there's no trackers of any sort sending data anywhere. Everything is local.
+
+![scanned_project](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Screenshot-2.png) 
 
 #### See an overview of the project status 
-![project_status](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Screenshot-3.png), including paths from files being scanned, largest dependency, and more. 
+
+> including paths from files being scanned, largest dependency, and more. 
+
+![project_status](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Screenshot-3.png)
 
 #### Tap on any item to see its dependencies 
 ![dependencies](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Screenshot-4.png)
+
 
 
 This is a very much WIP, however feedback is always welcome! 
