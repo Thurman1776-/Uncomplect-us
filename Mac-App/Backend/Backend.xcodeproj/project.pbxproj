@@ -19,6 +19,8 @@
 		651A85A4248CF03C00AD0927 /* CLIParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE9A223DCABD000242ADF /* CLIParserSpec.swift */; };
 		651A85A6248CF05D00AD0927 /* SwiftDepsParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D58A9523F828F100C2AB74 /* SwiftDepsParserSpec.swift */; };
 		651A85A8248CF07500AD0927 /* YamlParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7626623E6A3CA0014DEB9 /* YamlParserSpec.swift */; };
+		65358E57249D09EE0004510F /* ConcurrentWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65358E56249D09EE0004510F /* ConcurrentWork.swift */; };
+		653E150724B9B08B005DD3F1 /* Backend-default.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 653E150624B9B08B005DD3F1 /* Backend-default.xctestplan */; };
 		65896D26249CB0EE00257175 /* Project-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D23249CB0EE00257175 /* Project-Debug.xcconfig */; };
 		65896D27249CB0EE00257175 /* Project-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D24249CB0EE00257175 /* Project-Release.xcconfig */; };
 		65896D28249CB0EE00257175 /* Project-Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D25249CB0EE00257175 /* Project-Shared.xcconfig */; };
@@ -113,6 +115,8 @@
 		17A892613B802C921192B6A3 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Quick.framework; path = Dependencies/macOS/Quick.framework; sourceTree = "<group>"; };
 		28855F46A4EC65D5ECE0955E /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Nimble.framework; path = Dependencies/macOS/Nimble.framework; sourceTree = "<group>"; };
 		43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ReSwift.framework; path = Dependencies/macOS/ReSwift.framework; sourceTree = "<group>"; };
+		65358E56249D09EE0004510F /* ConcurrentWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentWork.swift; sourceTree = "<group>"; };
+		653E150624B9B08B005DD3F1 /* Backend-default.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Backend-default.xctestplan"; sourceTree = "<group>"; };
 		65896D23249CB0EE00257175 /* Project-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Debug.xcconfig"; sourceTree = "<group>"; };
 		65896D24249CB0EE00257175 /* Project-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Release.xcconfig"; sourceTree = "<group>"; };
 		65896D25249CB0EE00257175 /* Project-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Shared.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +200,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65358E55249D09C80004510F /* Helpers  */ = {
+			isa = PBXGroup;
+			children = (
+				A89E0BE123F87DAC0009154E /* DispatchQueue+Shorthands.swift */,
+				65358E56249D09EE0004510F /* ConcurrentWork.swift */,
+			);
+			path = "Helpers ";
+			sourceTree = "<group>";
+		};
+		653E150524B9B08B005DD3F1 /* TestPlans */ = {
+			isa = PBXGroup;
+			children = (
+				653E150624B9B08B005DD3F1 /* Backend-default.xctestplan */,
+			);
+			path = TestPlans;
+			sourceTree = "<group>";
+		};
 		65896D19249CAF8200257175 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,11 +323,11 @@
 		A831003A23DC9E4400460A12 /* Backend */ = {
 			isa = PBXGroup;
 			children = (
-				65896D1A249CAFB300257175 /* Configuration */,
 				A8E7626923DDB9DF00BFAD48 /* AppState */,
 				A831003B23DC9E4400460A12 /* Backend.h */,
 				A8E7626F23DDBBA400BFAD48 /* BackendAPI */,
 				A8CAE99923DCABA000242ADF /* CommandLine */,
+				65896D1A249CAFB300257175 /* Configuration */,
 				A8CAE99123DCAB9F00242ADF /* FileSystem */,
 				A831003C23DC9E4400460A12 /* Info.plist */,
 				A8CAE99323DCABA000242ADF /* Parsers */,
@@ -321,6 +342,7 @@
 				65896D1C249CAFF200257175 /* Configuration */,
 				A831004823DC9E4400460A12 /* Info.plist */,
 				A8F7626823E6A53F0014DEB9 /* Shared */,
+				653E150524B9B08B005DD3F1 /* TestPlans */,
 			);
 			path = BackendTests;
 			sourceTree = "<group>";
@@ -354,8 +376,8 @@
 		A89E0BE023F87D850009154E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				65358E55249D09C80004510F /* Helpers  */,
 				A84DAD2F244C7EED005EAB59 /* Extensions */,
-				A89E0BE123F87DAC0009154E /* DispatchQueue+Shorthands.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -617,6 +639,7 @@
 				65896D2D249CB11100257175 /* Backend-Release.xcconfig in Resources */,
 				65896D28249CB0EE00257175 /* Project-Shared.xcconfig in Resources */,
 				65896D2C249CB11100257175 /* Backend-Shared.xcconfig in Resources */,
+				653E150724B9B08B005DD3F1 /* Backend-default.xctestplan in Resources */,
 				65896D26249CB0EE00257175 /* Project-Debug.xcconfig in Resources */,
 				65896D2E249CB11100257175 /* Backend-Debug.xcconfig in Resources */,
 			);
@@ -704,6 +727,7 @@
 				A8E7627123DDBBB700BFAD48 /* BackendAPI.swift in Sources */,
 				A85514F123E6002500D3E7F6 /* SwiftDepsState.swift in Sources */,
 				A8E1019923EF055600C550E2 /* DependencyGraphState.swift in Sources */,
+				65358E57249D09EE0004510F /* ConcurrentWork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

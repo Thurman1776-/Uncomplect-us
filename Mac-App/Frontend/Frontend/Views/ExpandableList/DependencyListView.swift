@@ -29,7 +29,7 @@ public struct DependencyListView: View {
                         ForEach(state.dependencies, id: \.id) { node in
                             DependencyItemView(
                                 dependency: node,
-                                isExpanded: self.selection.contains(node)
+                                isExpanded: self.shouldExpandNode(node)
                             ).onTapGesture { self.didTapItem(node) }
                                 .modifier(ListRowModifier())
                                 .animation(.linear(duration: 0.25))
@@ -46,11 +46,15 @@ public struct DependencyListView: View {
         }
     }
 
-    func didTapItem(_ item: DependencyTree.State.Dependency) {
+    private func didTapItem(_ item: DependencyTree.State.Dependency) {
         if selection.contains(item) {
             selection.remove(item)
         } else {
             selection.insert(item)
         }
+    }
+
+    private func shouldExpandNode(_ node: DependencyTree.State.Dependency) -> Bool {
+        selection.contains(node)
     }
 }

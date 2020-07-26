@@ -21,3 +21,12 @@ extension Color {
 extension String: Identifiable {
     public var id: Int { hashValue }
 }
+
+// MARK: - Debugging
+
+extension View {
+    func debug() -> Self {
+        print(Mirror(reflecting: self).subjectType)
+        return self
+    }
+}

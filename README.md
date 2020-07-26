@@ -1,37 +1,60 @@
-## Welcome to GitHub Pages
+# How much you are complecting your code? 
 
-You can use the [editor on GitHub](https://github.com/Thurman1776-/Uncomplect-us/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Complect what? [Rich Hickey explain us what it means](https://www.youtube.com/watch?v=oytL881p-nQ&t=1320s) to complect your software. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This is a tool that intents to help you uncomplect your objects
+by giving you an indication of which entities show a large amount of dependencies & how they are intertwined. 
 
-### Markdown
+It is also a great way to learn about a project you might have recently joined. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+This is basically a re-write of [this project](https://github.com/PaulTaykalo/objc-dependency-visualizer) in Swift 
+as a Mac App. 
+Currently it is serving me as a way to experiment with newest tech such as SwiftUI.
+The app is using [ReSwift](https://github.com/ReSwift/ReSwift) that plays nicely with SwiftUI mental model, which 
+somehow encourages to have an unidirectional data flow.  
 
-```markdown
-Syntax highlighted code block
+The visual representation is quite different from the Ruby project but in the future I plan to have a similar graphical 
+representation of dependencies + tons of other useful features. 
 
-# Header 1
-## Header 2
-### Header 3
+### Requirements
 
-- Bulleted
-- List
+- Xcode 11.4.1
+- accio which can be installed via brew
+    ````
+    brew tap JamitLabs/Accio https://github.com/JamitLabs/Accio.git
+    brew install accio
+- carthage which can also be installed via brew
+    ```
+    brew install carthage
 
-1. Numbered
-2. List
+If brew is not your cup of tea, head over the projects' repos to learn about other options 👀
 
-**Bold** and _Italic_ and `Code` text
+### How to use the tool 
 
-[Link](url) and ![Image](src)
-```
+- Jump into the repo folder & paste this on your terminal `cd scripts && sh bootstrap.sh`
+- Run the Xcode project
+- Enjoy!
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Thurman1776-/Uncomplect-us/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+#### Enter your project name 
+e.g. Backend 
+![Backend_image](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Screenshot-1.png)
 
-### Support or Contact
+#### Wait while your project is being scanned 
+> Please note there's no trackers of any sort sending data anywhere. Everything is local.
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+![scanned_project](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Screenshot-2.png) 
+
+#### See an overview of the project status 
+
+> including paths from files being scanned, largest dependency, and more. 
+
+![project_status](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Screenshot-3.png)
+
+#### Tap on any item to see its dependencies 
+![dependencies](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Screenshot-4.png)
+
+
+
+This is a very much WIP, however feedback is always welcome! 

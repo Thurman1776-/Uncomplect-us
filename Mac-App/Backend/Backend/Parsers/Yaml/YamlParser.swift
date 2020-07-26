@@ -20,7 +20,7 @@ func parseYamlUrls(from urls: [URL]) -> [SwiftDeps] {
 }
 
 private func createYamlNodes(from collection: [String]) -> [Yams.Node] {
-    collection.compactMap { (try? Yams.compose(yaml: $0)) }
+    splitAndExecuteConcurrently(collection, transform: { try? Yams.compose(yaml: $0) })
 }
 
 private func contentsOfFile(using fileManager: FileManager = .default, at file: URL) -> String? {
