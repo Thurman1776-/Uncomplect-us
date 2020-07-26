@@ -8,6 +8,7 @@
 
 import Backend
 import Frontend
+import OSLog
 
 struct DefaultDispatcher: Dispatching {
     static func dispatch(_ action: Action) {
@@ -15,7 +16,7 @@ struct DefaultDispatcher: Dispatching {
         case let SearchAction.search(text):
             BackendAPI.dispatch(DependencyGraphAction.filter(including: text))
         default:
-            print("Unhandled action")
+            os_log("Unhandled action")
         }
     }
 }

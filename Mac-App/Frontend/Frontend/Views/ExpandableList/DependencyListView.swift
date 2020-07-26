@@ -53,7 +53,7 @@ public struct DependencyListView: View {
                 .animation(.linear(duration: 0.25))
         }
     }
-    
+
     private func didTapItem(_ item: DependencyTree.State.Dependency) {
         if selection.contains(item) {
             selection.remove(item)
