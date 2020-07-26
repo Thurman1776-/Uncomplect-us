@@ -13,7 +13,7 @@ struct DefaultDispatcher: Dispatching {
     static func dispatch(_ action: Action) {
         switch action {
         case let SearchAction.search(text):
-            print("Should dispatch actions to backend from here - \(text)")
+            BackendAPI.dispatch(DependencyGraphAction.filter(including: text))
         default:
             print("Unhandled action")
         }

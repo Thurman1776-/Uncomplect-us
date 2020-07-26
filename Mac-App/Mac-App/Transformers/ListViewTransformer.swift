@@ -49,6 +49,12 @@ extension Frontend.DependencyTree.State {
                     dependencies: $0.dependencies.map { String($0.name) }
                 )
             },
+            filteredDependencies: appState.dependencyGraphState.filteredTree.map {
+                DependencyTree.State.Dependency(
+                    owner: $0.owner,
+                    dependencies: $0.dependencies.map { String($0.name) }
+                )
+            },
             failure: appState.dependencyGraphState.failure
         )
     }
