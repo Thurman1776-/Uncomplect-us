@@ -22,6 +22,11 @@ func dependencyGraphReducer(action: Action, state: DependencyGraphState) -> Depe
         newState = DependencyGraphState.initialState
     case let .failure(message: message):
         newState.failure = message
+    case let .filter(including: value):
+        // TODO: Expand search to include owner's deps in the future
+        // Right now it could be very expensive to include everything as
+        // children size varies per owner
+        newState.filteredTree = newState.tree.filter { $0.owner.contains(value) }
     default: break
     }
 

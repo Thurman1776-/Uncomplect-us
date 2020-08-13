@@ -9,12 +9,8 @@
 import SwiftUI
 
 public struct DependencyListView: View {
-    @ObservedObject private var dependencyTreeStatus: Observable<DependencyTree.Status>
+    @EnvironmentObject private var dependencyTreeStatus: Observable<DependencyTree.Status>
     @State private var selection: Set<DependencyTree.State.Dependency> = []
-
-    public init(dependencyTreeStatus: Observable<DependencyTree.Status>) {
-        self.dependencyTreeStatus = dependencyTreeStatus
-    }
 
     public var body: some View {
         switch dependencyTreeStatus.input {
@@ -30,13 +26,10 @@ public struct DependencyListView: View {
             return AnyView(
                 VStack(alignment: .leading, spacing: 8) {
                     List {
-                        ForEach(state.dependencies, id: \.id) { node in
-                            DependencyItemView(
-                                dependency: node,
-                                isExpanded: self.shouldExpandNode(node)
-                            ).onTapGesture { self.didTapItem(node) }
-                                .modifier(ListRowModifier())
-                                .animation(.linear(duration: 0.25))
+                        if state.filteredDependencies.isEmpty {
+                            renderList(using: state.dependencies)
+                        } else {
+                            renderList(using: state.filteredDependencies)
                         }
                     }
                 }
@@ -50,6 +43,17 @@ public struct DependencyListView: View {
         }
     }
 
+    private func renderList(using dependencies: [DependencyTree.State.Dependency]) -> some View {
+        ForEach(dependencies, id: \.id) { dependency in
+            DependencyItemView(
+                dependency: dependency,
+                isExpanded: self.shouldExpandCell(dependency)
+            ).onTapGesture { self.didTapItem(dependency) }
+                .modifier(ListRowModifier())
+                .animation(.linear(duration: 0.25))
+        }
+    }
+
     private func didTapItem(_ item: DependencyTree.State.Dependency) {
         if selection.contains(item) {
             selection.remove(item)
@@ -58,7 +62,7 @@ public struct DependencyListView: View {
         }
     }
 
-    private func shouldExpandNode(_ node: DependencyTree.State.Dependency) -> Bool {
-        selection.contains(node)
+    private func shouldExpandCell(_ dependency: DependencyTree.State.Dependency) -> Bool {
+        selection.contains(dependency)
     }
 }

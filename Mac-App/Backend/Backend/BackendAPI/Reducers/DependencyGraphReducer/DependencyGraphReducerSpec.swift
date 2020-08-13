@@ -92,6 +92,41 @@ final class DependencyGraphReducerSpec: QuickSpec {
                     expect(sut.failure).toNot(beNil())
                 }
             }
+
+            context("when DependencyGraphAction.filter gets dispatched") {
+                context("given it is a partial match") {
+                    it("inserts matching search results in filtered property") {
+                        let sut = dependencyGraphReducer(
+                            action: DependencyGraphAction.filter(including: "w"),
+                            state: DependencyGraphState.weekFixture
+                        )
+
+                        expect(sut.filteredTree).notTo(beEmpty())
+                    }
+                }
+
+                context("given it is a 100% match") {
+                    it("inserts matching search results in filtered property") {
+                        let sut = dependencyGraphReducer(
+                            action: DependencyGraphAction.filter(including: "weekdays"),
+                            state: DependencyGraphState.weekFixture
+                        )
+
+                        expect(sut.filteredTree).notTo(beEmpty())
+                    }
+                }
+
+                context("given it does not match any character") {
+                    it("inserts nothing") {
+                        let sut = dependencyGraphReducer(
+                            action: DependencyGraphAction.filter(including: "hello"),
+                            state: DependencyGraphState.weekFixture
+                        )
+
+                        expect(sut.filteredTree).to(beEmpty())
+                    }
+                }
+            }
         }
     }
 }
@@ -100,5 +135,28 @@ extension DependencyTree {
     static let fixture = DependencyTree(
         owner: "tests",
         dependencies: [.init(name: "test_deps")]
+    )
+}
+
+extension DependencyGraphState {
+    static let weekFixture = DependencyGraphState(
+        tree: [
+            DependencyTree(
+                owner: "weekdays",
+                dependencies: [
+                    .init(name: "montag"),
+                    .init(name: "mittwoch"),
+                    .init(name: "freitag"),
+                ]
+            ),
+            DependencyTree(
+                owner: "weekends",
+                dependencies: [
+                    .init(name: "samstag"),
+                    .init(name: "sonntag"),
+                ]
+            ),
+        ],
+        failure: nil
     )
 }

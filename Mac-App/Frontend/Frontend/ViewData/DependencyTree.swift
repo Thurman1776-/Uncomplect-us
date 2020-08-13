@@ -13,10 +13,16 @@ public enum DependencyTree {
 
     public struct State: Equatable {
         public let dependencies: [Dependency]
+        public let filteredDependencies: [Dependency]
         public let failure: String?
 
-        public init(dependencies: [Dependency], failure: String?) {
+        public init(
+            dependencies: [Dependency],
+            filteredDependencies: [Dependency],
+            failure: String?
+        ) {
             self.dependencies = dependencies.sorted(by: { $0.dependencies.count > $1.dependencies.count })
+            self.filteredDependencies = filteredDependencies.sorted(by: { $0.dependencies.count > $1.dependencies.count })
             self.failure = failure
         }
 

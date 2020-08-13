@@ -12,6 +12,7 @@ import ReSwift
 
 public struct DependencyGraphState: Equatable {
     public var tree: [DependencyTree]
+    public var filteredTree: [DependencyTree] = []
     public var failure: String?
 }
 
@@ -26,6 +27,7 @@ extension DependencyGraphState {
 public enum DependencyGraphAction: Action {
     case mapFrom(deps: [SwiftDeps])
     case set([DependencyTree])
+    case filter(including: String)
     case reset
     case failure(message: String)
 }
