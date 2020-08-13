@@ -98,7 +98,7 @@ final class DependencyGraphReducerSpec: QuickSpec {
                     it("inserts matching search results in filtered property") {
                         let sut = dependencyGraphReducer(
                             action: DependencyGraphAction.filter(including: "w"),
-                            state: DependencyGraphState.weekDependencyTree
+                            state: DependencyGraphState.weekFixture
                         )
 
                         expect(sut.filteredTree).notTo(beEmpty())
@@ -109,7 +109,7 @@ final class DependencyGraphReducerSpec: QuickSpec {
                     it("inserts matching search results in filtered property") {
                         let sut = dependencyGraphReducer(
                             action: DependencyGraphAction.filter(including: "weekdays"),
-                            state: DependencyGraphState.weekDependencyTree
+                            state: DependencyGraphState.weekFixture
                         )
 
                         expect(sut.filteredTree).notTo(beEmpty())
@@ -120,7 +120,7 @@ final class DependencyGraphReducerSpec: QuickSpec {
                     it("inserts nothing") {
                         let sut = dependencyGraphReducer(
                             action: DependencyGraphAction.filter(including: "hello"),
-                            state: DependencyGraphState.weekDependencyTree
+                            state: DependencyGraphState.weekFixture
                         )
 
                         expect(sut.filteredTree).to(beEmpty())
@@ -139,7 +139,7 @@ extension DependencyTree {
 }
 
 extension DependencyGraphState {
-    static let weekDependencyTree = DependencyGraphState(
+    static let weekFixture = DependencyGraphState(
         tree: [
             DependencyTree(
                 owner: "weekdays",
