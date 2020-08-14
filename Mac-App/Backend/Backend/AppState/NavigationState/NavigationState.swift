@@ -23,7 +23,7 @@ extension NavigationState {
 
 // MARK: - Actions
 
-public enum NavigationStateAction: Action {
+public enum NavigationAction: Action {
     case transition(to: Node)
 }
 
