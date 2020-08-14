@@ -12,6 +12,7 @@ public struct AppState: StateType {
     public let dependencyPathsState: DependencyPathsState
     public let swiftDepsState: SwiftDepsState
     public let dependencyGraphState: DependencyGraphState
+    public let navigationState: NavigationState
 }
 
 // MARK: - Initial state
@@ -20,7 +21,8 @@ extension AppState {
     static let initialState = AppState(
         dependencyPathsState: DependencyPathsState.initialState,
         swiftDepsState: SwiftDepsState.initialState,
-        dependencyGraphState: DependencyGraphState.initialState
+        dependencyGraphState: DependencyGraphState.initialState,
+        navigationState: NavigationState.initialState
     )
 }
 

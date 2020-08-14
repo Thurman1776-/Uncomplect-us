@@ -15,6 +15,7 @@ func appReducer(action: Action, state: AppState!) -> AppState {
     AppState(
         dependencyPathsState: dependencyPathsReducer(action: action, state: state.dependencyPathsState),
         swiftDepsState: swiftDepsReducer(action: action, state: state.swiftDepsState),
-        dependencyGraphState: dependencyGraphReducer(action: action, state: state.dependencyGraphState)
+        dependencyGraphState: dependencyGraphReducer(action: action, state: state.dependencyGraphState),
+        navigationState: navigationReducer(action: action, state: state.navigationState)
     )
 }
