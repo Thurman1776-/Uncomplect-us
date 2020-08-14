@@ -37,6 +37,6 @@ public struct SearchBar: View {
     }
 
     private func dispatchAction() {
-        actionDispatcher.dispatch(SearchAction.search(searchText))
+        actionDispatcher.dispatch(SearchBarAction.search(searchText))
     }
 }
