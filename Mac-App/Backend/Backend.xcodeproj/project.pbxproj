@@ -217,6 +217,14 @@
 			path = TestPlans;
 			sourceTree = "<group>";
 		};
+		654474A224E6C6DE0029E04C /* SwiftDepsState */ = {
+			isa = PBXGroup;
+			children = (
+				A85514F023E6002500D3E7F6 /* SwiftDepsState.swift */,
+			);
+			path = SwiftDepsState;
+			sourceTree = "<group>";
+		};
 		65896D19249CAF8200257175 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -452,6 +460,7 @@
 		A8E7626923DDB9DF00BFAD48 /* AppState */ = {
 			isa = PBXGroup;
 			children = (
+				654474A224E6C6DE0029E04C /* SwiftDepsState */,
 				A8E1019723EF051F00C550E2 /* DependencyGraphState */,
 				A8E7626C23DDBA5100BFAD48 /* DependencyPathsState */,
 				A8E7626A23DDB9F000BFAD48 /* AppState.swift */,
@@ -463,7 +472,6 @@
 			isa = PBXGroup;
 			children = (
 				A8E7626D23DDBA6B00BFAD48 /* DependencyPathsState.swift */,
-				A85514F023E6002500D3E7F6 /* SwiftDepsState.swift */,
 			);
 			path = DependencyPathsState;
 			sourceTree = "<group>";
