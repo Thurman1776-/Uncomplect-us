@@ -11,8 +11,8 @@ import ReSwift
 // MARK: - State
 
 public struct NavigationState: Equatable {
-    var currentNode: Node
-    var previousNode: Node?
+    public var currentNode: Node
+    public var previousNode: Node?
 }
 
 // MARK: - Initial state
