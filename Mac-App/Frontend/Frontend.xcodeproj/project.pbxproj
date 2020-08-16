@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		654474AF24E72F5B0029E04C /* NavigationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654474AE24E72F5B0029E04C /* NavigationData.swift */; };
 		655AC9FA24B6CC05005D8145 /* SearchableDependencyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655AC9F924B6CC05005D8145 /* SearchableDependencyListView.swift */; };
 		656F141F24BB05930019C550 /* FrontendActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F141E24BB05930019C550 /* FrontendActions.swift */; };
 		65896CFE249A882600257175 /* Project-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896CFB249A882600257175 /* Project-Release.xcconfig */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		654474AE24E72F5B0029E04C /* NavigationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationData.swift; sourceTree = "<group>"; };
 		655AC9F924B6CC05005D8145 /* SearchableDependencyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableDependencyListView.swift; sourceTree = "<group>"; };
 		656F141E24BB05930019C550 /* FrontendActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontendActions.swift; sourceTree = "<group>"; };
 		65896CFB249A882600257175 /* Project-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Release.xcconfig"; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			children = (
 				A8F2526724029B6500CD12DE /* DependencyTree.swift */,
 				A8FECAA82431086D0028CC64 /* ProjectDetails.swift */,
+				654474AE24E72F5B0029E04C /* NavigationData.swift */,
 			);
 			path = ViewData;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A86ED71C24767B300008B604 /* PlainList.swift in Sources */,
+				654474AF24E72F5B0029E04C /* NavigationData.swift in Sources */,
 				A8DF67612411639500D0DE02 /* ActivityIndicator.swift in Sources */,
 				65E8586D24B573DD00A58DE3 /* SearchBar.swift in Sources */,
 				A88160DB2421073300CDB15A /* DependencyItemView.swift in Sources */,
