@@ -18,7 +18,10 @@ public struct InputView: View {
         TextField(
             "Type your project's name...",
             text: $input,
-            onCommit: { self.actionDispatcher.dispatch(InputViewAction.search(self.input)) }
+            onCommit: {
+                guard self.input.isEmpty == false else { return }
+                self.actionDispatcher.dispatch(InputViewAction.search(self.input))
+        }
         ).border(
             AngularGradient(
                 gradient: Gradient(colors: randomColors()),
