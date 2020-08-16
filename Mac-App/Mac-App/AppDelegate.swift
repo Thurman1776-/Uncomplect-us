@@ -25,7 +25,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
             backing: .buffered, defer: false
         )
-        backendSubscription = BackendSubscription(window: window)
+        backendSubscription = BackendSubscription(on: window)
         backendSubscription.startListening()
         window.center()
         window.setFrameAutosaveName("Main Window")
@@ -36,8 +36,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private func configureEnviromentValues() {
         DispatcherKey.defaultValue = DefaultDispatcher.self
     }
-    
-    func applicationWillTerminate(_ notification: Notification) {
+
+    func applicationWillTerminate(_: Notification) {
         backendSubscription.stopListening()
     }
 }

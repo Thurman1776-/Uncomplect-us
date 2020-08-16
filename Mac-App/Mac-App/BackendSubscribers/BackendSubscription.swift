@@ -14,7 +14,7 @@ struct BackendSubscription: StateSubscription {
     private let window: NSWindow
     private var transformers = [StateSubscription]()
 
-    init(window: NSWindow) {
+    init(on window: NSWindow) {
         self.window = window
         registerSubscribers()
     }
