@@ -40,3 +40,7 @@ public extension EnvironmentValues {
 public enum SearchBarAction: Action {
     case search(_ text: String)
 }
+
+public enum InputViewAction: Action {
+    case search(_ text: String)
+}
