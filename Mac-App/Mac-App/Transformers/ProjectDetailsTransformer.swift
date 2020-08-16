@@ -11,7 +11,7 @@ import Combine
 import Frontend
 import ReSwift
 
-final class ProjectDetailsTransformer: StateObserving, ViewInput, StateSubscription {
+final class ProjectDetailsTransformer: StateTransforming, StateRepresentableViewInput, StateSubscription {
     let stateObserver = StateObserver<ProjectDetails.State>()
     private(set) var viewInput: Observable<ProjectDetails.Status> = .init(.initial)
     private var cancellable: AnyCancellable = AnyCancellable {}

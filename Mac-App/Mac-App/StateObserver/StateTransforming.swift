@@ -9,7 +9,7 @@
 import Frontend
 import ReSwift
 
-protocol StateObserving {
+protocol StateTransforming {
     associatedtype ObservableElement: Equatable & StateType
     var stateObserver: StateObserver<ObservableElement> { get }
 
@@ -21,7 +21,7 @@ protocol StateSubscription {
     func stopListening()
 }
 
-protocol ViewInput {
+protocol StateRepresentableViewInput {
     associatedtype InputValue: Equatable
     var viewInput: Observable<InputValue> { get }
 }

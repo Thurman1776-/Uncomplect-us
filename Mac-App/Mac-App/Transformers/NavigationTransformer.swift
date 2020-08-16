@@ -13,7 +13,7 @@ import Frontend
 import ReSwift
 import SwiftUI
 
-final class NavigationTransformer: StateObserving, ViewInput, StateSubscription {
+final class NavigationTransformer: StateTransforming, StateRepresentableViewInput, StateSubscription {
     let stateObserver = StateObserver<Frontend.NavigationData.State>()
     let viewInput: Observable<NavigationData.Status> = .init(.initial)
     private var cancellable: AnyCancellable = AnyCancellable {}
