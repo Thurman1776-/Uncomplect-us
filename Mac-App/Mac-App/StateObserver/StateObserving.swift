@@ -13,10 +13,12 @@ protocol StateObserving {
     associatedtype ObservableElement: Equatable & StateType
     var stateObserver: StateObserver<ObservableElement> { get }
 
+    func emitNewState(_ state: ObservableElement)
+}
+
+protocol StateSubscription {
     func startListening()
     func stopListening()
-
-    func emitNewState(_ state: ObservableElement)
 }
 
 protocol ViewInput {
