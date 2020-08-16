@@ -14,6 +14,7 @@ import SwiftUI
 @NSApplicationMain
 final class AppDelegate: NSObject, NSApplicationDelegate {
     var window: NSWindow!
+    var backendSubscription: BackendSubscription!
 
     func applicationDidFinishLaunching(_: Notification) {
         configureEnviromentValues()
@@ -24,7 +25,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
             backing: .buffered, defer: false
         )
-        registerSubscribers(with: window)
+        backendSubscription = BackendSubscription(window: window)
+        backendSubscription.startListening()
         window.center()
         window.setFrameAutosaveName("Main Window")
         window.contentView = NSHostingView(rootView: contentView)
@@ -33,5 +35,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func configureEnviromentValues() {
         DispatcherKey.defaultValue = DefaultDispatcher.self
+    }
+    
+    func applicationWillTerminate(_ notification: Notification) {
+        backendSubscription.stopListening()
     }
 }

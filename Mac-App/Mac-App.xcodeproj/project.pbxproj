@@ -25,7 +25,7 @@
 		A86E10382365DAB800D3FF94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86E10372365DAB800D3FF94 /* Assets.xcassets */; };
 		A86E103B2365DAB800D3FF94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86E103A2365DAB800D3FF94 /* Preview Assets.xcassets */; };
 		A86E103E2365DAB900D3FF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86E103C2365DAB900D3FF94 /* Main.storyboard */; };
-		A8743A6F245F28BF00F8BFF2 /* registerSubscribers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8743A6E245F28BF00F8BFF2 /* registerSubscribers.swift */; };
+		A8743A6F245F28BF00F8BFF2 /* BackendSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8743A6E245F28BF00F8BFF2 /* BackendSubscription.swift */; };
 		A8743A72245F2B1B00F8BFF2 /* StateObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8743A71245F2B1B00F8BFF2 /* StateObserver.swift */; };
 		A89E0BE423F883AA0009154E /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89E0BE323F883AA0009154E /* ReSwift.framework */; };
 		A89E0BE523F883AA0009154E /* ReSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A89E0BE323F883AA0009154E /* ReSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -82,7 +82,7 @@
 		A86E10402365DAB900D3FF94 /* Mac_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mac_App.entitlements; sourceTree = "<group>"; };
 		A86E10452365DAB900D3FF94 /* Mac-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mac-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86E104B2365DAB900D3FF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8743A6E245F28BF00F8BFF2 /* registerSubscribers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerSubscribers.swift; sourceTree = "<group>"; };
+		A8743A6E245F28BF00F8BFF2 /* BackendSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendSubscription.swift; sourceTree = "<group>"; };
 		A8743A71245F2B1B00F8BFF2 /* StateObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateObserver.swift; sourceTree = "<group>"; };
 		A89E0BE323F883AA0009154E /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Backend/Dependencies/macOS/ReSwift.framework; sourceTree = "<group>"; };
 		A8CAE9A923DCAE7E00242ADF /* Mac-AppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Mac-AppTests.swift"; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 		A8743A6D245F289D00F8BFF2 /* BackendSubscribers */ = {
 			isa = PBXGroup;
 			children = (
-				A8743A6E245F28BF00F8BFF2 /* registerSubscribers.swift */,
+				A8743A6E245F28BF00F8BFF2 /* BackendSubscription.swift */,
 			);
 			path = BackendSubscribers;
 			sourceTree = "<group>";
@@ -370,7 +370,7 @@
 			files = (
 				654474AD24E72BE40029E04C /* NavigationTransformer.swift in Sources */,
 				656F142124BB1DCC0019C550 /* DefaultDispatcher.swift in Sources */,
-				A8743A6F245F28BF00F8BFF2 /* registerSubscribers.swift in Sources */,
+				A8743A6F245F28BF00F8BFF2 /* BackendSubscription.swift in Sources */,
 				A8743A72245F2B1B00F8BFF2 /* StateObserver.swift in Sources */,
 				A86E10342365DAB800D3FF94 /* AppDelegate.swift in Sources */,
 				A8FECAAB24310DDC0028CC64 /* ProjectDetailsTransformer.swift in Sources */,
