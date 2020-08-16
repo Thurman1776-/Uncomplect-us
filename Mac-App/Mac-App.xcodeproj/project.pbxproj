@@ -16,6 +16,7 @@
 		65358E52249CB4440004510F /* Mac-AppTests-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65358E4F249CB4440004510F /* Mac-AppTests-Release.xcconfig */; };
 		65358E53249CB4440004510F /* Mac-AppTests-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65358E50249CB4440004510F /* Mac-AppTests-Debug.xcconfig */; };
 		65358E54249CB4440004510F /* Mac-AppTests-Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65358E51249CB4440004510F /* Mac-AppTests-Shared.xcconfig */; };
+		654474AD24E72BE40029E04C /* NavigationTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654474AC24E72BE40029E04C /* NavigationTransformer.swift */; };
 		656F142124BB1DCC0019C550 /* DefaultDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F142024BB1DCC0019C550 /* DefaultDispatcher.swift */; };
 		A8199C5823E70C97000B89F6 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8199C5723E70C97000B89F6 /* Backend.framework */; };
 		A8472C9E2402C6190032E702 /* ListViewTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8472C9D2402C6190032E702 /* ListViewTransformer.swift */; };
@@ -66,6 +67,7 @@
 		65358E4F249CB4440004510F /* Mac-AppTests-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Mac-AppTests-Release.xcconfig"; sourceTree = "<group>"; };
 		65358E50249CB4440004510F /* Mac-AppTests-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Mac-AppTests-Debug.xcconfig"; sourceTree = "<group>"; };
 		65358E51249CB4440004510F /* Mac-AppTests-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Mac-AppTests-Shared.xcconfig"; sourceTree = "<group>"; };
+		654474AC24E72BE40029E04C /* NavigationTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTransformer.swift; sourceTree = "<group>"; };
 		656F142024BB1DCC0019C550 /* DefaultDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDispatcher.swift; sourceTree = "<group>"; };
 		A8199C5723E70C97000B89F6 /* Backend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Backend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8472C9D2402C6190032E702 /* ListViewTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewTransformer.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			children = (
 				A8472C9D2402C6190032E702 /* ListViewTransformer.swift */,
 				A8FECAAA24310DDC0028CC64 /* ProjectDetailsTransformer.swift */,
+				654474AC24E72BE40029E04C /* NavigationTransformer.swift */,
 			);
 			path = Transformers;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				654474AD24E72BE40029E04C /* NavigationTransformer.swift in Sources */,
 				656F142124BB1DCC0019C550 /* DefaultDispatcher.swift in Sources */,
 				A8743A6F245F28BF00F8BFF2 /* registerSubscribers.swift in Sources */,
 				A8743A72245F2B1B00F8BFF2 /* StateObserver.swift in Sources */,
