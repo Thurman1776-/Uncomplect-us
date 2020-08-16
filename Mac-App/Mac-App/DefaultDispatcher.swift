@@ -15,6 +15,8 @@ struct DefaultDispatcher: Dispatching {
         switch action {
         case let SearchBarAction.search(text):
             BackendAPI.dispatch(DependencyGraphAction.filter(including: text))
+        case let InputViewAction.search(value):
+            BackendAPI.dispatch(DependencyPathsAction.findUrls(for: value))
         default:
             os_log("Unhandled action")
         }
