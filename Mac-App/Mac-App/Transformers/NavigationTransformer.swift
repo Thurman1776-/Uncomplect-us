@@ -51,21 +51,6 @@ final class NavigationTransformer: StateObserving, ViewInput {
 
 // MARK: - Observing state capabilities
 
-protocol StateObserving {
-    associatedtype ObservableElement: Equatable & StateType
-    var stateObserver: StateObserver<ObservableElement> { get }
-
-    func startListening()
-    func stopListening()
-
-    func emitNewState(_ state: ObservableElement)
-}
-
-protocol ViewInput {
-    associatedtype InputValue: Equatable
-    var viewInput: Observable<InputValue> { get }
-}
-
 // MARK: - Mapper from AppState to subscriber state (view data for UI)
 
 extension Frontend.NavigationData.State {

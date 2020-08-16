@@ -17,6 +17,7 @@
 		65358E53249CB4440004510F /* Mac-AppTests-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65358E50249CB4440004510F /* Mac-AppTests-Debug.xcconfig */; };
 		65358E54249CB4440004510F /* Mac-AppTests-Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65358E51249CB4440004510F /* Mac-AppTests-Shared.xcconfig */; };
 		654474AD24E72BE40029E04C /* NavigationTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654474AC24E72BE40029E04C /* NavigationTransformer.swift */; };
+		654474B124E9456A0029E04C /* StateObserving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654474B024E9456A0029E04C /* StateObserving.swift */; };
 		656F142124BB1DCC0019C550 /* DefaultDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F142024BB1DCC0019C550 /* DefaultDispatcher.swift */; };
 		A8199C5823E70C97000B89F6 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8199C5723E70C97000B89F6 /* Backend.framework */; };
 		A8472C9E2402C6190032E702 /* ListViewTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8472C9D2402C6190032E702 /* ListViewTransformer.swift */; };
@@ -68,6 +69,7 @@
 		65358E50249CB4440004510F /* Mac-AppTests-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Mac-AppTests-Debug.xcconfig"; sourceTree = "<group>"; };
 		65358E51249CB4440004510F /* Mac-AppTests-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Mac-AppTests-Shared.xcconfig"; sourceTree = "<group>"; };
 		654474AC24E72BE40029E04C /* NavigationTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTransformer.swift; sourceTree = "<group>"; };
+		654474B024E9456A0029E04C /* StateObserving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateObserving.swift; sourceTree = "<group>"; };
 		656F142024BB1DCC0019C550 /* DefaultDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDispatcher.swift; sourceTree = "<group>"; };
 		A8199C5723E70C97000B89F6 /* Backend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Backend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8472C9D2402C6190032E702 /* ListViewTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewTransformer.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				A8743A71245F2B1B00F8BFF2 /* StateObserver.swift */,
+				654474B024E9456A0029E04C /* StateObserving.swift */,
 			);
 			path = StateObserver;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				A86E10342365DAB800D3FF94 /* AppDelegate.swift in Sources */,
 				A8FECAAB24310DDC0028CC64 /* ProjectDetailsTransformer.swift in Sources */,
 				A8472C9E2402C6190032E702 /* ListViewTransformer.swift in Sources */,
+				654474B124E9456A0029E04C /* StateObserving.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
