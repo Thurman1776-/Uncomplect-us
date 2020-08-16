@@ -17,10 +17,19 @@ final class NavigationTransformer: StateObserving, ViewInput, StateSubscription 
     let stateObserver = StateObserver<Frontend.NavigationData.State>()
     let viewInput: Observable<NavigationData.Status> = .init(.initial)
     private var cancellable: AnyCancellable = AnyCancellable {}
-    private let window: NSWindow
 
-    init(window: NSWindow) {
+    private let window: NSWindow
+    private let listViewTransformer: ListViewTransformer
+    private let projectDetailsTransformer: ProjectDetailsTransformer
+
+    init(
+        window: NSWindow,
+        listViewTransformer: ListViewTransformer,
+        projectDetailsTransformer: ProjectDetailsTransformer
+    ) {
         self.window = window
+        self.listViewTransformer = listViewTransformer
+        self.projectDetailsTransformer = projectDetailsTransformer
     }
 
     func startListening() {
