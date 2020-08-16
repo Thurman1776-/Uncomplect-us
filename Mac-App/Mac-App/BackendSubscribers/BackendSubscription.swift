@@ -1,5 +1,5 @@
 //
-//  registerSubscribers.swift
+//  BackendSubscription.swift
 //  Mac-App
 //
 //  Created by Daniel GARCÍA on 03.05.20.
