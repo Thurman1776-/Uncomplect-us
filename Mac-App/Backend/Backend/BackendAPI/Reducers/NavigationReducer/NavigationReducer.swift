@@ -9,13 +9,13 @@
 import ReSwift
 
 func navigationReducer(action: Action, state: NavigationState) -> NavigationState {
-    guard let swiftDepsAction = action as? NavigationAction else {
+    guard let navigationAction = action as? NavigationAction else {
         return state
     }
 
     var newState = state
 
-    switch swiftDepsAction {
+    switch navigationAction {
     case let .transition(to: node):
         newState = applyTranstion(to: node, from: newState)
     }
