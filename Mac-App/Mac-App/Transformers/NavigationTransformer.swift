@@ -49,8 +49,6 @@ final class NavigationTransformer: StateObserving, ViewInput {
     }
 }
 
-// MARK: - Observing state capabilities
-
 // MARK: - Mapper from AppState to subscriber state (view data for UI)
 
 extension Frontend.NavigationData.State {
