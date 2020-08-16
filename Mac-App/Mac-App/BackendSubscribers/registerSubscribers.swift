@@ -7,11 +7,18 @@
 //
 
 import Backend
+import Cocoa
 import Frontend
 
-func registerSubscribers() {
+func registerSubscribers(with window: NSWindow) {
     BackendAPI.subscribe(listViewTransformer.stateObserver) { $0.select(DependencyTree.State.init) }
     BackendAPI.subscribe(projectDetailsTransformer.stateObserver) { $0.select(ProjectDetails.State.init) }
+
+    navigationTransformer = NavigationTransformer(window: window)
+    BackendAPI.subscribe(navigationTransformer.stateObserver) { $0.select(NavigationData.State.init) }
+
+    // FIX ME: Use interfaces to call all transformer's listening functions
+    navigationTransformer.startListening()
 
     startListening()
 }
@@ -30,3 +37,5 @@ private func stopListening() {
 
 let listViewTransformer = ListViewTransformer()
 let projectDetailsTransformer = ProjectDetailsTransformer()
+// FIXME: Move transformers to their own entity!
+var navigationTransformer: NavigationTransformer!

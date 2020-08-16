@@ -10,17 +10,15 @@ import SwiftUI
 
 public struct InputView: View {
     @State private var input: String = ""
-    private var output: (String) -> Void
+    @Environment(\.dispatcher) var actionDispatcher
 
-    public init(output: @escaping (String) -> Void = { _ in }) {
-        self.output = output
-    }
+    public init() {}
 
     public var body: some View {
         TextField(
             "Type your project's name...",
             text: $input,
-            onCommit: { self.output(self.input) }
+            onCommit: { self.actionDispatcher.dispatch(InputViewAction.search(self.input)) }
         ).border(
             AngularGradient(
                 gradient: Gradient(colors: randomColors()),
