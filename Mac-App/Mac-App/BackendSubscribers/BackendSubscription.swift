@@ -36,8 +36,8 @@ struct BackendSubscription: StateSubscription {
 
         let navigationTransformer = NavigationTransformer(
             window: window,
-            listViewTransformer: listViewTransformer,
-            projectDetailsTransformer: projectDetailsTransformer
+            listViewInput: listViewTransformer.viewInput,
+            projectDetailsViewInput: projectDetailsTransformer.viewInput
         )
         BackendAPI.subscribe(navigationTransformer.stateObserver) { $0.select(NavigationData.State.init) }
 

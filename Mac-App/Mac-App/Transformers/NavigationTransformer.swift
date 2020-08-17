@@ -18,17 +18,17 @@ final class NavigationTransformer: StateTransforming, StateRepresentableViewInpu
     private var cancellable: AnyCancellable = AnyCancellable {}
 
     private let window: NSWindow
-    private let listViewTransformer: ListViewTransformer
-    private let projectDetailsTransformer: ProjectDetailsTransformer
+    private let listViewInput: Observable<Frontend.DependencyTree.Status>
+    private let projectDetailsViewInput: Observable<Frontend.ProjectDetails.Status>
 
     init(
         window: NSWindow,
-        listViewTransformer: ListViewTransformer,
-        projectDetailsTransformer: ProjectDetailsTransformer
+        listViewInput: Observable<Frontend.DependencyTree.Status>,
+        projectDetailsViewInput: Observable<Frontend.ProjectDetails.Status>
     ) {
         self.window = window
-        self.listViewTransformer = listViewTransformer
-        self.projectDetailsTransformer = projectDetailsTransformer
+        self.listViewInput = listViewInput
+        self.projectDetailsViewInput = projectDetailsViewInput
     }
 
     func startListening() {
@@ -49,8 +49,8 @@ final class NavigationTransformer: StateTransforming, StateRepresentableViewInpu
         case .input: break
         case .mainScreen:
             let mainSplitView = MainSplitView(
-                dependencyTreeStatus: listViewTransformer.viewInput,
-                projectDetailsStatus: projectDetailsTransformer.viewInput
+                dependencyTreeStatus: listViewInput,
+                projectDetailsStatus: projectDetailsViewInput
             )
             window.contentView = NSHostingView(rootView: mainSplitView)
         }
