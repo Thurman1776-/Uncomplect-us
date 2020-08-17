@@ -24,7 +24,7 @@ struct BackendSubscription: StateSubscription {
     }
 
     func stopListening() {
-        transformers.forEach { $0.startListening() }
+        transformers.forEach { $0.stopListening() }
     }
 
     private mutating func registerSubscribers() {
