@@ -7,7 +7,6 @@
 //
 
 import Backend
-import Cocoa
 import Combine
 import Frontend
 import ReSwift
