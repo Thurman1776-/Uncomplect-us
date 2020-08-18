@@ -21,6 +21,9 @@
 		651A85A8248CF07500AD0927 /* YamlParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7626623E6A3CA0014DEB9 /* YamlParserSpec.swift */; };
 		65358E57249D09EE0004510F /* ConcurrentWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65358E56249D09EE0004510F /* ConcurrentWork.swift */; };
 		653E150724B9B08B005DD3F1 /* Backend-default.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 653E150624B9B08B005DD3F1 /* Backend-default.xctestplan */; };
+		654474A524E6C7460029E04C /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654474A424E6C7460029E04C /* NavigationState.swift */; };
+		654474A824E6C9540029E04C /* NavigationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654474A724E6C9540029E04C /* NavigationReducer.swift */; };
+		654474AB24E6CC160029E04C /* NavigationReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654474A924E6CC120029E04C /* NavigationReducerSpec.swift */; };
 		65896D26249CB0EE00257175 /* Project-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D23249CB0EE00257175 /* Project-Debug.xcconfig */; };
 		65896D27249CB0EE00257175 /* Project-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D24249CB0EE00257175 /* Project-Release.xcconfig */; };
 		65896D28249CB0EE00257175 /* Project-Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D25249CB0EE00257175 /* Project-Shared.xcconfig */; };
@@ -117,6 +120,9 @@
 		43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ReSwift.framework; path = Dependencies/macOS/ReSwift.framework; sourceTree = "<group>"; };
 		65358E56249D09EE0004510F /* ConcurrentWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentWork.swift; sourceTree = "<group>"; };
 		653E150624B9B08B005DD3F1 /* Backend-default.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Backend-default.xctestplan"; sourceTree = "<group>"; };
+		654474A424E6C7460029E04C /* NavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationState.swift; sourceTree = "<group>"; };
+		654474A724E6C9540029E04C /* NavigationReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationReducer.swift; sourceTree = "<group>"; };
+		654474A924E6CC120029E04C /* NavigationReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationReducerSpec.swift; sourceTree = "<group>"; };
 		65896D23249CB0EE00257175 /* Project-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Debug.xcconfig"; sourceTree = "<group>"; };
 		65896D24249CB0EE00257175 /* Project-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Release.xcconfig"; sourceTree = "<group>"; };
 		65896D25249CB0EE00257175 /* Project-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Shared.xcconfig"; sourceTree = "<group>"; };
@@ -215,6 +221,31 @@
 				653E150624B9B08B005DD3F1 /* Backend-default.xctestplan */,
 			);
 			path = TestPlans;
+			sourceTree = "<group>";
+		};
+		654474A224E6C6DE0029E04C /* SwiftDepsState */ = {
+			isa = PBXGroup;
+			children = (
+				A85514F023E6002500D3E7F6 /* SwiftDepsState.swift */,
+			);
+			path = SwiftDepsState;
+			sourceTree = "<group>";
+		};
+		654474A324E6C7300029E04C /* NavigationState */ = {
+			isa = PBXGroup;
+			children = (
+				654474A424E6C7460029E04C /* NavigationState.swift */,
+			);
+			path = NavigationState;
+			sourceTree = "<group>";
+		};
+		654474A624E6C9250029E04C /* NavigationReducer */ = {
+			isa = PBXGroup;
+			children = (
+				654474A724E6C9540029E04C /* NavigationReducer.swift */,
+				654474A924E6CC120029E04C /* NavigationReducerSpec.swift */,
+			);
+			path = NavigationReducer;
 			sourceTree = "<group>";
 		};
 		65896D19249CAF8200257175 /* Configuration */ = {
@@ -452,9 +483,11 @@
 		A8E7626923DDB9DF00BFAD48 /* AppState */ = {
 			isa = PBXGroup;
 			children = (
+				A8E7626A23DDB9F000BFAD48 /* AppState.swift */,
 				A8E1019723EF051F00C550E2 /* DependencyGraphState */,
 				A8E7626C23DDBA5100BFAD48 /* DependencyPathsState */,
-				A8E7626A23DDB9F000BFAD48 /* AppState.swift */,
+				654474A324E6C7300029E04C /* NavigationState */,
+				654474A224E6C6DE0029E04C /* SwiftDepsState */,
 			);
 			path = AppState;
 			sourceTree = "<group>";
@@ -463,7 +496,6 @@
 			isa = PBXGroup;
 			children = (
 				A8E7626D23DDBA6B00BFAD48 /* DependencyPathsState.swift */,
-				A85514F023E6002500D3E7F6 /* SwiftDepsState.swift */,
 			);
 			path = DependencyPathsState;
 			sourceTree = "<group>";
@@ -485,6 +517,7 @@
 				A8E7627323DDBC8000BFAD48 /* AppReducer.swift */,
 				A8E1019C23EF072400C550E2 /* DependencyGraphReducer */,
 				A8E7627523DDBCC800BFAD48 /* DependencyPathsReducer */,
+				654474A624E6C9250029E04C /* NavigationReducer */,
 				A85514F223E6013F00D3E7F6 /* SwiftDepsReducer */,
 			);
 			path = Reducers;
@@ -721,6 +754,8 @@
 				A8CAE99F23DCABC700242ADF /* Bash+Error.swift in Sources */,
 				A8E1019B23EF05E600C550E2 /* DependencyTree.swift in Sources */,
 				A86348C923F831820053C03D /* SwiftPrimitives.swift in Sources */,
+				654474A524E6C7460029E04C /* NavigationState.swift in Sources */,
+				654474A824E6C9540029E04C /* NavigationReducer.swift in Sources */,
 				A85514F423E6015E00D3E7F6 /* SwiftDepsReducer.swift in Sources */,
 				A8F12EF823DF6427001EB945 /* FindProjectOutputDirsSideEffects.swift in Sources */,
 				A8CAE99D23DCABC100242ADF /* Commandable.swift in Sources */,
@@ -745,6 +780,7 @@
 				651A85A0248CEFA800AD0927 /* BashSpec.swift in Sources */,
 				651A859A248CEE7400AD0927 /* DependencyGraphReducerSpec.swift in Sources */,
 				A8489B96247C35F2005C69B7 /* ParseSwiftDepsSideEffectsSpec.swift in Sources */,
+				654474AB24E6CC160029E04C /* NavigationReducerSpec.swift in Sources */,
 				651A85A6248CF05D00AD0927 /* SwiftDepsParserSpec.swift in Sources */,
 				651A859E248CEEB500AD0927 /* SwiftDepsReducerSpec.swift in Sources */,
 			);

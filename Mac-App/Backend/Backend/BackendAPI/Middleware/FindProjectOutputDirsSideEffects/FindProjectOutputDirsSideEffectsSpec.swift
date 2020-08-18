@@ -57,8 +57,8 @@ final class FindProjectOutputDirsSideEffectsSpec: QuickSpec {
 
             context("when DependencyPathsAction.findUrls action gets dispatched") {
                 context("given there are .swiftdeps files found") {
-                    it("triggers 2 actions") {
-                        let expectedNumberOfActions = 2
+                    it("triggers 3 actions (including navigation)") {
+                        let expectedNumberOfActions = 3
 
                         stubbedUrls = [URL(string: "www.apple.de")!]
                         let sutMiddleware = sut(
@@ -70,7 +70,9 @@ final class FindProjectOutputDirsSideEffectsSpec: QuickSpec {
                         expect(actionRecorder.isEmpty).toEventually(beFalse(), timeout: timeout)
 
                         expect(actionRecorder.count == expectedNumberOfActions).toEventually(
-                            beTrue(), timeout: timeout, description: "Expected 2 actions to have been dispatched!"
+                            beTrue(),
+                            timeout: timeout,
+                            description: "Expected \(expectedNumberOfActions) actions to have been dispatched! Got - \(actionRecorder.count)"
                         )
 
                         expect(nextActionRecorder.isEmpty).toEventually(
@@ -82,8 +84,8 @@ final class FindProjectOutputDirsSideEffectsSpec: QuickSpec {
 
             context("when DependencyPathsAction.findUrls action gets dispatched") {
                 context("given there are NO .swiftdeps files found") {
-                    it("trigger 3 actions") {
-                        let expectedNumberOfActions = 3
+                    it("triggers 4 actions (including navigation)") {
+                        let expectedNumberOfActions = 4
 
                         let sutMiddleware = sut(
                             mockFindProjectOutputDirectories(derivedDataPaths:projectName:targetNames:bash:excludingTests:)
@@ -94,7 +96,9 @@ final class FindProjectOutputDirsSideEffectsSpec: QuickSpec {
                         expect(actionRecorder.isEmpty).toEventually(beFalse(), timeout: timeout)
 
                         expect(actionRecorder.count == expectedNumberOfActions).toEventually(
-                            beTrue(), timeout: timeout, description: "Expected 3 actions to have been dispatched!"
+                            beTrue(),
+                            timeout: timeout,
+                            description: "Expected \(expectedNumberOfActions) actions to have been dispatched! Got - \(actionRecorder.count)"
                         )
 
                         expect(nextActionRecorder.isEmpty).toEventually(

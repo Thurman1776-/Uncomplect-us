@@ -13,8 +13,10 @@ import OSLog
 struct DefaultDispatcher: Dispatching {
     static func dispatch(_ action: Action) {
         switch action {
-        case let SearchAction.search(text):
+        case let SearchBarAction.search(text):
             BackendAPI.dispatch(DependencyGraphAction.filter(including: text))
+        case let InputViewAction.search(value):
+            BackendAPI.dispatch(DependencyPathsAction.findUrls(for: value))
         default:
             os_log("Unhandled action")
         }

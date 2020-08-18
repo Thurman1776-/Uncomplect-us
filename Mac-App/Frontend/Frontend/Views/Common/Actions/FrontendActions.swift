@@ -37,6 +37,10 @@ public extension EnvironmentValues {
 
 // MARK: - App's actions
 
-public enum SearchAction: Action {
+public enum SearchBarAction: Action {
+    case search(_ text: String)
+}
+
+public enum InputViewAction: Action {
     case search(_ text: String)
 }

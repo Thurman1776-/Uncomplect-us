@@ -11,7 +11,7 @@ import Combine
 import Frontend
 import ReSwift
 
-final class ListViewTransformer {
+final class ListViewTransformer: StateTransforming, StateRepresentableViewInput, StateSubscription {
     let stateObserver = StateObserver<Frontend.DependencyTree.State>()
     private(set) var viewInput: Observable<Frontend.DependencyTree.Status> = .init(.initial)
     private var cancellable: AnyCancellable = AnyCancellable {}
@@ -29,7 +29,7 @@ final class ListViewTransformer {
         cancellable.cancel()
     }
 
-    private func emitNewState(_ state: Frontend.DependencyTree.State) {
+    func emitNewState(_ state: Frontend.DependencyTree.State) {
         if state.dependencies.isEmpty == false {
             viewInput.update(to: .success(state: state))
         } else if let failure = state.failure {

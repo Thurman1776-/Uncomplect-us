@@ -11,7 +11,7 @@ import Combine
 import Frontend
 import ReSwift
 
-final class ProjectDetailsTransformer {
+final class ProjectDetailsTransformer: StateTransforming, StateRepresentableViewInput, StateSubscription {
     let stateObserver = StateObserver<ProjectDetails.State>()
     private(set) var viewInput: Observable<ProjectDetails.Status> = .init(.initial)
     private var cancellable: AnyCancellable = AnyCancellable {}
@@ -29,7 +29,7 @@ final class ProjectDetailsTransformer {
         cancellable.cancel()
     }
 
-    private func emitNewState(_ state: ProjectDetails.State) {
+    func emitNewState(_ state: ProjectDetails.State) {
         if state.paths.isEmpty == false {
             viewInput.update(to: .success(state: state))
         } else if let failure = state.failure {
