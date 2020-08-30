@@ -17,6 +17,12 @@ struct DefaultDispatcher: Dispatching {
             BackendAPI.dispatch(DependencyGraphAction.filter(including: text))
         case let InputViewAction.search(value):
             BackendAPI.dispatch(DependencyPathsAction.findUrls(for: value))
+        case FileMenuAction.newProjectSearch:
+            // TODO: How could you ensure no actions would be missed when a new state leave is added?
+            BackendAPI.dispatch(DependencyGraphAction.reset)
+            BackendAPI.dispatch(DependencyPathsAction.reset)
+            BackendAPI.dispatch(SwiftDepsAction.reset)
+            BackendAPI.dispatch(NavigationAction.transition(to: .input))
         default:
             os_log("Unhandled action")
         }
