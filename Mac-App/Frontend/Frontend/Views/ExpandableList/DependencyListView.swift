@@ -12,15 +12,18 @@ public struct DependencyListView: View {
     @EnvironmentObject private var dependencyTreeStatus: Observable<DependencyTree.Status>
     @State private var selection: Set<DependencyTree.State.Dependency> = []
 
-    @ViewBuilder public var body: some View {
+    public var body: some View {
         switch dependencyTreeStatus.input {
-            case .initial:
+        case .initial:
+            return AnyView(
                 LoadingView(
                     title: "Processing build files...",
                     titleColor: .gray,
                     isLoading: true
                 ).frame(width: 200, height: 250)
-            case let .success(state: state):
+            )
+        case let .success(state: state):
+            return AnyView(
                 VStack(alignment: .leading, spacing: 8) {
                     List {
                         if state.filteredDependencies.isEmpty {
@@ -31,9 +34,12 @@ public struct DependencyListView: View {
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-            case let .failure(message):
+            )
+        case let .failure(message):
+            return AnyView(
                 Text(message)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
+            )
         }
     }
 
