@@ -52,7 +52,10 @@ final class NavigationTransformer: StateTransforming, StateRepresentableViewInpu
             window.makeKeyAndOrderFront(nil)
             window.contentView = NSHostingView(rootView: InputView())
         case .input:
-            guard state.previousNode != nil, state.currentNode != state.previousNode else { return }
+            // When transitioning to `input` view, transformers' view data need to switch back to
+            // `initial` state for correct layout rendering
+            listViewInput.update(to: .initial)
+            projectDetailsViewInput.update(to: .initial)
             window.contentView = NSHostingView(rootView: InputView())
         case .mainScreen:
             let mainSplitView = MainSplitView(
