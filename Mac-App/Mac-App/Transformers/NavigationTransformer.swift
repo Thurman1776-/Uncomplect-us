@@ -46,7 +46,14 @@ final class NavigationTransformer: StateTransforming, StateRepresentableViewInpu
 
     func emitNewState(_ state: NavigationData.State) {
         switch state.currentNode {
-        case .input: break
+        case .startup:
+            window.center()
+            window.setFrameAutosaveName("Main Window")
+            window.makeKeyAndOrderFront(nil)
+            window.contentView = NSHostingView(rootView: InputView())
+        case .input:
+            guard state.previousNode != nil, state.currentNode != state.previousNode else { return }
+            window.contentView = NSHostingView(rootView: InputView())
         case .mainScreen:
             let mainSplitView = MainSplitView(
                 dependencyTreeStatus: listViewInput,
@@ -63,14 +70,31 @@ extension Frontend.NavigationData.State {
     init(appState: AppState) {
         let frontendCurrentNode: Frontend.NavigationData.Node
         let backendCurrentNode = appState.navigationState.currentNode
+
         switch backendCurrentNode {
+        case .startup:
+            frontendCurrentNode = .startup
         case .input:
             frontendCurrentNode = .input
         case .mainScreen:
             frontendCurrentNode = .mainScreen
         }
 
-        self.init(currentNode: frontendCurrentNode)
+        let frontendPreviousNode: Frontend.NavigationData.Node?
+        let backendPreviousNode = appState.navigationState.previousNode
+
+        switch backendPreviousNode {
+        case .startup:
+            frontendPreviousNode = .startup
+        case .input:
+            frontendPreviousNode = .input
+        case .mainScreen:
+            frontendPreviousNode = .mainScreen
+        case .none:
+            frontendPreviousNode = nil
+        }
+
+        self.init(currentNode: frontendCurrentNode, previousNode: frontendPreviousNode)
     }
 }
 
