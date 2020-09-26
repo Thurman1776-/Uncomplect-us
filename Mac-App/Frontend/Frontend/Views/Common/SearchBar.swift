@@ -33,6 +33,10 @@ public struct SearchBar: View {
                 self.isEditing = true
                 self.searchText = ""
             }
+            //TODO -> Use file menu action instead?
+            Button("New project search", action: {
+                self.actionDispatcher.dispatch(FileMenuAction.newProjectSearch)
+            })
         }
     }
 
