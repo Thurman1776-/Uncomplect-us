@@ -25,7 +25,7 @@ final class NavigationReducerSpec: QuickSpec {
                         )
 
                         expect(newState.currentNode).to(equal(.mainScreen))
-                        expect(newState.previousNode).to(equal(.input))
+                        expect(newState.previousNode).to(equal(.startup))
                     }
                 }
 
