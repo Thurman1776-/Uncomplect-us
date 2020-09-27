@@ -25,7 +25,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }()
 
     private lazy var backendSubscription = BackendSubscription(on: window)
-    private let macoOSMenu = macOSMenu()
+    private let menuBar = macOSMenu()
     
     // MARK: - NSApplicationDelegate
     
@@ -54,6 +54,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
 extension AppDelegate {
     @IBAction func triggerNewSearch(_ sender: NSMenuItem) {
-        macoOSMenu.triggerNewSearch(sender)
+        menuBar.triggerNewSearch(sender)
     }
 }
