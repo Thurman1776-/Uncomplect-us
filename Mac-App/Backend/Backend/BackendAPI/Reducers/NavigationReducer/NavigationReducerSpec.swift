@@ -30,7 +30,7 @@ final class NavigationReducerSpec: QuickSpec {
                     }
                 }
 
-                context("given the same node gets dispatched") {
+                context("when the same node gets dispatched") {
                     it("does not transition to anything") {
                         let currentNavigationState = NavigationState(currentNode: .input, previousNode: nil)
                         let sut = navigationReducer
