@@ -13,9 +13,8 @@ import SwiftUI
 
 @NSApplicationMain
 final class AppDelegate: NSObject, NSApplicationDelegate {
-    @IBOutlet weak var mainMenu: NSMenu!
-    var window: NSWindow!
-    var backendSubscription: BackendSubscription!
+    private var window: NSWindow!
+    private var backendSubscription: BackendSubscription!
     private let macoOSMenu = macOSMenu()
 
     func applicationDidFinishLaunching(_: Notification) {
