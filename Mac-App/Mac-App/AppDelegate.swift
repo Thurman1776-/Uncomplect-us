@@ -13,8 +13,10 @@ import SwiftUI
 
 @NSApplicationMain
 final class AppDelegate: NSObject, NSApplicationDelegate {
+    @IBOutlet weak var mainMenu: NSMenu!
     var window: NSWindow!
     var backendSubscription: BackendSubscription!
+    private let macoOSMenu = macOSMenu()
 
     func applicationDidFinishLaunching(_: Notification) {
         configureEnviromentValues()
@@ -34,5 +36,18 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationWillTerminate(_: Notification) {
         backendSubscription.stopListening()
+    }
+}
+
+// MARK: Akward macOS menu actions plugging
+
+/// Actions from menus will be forwarded to a designated data type to avoid unnecessary clutter in the
+/// AppDelegate.
+/// This mechanism (linking actions from `Main.storyboard`) is very strange but attempting to do this
+/// only with code is surprinsigly complicated. WTF Apple?
+
+extension AppDelegate {
+    @IBAction func triggerNewSearch(_ sender: NSMenuItem) {
+        macoOSMenu.triggerNewSearch(sender)
     }
 }
