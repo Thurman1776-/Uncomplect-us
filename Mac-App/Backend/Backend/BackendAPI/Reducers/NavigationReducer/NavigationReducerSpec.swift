@@ -19,9 +19,10 @@ final class NavigationReducerSpec: QuickSpec {
                 context("when it is on the initial state") {
                     it("then transitions to expected node") {
                         let nextNode = Node.mainScreen
-                        let newState = navigationReducer(
-                            action: NavigationAction.transition(to: nextNode),
-                            state: navigationState
+                        let sut = navigationReducer
+                        let newState = sut(
+                            NavigationAction.transition(to: nextNode),
+                            navigationState
                         )
 
                         expect(newState.currentNode).to(equal(.mainScreen))
@@ -32,9 +33,10 @@ final class NavigationReducerSpec: QuickSpec {
                 context("given the same node gets dispatched") {
                     it("does not transition to anything") {
                         let currentNavigationState = NavigationState(currentNode: .input, previousNode: nil)
-                        let newState = navigationReducer(
-                            action: NavigationAction.transition(to: .input),
-                            state: currentNavigationState
+                        let sut = navigationReducer
+                        let newState = sut(
+                            NavigationAction.transition(to: .input),
+                            currentNavigationState
                         )
 
                         expect(newState.currentNode).to(equal(.input))
@@ -45,3 +47,15 @@ final class NavigationReducerSpec: QuickSpec {
         }
     }
 }
+
+//
+// context("given the navigation is on \(Node.mainScreen)") {
+//
+//    beforeEach {
+//
+//    }
+//
+//    context("when a ") {
+//
+//    }
+// }
