@@ -43,19 +43,29 @@ final class NavigationReducerSpec: QuickSpec {
                         expect(newState.previousNode).to(beNil())
                     }
                 }
+
+                context("given the navigation is on \(Node.mainScreen)") {
+                    let sut = navigationReducer
+                    var navigationState = NavigationState.initialState
+
+                    // MARK: Precondition - Navigate to main screen first
+
+                    beforeEach {
+                        navigationState = sut(NavigationAction.transition(to: .mainScreen), navigationState)
+                    }
+
+                    context("given a new project search is needed") {
+                        context("when \(Node.input) action gets dispatched") {
+                            it("correctly navigates back") {
+                                navigationState = sut(NavigationAction.transition(to: .input), navigationState)
+
+                                expect(navigationState.currentNode).to(equal(.input))
+                                expect(navigationState.previousNode).to(equal(.mainScreen))
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 }
-
-//
-// context("given the navigation is on \(Node.mainScreen)") {
-//
-//    beforeEach {
-//
-//    }
-//
-//    context("when a ") {
-//
-//    }
-// }
