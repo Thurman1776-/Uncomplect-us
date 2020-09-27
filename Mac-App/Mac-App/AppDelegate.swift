@@ -13,28 +13,35 @@ import SwiftUI
 
 @NSApplicationMain
 final class AppDelegate: NSObject, NSApplicationDelegate {
-    private var window: NSWindow!
-    private var backendSubscription: BackendSubscription!
-    private let macoOSMenu = macOSMenu()
-
-    func applicationDidFinishLaunching(_: Notification) {
-        configureEnviromentValues()
-
-        window = NSWindow(
+    // MARK: - Private API
+    private lazy var window: NSWindow = {
+        let window = NSWindow(
             contentRect: NSRect.zero,
             styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
             backing: .buffered, defer: false
         )
-        backendSubscription = BackendSubscription(on: window)
-        backendSubscription.startListening()
-    }
 
-    private func configureEnviromentValues() {
-        DispatcherKey.defaultValue = DefaultDispatcher.self
+        return window
+    }()
+
+    private lazy var backendSubscription = BackendSubscription(on: window)
+    private let macoOSMenu = macOSMenu()
+    
+    // MARK: - NSApplicationDelegate
+    
+    func applicationDidFinishLaunching(_: Notification) {
+        configureEnviromentValues()
+        backendSubscription.startListening()
     }
 
     func applicationWillTerminate(_: Notification) {
         backendSubscription.stopListening()
+    }
+    
+    // MARK: - Private API
+
+    private func configureEnviromentValues() {
+        DispatcherKey.defaultValue = DefaultDispatcher.self
     }
 }
 
