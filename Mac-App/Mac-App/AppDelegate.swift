@@ -14,6 +14,7 @@ import SwiftUI
 @NSApplicationMain
 final class AppDelegate: NSObject, NSApplicationDelegate {
     // MARK: - Private API
+
     private lazy var window: NSWindow = {
         let window = NSWindow(
             contentRect: NSRect.zero,
@@ -26,9 +27,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     private lazy var backendSubscription = BackendSubscription(on: window)
     private let menuBar = macOSMenu()
-    
+
     // MARK: - NSApplicationDelegate
-    
+
     func applicationDidFinishLaunching(_: Notification) {
         configureEnviromentValues()
         backendSubscription.startListening()
@@ -37,7 +38,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_: Notification) {
         backendSubscription.stopListening()
     }
-    
+
     // MARK: - Private API
 
     private func configureEnviromentValues() {
@@ -53,7 +54,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 /// only with code is surprinsigly complicated. WTF Apple?
 
 extension AppDelegate {
-    @IBAction func triggerNewSearch(_ sender: NSMenuItem) {
-        menuBar.triggerNewSearch(sender)
+    @IBAction func triggerNewSearch(_: NSMenuItem) {
+        menuBar.triggerNewSearch()
     }
 }

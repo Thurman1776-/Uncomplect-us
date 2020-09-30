@@ -10,7 +10,7 @@ import Cocoa
 import Frontend
 
 struct macOSMenu {
-    func triggerNewSearch(_: NSMenuItem) {
+    func triggerNewSearch() {
         DefaultDispatcher.dispatch(FileMenuAction.newProjectSearch)
     }
 }
