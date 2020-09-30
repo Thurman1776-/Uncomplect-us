@@ -18,7 +18,7 @@ public struct NavigationState: Equatable {
 // MARK: - Initial state
 
 extension NavigationState {
-    static let initialState = NavigationState(currentNode: .input, previousNode: nil)
+    static let initialState = NavigationState(currentNode: .startup, previousNode: nil)
 }
 
 // MARK: - Actions
@@ -28,6 +28,7 @@ public enum NavigationAction: Action {
 }
 
 public enum Node {
+    case startup
     case input
     case mainScreen
 }

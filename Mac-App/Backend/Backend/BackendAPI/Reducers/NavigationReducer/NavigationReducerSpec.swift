@@ -15,30 +15,54 @@ final class NavigationReducerSpec: QuickSpec {
         describe("NavigationReducerSpec") {
             let navigationState = NavigationState.initialState
 
-            context("when NavigationAction.transition(to:) gets dispatched") {
-                context("given it is on the initial state") {
-                    it("it transitions to expected node") {
+            context("given NavigationAction.transition(to:) gets dispatched") {
+                context("when it is on the initial state") {
+                    it("then transitions to expected node") {
                         let nextNode = Node.mainScreen
-                        let newState = navigationReducer(
-                            action: NavigationAction.transition(to: nextNode),
-                            state: navigationState
+                        let sut = navigationReducer
+                        let newState = sut(
+                            NavigationAction.transition(to: nextNode),
+                            navigationState
                         )
 
                         expect(newState.currentNode).to(equal(.mainScreen))
-                        expect(newState.previousNode).to(equal(.input))
+                        expect(newState.previousNode).to(equal(.startup))
                     }
                 }
 
-                context("when same node gets dispatched") {
+                context("when the same node gets dispatched") {
                     it("does not transition to anything") {
                         let currentNavigationState = NavigationState(currentNode: .input, previousNode: nil)
-                        let newState = navigationReducer(
-                            action: NavigationAction.transition(to: .input),
-                            state: currentNavigationState
+                        let sut = navigationReducer
+                        let newState = sut(
+                            NavigationAction.transition(to: .input),
+                            currentNavigationState
                         )
 
                         expect(newState.currentNode).to(equal(.input))
                         expect(newState.previousNode).to(beNil())
+                    }
+                }
+
+                context("given the navigation is on \(Node.mainScreen)") {
+                    let sut = navigationReducer
+                    var navigationState = NavigationState.initialState
+
+                    // MARK: Precondition - Navigate to main screen first
+
+                    beforeEach {
+                        navigationState = sut(NavigationAction.transition(to: .mainScreen), navigationState)
+                    }
+
+                    context("given a new project search is needed") {
+                        context("when \(Node.input) action gets dispatched") {
+                            it("correctly navigates back") {
+                                navigationState = sut(NavigationAction.transition(to: .input), navigationState)
+
+                                expect(navigationState.currentNode).to(equal(.input))
+                                expect(navigationState.previousNode).to(equal(.mainScreen))
+                            }
+                        }
                     }
                 }
             }

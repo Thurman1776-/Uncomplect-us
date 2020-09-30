@@ -11,13 +11,19 @@ public enum NavigationData {
 
     public struct State: Equatable {
         public var currentNode: Node
+        public var previousNode: Node?
 
-        public init(currentNode: NavigationData.Node) {
+        public init(
+            currentNode: NavigationData.Node,
+            previousNode: Node?
+        ) {
             self.currentNode = currentNode
+            self.previousNode = previousNode
         }
     }
 
     public enum Node {
+        case startup
         case input
         case mainScreen
     }

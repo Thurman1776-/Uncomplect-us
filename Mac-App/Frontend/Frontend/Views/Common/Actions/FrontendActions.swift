@@ -44,3 +44,7 @@ public enum SearchBarAction: Action {
 public enum InputViewAction: Action {
     case search(_ text: String)
 }
+
+public enum FileMenuAction: Action {
+    case newProjectSearch
+}

@@ -24,7 +24,7 @@ func dependencyPathsReducer(action: Action, state: DependencyPathsState) -> Depe
         let newPaths = newState.paths.filter { paths.contains($0) == false }
         newState.paths = newPaths
     case .reset:
-        newState.paths = []
+        newState = DependencyPathsState.initialState
     case let .failure(message):
         newState.failure = message
     }

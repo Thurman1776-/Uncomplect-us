@@ -19,7 +19,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_: Notification) {
         configureEnviromentValues()
 
-        let inputView = InputView()
         window = NSWindow(
             contentRect: NSRect.zero,
             styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
@@ -27,10 +26,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         )
         backendSubscription = BackendSubscription(on: window)
         backendSubscription.startListening()
-        window.center()
-        window.setFrameAutosaveName("Main Window")
-        window.contentView = NSHostingView(rootView: inputView)
-        window.makeKeyAndOrderFront(nil)
     }
 
     private func configureEnviromentValues() {
