@@ -15,15 +15,11 @@ import SwiftUI
 final class AppDelegate: NSObject, NSApplicationDelegate {
     // MARK: - Private API
 
-    private lazy var window: NSWindow = {
-        let window = NSWindow(
-            contentRect: NSRect.zero,
-            styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
-            backing: .buffered, defer: false
-        )
-
-        return window
-    }()
+    private let window = NSWindow(
+        contentRect: NSRect.zero,
+        styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
+        backing: .buffered, defer: false
+    )
 
     private lazy var backendSubscription = BackendSubscription(on: window)
     private let menuBar = macOSMenu()
