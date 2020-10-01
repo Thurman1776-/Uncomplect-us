@@ -19,6 +19,7 @@
 		654474AD24E72BE40029E04C /* NavigationTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654474AC24E72BE40029E04C /* NavigationTransformer.swift */; };
 		654474B124E9456A0029E04C /* StateTransforming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654474B024E9456A0029E04C /* StateTransforming.swift */; };
 		656F142124BB1DCC0019C550 /* DefaultDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F142024BB1DCC0019C550 /* DefaultDispatcher.swift */; };
+		65E56F3F2520E7F800C89BB1 /* macOSMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E56F3E2520E7F800C89BB1 /* macOSMenu.swift */; };
 		A8199C5823E70C97000B89F6 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8199C5723E70C97000B89F6 /* Backend.framework */; };
 		A8472C9E2402C6190032E702 /* ListViewTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8472C9D2402C6190032E702 /* ListViewTransformer.swift */; };
 		A86E10342365DAB800D3FF94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E10332365DAB800D3FF94 /* AppDelegate.swift */; };
@@ -71,6 +72,7 @@
 		654474AC24E72BE40029E04C /* NavigationTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTransformer.swift; sourceTree = "<group>"; };
 		654474B024E9456A0029E04C /* StateTransforming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTransforming.swift; sourceTree = "<group>"; };
 		656F142024BB1DCC0019C550 /* DefaultDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDispatcher.swift; sourceTree = "<group>"; };
+		65E56F3E2520E7F800C89BB1 /* macOSMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOSMenu.swift; sourceTree = "<group>"; };
 		A8199C5723E70C97000B89F6 /* Backend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Backend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8472C9D2402C6190032E702 /* ListViewTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewTransformer.swift; sourceTree = "<group>"; };
 		A86E10302365DAB800D3FF94 /* Mac-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mac-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,14 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		65E56F3D2520E7C800C89BB1 /* macOSMenu */ = {
+			isa = PBXGroup;
+			children = (
+				65E56F3E2520E7F800C89BB1 /* macOSMenu.swift */,
+			);
+			path = macOSMenu;
+			sourceTree = "<group>";
+		};
 		A80EF04E236611FF00CD7500 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +194,7 @@
 		A86E10322365DAB800D3FF94 /* Mac-App */ = {
 			isa = PBXGroup;
 			children = (
+				65E56F3D2520E7C800C89BB1 /* macOSMenu */,
 				65358E41249CB39D0004510F /* Configuration */,
 				A8743A70245F2B0900F8BFF2 /* StateObserver */,
 				A8743A6D245F289D00F8BFF2 /* BackendSubscribers */,
@@ -371,6 +382,7 @@
 				654474AD24E72BE40029E04C /* NavigationTransformer.swift in Sources */,
 				656F142124BB1DCC0019C550 /* DefaultDispatcher.swift in Sources */,
 				A8743A6F245F28BF00F8BFF2 /* BackendSubscription.swift in Sources */,
+				65E56F3F2520E7F800C89BB1 /* macOSMenu.swift in Sources */,
 				A8743A72245F2B1B00F8BFF2 /* StateObserver.swift in Sources */,
 				A86E10342365DAB800D3FF94 /* AppDelegate.swift in Sources */,
 				A8FECAAB24310DDC0028CC64 /* ProjectDetailsTransformer.swift in Sources */,

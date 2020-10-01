@@ -13,26 +13,44 @@ import SwiftUI
 
 @NSApplicationMain
 final class AppDelegate: NSObject, NSApplicationDelegate {
-    var window: NSWindow!
-    var backendSubscription: BackendSubscription!
+    // MARK: - Private API
+
+    private let window = NSWindow(
+        contentRect: NSRect.zero,
+        styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
+        backing: .buffered, defer: false
+    )
+
+    private lazy var backendSubscription = BackendSubscription(on: window)
+    private let menuBar = macOSMenu()
+
+    // MARK: - NSApplicationDelegate
 
     func applicationDidFinishLaunching(_: Notification) {
         configureEnviromentValues()
-
-        window = NSWindow(
-            contentRect: NSRect.zero,
-            styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
-            backing: .buffered, defer: false
-        )
-        backendSubscription = BackendSubscription(on: window)
         backendSubscription.startListening()
-    }
-
-    private func configureEnviromentValues() {
-        DispatcherKey.defaultValue = DefaultDispatcher.self
     }
 
     func applicationWillTerminate(_: Notification) {
         backendSubscription.stopListening()
+    }
+
+    // MARK: - Private API
+
+    private func configureEnviromentValues() {
+        DispatcherKey.defaultValue = DefaultDispatcher.self
+    }
+}
+
+// MARK: Akward macOS menu actions plugging
+
+/// Actions from menus will be forwarded to a designated data type to avoid unnecessary clutter in the
+/// AppDelegate.
+/// This mechanism (linking actions from `Main.storyboard`) is very strange but attempting to do this
+/// only with code is surprinsigly complicated. WTF Apple?
+
+extension AppDelegate {
+    @IBAction func triggerNewSearch(_: NSMenuItem) {
+        menuBar.triggerNewSearch()
     }
 }
