@@ -12,17 +12,12 @@ import Frontend
 import ReSwift
 
 final class ProjectDetailsTransformer: StateTransforming, StateRepresentableViewInput, StateSubscription {
-    let stateObserver = StateObserver<ProjectDetails.State>()
+    let stateObserver = StateObserver<ProjectDetails.State>(state: ProjectDetails.State.initialState)
     private(set) var viewInput: Observable<ProjectDetails.Status> = .init(.initial)
     private var cancellable: AnyCancellable = AnyCancellable {}
 
     func startListening() {
-        cancellable = stateObserver.$currentState.sink {
-            [weak self] projectDetailsState in
-
-            precondition(projectDetailsState != nil, "State observer should always have an initial state provided by the Backend!")
-            self?.emitNewState(projectDetailsState!)
-        }
+        cancellable = stateObserver.$currentState.sink { [weak self] in self?.emitNewState($0) }
     }
 
     func stopListening() {
@@ -60,3 +55,11 @@ extension ProjectDetails.State {
 }
 
 extension ProjectDetails.State: StateType {}
+extension ProjectDetails.State {
+    static let initialState = ProjectDetails.State(
+        heaviestDependency: "",
+        totalDependenciesFound: -1,
+        paths: [],
+        failure: nil
+    )
+}

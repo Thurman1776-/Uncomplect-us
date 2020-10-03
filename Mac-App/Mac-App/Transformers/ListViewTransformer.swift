@@ -12,17 +12,12 @@ import Frontend
 import ReSwift
 
 final class ListViewTransformer: StateTransforming, StateRepresentableViewInput, StateSubscription {
-    let stateObserver = StateObserver<Frontend.DependencyTree.State>()
+    let stateObserver = StateObserver<Frontend.DependencyTree.State>(state: DependencyTree.State.initialState)
     private(set) var viewInput: Observable<Frontend.DependencyTree.Status> = .init(.initial)
     private var cancellable: AnyCancellable = AnyCancellable {}
 
     func startListening() {
-        cancellable = stateObserver.$currentState.sink {
-            [weak self] appState in
-
-            precondition(appState != nil, "State observer should always have an initial state provided by the Backend!")
-            self?.emitNewState(appState!)
-        }
+        cancellable = stateObserver.$currentState.sink { [weak self] in self?.emitNewState($0) }
     }
 
     func stopListening() {
@@ -61,3 +56,6 @@ extension Frontend.DependencyTree.State {
 }
 
 extension Frontend.DependencyTree.State: StateType {}
+extension Frontend.DependencyTree.State {
+    static let initialState = DependencyTree.State(dependencies: [], filteredDependencies: [], failure: nil)
+}

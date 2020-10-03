@@ -13,7 +13,7 @@ import ReSwift
 import SwiftUI
 
 final class NavigationTransformer: StateTransforming, StateRepresentableViewInput, StateSubscription {
-    let stateObserver = StateObserver<Frontend.NavigationData.State>()
+    let stateObserver = StateObserver<Frontend.NavigationData.State>(state: NavigationData.State.initialState)
     let viewInput: Observable<NavigationData.Status> = .init(.initial)
     private var cancellable: AnyCancellable = AnyCancellable {}
 
@@ -32,12 +32,7 @@ final class NavigationTransformer: StateTransforming, StateRepresentableViewInpu
     }
 
     func startListening() {
-        cancellable = stateObserver.$currentState.sink {
-            [weak self] appState in
-
-            precondition(appState != nil, "State observer should always have an initial state provided by the Backend!")
-            self?.emitNewState(appState!)
-        }
+        cancellable = stateObserver.$currentState.sink { [weak self] in self?.emitNewState($0) }
     }
 
     func stopListening() {
@@ -102,3 +97,6 @@ extension Frontend.NavigationData.State {
 }
 
 extension Frontend.NavigationData.State: StateType {}
+extension Frontend.NavigationData.State {
+    static let initialState = NavigationData.State(currentNode: NavigationData.Node.startup, previousNode: nil)
+}
