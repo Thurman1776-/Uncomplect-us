@@ -17,7 +17,7 @@ final class ProjectDetailsTransformer: StateTransforming, StateRepresentableView
     private var cancellable: AnyCancellable = AnyCancellable {}
 
     func startListening() {
-        cancellable = stateObserver.$currentState.sink { [weak self] in self?.emitNewState($0) }
+        cancellable = stateObserver.$currentState.sink { [unowned self] in self.emitNewState($0) }
     }
 
     func stopListening() {

@@ -32,7 +32,7 @@ final class NavigationTransformer: StateTransforming, StateRepresentableViewInpu
     }
 
     func startListening() {
-        cancellable = stateObserver.$currentState.sink { [weak self] in self?.emitNewState($0) }
+        cancellable = stateObserver.$currentState.sink { [unowned self] in self.emitNewState($0) }
     }
 
     func stopListening() {
