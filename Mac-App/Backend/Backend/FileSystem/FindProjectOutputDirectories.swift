@@ -84,7 +84,10 @@ private func parseSequencially(_ collection: [String]) -> [URL] {
 }
 
 private func parseConcurrently(_ collection: [String]) -> [URL] {
-    let splitCount = 100
+    let processInfo = ProcessInfo()
+    let coreCount = processInfo.activeProcessorCount
+    let splitAmount = coreCount - 1
+    let splitCount = collection.count / splitAmount
     var paths: Set<URL> = []
     
     let chunks = collection.chunked(into: splitCount)
