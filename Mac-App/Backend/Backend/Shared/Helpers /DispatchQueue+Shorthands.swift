@@ -23,3 +23,16 @@ func dispatchAsyncOnConcurrentBackendQueue(
 ) {
     _backendQueue.async { work() }
 }
+
+private let _backendSerialQueue = DispatchQueue(
+    label: "Acphut.Werkstatt.Backend.serial",
+    qos: .userInitiated,
+    autoreleaseFrequency: .inherit
+)
+
+func dispatchAsyncOnSerialBackendQueue(
+    with _: DispatchQoS.QoSClass = .userInitiated,
+    work: @escaping () -> Void
+) {
+    _backendSerialQueue.async { work() }
+}
