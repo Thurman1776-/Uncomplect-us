@@ -11,7 +11,7 @@ func dispatchAsyncOnGlobal(with qualityOfService: DispatchQoS.QoSClass = .userIn
 }
 
 private let _backendQueue = DispatchQueue(
-    label: "Acphut.Werkstatt.Backend",
+    label: "Acphut.Werkstatt.Backend.concurrent",
     qos: .userInitiated,
     attributes: DispatchQueue.Attributes.concurrent,
     autoreleaseFrequency: .inherit
