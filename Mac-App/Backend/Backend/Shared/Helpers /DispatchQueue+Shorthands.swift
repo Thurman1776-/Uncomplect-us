@@ -17,7 +17,7 @@ private let _backendQueue = DispatchQueue(
     autoreleaseFrequency: .inherit
 )
 
-func dispatchAsyncOnBackendQueue(
+func dispatchAsyncOnConcurrentBackendQueue(
     with _: DispatchQoS.QoSClass = .userInitiated,
     work: @escaping () -> Void
 ) {
