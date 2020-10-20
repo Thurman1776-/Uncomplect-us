@@ -13,7 +13,13 @@ final class StateObserver<State: StateType & Equatable>: StoreSubscriber {
     typealias StoreSubscriberStateType = State
 
     @Published
-    private(set) var currentState: State!
+    private(set) var currentState: State
+
+    init(state: State) {
+        currentState = state
+    }
+
+    // MARK: - Public API
 
     func newState(state: State) {
         guard currentState != state else { return }
