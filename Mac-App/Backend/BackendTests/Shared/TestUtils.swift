@@ -8,7 +8,7 @@
 
 @testable import Backend
 
-let timeout: TimeInterval = 0.2
+let timeout: DispatchTimeInterval = .milliseconds(200)
 
 func execDefaultFindCommand() -> String {
     Bash().execute(

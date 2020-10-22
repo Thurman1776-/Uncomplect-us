@@ -17,6 +17,8 @@
 		651A85A8248CF07500AD0927 /* YamlParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7626623E6A3CA0014DEB9 /* YamlParserSpec.swift */; };
 		651C822C2541FC8100BC014E /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 651C822B2541FC8100BC014E /* ReSwift */; };
 		651C822F2541FFE500BC014E /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = 651C822E2541FFE500BC014E /* Yams */; };
+		651C82372542024200BC014E /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 651C82362542024200BC014E /* Quick */; };
+		651C823A2542028800BC014E /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 651C82392542028800BC014E /* Nimble */; };
 		65358E57249D09EE0004510F /* ConcurrentWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65358E56249D09EE0004510F /* ConcurrentWork.swift */; };
 		653E150724B9B08B005DD3F1 /* Backend-default.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 653E150624B9B08B005DD3F1 /* Backend-default.xctestplan */; };
 		654474A524E6C7460029E04C /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654474A424E6C7460029E04C /* NavigationState.swift */; };
@@ -156,6 +158,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				651C823A2542028800BC014E /* Nimble in Frameworks */,
+				651C82372542024200BC014E /* Quick in Frameworks */,
 				A831004223DC9E4400460A12 /* Backend.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,6 +167,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		651C82302542019A00BC014E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		65358E55249D09C80004510F /* Helpers  */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +307,7 @@
 				A831004523DC9E4400460A12 /* BackendTests */,
 				8D53CC87ED3200CD4593921C /* Dependencies */,
 				A831003923DC9E4400460A12 /* Products */,
+				651C82302542019A00BC014E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -580,6 +592,10 @@
 				A831004423DC9E4400460A12 /* PBXTargetDependency */,
 			);
 			name = BackendTests;
+			packageProductDependencies = (
+				651C82362542024200BC014E /* Quick */,
+				651C82392542028800BC014E /* Nimble */,
+			);
 			productName = BackendTests;
 			productReference = A831004123DC9E4400460A12 /* BackendTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -614,6 +630,8 @@
 			packageReferences = (
 				651C822A2541FC8100BC014E /* XCRemoteSwiftPackageReference "ReSwift" */,
 				651C822D2541FFE500BC014E /* XCRemoteSwiftPackageReference "Yams" */,
+				651C82352542024200BC014E /* XCRemoteSwiftPackageReference "Quick" */,
+				651C82382542028800BC014E /* XCRemoteSwiftPackageReference "Nimble" */,
 			);
 			productRefGroup = A831003923DC9E4400460A12 /* Products */;
 			projectDirPath = "";
@@ -838,6 +856,22 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		651C82352542024200BC014E /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		651C82382542028800BC014E /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -850,6 +884,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 651C822D2541FFE500BC014E /* XCRemoteSwiftPackageReference "Yams" */;
 			productName = Yams;
+		};
+		651C82362542024200BC014E /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 651C82352542024200BC014E /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		651C82392542028800BC014E /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 651C82382542028800BC014E /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
