@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06E2FC25FC7EE2E889173070 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28855F46A4EC65D5ECE0955E /* Nimble.framework */; };
-		27E97B35FB80DD98519DF008 /* CwlPreconditionTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFEE7E84BA333690941FA0A0 /* CwlPreconditionTesting.framework */; };
-		519AB329056AB567432FDAF7 /* CwlCatchException.framework in Accio */ = {isa = PBXBuildFile; fileRef = 9630BDA30D9CD7865E05CE8D /* CwlCatchException.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		61130044FABE7561B68DEED4 /* Quick.framework in Accio */ = {isa = PBXBuildFile; fileRef = 17A892613B802C921192B6A3 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		651A859A248CEE7400AD0927 /* DependencyGraphReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D58A8F23F6754000C2AB74 /* DependencyGraphReducerSpec.swift */; };
 		651A859C248CEE9200AD0927 /* DependencyPathsReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7627A23DDE79000BFAD48 /* DependencyPathsReducerSpec.swift */; };
 		651A859E248CEEB500AD0927 /* SwiftDepsReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8199C5323E6F3AD000B89F6 /* SwiftDepsReducerSpec.swift */; };
@@ -34,14 +30,9 @@
 		65896D32249CB13B00257175 /* BackendTests-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D2F249CB13B00257175 /* BackendTests-Release.xcconfig */; };
 		65896D33249CB13B00257175 /* BackendTests-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D30249CB13B00257175 /* BackendTests-Debug.xcconfig */; };
 		65896D34249CB13B00257175 /* BackendTests-Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D31249CB13B00257175 /* BackendTests-Shared.xcconfig */; };
-		66E89AD4BD74A3D517558DDC /* CwlCatchException.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9630BDA30D9CD7865E05CE8D /* CwlCatchException.framework */; };
-		91FA8BC9456EA57494C961D0 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */; };
-		961818E76009BE3E450B26B4 /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA32A46831C17A7C83A1CF1 /* Yams.framework */; };
-		987E9CB59EFC3AEACD688A03 /* Nimble.framework in Accio */ = {isa = PBXBuildFile; fileRef = 28855F46A4EC65D5ECE0955E /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A8199C5123E6CA73000B89F6 /* SwiftDeps.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8199C5023E6CA73000B89F6 /* SwiftDeps.swift */; };
 		A8199C5623E700A5000B89F6 /* AppDelegateSwiftDepsFixture.swiftDeps in Resources */ = {isa = PBXBuildFile; fileRef = A8199C5523E700A5000B89F6 /* AppDelegateSwiftDepsFixture.swiftDeps */; };
 		A8237E6A247A523D003A5994 /* FindProjectOutputDirsSideEffectsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8237E69247A523D003A5994 /* FindProjectOutputDirsSideEffectsSpec.swift */; };
-		A8237E70247A58A1003A5994 /* ReSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A82655022480E1CE009B12D8 /* DependencyGraphSideEffectsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82655012480E1CE009B12D8 /* DependencyGraphSideEffectsSpec.swift */; };
 		A831004223DC9E4400460A12 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A831003823DC9E4400460A12 /* Backend.framework */; };
 		A831004923DC9E4400460A12 /* Backend.h in Headers */ = {isa = PBXBuildFile; fileRef = A831003B23DC9E4400460A12 /* Backend.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -71,10 +62,6 @@
 		A8E7627723DDBCE200BFAD48 /* DependencyPathsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7627623DDBCE200BFAD48 /* DependencyPathsReducer.swift */; };
 		A8F12EF823DF6427001EB945 /* FindProjectOutputDirsSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F12EF723DF6427001EB945 /* FindProjectOutputDirsSideEffects.swift */; };
 		A8F7626A23E6A5590014DEB9 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7626923E6A5590014DEB9 /* TestUtils.swift */; };
-		B33D522CFB40DE4CF75B827C /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073CD94B1BFD29B335961A59 /* Yams.framework */; };
-		B4781C80CFFF0A0C5893DF4E /* CwlPreconditionTesting.framework in Accio */ = {isa = PBXBuildFile; fileRef = CFEE7E84BA333690941FA0A0 /* CwlPreconditionTesting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		F982DD1447C7D404E4881F9E /* Yams.framework in Accio */ = {isa = PBXBuildFile; fileRef = CDA32A46831C17A7C83A1CF1 /* Yams.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		FAFD5D6D8AFB5A7A53C1C7D9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A892613B802C921192B6A3 /* Quick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,33 +73,6 @@
 			remoteInfo = Backend;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		6356CDB8F68E7DFC50FE9279 /* Accio */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstSubfolderSpec = 10;
-			files = (
-				519AB329056AB567432FDAF7 /* CwlCatchException.framework in Accio */,
-				B4781C80CFFF0A0C5893DF4E /* CwlPreconditionTesting.framework in Accio */,
-				987E9CB59EFC3AEACD688A03 /* Nimble.framework in Accio */,
-				61130044FABE7561B68DEED4 /* Quick.framework in Accio */,
-				F982DD1447C7D404E4881F9E /* Yams.framework in Accio */,
-			);
-			name = Accio;
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A8237E6F247A5894003A5994 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A8237E70247A58A1003A5994 /* ReSwift.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		073CD94B1BFD29B335961A59 /* Yams.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Yams.framework; path = Dependencies/macOS/Yams.framework; sourceTree = "<group>"; };
@@ -187,8 +147,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				651C822C2541FC8100BC014E /* ReSwift in Frameworks */,
-				91FA8BC9456EA57494C961D0 /* ReSwift.framework in Frameworks */,
-				B33D522CFB40DE4CF75B827C /* Yams.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,11 +155,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A831004223DC9E4400460A12 /* Backend.framework in Frameworks */,
-				FAFD5D6D8AFB5A7A53C1C7D9 /* Quick.framework in Frameworks */,
-				66E89AD4BD74A3D517558DDC /* CwlCatchException.framework in Frameworks */,
-				27E97B35FB80DD98519DF008 /* CwlPreconditionTesting.framework in Frameworks */,
-				06E2FC25FC7EE2E889173070 /* Nimble.framework in Frameworks */,
-				961818E76009BE3E450B26B4 /* Yams.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,7 +549,6 @@
 				A831003423DC9E4400460A12 /* Sources */,
 				A831003523DC9E4400460A12 /* Frameworks */,
 				A831003623DC9E4400460A12 /* Resources */,
-				262A9F624B12F411E35E920A /* Accio */,
 			);
 			buildRules = (
 			);
@@ -617,9 +569,7 @@
 				A831003D23DC9E4400460A12 /* Sources */,
 				A831003E23DC9E4400460A12 /* Frameworks */,
 				A831003F23DC9E4400460A12 /* Resources */,
-				6356CDB8F68E7DFC50FE9279 /* Accio */,
 				A8237E67247984C2003A5994 /* Run Swiftformat */,
-				A8237E6F247A5894003A5994 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -700,24 +650,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		262A9F624B12F411E35E920A /* Accio */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Dependencies/macOS/ReSwift.framework",
-				"$(SRCROOT)/Dependencies/macOS/Yams.framework",
-			);
-			name = Accio;
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReSwift.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Yams.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
 		A8237E67247984C2003A5994 /* Run Swiftformat */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
