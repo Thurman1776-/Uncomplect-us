@@ -33,6 +33,7 @@
 		65896D32249CB13B00257175 /* BackendTests-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D2F249CB13B00257175 /* BackendTests-Release.xcconfig */; };
 		65896D33249CB13B00257175 /* BackendTests-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D30249CB13B00257175 /* BackendTests-Debug.xcconfig */; };
 		65896D34249CB13B00257175 /* BackendTests-Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D31249CB13B00257175 /* BackendTests-Shared.xcconfig */; };
+		65CE35E42544B7E000196EBF /* AssignActionsOnQueuesSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CE35E32544B7E000196EBF /* AssignActionsOnQueuesSideEffects.swift */; };
 		66E89AD4BD74A3D517558DDC /* CwlCatchException.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9630BDA30D9CD7865E05CE8D /* CwlCatchException.framework */; };
 		91FA8BC9456EA57494C961D0 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */; };
 		961818E76009BE3E450B26B4 /* Yams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA32A46831C17A7C83A1CF1 /* Yams.framework */; };
@@ -132,6 +133,7 @@
 		65896D2F249CB13B00257175 /* BackendTests-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "BackendTests-Release.xcconfig"; sourceTree = "<group>"; };
 		65896D30249CB13B00257175 /* BackendTests-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "BackendTests-Debug.xcconfig"; sourceTree = "<group>"; };
 		65896D31249CB13B00257175 /* BackendTests-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "BackendTests-Shared.xcconfig"; sourceTree = "<group>"; };
+		65CE35E32544B7E000196EBF /* AssignActionsOnQueuesSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignActionsOnQueuesSideEffects.swift; sourceTree = "<group>"; };
 		9630BDA30D9CD7865E05CE8D /* CwlCatchException.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = CwlCatchException.framework; path = Dependencies/macOS/CwlCatchException.framework; sourceTree = "<group>"; };
 		A8199C5023E6CA73000B89F6 /* SwiftDeps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDeps.swift; sourceTree = "<group>"; };
 		A8199C5323E6F3AD000B89F6 /* SwiftDepsReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDepsReducerSpec.swift; sourceTree = "<group>"; };
@@ -276,6 +278,14 @@
 				65896D31249CB13B00257175 /* BackendTests-Shared.xcconfig */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		65CE35E22544B7A700196EBF /* AssignActionsOnQueuesSideEffects */ = {
+			isa = PBXGroup;
+			children = (
+				65CE35E32544B7E000196EBF /* AssignActionsOnQueuesSideEffects.swift */,
+			);
+			path = AssignActionsOnQueuesSideEffects;
 			sourceTree = "<group>";
 		};
 		8D53CC87ED3200CD4593921C /* Dependencies */ = {
@@ -535,6 +545,7 @@
 		A8F12EF523DF63B1001EB945 /* Middleware */ = {
 			isa = PBXGroup;
 			children = (
+				65CE35E22544B7A700196EBF /* AssignActionsOnQueuesSideEffects */,
 				A82F42DA2481366600A9A321 /* DependencyGraphSideEffects */,
 				A82F42D82481364800A9A321 /* FindProjectOutputDirsSideEffects */,
 				A82F42D92481365400A9A321 /* ParseSwiftDepsSideEffects */,
@@ -736,6 +747,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8CAE99A23DCABB500242ADF /* FindProjectOutputDirectories.swift in Sources */,
+				65CE35E42544B7E000196EBF /* AssignActionsOnQueuesSideEffects.swift in Sources */,
 				A8CAE99B23DCABB900242ADF /* CLParser.swift in Sources */,
 				A8E1019E23EF074100C550E2 /* DependencyGraphReducer.swift in Sources */,
 				A8E7626B23DDB9F000BFAD48 /* AppState.swift in Sources */,

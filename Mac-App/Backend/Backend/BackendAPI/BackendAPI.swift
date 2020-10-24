@@ -16,9 +16,10 @@ public enum BackendAPI {
             findProjectOutputDirsSideEffects(finder: findProjectOutputDirectories),
             parseSwiftDepsSideEffects(yamlParser: parseYamlUrls(from:)),
             dependencyGraphSideEffects(parser: parseSwiftDeps(_:)),
+            assignActionsOnQueuesSideEffects(),
         ]
     )
-    
+
     private static let _backendAPISerialQueue = DispatchQueue(
         label: "Acphut.Werkstatt.BackendAPI.serial",
         qos: .userInteractive,
