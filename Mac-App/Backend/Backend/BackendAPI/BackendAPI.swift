@@ -20,12 +20,6 @@ public enum BackendAPI {
         ]
     )
 
-    private static let _backendAPISerialQueue = DispatchQueue(
-        label: "Acphut.Werkstatt.BackendAPI.serial",
-        qos: .userInteractive,
-        autoreleaseFrequency: .inherit
-    )
-
     public static var state: AppState { store.state }
     public static var dispatchFunction: ReSwift.DispatchFunction { store.dispatchFunction }
 
@@ -42,8 +36,6 @@ public enum BackendAPI {
         _ subscriber: S,
         transform: ((ReSwift.Subscription<AppState>) -> ReSwift.Subscription<SelectedState>)?
     ) where SelectedState == S.StoreSubscriberStateType, S: ReSwift.StoreSubscriber {
-        _backendAPISerialQueue.async {
-            BackendAPI.store.subscribe(subscriber, transform: transform)
-        }
+        BackendAPI.store.subscribe(subscriber, transform: transform)
     }
 }
