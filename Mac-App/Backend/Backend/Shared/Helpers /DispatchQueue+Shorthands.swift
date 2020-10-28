@@ -6,10 +6,6 @@
 //  Copyright © 2020 Acphut Werkstatt. All rights reserved.
 //
 
-func dispatchAsyncOnGlobal(with qualityOfService: DispatchQoS.QoSClass = .userInitiated, work: @escaping () -> Void) {
-    DispatchQueue.global(qos: qualityOfService).async { work() }
-}
-
 // MARK: - Backend concurrent queue
 
 private let _backendConcurrentLabel = "Acphut.Werkstatt.Backend.concurrent"
