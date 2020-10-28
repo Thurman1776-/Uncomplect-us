@@ -10,8 +10,12 @@ func dispatchAsyncOnGlobal(with qualityOfService: DispatchQoS.QoSClass = .userIn
     DispatchQueue.global(qos: qualityOfService).async { work() }
 }
 
+// MARK: - Backend concurrent queue
+
+private let _backendConcurrentLabel = "Acphut.Werkstatt.Backend.concurrent"
+private let _backendMarkerConcurrentQueue = DispatchSpecificKey<String>()
 private let _backendQueue = DispatchQueue(
-    label: "Acphut.Werkstatt.Backend.concurrent",
+    label: _backendConcurrentLabel,
     qos: .userInitiated,
     attributes: DispatchQueue.Attributes.concurrent,
     autoreleaseFrequency: .inherit
@@ -21,7 +25,12 @@ func dispatchAsyncOnConcurrentBackendQueue(
     with _: DispatchQoS.QoSClass = .userInitiated,
     work: @escaping () -> Void
 ) {
-    _backendQueue.async { work() }
+    if let _ = _backendQueue.getSpecific(key: _backendMarkerConcurrentQueue) {
+        _backendQueue.asyncWithCheck(key: _backendMarkerConcurrentQueue, execute: work)
+    } else {
+        _backendQueue.setSpecific(key: _backendMarkerConcurrentQueue, value: _backendConcurrentLabel)
+        _backendQueue.async { work() }
+    }
 }
 
 // MARK: - Backend serial queue
