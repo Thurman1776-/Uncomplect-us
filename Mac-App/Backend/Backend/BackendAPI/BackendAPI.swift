@@ -16,6 +16,7 @@ public enum BackendAPI {
             findProjectOutputDirsSideEffects(finder: findProjectOutputDirectories),
             parseSwiftDepsSideEffects(yamlParser: parseYamlUrls(from:)),
             dependencyGraphSideEffects(parser: parseSwiftDeps(_:)),
+            // This side effect should always be the last! 
             assignActionsOnQueuesSideEffects(),
         ]
     )
