@@ -24,8 +24,12 @@ func dispatchAsyncOnConcurrentBackendQueue(
     _backendQueue.async { work() }
 }
 
+// MARK: - Backend serial queue
+
+private let _backendSerialLabel = "Acphut.Werkstatt.Backend.serial"
+private let _backendMarkerSerialQueue = DispatchSpecificKey<String>()
 private let _backendSerialQueue = DispatchQueue(
-    label: "Acphut.Werkstatt.Backend.serial",
+    label: _backendSerialLabel,
     qos: .userInitiated,
     autoreleaseFrequency: .inherit
 )
@@ -34,5 +38,10 @@ func dispatchAsyncOnSerialBackendQueue(
     with _: DispatchQoS.QoSClass = .userInitiated,
     work: @escaping () -> Void
 ) {
-    _backendSerialQueue.async { work() }
+    if let _ = _backendSerialQueue.getSpecific(key: _backendMarkerSerialQueue) {
+        _backendSerialQueue.asyncWithCheck(key: _backendMarkerSerialQueue, execute: work)
+    } else {
+        _backendSerialQueue.setSpecific(key: _backendMarkerSerialQueue, value: _backendSerialLabel)
+        _backendSerialQueue.async { work() }
+    }
 }
