@@ -1,5 +1,5 @@
 //
-//  AsignActionsOnQueuesSideEffects.swift
+//  RunActionsOnSerialQueueSideEffects.swift
 //  Backend
 //
 //  Created by Daniel Garcia on 24.10.20.
@@ -8,7 +8,7 @@
 
 import ReSwift
 
-func assignActionsOnQueuesSideEffects() -> Middleware<AppState> {
+func runActionsOnSerialQueueSideEffects() -> Middleware<AppState> {
     { (_: @escaping DispatchFunction, _: @escaping () -> AppState?) in
         { (next: @escaping DispatchFunction) in
             { action in
