@@ -24,6 +24,7 @@
 		654474A524E6C7460029E04C /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654474A424E6C7460029E04C /* NavigationState.swift */; };
 		654474A824E6C9540029E04C /* NavigationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654474A724E6C9540029E04C /* NavigationReducer.swift */; };
 		654474AB24E6CC160029E04C /* NavigationReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654474A924E6CC120029E04C /* NavigationReducerSpec.swift */; };
+		655BF9682549E14200C8DFFC /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655BF9672549E14200C8DFFC /* DispatchQueue.swift */; };
 		65896D26249CB0EE00257175 /* Project-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D23249CB0EE00257175 /* Project-Debug.xcconfig */; };
 		65896D27249CB0EE00257175 /* Project-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D24249CB0EE00257175 /* Project-Release.xcconfig */; };
 		65896D28249CB0EE00257175 /* Project-Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65896D25249CB0EE00257175 /* Project-Shared.xcconfig */; };
@@ -124,6 +125,7 @@
 		654474A424E6C7460029E04C /* NavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationState.swift; sourceTree = "<group>"; };
 		654474A724E6C9540029E04C /* NavigationReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationReducer.swift; sourceTree = "<group>"; };
 		654474A924E6CC120029E04C /* NavigationReducerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationReducerSpec.swift; sourceTree = "<group>"; };
+		655BF9672549E14200C8DFFC /* DispatchQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
 		65896D23249CB0EE00257175 /* Project-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Debug.xcconfig"; sourceTree = "<group>"; };
 		65896D24249CB0EE00257175 /* Project-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Release.xcconfig"; sourceTree = "<group>"; };
 		65896D25249CB0EE00257175 /* Project-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Shared.xcconfig"; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				A84DAD30244C7F01005EAB59 /* Collection.swift */,
+				655BF9672549E14200C8DFFC /* DispatchQueue.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -769,6 +772,7 @@
 				654474A524E6C7460029E04C /* NavigationState.swift in Sources */,
 				654474A824E6C9540029E04C /* NavigationReducer.swift in Sources */,
 				A85514F423E6015E00D3E7F6 /* SwiftDepsReducer.swift in Sources */,
+				655BF9682549E14200C8DFFC /* DispatchQueue.swift in Sources */,
 				A8F12EF823DF6427001EB945 /* FindProjectOutputDirsSideEffects.swift in Sources */,
 				A8CAE99D23DCABC100242ADF /* Commandable.swift in Sources */,
 				A8E7627123DDBBB700BFAD48 /* BackendAPI.swift in Sources */,
