@@ -9,7 +9,7 @@
 // MARK: - Backend concurrent queue
 
 private let _backendConcurrentLabel = "Acphut.Werkstatt.Backend.concurrent"
-private let _backendMarkerConcurrentQueue = DispatchSpecificKey<String>()
+private let _backendConcurrentMarker = DispatchSpecificKey<String>()
 private let _backendQueue = DispatchQueue(
     label: _backendConcurrentLabel,
     qos: .userInitiated,
@@ -21,10 +21,10 @@ func dispatchAsyncOnConcurrentBackendQueue(
     with _: DispatchQoS.QoSClass = .userInitiated,
     work: @escaping () -> Void
 ) {
-    if let _ = _backendQueue.getSpecific(key: _backendMarkerConcurrentQueue) {
-        _backendQueue.asyncWithCheck(key: _backendMarkerConcurrentQueue, execute: work)
+    if let _ = _backendQueue.getSpecific(key: _backendConcurrentMarker) {
+        _backendQueue.asyncWithCheck(key: _backendConcurrentMarker, execute: work)
     } else {
-        _backendQueue.setSpecific(key: _backendMarkerConcurrentQueue, value: _backendConcurrentLabel)
+        _backendQueue.setSpecific(key: _backendConcurrentMarker, value: _backendConcurrentLabel)
         _backendQueue.async { work() }
     }
 }
@@ -32,7 +32,7 @@ func dispatchAsyncOnConcurrentBackendQueue(
 // MARK: - Backend serial queue
 
 private let _backendSerialLabel = "Acphut.Werkstatt.Backend.serial"
-private let _backendMarkerSerialQueue = DispatchSpecificKey<String>()
+private let _backendSerialMarker = DispatchSpecificKey<String>()
 private let _backendSerialQueue = DispatchQueue(
     label: _backendSerialLabel,
     qos: .userInitiated,
@@ -43,10 +43,10 @@ func dispatchAsyncOnSerialBackendQueue(
     with _: DispatchQoS.QoSClass = .userInitiated,
     work: @escaping () -> Void
 ) {
-    if let _ = _backendSerialQueue.getSpecific(key: _backendMarkerSerialQueue) {
-        _backendSerialQueue.asyncWithCheck(key: _backendMarkerSerialQueue, execute: work)
+    if let _ = _backendSerialQueue.getSpecific(key: _backendSerialMarker) {
+        _backendSerialQueue.asyncWithCheck(key: _backendSerialMarker, execute: work)
     } else {
-        _backendSerialQueue.setSpecific(key: _backendMarkerSerialQueue, value: _backendSerialLabel)
+        _backendSerialQueue.setSpecific(key: _backendSerialMarker, value: _backendSerialLabel)
         _backendSerialQueue.async { work() }
     }
 }
