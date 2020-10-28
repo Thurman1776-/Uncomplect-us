@@ -17,10 +17,7 @@ private let _backendQueue = DispatchQueue(
     autoreleaseFrequency: .inherit
 )
 
-func dispatchAsyncOnConcurrentBackendQueue(
-    with _: DispatchQoS.QoSClass = .userInitiated,
-    work: @escaping () -> Void
-) {
+func dispatchAsyncOnConcurrentBackendQueue(_ work: @escaping () -> Void) {
     if let _ = _backendQueue.getSpecific(key: _backendConcurrentMarker) {
         _backendQueue.asyncWithCheck(key: _backendConcurrentMarker, execute: work)
     } else {
@@ -39,10 +36,7 @@ private let _backendSerialQueue = DispatchQueue(
     autoreleaseFrequency: .inherit
 )
 
-func dispatchAsyncOnSerialBackendQueue(
-    with _: DispatchQoS.QoSClass = .userInitiated,
-    work: @escaping () -> Void
-) {
+func dispatchAsyncOnSerialBackendQueue(_ work: @escaping () -> Void) {
     if let _ = _backendSerialQueue.getSpecific(key: _backendSerialMarker) {
         _backendSerialQueue.asyncWithCheck(key: _backendSerialMarker, execute: work)
     } else {

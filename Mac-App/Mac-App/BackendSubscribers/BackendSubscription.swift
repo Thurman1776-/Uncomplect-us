@@ -30,6 +30,7 @@ struct BackendSubscription: StateSubscription {
 
     private mutating func registerSubscribers() {
         // MARK: - Dependency list (and its children)
+
         let listViewTransformer = ListViewTransformer()
         BackendAPI.subscribe(listViewTransformer.stateObserver) { appState -> Subscription<Frontend.DependencyTree.State> in
             let skippingOnSameSubState = appState.skip { $0.dependencyGraphState == $1.dependencyGraphState }
@@ -37,6 +38,7 @@ struct BackendSubscription: StateSubscription {
         }
 
         // MARK: - Project stats shown on the left hand side of the app
+
         let projectDetailsTransformer = ProjectDetailsTransformer()
         BackendAPI.subscribe(projectDetailsTransformer.stateObserver) { appState -> Subscription<ProjectDetails.State> in
             let skippingOnSameSubState = appState.skip { lhs, rhs -> Bool in
@@ -46,6 +48,7 @@ struct BackendSubscription: StateSubscription {
         }
 
         // MARK: - App navigation
+
         let navigationTransformer = NavigationTransformer(
             window: window,
             listViewInput: listViewTransformer.viewInput,
