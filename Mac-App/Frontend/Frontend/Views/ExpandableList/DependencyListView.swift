@@ -31,7 +31,7 @@ public struct DependencyListView: View {
                         } else {
                             renderList(using: state.filteredDependencies)
                         }
-                    }
+                    }.id(UUID())
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             )
