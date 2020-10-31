@@ -819,10 +819,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 65896D2B249CB11100257175 /* Backend-Debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Dependencies/macOS",
-				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 			};
 			name = Debug;
@@ -831,10 +827,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 65896D2A249CB11100257175 /* Backend-Release.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Dependencies/macOS",
-				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 			};
 			name = Release;
@@ -843,10 +835,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 65896D30249CB13B00257175 /* BackendTests-Debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Dependencies/macOS",
-				);
 			};
 			name = Debug;
 		};
@@ -854,10 +842,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 65896D2F249CB13B00257175 /* BackendTests-Release.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Dependencies/macOS",
-				);
 			};
 			name = Release;
 		};
