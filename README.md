@@ -18,7 +18,7 @@ representation of dependencies + tons of other useful features.
 
 ### Requirements
 
-- Xcode 11.4.1
+- Xcode 12.0
 - accio which can be installed via brew
     ````
     brew tap JamitLabs/Accio https://github.com/JamitLabs/Accio.git
