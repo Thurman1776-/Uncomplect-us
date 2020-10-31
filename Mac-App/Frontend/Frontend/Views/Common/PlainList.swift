@@ -23,7 +23,7 @@ public struct PlainList: View {
                 Text(title)
                     .font(.caption)
                     .italic()
-                    .foregroundColor(self.itemsColor)
+                    .foregroundColor(itemsColor)
             }
         }
     }

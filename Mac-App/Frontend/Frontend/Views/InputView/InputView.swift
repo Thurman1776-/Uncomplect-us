@@ -19,8 +19,8 @@ public struct InputView: View {
             "Type your project's name...",
             text: $input,
             onCommit: {
-                guard self.input.isEmpty == false else { return }
-                self.actionDispatcher.dispatch(InputViewAction.search(self.input))
+                guard input.isEmpty == false else { return }
+                actionDispatcher.dispatch(InputViewAction.search(input))
             }
         ).border(
             AngularGradient(

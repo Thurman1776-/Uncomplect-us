@@ -23,15 +23,15 @@ public struct SearchBar: View {
             TextField(
                 "\(placeholder)    ",
                 text: $searchText,
-                onCommit: { self.dispatchAction() }
+                onCommit: { dispatchAction() }
             )
             .padding(8)
             .padding(.horizontal, 10)
             .background(Color.lightGray)
             .cornerRadius(8)
             .onTapGesture {
-                self.isEditing = true
-                self.searchText = ""
+                isEditing = true
+                searchText = ""
             }
         }
     }
