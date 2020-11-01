@@ -17,7 +17,7 @@ private let _backendQueue = DispatchQueue(
     autoreleaseFrequency: .inherit
 )
 
-func dispatchAsyncOnConcurrentBackendQueue(_ work: @escaping () -> Void) {
+func dispatchAsyncOnConcurrentBackgroundQueue(_ work: @escaping () -> Void) {
     if let _ = _backendQueue.getSpecific(key: _backendConcurrentMarker) {
         _backendQueue.asyncWithCheck(key: _backendConcurrentMarker, execute: work)
     } else {
