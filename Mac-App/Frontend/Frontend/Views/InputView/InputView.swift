@@ -21,6 +21,11 @@ public struct InputView: View {
             onCommit: {
                 guard input.isEmpty == false else { return }
                 actionDispatcher.dispatch(InputViewAction.search(input))
+                // FIX ME: When the view gets removed from its parent, this closure is run twice
+                // causing the following undesired side effect:
+                // 1. `InputViewAction.search(input)` gets dispatched twice. Effectively duplicating results
+                // It seems this is a common issue with TextFields when they get removed from the hierarchy
+                // Same happens with `SearchBar` - A proper solution for all cases needs to be thought of
                 input = ""
             }
         ).border(
