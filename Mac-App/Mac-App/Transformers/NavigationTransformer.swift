@@ -52,12 +52,14 @@ final class NavigationTransformer: StateTransforming, StateRepresentableViewInpu
             listViewInput.update(to: .initial)
             projectDetailsViewInput.update(to: .initial)
             window.contentView = NSHostingView(rootView: InputView())
+            window.makeKeyAndOrderFront(nil)
         case .mainScreen:
             let mainSplitView = MainSplitView(
                 dependencyTreeStatus: listViewInput,
                 projectDetailsStatus: projectDetailsViewInput
             )
             window.contentView = NSHostingView(rootView: mainSplitView)
+            window.makeKeyAndOrderFront(nil)
         }
     }
 }
