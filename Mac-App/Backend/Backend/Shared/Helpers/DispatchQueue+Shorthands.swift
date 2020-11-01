@@ -19,7 +19,7 @@ private let _backendQueue = DispatchQueue(
 
 func dispatchAsyncOnConcurrentBackgroundQueue(_ work: @escaping () -> Void) {
     if let _ = _backendQueue.getSpecific(key: _backendConcurrentMarker) {
-        _backendQueue.asyncWithCheck(key: _backendConcurrentMarker, execute: work)
+        _backendQueue.asyncCheckingCurrentQueue(for: _backendConcurrentMarker, execute: work)
     } else {
         _backendQueue.setSpecific(key: _backendConcurrentMarker, value: _backendConcurrentLabel)
         _backendQueue.async { work() }
@@ -38,7 +38,7 @@ private let _backendSerialQueue = DispatchQueue(
 
 func dispatchAsyncOnSerialBackendQueue(_ work: @escaping () -> Void) {
     if let _ = _backendSerialQueue.getSpecific(key: _backendSerialMarker) {
-        _backendSerialQueue.asyncWithCheck(key: _backendSerialMarker, execute: work)
+        _backendSerialQueue.asyncCheckingCurrentQueue(for: _backendSerialMarker, execute: work)
     } else {
         _backendSerialQueue.setSpecific(key: _backendSerialMarker, value: _backendSerialLabel)
         _backendSerialQueue.async { work() }
