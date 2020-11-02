@@ -19,7 +19,7 @@ func findProjectOutputDirsSideEffects(finder: @escaping ProjectOutputFinderType)
                 switch action {
                 case let DependencyPathsAction.findUrls(for: project):
                     dispatchFuction(NavigationAction.transition(to: .mainScreen))
-                    dispatchAsyncOnBackendQueue {
+                    dispatchAsyncOnConcurrentBackgroundQueue {
                         let urls = finder(
                             DefaultSearchValues.derivedDataPaths,
                             project,

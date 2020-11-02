@@ -21,6 +21,7 @@ public struct InputView: View {
             onCommit: {
                 guard input.isEmpty == false else { return }
                 actionDispatcher.dispatch(InputViewAction.search(input))
+                input = ""
             }
         ).border(
             AngularGradient(
