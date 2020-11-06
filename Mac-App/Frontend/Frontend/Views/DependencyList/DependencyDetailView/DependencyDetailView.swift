@@ -19,7 +19,7 @@ struct DependencyDetailView: View {
         VStack {
             Text(dependency.owner)
                 .font(.title)
-                .foregroundColor(.gray)
+                .foregroundColor(.lightBlue)
                 .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
                 .clipped()
             Text("Dependency count: \(dependency.dependencies.count)")
