@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		652FCF092555FC4A0025AC6B /* DependencyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FCF082555FC4A0025AC6B /* DependencyDetailView.swift */; };
 		654474AF24E72F5B0029E04C /* NavigationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654474AE24E72F5B0029E04C /* NavigationData.swift */; };
 		655AC9FA24B6CC05005D8145 /* SearchableDependencyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655AC9F924B6CC05005D8145 /* SearchableDependencyListView.swift */; };
 		656F141F24BB05930019C550 /* FrontendActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F141E24BB05930019C550 /* FrontendActions.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		652FCF082555FC4A0025AC6B /* DependencyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyDetailView.swift; sourceTree = "<group>"; };
 		654474AE24E72F5B0029E04C /* NavigationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationData.swift; sourceTree = "<group>"; };
 		655AC9F924B6CC05005D8145 /* SearchableDependencyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableDependencyListView.swift; sourceTree = "<group>"; };
 		656F141E24BB05930019C550 /* FrontendActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontendActions.swift; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		652FCF072555FC290025AC6B /* DependencyDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				652FCF082555FC4A0025AC6B /* DependencyDetailView.swift */,
+			);
+			path = DependencyDetailView;
+			sourceTree = "<group>";
+		};
 		655AC9F824B6CBD4005D8145 /* SearchableDependencyListView */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +260,7 @@
 		A8FECA9F2429EBE80028CC64 /* DependencyList */ = {
 			isa = PBXGroup;
 			children = (
+				652FCF072555FC290025AC6B /* DependencyDetailView */,
 				A8F2525D23FF0BF300CD12DE /* DependencyListView.swift */,
 				A88160DA2421073300CDB15A /* DependencyItemView.swift */,
 			);
@@ -426,6 +437,7 @@
 				A8FECAA72430BCAE0028CC64 /* DetailsView.swift in Sources */,
 				A8F2526824029B6500CD12DE /* DependencyTree.swift in Sources */,
 				A8DF67642412D9AE00D0DE02 /* InputView.swift in Sources */,
+				652FCF092555FC4A0025AC6B /* DependencyDetailView.swift in Sources */,
 				A88160DD2421480E00CDB15A /* ListRowModifier.swift in Sources */,
 				A8F2526424029A2400CD12DE /* Observable.swift in Sources */,
 				A8F2525E23FF0BF300CD12DE /* DependencyListView.swift in Sources */,
