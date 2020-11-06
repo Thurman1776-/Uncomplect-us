@@ -36,27 +36,29 @@ public struct DependencyListView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
+    
+    // MARK: Private API
 
     private func renderList(using dependencies: [DependencyTree.State.Dependency]) -> some View {
         ForEach(dependencies, id: \.id) { dependency in
-            DependencyItemView(
-                dependency: dependency,
-                isExpanded: shouldExpandCell(dependency)
-            ).onTapGesture { didTapItem(dependency) }
+            dependencyItem(dependency)
                 .modifier(ListRowModifier())
                 .animation(.linear(duration: 0.25))
         }
     }
-
-    private func didTapItem(_ item: DependencyTree.State.Dependency) {
-        if selection.contains(item) {
-            selection.remove(item)
-        } else {
-            selection.insert(item)
+    
+    private func dependencyItem(_ dependency: DependencyTree.State.Dependency) -> some View {
+        VStack(alignment: .leading) {
+            HStack {
+                Text("Owner: \(dependency.owner)")
+                    .font(.headline)
+                    .foregroundColor(.lightBlue)
+                Text("Dependency count: \(dependency.dependencies.count)")
+                    .font(.caption)
+                    .foregroundColor(.white)
+            }
+            .padding(8)
         }
-    }
-
-    private func shouldExpandCell(_ dependency: DependencyTree.State.Dependency) -> Bool {
-        selection.contains(dependency)
+        .padding([.leading, .top, .trailing], 8)
     }
 }
