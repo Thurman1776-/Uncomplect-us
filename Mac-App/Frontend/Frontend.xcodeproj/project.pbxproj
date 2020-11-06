@@ -229,7 +229,7 @@
 			children = (
 				655AC9F824B6CBD4005D8145 /* SearchableDependencyListView */,
 				A8DF675F2411637700D0DE02 /* Common */,
-				A8FECA9F2429EBE80028CC64 /* ExpandableList */,
+				A8FECA9F2429EBE80028CC64 /* DependencyList */,
 				A8DF67622412D9A200D0DE02 /* InputView */,
 				A8FECAA02429ECD40028CC64 /* MainSplitView */,
 				A8FECAA52430BC970028CC64 /* DetailsView */,
@@ -247,13 +247,13 @@
 			path = ViewData;
 			sourceTree = "<group>";
 		};
-		A8FECA9F2429EBE80028CC64 /* ExpandableList */ = {
+		A8FECA9F2429EBE80028CC64 /* DependencyList */ = {
 			isa = PBXGroup;
 			children = (
 				A8F2525D23FF0BF300CD12DE /* DependencyListView.swift */,
 				A88160DA2421073300CDB15A /* DependencyItemView.swift */,
 			);
-			path = ExpandableList;
+			path = DependencyList;
 			sourceTree = "<group>";
 		};
 		A8FECAA02429ECD40028CC64 /* MainSplitView */ = {
