@@ -2,7 +2,7 @@ import Frontend
 import PlaygroundSupport
 import SwiftUI
 
-let itemView = DependencyItemView(
+let itemView = DependencyItemsView(
     dependency: DependencyTree.State.Dependency(owner: "Daniel", dependencies: ["orange", "apple", "banana"]),
     isExpanded: true
 )

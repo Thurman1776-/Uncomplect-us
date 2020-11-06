@@ -1,5 +1,5 @@
 //
-//  DependencyItemView.swift
+//  DependencyItemsView.swift
 //  Frontend
 //
 //  Created by Daniel GARCÍA on 17.03.20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-public struct DependencyItemView: View {
+public struct DependencyItemsView: View {
     let dependency: DependencyTree.State.Dependency
 
     public init(dependency: DependencyTree.State.Dependency) {
@@ -37,9 +37,9 @@ public struct DependencyItemView: View {
     }
 }
 
-struct DependencyItemView_Previews: PreviewProvider {
+struct DependencyItemsView_Previews: PreviewProvider {
     static var previews: some View {
-        DependencyItemView(
+        DependencyItemsView(
             dependency: .init(
                 owner: "Apple",
                 dependencies: ["iOS", "watchOS", "macOS", "tvOS"]

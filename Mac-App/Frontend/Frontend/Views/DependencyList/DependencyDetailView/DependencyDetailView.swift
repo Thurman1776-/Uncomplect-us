@@ -27,7 +27,7 @@ struct DependencyDetailView: View {
                 .foregroundColor(.gray)
             Divider()
                 .foregroundColor(.white)
-            DependencyItemView(dependency: dependency)
+            DependencyItemsView(dependency: dependency)
         }
     }
 }
