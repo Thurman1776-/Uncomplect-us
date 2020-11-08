@@ -59,7 +59,9 @@ public struct DetailsView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         case let .failure(errorMessage):
             Text(errorMessage)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .bold()
+                .foregroundColor(.gray)
+                .padding([.leading, .trailing, .bottom], 8)
         }
     }
 }

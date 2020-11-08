@@ -33,10 +33,13 @@ public struct DependencyListView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         case let .failure(message):
             Text(message)
+                .bold()
+                .foregroundColor(.gray)
+                .padding([.leading, .trailing, .bottom], 8)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
-    
+
     // MARK: Private API
 
     private func renderList(using dependencies: [DependencyTree.State.Dependency]) -> some View {
@@ -46,7 +49,7 @@ public struct DependencyListView: View {
                 .animation(.linear(duration: 0.25))
         }
     }
-    
+
     private func dependencyItem(_ dependency: DependencyTree.State.Dependency) -> some View {
         VStack(alignment: .leading) {
             HStack {
