@@ -34,7 +34,6 @@
 		A8F2525E23FF0BF300CD12DE /* DependencyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2525D23FF0BF300CD12DE /* DependencyListView.swift */; };
 		A8F2526424029A2400CD12DE /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2526324029A2400CD12DE /* Observable.swift */; };
 		A8F2526824029B6500CD12DE /* DependencyTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2526724029B6500CD12DE /* DependencyTree.swift */; };
-		A8FECAA22429ED1A0028CC64 /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA12429ED1A0028CC64 /* MainSplitViewController.swift */; };
 		A8FECAA4243096650028CC64 /* MainSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA3243096650028CC64 /* MainSplitView.swift */; };
 		A8FECAA72430BCAE0028CC64 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA62430BCAE0028CC64 /* DetailsView.swift */; };
 		A8FECAA92431086D0028CC64 /* ProjectDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA82431086D0028CC64 /* ProjectDetails.swift */; };
@@ -82,7 +81,6 @@
 		A8F2525D23FF0BF300CD12DE /* DependencyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyListView.swift; sourceTree = "<group>"; };
 		A8F2526324029A2400CD12DE /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		A8F2526724029B6500CD12DE /* DependencyTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyTree.swift; sourceTree = "<group>"; };
-		A8FECAA12429ED1A0028CC64 /* MainSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitViewController.swift; sourceTree = "<group>"; };
 		A8FECAA3243096650028CC64 /* MainSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitView.swift; sourceTree = "<group>"; };
 		A8FECAA62430BCAE0028CC64 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		A8FECAA82431086D0028CC64 /* ProjectDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetails.swift; sourceTree = "<group>"; };
@@ -270,7 +268,6 @@
 		A8FECAA02429ECD40028CC64 /* MainSplitView */ = {
 			isa = PBXGroup;
 			children = (
-				A8FECAA12429ED1A0028CC64 /* MainSplitViewController.swift */,
 				A8FECAA3243096650028CC64 /* MainSplitView.swift */,
 			);
 			path = MainSplitView;
@@ -431,7 +428,6 @@
 				65E8586D24B573DD00A58DE3 /* SearchBar.swift in Sources */,
 				A88160DB2421073300CDB15A /* DependencyItemsView.swift in Sources */,
 				A8FECAA92431086D0028CC64 /* ProjectDetails.swift in Sources */,
-				A8FECAA22429ED1A0028CC64 /* MainSplitViewController.swift in Sources */,
 				655AC9FA24B6CC05005D8145 /* SearchableDependencyListView.swift in Sources */,
 				A82DDE0F246E5822000259BF /* ActivityIndicator+LoadingDescription.swift in Sources */,
 				A8FECAA72430BCAE0028CC64 /* DetailsView.swift in Sources */,
