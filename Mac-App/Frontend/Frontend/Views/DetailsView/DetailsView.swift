@@ -24,44 +24,75 @@ public struct DetailsView: View {
                 isLoading: true
             ).frame(width: 200, height: 250)
         case let .success(state: state):
-            VStack {
-                VStack {
-                    Text("Heaviest dependency: ")
-                        .foregroundColor(.lightBlue)
-                        .font(.system(.headline))
-                    Text(state.heaviestDependency)
-                        .underline()
-                        .font(.system(.subheadline))
-                        .foregroundColor(.white)
-                }
-                .padding(EdgeInsets(top: 8, leading: 4, bottom: 16, trailing: 4))
-
-                VStack {
+            HStack(spacing: 8) {
+                VStack(spacing: 4) {
+                    VStack {
+                        Text("Heaviest dependency: ")
+                            .foregroundColor(.lightBlue)
+                            .font(.system(.headline))
+                        Text(state.heaviestDependency)
+                            .underline()
+                            .font(.system(.subheadline))
+                            .foregroundColor(.white)
+                    }
+                    
                     Text("Total dependencies found: \(state.totalDependenciesFound)")
                         .bold()
                         .foregroundColor(.lightBlue)
                         .font(.system(.body))
+                    
+                    Text("Files scanned: \(state.paths.count)")
+                        .bold()
+                        .foregroundColor(.lightGreen)
+                        .font(.system(.body))
                 }
-                .padding(EdgeInsets(top: 0, leading: 4, bottom: 16, trailing: 4))
-
-                Text("Files scanned: \(state.paths.count)")
-                    .bold()
-                    .foregroundColor(.lightGreen)
-                    .font(.system(.body))
-                    .padding(EdgeInsets(top: 0, leading: 4, bottom: 16, trailing: 4))
 
                 PlainList(
                     titles: state.paths.map { String($0.absoluteString) },
                     itemsColor: .yellow
                 )
             }
-            .padding(EdgeInsets(top: 16, leading: 4, bottom: 16, trailing: 4))
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding([.leading, .top, .trailing, .bottom], 8)
         case let .failure(errorMessage):
             Text(errorMessage)
                 .bold()
                 .foregroundColor(.gray)
                 .padding([.leading, .trailing, .bottom], 8)
         }
+    }
+}
+
+struct DetailsView_Previews: PreviewProvider {
+    static var previews: some View {
+        DetailsView(
+            projectDetailsStatus: Observable<ProjectDetails.Status>(
+                ProjectDetails.Status.success(
+                    state: .init(
+                        heaviestDependency: "Heaviest",
+                        totalDependenciesFound: 100_000,
+                        paths: [
+                            URL(string: "www.google.com")!,
+                            URL(string: "www.google.com")!,
+                            URL(string: "www.google.com")!,
+                            URL(string: "www.google.com")!,
+                            URL(string: "www.google.com")!,
+                            URL(string: "www.google.com")!,
+                            URL(string: "www.google.com")!,
+                            URL(string: "www.google.com")!,
+                            URL(string: "www.google.com")!,
+                            URL(string: "www.google.com")!,
+                            URL(string: "www.google.com")!,
+                            URL(string: "www.google.com")!,
+                            URL(string: "www.google.com")!,
+                            URL(string: "www.google.com")!,
+                            URL(string: "www.google.com")!,
+                            URL(string: "www.google.com")!,
+                            URL(string: "www.google.com")!,
+                        ],
+                        failure: nil
+                    )
+                )
+            )
+        )
     }
 }
