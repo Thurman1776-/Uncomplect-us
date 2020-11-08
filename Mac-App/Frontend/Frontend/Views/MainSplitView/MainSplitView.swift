@@ -21,9 +21,8 @@ public struct MainSplitView: View {
     }
 
     public var body: some View {
-        HStack(alignment: .center, spacing: 16) {
+        VStack(alignment: .center, spacing: 0) {
             DetailsView(projectDetailsStatus: projectDetailsStatus)
-                
             Divider()
                 .foregroundColor(.gray)
             SearchableDependencyListView(dependencyTreeStatus: dependencyTreeStatus)
@@ -53,7 +52,7 @@ struct MainSplitView_Previews: PreviewProvider {
                             dependencies: [
                                 .init(owner: "First", dependencies: ["one", "two", "three"]),
                                 .init(owner: "Second", dependencies: ["one", "two", "three"]),
-                                .init(owner: "Third", dependencies: ["one", "two", "three"])
+                                .init(owner: "Third", dependencies: ["one", "two", "three"]),
                             ],
                             filteredDependencies: [],
                             failure: ""
@@ -68,7 +67,21 @@ struct MainSplitView_Previews: PreviewProvider {
                             paths: [
                                 URL(string: "www.google.com")!,
                                 URL(string: "www.google.com")!,
-                                URL(string: "www.google.com")!
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
                             ],
                             failure: nil
                         )

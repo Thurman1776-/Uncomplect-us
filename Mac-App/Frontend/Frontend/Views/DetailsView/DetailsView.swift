@@ -35,12 +35,12 @@ public struct DetailsView: View {
                             .font(.system(.subheadline))
                             .foregroundColor(.white)
                     }
-                    
+
                     Text("Total dependencies found: \(state.totalDependenciesFound)")
                         .bold()
                         .foregroundColor(.lightBlue)
                         .font(.system(.body))
-                    
+
                     Text("Files scanned: \(state.paths.count)")
                         .bold()
                         .foregroundColor(.lightGreen)
