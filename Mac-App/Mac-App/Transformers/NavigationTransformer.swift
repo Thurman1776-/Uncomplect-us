@@ -16,6 +16,7 @@ final class NavigationTransformer: StateTransforming, StateRepresentableViewInpu
     let stateObserver = StateObserver<Frontend.NavigationData.State>(state: NavigationData.State.initialState)
     let viewInput: Observable<NavigationData.Status> = .init(.initial)
     private var cancellable: AnyCancellable = AnyCancellable {}
+    private var currentView: NavigationData.Node?
 
     private let window: NSWindow
     private let listViewInput: Observable<Frontend.DependencyTree.Status>
@@ -32,7 +33,7 @@ final class NavigationTransformer: StateTransforming, StateRepresentableViewInpu
     }
 
     func startListening() {
-        cancellable = stateObserver.$currentState.sink { [unowned self] in self.emitNewState($0) }
+        cancellable = stateObserver.$currentState.receive(on: DispatchQueue.main).sink { [unowned self] in self.emitNewState($0) }
     }
 
     func stopListening() {
@@ -40,8 +41,11 @@ final class NavigationTransformer: StateTransforming, StateRepresentableViewInpu
     }
 
     func emitNewState(_ state: NavigationData.State) {
+        guard currentView != state.currentNode else { return }
+
         switch state.currentNode {
         case .startup:
+            currentView = .startup
             window.center()
             window.setFrameAutosaveName("Main Window")
             window.makeKeyAndOrderFront(nil)
@@ -49,15 +53,19 @@ final class NavigationTransformer: StateTransforming, StateRepresentableViewInpu
         case .input:
             // When transitioning to `input` view, transformers' view data need to switch back to
             // `initial` state for correct layout rendering
+            currentView = .input
             listViewInput.update(to: .initial)
             projectDetailsViewInput.update(to: .initial)
             window.contentView = NSHostingView(rootView: InputView())
+            window.makeKeyAndOrderFront(nil)
         case .mainScreen:
+            currentView = .mainScreen
             let mainSplitView = MainSplitView(
                 dependencyTreeStatus: listViewInput,
                 projectDetailsStatus: projectDetailsViewInput
             )
             window.contentView = NSHostingView(rootView: mainSplitView)
+            window.makeKeyAndOrderFront(nil)
         }
     }
 }

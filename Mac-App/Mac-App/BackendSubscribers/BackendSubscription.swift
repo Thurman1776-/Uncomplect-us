@@ -9,6 +9,7 @@
 import Backend
 import Cocoa
 import Frontend
+import ReSwift
 
 struct BackendSubscription: StateSubscription {
     private let window: NSWindow
@@ -28,18 +29,35 @@ struct BackendSubscription: StateSubscription {
     }
 
     private mutating func registerSubscribers() {
+        // MARK: - Dependency list (and its children)
+
         let listViewTransformer = ListViewTransformer()
-        BackendAPI.subscribe(listViewTransformer.stateObserver) { $0.select(DependencyTree.State.init) }
+        BackendAPI.subscribe(listViewTransformer.stateObserver) { appState -> Subscription<Frontend.DependencyTree.State> in
+            let skippingOnSameSubState = appState.skip { $0.dependencyGraphState == $1.dependencyGraphState }
+            return skippingOnSameSubState.select(Frontend.DependencyTree.State.init)
+        }
+
+        // MARK: - Project stats shown on the left hand side of the app
 
         let projectDetailsTransformer = ProjectDetailsTransformer()
-        BackendAPI.subscribe(projectDetailsTransformer.stateObserver) { $0.select(ProjectDetails.State.init) }
+        BackendAPI.subscribe(projectDetailsTransformer.stateObserver) { appState -> Subscription<ProjectDetails.State> in
+            let skippingOnSameSubState = appState.skip { lhs, rhs -> Bool in
+                lhs.dependencyGraphState == rhs.dependencyGraphState && lhs.dependencyPathsState == rhs.dependencyPathsState
+            }
+            return skippingOnSameSubState.select(ProjectDetails.State.init)
+        }
+
+        // MARK: - App navigation
 
         let navigationTransformer = NavigationTransformer(
             window: window,
             listViewInput: listViewTransformer.viewInput,
             projectDetailsViewInput: projectDetailsTransformer.viewInput
         )
-        BackendAPI.subscribe(navigationTransformer.stateObserver) { $0.select(NavigationData.State.init) }
+        BackendAPI.subscribe(navigationTransformer.stateObserver) { appState -> Subscription<Frontend.NavigationData.State> in
+            let skippingOnSameSubState = appState.skip { $0.navigationState == $1.navigationState }
+            return skippingOnSameSubState.select(NavigationData.State.init)
+        }
 
         transformers.append(listViewTransformer)
         transformers.append(projectDetailsTransformer)
