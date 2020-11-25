@@ -42,7 +42,7 @@ final class NavigationTransformer: StateTransforming, StateRepresentableViewInpu
 
     func emitNewState(_ state: NavigationData.State) {
         guard currentView != state.currentNode else { return }
-        
+
         switch state.currentNode {
         case .startup:
             currentView = .startup

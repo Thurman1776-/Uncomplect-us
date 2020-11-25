@@ -28,8 +28,6 @@
 		A86E103E2365DAB900D3FF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86E103C2365DAB900D3FF94 /* Main.storyboard */; };
 		A8743A6F245F28BF00F8BFF2 /* BackendSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8743A6E245F28BF00F8BFF2 /* BackendSubscription.swift */; };
 		A8743A72245F2B1B00F8BFF2 /* StateObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8743A71245F2B1B00F8BFF2 /* StateObserver.swift */; };
-		A89E0BE423F883AA0009154E /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89E0BE323F883AA0009154E /* ReSwift.framework */; };
-		A89E0BE523F883AA0009154E /* ReSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A89E0BE323F883AA0009154E /* ReSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A8CAE9AA23DCAE7E00242ADF /* Mac-AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE9A923DCAE7E00242ADF /* Mac-AppTests.swift */; };
 		A8F252602400526200CD12DE /* Frontend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F2525F2400526200CD12DE /* Frontend.framework */; };
 		A8FECAAB24310DDC0028CC64 /* ProjectDetailsTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAAA24310DDC0028CC64 /* ProjectDetailsTransformer.swift */; };
@@ -44,20 +42,6 @@
 			remoteInfo = "Mac-App";
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A89E0BE623F883AA0009154E /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A89E0BE523F883AA0009154E /* ReSwift.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		65358E43249CB4310004510F /* Project-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,7 +83,6 @@
 			files = (
 				A8F252602400526200CD12DE /* Frontend.framework in Frameworks */,
 				A8199C5823E70C97000B89F6 /* Backend.framework in Frameworks */,
-				A89E0BE423F883AA0009154E /* ReSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +238,6 @@
 				A86E102C2365DAB800D3FF94 /* Sources */,
 				A86E102D2365DAB800D3FF94 /* Frameworks */,
 				A86E102E2365DAB800D3FF94 /* Resources */,
-				A89E0BE623F883AA0009154E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
