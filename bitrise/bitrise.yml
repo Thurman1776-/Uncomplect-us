@@ -2,6 +2,7 @@
 #
 # IMPORTANT: Before running this config locally, make sure you have latest yml from bitrise.com
 #
+---
 format_version: '8'
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 project_type: macos
@@ -17,15 +18,6 @@ workflows:
         run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
     - git-clone@4: {}
     - cache-pull@2: {}
-    - script@1:
-        title: Installs Accio (deploy)
-        run_if: ".IsCI"
-        inputs:
-        - content: |-
-            brew tap JamitLabs/Accio https://github.com/JamitLabs/Accio.git
-            brew install accio
-            cd Mac-App/Backend
-            accio install
     - certificate-and-profile-installer@1: {}
     - xcode-test-mac@1:
         inputs:
@@ -44,15 +36,6 @@ workflows:
         run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
     - git-clone@4: {}
     - cache-pull@2: {}
-    - script@1:
-        title: Installs Accio (primary)
-        run_if: ".IsCI"
-        inputs:
-        - content: |-
-            brew tap JamitLabs/Accio https://github.com/JamitLabs/Accio.git
-            brew install accio
-            cd Mac-App/Backend
-            accio install
     - certificate-and-profile-installer@1: {}
     - xcode-test-mac@1:
         inputs:
