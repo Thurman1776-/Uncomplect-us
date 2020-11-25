@@ -1,3 +1,5 @@
+[![Build Status](https://app.bitrise.io/app/84713dd82975d73b/status.svg?token=l5L6XnOKx-88HpwVnBQhkQ&branch=master)](https://app.bitrise.io/app/84713dd82975d73b)
+
 # How much you are complecting your code? 
 
 Complect what? [Rich Hickey explain us what it means](https://www.youtube.com/watch?v=oytL881p-nQ&t=1320s) to complect your software. 
