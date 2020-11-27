@@ -11,8 +11,8 @@ It is also a great way to learn about a project you might have recently joined.
 
 This is basically a re-write of [this project](https://github.com/PaulTaykalo/objc-dependency-visualizer) in Swift 
 as a Mac App. 
-Currently it is serving me as a way to experiment with newest tech such as SwiftUI.
-The app is using [ReSwift](https://github.com/ReSwift/ReSwift) that plays nicely with SwiftUI mental model, which 
+Currently it is serving me as a way to experiment with newest tech such as SwiftUI/Combine.
+The app is using [ReSwift](https://github.com/ReSwift/ReSwift) that plays nicely with SwiftUI mental model, that 
 somehow encourages to have an unidirectional data flow.  
 
 The visual representation is quite different from the Ruby project but in the future I plan to have a similar graphical 
@@ -21,22 +21,13 @@ representation of dependencies + tons of other useful features.
 ### Requirements
 
 - Xcode 12.0
-- accio which can be installed via brew
-    ````
-    brew tap JamitLabs/Accio https://github.com/JamitLabs/Accio.git
-    brew install accio
-- carthage which can also be installed via brew
-    ```
-    brew install carthage
-
-If brew is not your cup of tea, head over the projects' repos to learn about other options 👀
 
 ### How to use the tool 
 
-- Jump into the repo folder & paste this on your terminal `cd scripts && sh bootstrap.sh`
-- Run the Xcode project
+- Jump into the repo folder & open `Uncomplect-us.xcworkspace` with Xcode
+- Let SPM fetch & resolve deps (takes a minute or two)
+- Select the `Mac-App` target & run
 - Enjoy!
-
 
 
 #### Enter your project name 
