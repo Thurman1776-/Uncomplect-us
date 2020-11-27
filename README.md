@@ -32,25 +32,27 @@ representation of dependencies + tons of other useful features.
 
 #### Enter your project/target name (as long as your project has been compiled before & you use the default derive data settings)
 e.g. Backend 
-![Backend_image](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Screenshot-1.png)
+
+![Backend_image](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Startup.png)
+![Backend_image](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Typing.png)
 
 #### Wait while your project is being scanned 
 > Please note there's no trackers of any sort sending data anywhere. Everything is local.
 
-![scanned_project](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Screenshot-2.png) 
+![scanned_project](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Searching.png) 
 
 #### See an overview of the project status 
 
 > including paths from files being scanned, largest dependency, and more. 
 
-![project_status](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Screenshot-3.png)
+![project_status](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Results.png)
 
 #### You can filter results using the search field
 
-![filtered_results](image-url-goes-here)
+![filtered_results](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Filter.png)
 
 #### Tap on any item to see its dependencies 
-![dependencies](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Screenshot-4.png)
+![dependencies](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Expanded-deps.png)
 
 
 
