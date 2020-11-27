@@ -30,7 +30,7 @@ representation of dependencies + tons of other useful features.
 - Enjoy!
 
 
-#### Enter your project name 
+#### Enter your project/target name (as long as your project has been compiled before & you use the default derive data settings)
 e.g. Backend 
 ![Backend_image](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Screenshot-1.png)
 
