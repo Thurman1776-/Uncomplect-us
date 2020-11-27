@@ -45,6 +45,10 @@ e.g. Backend
 
 ![project_status](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Screenshot-3.png)
 
+#### You can filter results using the search field
+
+![filtered_results](image-url-goes-here)
+
 #### Tap on any item to see its dependencies 
 ![dependencies](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Screenshot-4.png)
 
