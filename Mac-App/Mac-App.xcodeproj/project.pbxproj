@@ -421,6 +421,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 65358E4A249CB43B0004510F /* Mac-App-Debug.xcconfig */;
 			buildSettings = {
+				MARKETING_VERSION = "1.0.0-alpha";
 			};
 			name = Debug;
 		};
@@ -428,6 +429,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 65358E4B249CB43B0004510F /* Mac-App-Release.xcconfig */;
 			buildSettings = {
+				MARKETING_VERSION = "1.0.0-alpha";
 			};
 			name = Release;
 		};
