@@ -29,6 +29,10 @@ representation of dependencies + tons of other useful features.
 - Select the `Mac-App` target & run
 - Enjoy!
 
+#### Executing the binary
+
+Alternatively, download & run the binary directly from [here](url-goes-here)
+
 
 #### Enter your project/target name (as long as your project has been compiled before & you use the default derive data settings)
 e.g. Backend 
