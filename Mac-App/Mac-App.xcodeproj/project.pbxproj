@@ -18,9 +18,12 @@
 		65358E54249CB4440004510F /* Mac-AppTests-Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65358E51249CB4440004510F /* Mac-AppTests-Shared.xcconfig */; };
 		654474AD24E72BE40029E04C /* NavigationTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654474AC24E72BE40029E04C /* NavigationTransformer.swift */; };
 		654474B124E9456A0029E04C /* StateTransforming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654474B024E9456A0029E04C /* StateTransforming.swift */; };
+		654AB2E625753445002C371F /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8199C5723E70C97000B89F6 /* Backend.framework */; };
+		654AB2E725753445002C371F /* Backend.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A8199C5723E70C97000B89F6 /* Backend.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		654AB2E925753447002C371F /* Frontend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F2525F2400526200CD12DE /* Frontend.framework */; };
+		654AB2EA25753447002C371F /* Frontend.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A8F2525F2400526200CD12DE /* Frontend.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		656F142124BB1DCC0019C550 /* DefaultDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F142024BB1DCC0019C550 /* DefaultDispatcher.swift */; };
 		65E56F3F2520E7F800C89BB1 /* macOSMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E56F3E2520E7F800C89BB1 /* macOSMenu.swift */; };
-		A8199C5823E70C97000B89F6 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8199C5723E70C97000B89F6 /* Backend.framework */; };
 		A8472C9E2402C6190032E702 /* ListViewTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8472C9D2402C6190032E702 /* ListViewTransformer.swift */; };
 		A86E10342365DAB800D3FF94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E10332365DAB800D3FF94 /* AppDelegate.swift */; };
 		A86E10382365DAB800D3FF94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86E10372365DAB800D3FF94 /* Assets.xcassets */; };
@@ -29,7 +32,6 @@
 		A8743A6F245F28BF00F8BFF2 /* BackendSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8743A6E245F28BF00F8BFF2 /* BackendSubscription.swift */; };
 		A8743A72245F2B1B00F8BFF2 /* StateObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8743A71245F2B1B00F8BFF2 /* StateObserver.swift */; };
 		A8CAE9AA23DCAE7E00242ADF /* Mac-AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE9A923DCAE7E00242ADF /* Mac-AppTests.swift */; };
-		A8F252602400526200CD12DE /* Frontend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F2525F2400526200CD12DE /* Frontend.framework */; };
 		A8FECAAB24310DDC0028CC64 /* ProjectDetailsTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAAA24310DDC0028CC64 /* ProjectDetailsTransformer.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,21 @@
 			remoteInfo = "Mac-App";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		654AB2E825753445002C371F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				654AB2EA25753447002C371F /* Frontend.framework in Embed Frameworks */,
+				654AB2E725753445002C371F /* Backend.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		65358E43249CB4310004510F /* Project-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,8 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8F252602400526200CD12DE /* Frontend.framework in Frameworks */,
-				A8199C5823E70C97000B89F6 /* Backend.framework in Frameworks */,
+				654AB2E925753447002C371F /* Frontend.framework in Frameworks */,
+				654AB2E625753445002C371F /* Backend.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +255,7 @@
 				A86E102C2365DAB800D3FF94 /* Sources */,
 				A86E102D2365DAB800D3FF94 /* Frameworks */,
 				A86E102E2365DAB800D3FF94 /* Resources */,
+				654AB2E825753445002C371F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
