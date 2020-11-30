@@ -31,7 +31,7 @@ representation of dependencies + tons of other useful features.
 
 #### Executing the binary
 
-Alternatively, download & run the binary directly from [here](url-goes-here)
+Alternatively, download & run the binary directly from [here](https://github.com/Thurman1776-/Uncomplect-us/tree/master/Mac-App/bin/alpha/Uncomplect-us_2.0.0-alpha.app)
 
 
 #### Enter your project/target name (as long as your project has been compiled before & you use the default derive data settings)
