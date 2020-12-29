@@ -32,7 +32,6 @@ public struct DependencyListView: View {
                 }
                 .id(UUID())
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
         case let .failure(message):
             Text(message)
                 .bold()
