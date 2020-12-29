@@ -28,7 +28,7 @@ struct DependencyDetailView: View {
             Divider()
                 .foregroundColor(.white)
             DependencyItemsView(dependency: dependency)
-        }
+        }.frame(minWidth: 220, maxWidth: 280)
     }
 }
 

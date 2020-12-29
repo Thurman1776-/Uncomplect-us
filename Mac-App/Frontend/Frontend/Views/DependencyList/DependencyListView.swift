@@ -22,15 +22,17 @@ public struct DependencyListView: View {
             )
             .frame(width: 200, height: 220)
         case let .success(state: state):
-            VStack(alignment: .leading, spacing: 8) {
-                List {
-                    if state.filteredDependencies.isEmpty {
-                        renderList(using: state.dependencies)
-                    } else {
-                        renderList(using: state.filteredDependencies)
+            NavigationView {
+                VStack(alignment: .leading, spacing: 8) {
+                    List {
+                        if state.filteredDependencies.isEmpty {
+                            renderList(using: state.dependencies)
+                        } else {
+                            renderList(using: state.filteredDependencies)
+                        }
                     }
+                    .id(UUID())
                 }
-                .id(UUID())
             }
         case let .failure(message):
             Text(message)
@@ -45,9 +47,9 @@ public struct DependencyListView: View {
 
     private func renderList(using dependencies: [DependencyTree.State.Dependency]) -> some View {
         ForEach(dependencies, id: \.id) { dependency in
-            dependencyItem(dependency)
-                .modifier(ListRowModifier())
-                .animation(.linear(duration: 0.25))
+            NavigationLink( destination: DependencyDetailView(dependency)) {
+                dependencyItem(dependency)
+            }
         }
     }
 
