@@ -19,7 +19,8 @@ public struct DependencyListView: View {
                 title: "Processing build files...",
                 titleColor: .gray,
                 isLoading: true
-            ).frame(width: 200, height: 250)
+            )
+            .frame(width: 200, height: 220)
         case let .success(state: state):
             VStack(alignment: .leading, spacing: 8) {
                 List {
@@ -28,7 +29,8 @@ public struct DependencyListView: View {
                     } else {
                         renderList(using: state.filteredDependencies)
                     }
-                }.id(UUID())
+                }
+                .id(UUID())
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         case let .failure(message):
@@ -36,7 +38,7 @@ public struct DependencyListView: View {
                 .bold()
                 .foregroundColor(.gray)
                 .padding([.leading, .trailing, .bottom], 8)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .frame(minWidth: 100, minHeight: 150)
         }
     }
 
