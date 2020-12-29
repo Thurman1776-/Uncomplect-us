@@ -49,7 +49,8 @@ public struct DetailsView: View {
 
                 PlainList(
                     titles: state.paths.map { String($0.absoluteString) },
-                    itemsColor: .yellow
+                    itemsColor: .yellow,
+                    truncationMode: .middle
                 )
             }
             .padding([.leading, .top, .trailing, .bottom], 8)

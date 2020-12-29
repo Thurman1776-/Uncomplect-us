@@ -11,10 +11,12 @@ import SwiftUI
 public struct PlainList: View {
     let titles: [String]
     let itemsColor: Color
+    private let truncationMode: Text.TruncationMode
 
-    public init(titles: [String], itemsColor: Color) {
+    public init(titles: [String], itemsColor: Color, truncationMode: Text.TruncationMode = .tail) {
         self.titles = titles
         self.itemsColor = itemsColor
+        self.truncationMode = truncationMode
     }
 
     public var body: some View {
@@ -23,6 +25,7 @@ public struct PlainList: View {
                 Text(title)
                     .font(.caption)
                     .italic()
+                    .truncationMode(truncationMode)
                     .foregroundColor(itemsColor)
             }
         }
