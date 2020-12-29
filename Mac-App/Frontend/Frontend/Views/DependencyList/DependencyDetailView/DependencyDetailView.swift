@@ -20,7 +20,7 @@ struct DependencyDetailView: View {
             Text(dependency.owner)
                 .font(.title)
                 .foregroundColor(.lightBlue)
-                .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+                .cornerRadius(3.0)
                 .clipped()
             Text("Dependency count: \(dependency.dependencies.count)")
                 .font(.footnote)
