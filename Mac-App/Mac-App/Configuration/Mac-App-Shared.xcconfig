@@ -59,7 +59,7 @@ ENABLE_PREVIEWS = YES
 // C++, or Objective-C++, and by the linker for frameworks used by the product. Paths are
 // delimited by whitespace, so any paths with spaces in them must be properly quoted.
 
-FRAMEWORK_SEARCH_PATHS = $(inherited) $(PROJECT_DIR)/Backend/Dependencies/macOS
+FRAMEWORK_SEARCH_PATHS = $(inherited)
 
 
 
@@ -121,3 +121,5 @@ PRODUCT_NAME = $(TARGET_NAME)
 // 
 
 SWIFT_VERSION = 5.0
+
+MARKETING_VERSION = 2.0.0-alpha

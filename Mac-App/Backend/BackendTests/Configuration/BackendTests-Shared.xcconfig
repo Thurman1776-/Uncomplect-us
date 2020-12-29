@@ -46,7 +46,7 @@ COMBINE_HIDPI_IMAGES = YES
 // C++, or Objective-C++, and by the linker for frameworks used by the product. Paths are
 // delimited by whitespace, so any paths with spaces in them must be properly quoted.
 
-FRAMEWORK_SEARCH_PATHS = $(inherited) $(PROJECT_DIR)/Dependencies/macOS
+FRAMEWORK_SEARCH_PATHS = $(inherited)
 
 
 

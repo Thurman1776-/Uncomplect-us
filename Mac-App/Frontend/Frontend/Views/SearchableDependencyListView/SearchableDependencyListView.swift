@@ -17,7 +17,7 @@ public struct SearchableDependencyListView: View {
 
     public var body: some View {
         VStack {
-            SearchBar(placeholder: "Search dependencies")
+            SearchBar(placeholder: "Filter dependencies")
                 .padding(8)
             DependencyListView().environmentObject(dependencyTreeStatus)
         }
