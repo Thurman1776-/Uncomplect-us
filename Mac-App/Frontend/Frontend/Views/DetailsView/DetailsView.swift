@@ -22,7 +22,7 @@ public struct DetailsView: View {
                 title: "Finding relevant stats...",
                 titleColor: .gray,
                 isLoading: true
-            ).frame(width: 200, height: 250)
+            ).frame(width: 200, height: 200)
         case let .success(state: state):
             HStack(spacing: 8) {
                 VStack(spacing: 4) {
@@ -59,6 +59,7 @@ public struct DetailsView: View {
                 .bold()
                 .foregroundColor(.gray)
                 .padding([.leading, .trailing, .bottom], 8)
+                .frame(minWidth: 100, minHeight: 120)
         }
     }
 }
