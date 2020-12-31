@@ -47,7 +47,7 @@ public struct DependencyListView: View {
 
     private func renderList(using dependencies: [DependencyTree.State.Dependency]) -> some View {
         ForEach(dependencies, id: \.id) { dependency in
-            NavigationLink( destination: DependencyDetailView(dependency)) {
+            NavigationLink(destination: DependencyDetailView(dependency)) {
                 dependencyItem(dependency)
             }
         }
