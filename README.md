@@ -4,23 +4,16 @@
 
 Complect what? [Rich Hickey explain us what it means](https://www.youtube.com/watch?v=oytL881p-nQ&t=1320s) to complect your software. 
 
-This is a tool that intents to help you uncomplect your objects
-by giving you an indication of which entities show a large amount of dependencies & how they are intertwined. 
+This is a tool that intents to help you uncomplect your software relationship
+by giving you an indication of which entities show a large amount of dependencies & how they might be intertwined. 
 
-It is also a great way to learn about a project you might have recently joined. 
-
-This is basically a re-write of [this project](https://github.com/PaulTaykalo/objc-dependency-visualizer) in Swift 
-as a Mac App. 
-Currently it is serving me as a way to experiment with newest tech such as SwiftUI/Combine.
-The app is using [ReSwift](https://github.com/ReSwift/ReSwift) that plays nicely with SwiftUI mental model, that 
-somehow encourages to have an unidirectional data flow.  
-
-The visual representation is quite different from the Ruby project but in the future I plan to have a similar graphical 
-representation of dependencies + tons of other useful features. 
+It is also a great way to learn about a project you might have recently joined or for open sourced projects you might be digging into. 
 
 ### Requirements
 
-- Xcode 12.0
+- Xcode 12.0 or higher
+- Project to be scanned has to be compiled at least once (its derived data needs to be there)
+- Use default location for derived data
 
 ### How to use the tool 
 
@@ -29,12 +22,13 @@ representation of dependencies + tons of other useful features.
 - Select the `Mac-App` target & run
 - Enjoy!
 
-#### Executing the binary
+### Executing the binary
 
 Alternatively, download & run the binary directly from [here](https://github.com/Thurman1776-/Uncomplect-us/tree/master/Mac-App/bin/alpha/Uncomplect-us_2.0.0-alpha.app)
 
+## Sample usage 
 
-#### Enter your project/target name (as long as your project has been compiled before & you use the default derive data settings)
+#### Enter your project/target name
 e.g. Backend 
 
 ![Backend_image](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Startup.png)
@@ -58,6 +52,8 @@ e.g. Backend
 #### Tap on any item to see its dependencies 
 ![dependencies](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Expanded-deps.png)
 
+### Motivation 
 
+I found this [unmaintained project](https://github.com/PaulTaykalo/objc-dependency-visualizer) a while ago & it became really useful for the problem I was facing back then. As I thought many of us run into the same issue, I decided to build a Mac app for it in Swift (powered by SwiftUI + Redux).
 
-This is a very much WIP, however feedback is always welcome! 
+The visual representation will likely change a lot during the time to come, as a result of experimentation & feedback. 

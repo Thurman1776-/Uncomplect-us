@@ -312,7 +312,6 @@
 				A831004523DC9E4400460A12 /* BackendTests */,
 				8D53CC87ED3200CD4593921C /* Dependencies */,
 				A831003923DC9E4400460A12 /* Products */,
-				651C82302542019A00BC014E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -772,7 +771,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 65896D23249CB0EE00257175 /* Project-Debug.xcconfig */;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -781,7 +779,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 65896D24249CB0EE00257175 /* Project-Release.xcconfig */;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -790,7 +787,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 65896D2B249CB11100257175 /* Backend-Debug.xcconfig */;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
 			};
 			name = Debug;
 		};
@@ -798,7 +794,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 65896D2A249CB11100257175 /* Backend-Release.xcconfig */;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
 			};
 			name = Release;
 		};

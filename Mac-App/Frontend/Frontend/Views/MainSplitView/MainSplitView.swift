@@ -21,9 +21,73 @@ public struct MainSplitView: View {
     }
 
     public var body: some View {
-        MainSplitViewController(
-            dependencyTreeStatus: dependencyTreeStatus,
-            projectDetailsStatus: projectDetailsStatus
-        )
+        VStack(alignment: .center, spacing: 0) {
+            DetailsView(projectDetailsStatus: projectDetailsStatus)
+            Divider()
+                .foregroundColor(.gray)
+            SearchableDependencyListView(dependencyTreeStatus: dependencyTreeStatus)
+        }
+    }
+}
+
+struct MainSplitView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            MainSplitView(
+                dependencyTreeStatus: Observable<DependencyTree.Status>(DependencyTree.Status.initial),
+                projectDetailsStatus: Observable<ProjectDetails.Status>(ProjectDetails.Status.initial)
+            )
+            MainSplitView(
+                dependencyTreeStatus: Observable<DependencyTree.Status>(
+                    DependencyTree.Status.failure("Something went wrong!")
+                ),
+                projectDetailsStatus: Observable<ProjectDetails.Status>(
+                    ProjectDetails.Status.failure("Could not find files!")
+                )
+            )
+            MainSplitView(
+                dependencyTreeStatus: Observable<DependencyTree.Status>(
+                    DependencyTree.Status.success(
+                        state: .init(
+                            dependencies: [
+                                .init(owner: "First", dependencies: ["one", "two", "three"]),
+                                .init(owner: "Second", dependencies: ["one", "two", "three"]),
+                                .init(owner: "Third", dependencies: ["one", "two", "three"]),
+                            ],
+                            filteredDependencies: [],
+                            failure: ""
+                        )
+                    )
+                ),
+                projectDetailsStatus: Observable<ProjectDetails.Status>(
+                    ProjectDetails.Status.success(
+                        state: .init(
+                            heaviestDependency: "Heaviest",
+                            totalDependenciesFound: 100_000,
+                            paths: [
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                                URL(string: "www.google.com")!,
+                            ],
+                            failure: nil
+                        )
+                    )
+                )
+            )
+        }
     }
 }

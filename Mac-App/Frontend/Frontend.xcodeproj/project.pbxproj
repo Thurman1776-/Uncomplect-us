@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		652FCF092555FC4A0025AC6B /* DependencyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652FCF082555FC4A0025AC6B /* DependencyDetailView.swift */; };
 		654474AF24E72F5B0029E04C /* NavigationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654474AE24E72F5B0029E04C /* NavigationData.swift */; };
 		655AC9FA24B6CC05005D8145 /* SearchableDependencyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655AC9F924B6CC05005D8145 /* SearchableDependencyListView.swift */; };
 		656F141F24BB05930019C550 /* FrontendActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F141E24BB05930019C550 /* FrontendActions.swift */; };
@@ -23,7 +24,7 @@
 		65E8586D24B573DD00A58DE3 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E8586C24B573DD00A58DE3 /* SearchBar.swift */; };
 		A82DDE0F246E5822000259BF /* ActivityIndicator+LoadingDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82DDE0E246E5822000259BF /* ActivityIndicator+LoadingDescription.swift */; };
 		A86ED71C24767B300008B604 /* PlainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86ED71B24767B300008B604 /* PlainList.swift */; };
-		A88160DB2421073300CDB15A /* DependencyItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88160DA2421073300CDB15A /* DependencyItemView.swift */; };
+		A88160DB2421073300CDB15A /* DependencyItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88160DA2421073300CDB15A /* DependencyItemsView.swift */; };
 		A88160DD2421480E00CDB15A /* ListRowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88160DC2421480E00CDB15A /* ListRowModifier.swift */; };
 		A8DF67612411639500D0DE02 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF67602411639500D0DE02 /* ActivityIndicator.swift */; };
 		A8DF67642412D9AE00D0DE02 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DF67632412D9AE00D0DE02 /* InputView.swift */; };
@@ -33,7 +34,6 @@
 		A8F2525E23FF0BF300CD12DE /* DependencyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2525D23FF0BF300CD12DE /* DependencyListView.swift */; };
 		A8F2526424029A2400CD12DE /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2526324029A2400CD12DE /* Observable.swift */; };
 		A8F2526824029B6500CD12DE /* DependencyTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2526724029B6500CD12DE /* DependencyTree.swift */; };
-		A8FECAA22429ED1A0028CC64 /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA12429ED1A0028CC64 /* MainSplitViewController.swift */; };
 		A8FECAA4243096650028CC64 /* MainSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA3243096650028CC64 /* MainSplitView.swift */; };
 		A8FECAA72430BCAE0028CC64 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA62430BCAE0028CC64 /* DetailsView.swift */; };
 		A8FECAA92431086D0028CC64 /* ProjectDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FECAA82431086D0028CC64 /* ProjectDetails.swift */; };
@@ -50,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		652FCF082555FC4A0025AC6B /* DependencyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyDetailView.swift; sourceTree = "<group>"; };
 		654474AE24E72F5B0029E04C /* NavigationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationData.swift; sourceTree = "<group>"; };
 		655AC9F924B6CC05005D8145 /* SearchableDependencyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableDependencyListView.swift; sourceTree = "<group>"; };
 		656F141E24BB05930019C550 /* FrontendActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontendActions.swift; sourceTree = "<group>"; };
@@ -67,7 +68,7 @@
 		65E8586C24B573DD00A58DE3 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		A82DDE0E246E5822000259BF /* ActivityIndicator+LoadingDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityIndicator+LoadingDescription.swift"; sourceTree = "<group>"; };
 		A86ED71B24767B300008B604 /* PlainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainList.swift; sourceTree = "<group>"; };
-		A88160DA2421073300CDB15A /* DependencyItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyItemView.swift; sourceTree = "<group>"; };
+		A88160DA2421073300CDB15A /* DependencyItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyItemsView.swift; sourceTree = "<group>"; };
 		A88160DC2421480E00CDB15A /* ListRowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowModifier.swift; sourceTree = "<group>"; };
 		A8DF67602411639500D0DE02 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		A8DF67632412D9AE00D0DE02 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
@@ -80,7 +81,6 @@
 		A8F2525D23FF0BF300CD12DE /* DependencyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyListView.swift; sourceTree = "<group>"; };
 		A8F2526324029A2400CD12DE /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		A8F2526724029B6500CD12DE /* DependencyTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyTree.swift; sourceTree = "<group>"; };
-		A8FECAA12429ED1A0028CC64 /* MainSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitViewController.swift; sourceTree = "<group>"; };
 		A8FECAA3243096650028CC64 /* MainSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitView.swift; sourceTree = "<group>"; };
 		A8FECAA62430BCAE0028CC64 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		A8FECAA82431086D0028CC64 /* ProjectDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetails.swift; sourceTree = "<group>"; };
@@ -105,6 +105,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		652FCF072555FC290025AC6B /* DependencyDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				652FCF082555FC4A0025AC6B /* DependencyDetailView.swift */,
+			);
+			path = DependencyDetailView;
+			sourceTree = "<group>";
+		};
 		655AC9F824B6CBD4005D8145 /* SearchableDependencyListView */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,7 +237,7 @@
 			children = (
 				655AC9F824B6CBD4005D8145 /* SearchableDependencyListView */,
 				A8DF675F2411637700D0DE02 /* Common */,
-				A8FECA9F2429EBE80028CC64 /* ExpandableList */,
+				A8FECA9F2429EBE80028CC64 /* DependencyList */,
 				A8DF67622412D9A200D0DE02 /* InputView */,
 				A8FECAA02429ECD40028CC64 /* MainSplitView */,
 				A8FECAA52430BC970028CC64 /* DetailsView */,
@@ -247,19 +255,19 @@
 			path = ViewData;
 			sourceTree = "<group>";
 		};
-		A8FECA9F2429EBE80028CC64 /* ExpandableList */ = {
+		A8FECA9F2429EBE80028CC64 /* DependencyList */ = {
 			isa = PBXGroup;
 			children = (
+				652FCF072555FC290025AC6B /* DependencyDetailView */,
 				A8F2525D23FF0BF300CD12DE /* DependencyListView.swift */,
-				A88160DA2421073300CDB15A /* DependencyItemView.swift */,
+				A88160DA2421073300CDB15A /* DependencyItemsView.swift */,
 			);
-			path = ExpandableList;
+			path = DependencyList;
 			sourceTree = "<group>";
 		};
 		A8FECAA02429ECD40028CC64 /* MainSplitView */ = {
 			isa = PBXGroup;
 			children = (
-				A8FECAA12429ED1A0028CC64 /* MainSplitViewController.swift */,
 				A8FECAA3243096650028CC64 /* MainSplitView.swift */,
 			);
 			path = MainSplitView;
@@ -418,14 +426,14 @@
 				654474AF24E72F5B0029E04C /* NavigationData.swift in Sources */,
 				A8DF67612411639500D0DE02 /* ActivityIndicator.swift in Sources */,
 				65E8586D24B573DD00A58DE3 /* SearchBar.swift in Sources */,
-				A88160DB2421073300CDB15A /* DependencyItemView.swift in Sources */,
+				A88160DB2421073300CDB15A /* DependencyItemsView.swift in Sources */,
 				A8FECAA92431086D0028CC64 /* ProjectDetails.swift in Sources */,
-				A8FECAA22429ED1A0028CC64 /* MainSplitViewController.swift in Sources */,
 				655AC9FA24B6CC05005D8145 /* SearchableDependencyListView.swift in Sources */,
 				A82DDE0F246E5822000259BF /* ActivityIndicator+LoadingDescription.swift in Sources */,
 				A8FECAA72430BCAE0028CC64 /* DetailsView.swift in Sources */,
 				A8F2526824029B6500CD12DE /* DependencyTree.swift in Sources */,
 				A8DF67642412D9AE00D0DE02 /* InputView.swift in Sources */,
+				652FCF092555FC4A0025AC6B /* DependencyDetailView.swift in Sources */,
 				A88160DD2421480E00CDB15A /* ListRowModifier.swift in Sources */,
 				A8F2526424029A2400CD12DE /* Observable.swift in Sources */,
 				A8F2525E23FF0BF300CD12DE /* DependencyListView.swift in Sources */,

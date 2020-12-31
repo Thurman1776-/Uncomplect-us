@@ -11,7 +11,6 @@ import SwiftUI
 public struct SearchBar: View {
     private let placeholder: String
     @State private var searchText: String = ""
-    @State private var isEditing: Bool = false
     @Environment(\.dispatcher) var actionDispatcher
 
     public init(placeholder: String) {
@@ -29,10 +28,7 @@ public struct SearchBar: View {
             .padding(.horizontal, 10)
             .background(Color.lightGray)
             .cornerRadius(8)
-            .onTapGesture {
-                isEditing = true
-                searchText = ""
-            }
+            .onTapGesture { searchText = "" }
         }
     }
 
