@@ -50,7 +50,7 @@ e.g. Backend
 ![filtered_results](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Filter.png)
 
 #### Tap on any item to see its dependencies 
-![dependencies](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Expanded-deps.png)
+![dependencies](https://github.com/Thurman1776-/Uncomplect-us/blob/master/Screenshots/Dep-details.png)
 
 ### Motivation 
 
