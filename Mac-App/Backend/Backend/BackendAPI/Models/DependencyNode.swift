@@ -6,12 +6,12 @@
 //  Copyright © 2020 Acphut Werkstatt. All rights reserved.
 //
 
-public struct DependencyTree: Equatable {
+public struct DependencyNode: Equatable {
     public let owner: String
-    public let dependencies: [DependencyTree.Dependency]
+    public let dependencies: [DependencyNode.Dependency]
 }
 
-extension DependencyTree {
+extension DependencyNode {
     public struct Dependency: Equatable {
         public let name: String
     }

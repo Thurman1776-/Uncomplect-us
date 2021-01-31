@@ -14,7 +14,7 @@ final class SwiftDepsParserSpec: QuickSpec {
     override func spec() {
         describe("parseSwiftDeps") {
             context("given it takes a valid input") {
-                var result: [DependencyTree] = []
+                var result: [DependencyNode] = []
 
                 beforeEach {
                     // Do not perform same search for each test case as the results are the same
@@ -28,7 +28,7 @@ final class SwiftDepsParserSpec: QuickSpec {
                     }
                 }
 
-                it("returns correctly parsed DependencyTree objects") {
+                it("returns correctly parsed DependencyNode objects") {
                     expect(result).toNotEventually(beEmpty(), timeout: timeout)
                 }
 

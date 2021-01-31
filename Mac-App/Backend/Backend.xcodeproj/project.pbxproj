@@ -58,7 +58,7 @@
 		A8CAE99F23DCABC700242ADF /* Bash+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99823DCABA000242ADF /* Bash+Error.swift */; };
 		A8D58A9323F67F8900C2AB74 /* SwiftDepsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D58A9223F67F8900C2AB74 /* SwiftDepsParser.swift */; };
 		A8E1019923EF055600C550E2 /* DependencyGraphState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E1019823EF055600C550E2 /* DependencyGraphState.swift */; };
-		A8E1019B23EF05E600C550E2 /* DependencyTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E1019A23EF05E600C550E2 /* DependencyTree.swift */; };
+		A8E1019B23EF05E600C550E2 /* DependencyNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E1019A23EF05E600C550E2 /* DependencyNode.swift */; };
 		A8E1019E23EF074100C550E2 /* DependencyGraphReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E1019D23EF074100C550E2 /* DependencyGraphReducer.swift */; };
 		A8E7626B23DDB9F000BFAD48 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7626A23DDB9F000BFAD48 /* AppState.swift */; };
 		A8E7626E23DDBA6B00BFAD48 /* DependencyPathsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7626D23DDBA6B00BFAD48 /* DependencyPathsState.swift */; };
@@ -133,7 +133,7 @@
 		A8D58A9223F67F8900C2AB74 /* SwiftDepsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDepsParser.swift; sourceTree = "<group>"; };
 		A8D58A9523F828F100C2AB74 /* SwiftDepsParserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDepsParserSpec.swift; sourceTree = "<group>"; };
 		A8E1019823EF055600C550E2 /* DependencyGraphState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyGraphState.swift; sourceTree = "<group>"; };
-		A8E1019A23EF05E600C550E2 /* DependencyTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyTree.swift; sourceTree = "<group>"; };
+		A8E1019A23EF05E600C550E2 /* DependencyNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyNode.swift; sourceTree = "<group>"; };
 		A8E1019D23EF074100C550E2 /* DependencyGraphReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyGraphReducer.swift; sourceTree = "<group>"; };
 		A8E7626A23DDB9F000BFAD48 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		A8E7626D23DDBA6B00BFAD48 /* DependencyPathsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyPathsState.swift; sourceTree = "<group>"; };
@@ -264,7 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				A8199C5023E6CA73000B89F6 /* SwiftDeps.swift */,
-				A8E1019A23EF05E600C550E2 /* DependencyTree.swift */,
+				A8E1019A23EF05E600C550E2 /* DependencyNode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -721,7 +721,7 @@
 				A85514EF23E5E6AA00D3E7F6 /* YamlParser.swift in Sources */,
 				A8E7626E23DDBA6B00BFAD48 /* DependencyPathsState.swift in Sources */,
 				A8CAE99F23DCABC700242ADF /* Bash+Error.swift in Sources */,
-				A8E1019B23EF05E600C550E2 /* DependencyTree.swift in Sources */,
+				A8E1019B23EF05E600C550E2 /* DependencyNode.swift in Sources */,
 				A86348C923F831820053C03D /* SwiftPrimitives.swift in Sources */,
 				654474A524E6C7460029E04C /* NavigationState.swift in Sources */,
 				654474A824E6C9540029E04C /* NavigationReducer.swift in Sources */,

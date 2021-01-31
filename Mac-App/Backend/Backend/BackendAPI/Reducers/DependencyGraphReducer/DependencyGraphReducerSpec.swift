@@ -42,7 +42,7 @@ final class DependencyGraphReducerSpec: QuickSpec {
             context("when DependencyGraphAction.set gets dispatched") {
                 it("it stores parsed `SwiftDeps`") {
                     let expectedTree = [
-                        DependencyTree.fixture,
+                        DependencyNode.fixture,
                     ]
                     let sut = dependencyGraphReducer(
                         action: DependencyGraphAction.set(expectedTree),
@@ -58,7 +58,7 @@ final class DependencyGraphReducerSpec: QuickSpec {
                 it("empties stored list") {
                     var sut = dependencyGraphReducer(
                         action: DependencyGraphAction.set([
-                            DependencyTree.fixture,
+                            DependencyNode.fixture,
                         ]),
                         state: graphState
                     )
@@ -76,7 +76,7 @@ final class DependencyGraphReducerSpec: QuickSpec {
                 it("returns (any) previous successful state & attached error") {
                     var sut = dependencyGraphReducer(
                         action: DependencyGraphAction.set([
-                            DependencyTree.fixture,
+                            DependencyNode.fixture,
                         ]),
                         state: graphState
                     )
@@ -131,8 +131,8 @@ final class DependencyGraphReducerSpec: QuickSpec {
     }
 }
 
-extension DependencyTree {
-    static let fixture = DependencyTree(
+extension DependencyNode {
+    static let fixture = DependencyNode(
         owner: "tests",
         dependencies: [.init(name: "test_deps")]
     )
@@ -141,7 +141,7 @@ extension DependencyTree {
 extension DependencyGraphState {
     static let weekFixture = DependencyGraphState(
         list: [
-            DependencyTree(
+            DependencyNode(
                 owner: "weekdays",
                 dependencies: [
                     .init(name: "montag"),
@@ -149,7 +149,7 @@ extension DependencyGraphState {
                     .init(name: "freitag"),
                 ]
             ),
-            DependencyTree(
+            DependencyNode(
                 owner: "weekends",
                 dependencies: [
                     .init(name: "samstag"),

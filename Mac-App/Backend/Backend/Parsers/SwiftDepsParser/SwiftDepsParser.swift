@@ -6,7 +6,7 @@
 //  Copyright © 2020 Acphut Werkstatt. All rights reserved.
 //
 
-typealias SwiftDepsParserType = (_ swiftDeps: [SwiftDeps]) -> [DependencyTree]
+typealias SwiftDepsParserType = (_ swiftDeps: [SwiftDeps]) -> [DependencyNode]
 
 /// Parses an array of `SwiftDeps` which represents a simplefied version of `.swiftDeps` YAML files
 ///
@@ -15,8 +15,8 @@ typealias SwiftDepsParserType = (_ swiftDeps: [SwiftDeps]) -> [DependencyTree]
 ///
 /// - Parameter swiftDeps: An array of Swift dependencies
 /// - Returns: An array of dependencies mapped in the form of: `owner -> [Dependencies]`
-func parseSwiftDeps(_ swiftDeps: [SwiftDeps]) -> [DependencyTree] {
-    var result = [DependencyTree]()
+func parseSwiftDeps(_ swiftDeps: [SwiftDeps]) -> [DependencyNode] {
+    var result = [DependencyNode]()
 
     swiftDeps.forEach { dep in
         dep.providesTopLevel.forEach { node in
@@ -27,9 +27,9 @@ func parseSwiftDeps(_ swiftDeps: [SwiftDeps]) -> [DependencyTree] {
                     .excludeSystemSymbols()
                     .excludeSystemSymbolsPrefixes()
                     .filterOcurrancesOf(name)
-                    .map(DependencyTree.Dependency.init)
+                    .map(DependencyNode.Dependency.init)
 
-                let tree = DependencyTree(owner: name, dependencies: deps)
+                let tree = DependencyNode(owner: name, dependencies: deps)
                 if result.contains(tree) == false {
                     result.append(tree)
                 }
