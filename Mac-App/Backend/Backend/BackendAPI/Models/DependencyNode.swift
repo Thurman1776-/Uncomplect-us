@@ -1,5 +1,5 @@
 //
-//  DependencyTree.swift
+//  DependencyNode.swift
 //  Backend
 //
 //  Created by Daniel GARCÍA on 23.02.20.

@@ -61,7 +61,7 @@ final class NavigationTransformer: StateTransforming, StateRepresentableViewInpu
         case .mainScreen:
             currentView = .mainScreen
             let mainSplitView = MainSplitView(
-                dependencyTreeStatus: listViewInput,
+                dependencyNodeStatus: listViewInput,
                 projectDetailsStatus: projectDetailsViewInput
             )
             window.contentView = NSHostingView(rootView: mainSplitView)

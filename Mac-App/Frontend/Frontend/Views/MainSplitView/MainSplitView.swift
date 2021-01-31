@@ -9,14 +9,14 @@
 import SwiftUI
 
 public struct MainSplitView: View {
-    private var dependencyTreeStatus: Observable<DependencyNode.Status>
+    private var dependencyNodeStatus: Observable<DependencyNode.Status>
     private var projectDetailsStatus: Observable<ProjectDetails.Status>
 
     public init(
-        dependencyTreeStatus: Observable<DependencyNode.Status>,
+        dependencyNodeStatus: Observable<DependencyNode.Status>,
         projectDetailsStatus: Observable<ProjectDetails.Status>
     ) {
-        self.dependencyTreeStatus = dependencyTreeStatus
+        self.dependencyNodeStatus = dependencyNodeStatus
         self.projectDetailsStatus = projectDetailsStatus
     }
 
@@ -25,7 +25,7 @@ public struct MainSplitView: View {
             DetailsView(projectDetailsStatus: projectDetailsStatus)
             Divider()
                 .foregroundColor(.gray)
-            SearchableDependencyListView(dependencyTreeStatus: dependencyTreeStatus)
+            SearchableDependencyListView(dependencyNodeStatus: dependencyNodeStatus)
         }
     }
 }
@@ -34,11 +34,11 @@ struct MainSplitView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             MainSplitView(
-                dependencyTreeStatus: Observable<DependencyNode.Status>(DependencyNode.Status.initial),
+                dependencyNodeStatus: Observable<DependencyNode.Status>(DependencyNode.Status.initial),
                 projectDetailsStatus: Observable<ProjectDetails.Status>(ProjectDetails.Status.initial)
             )
             MainSplitView(
-                dependencyTreeStatus: Observable<DependencyNode.Status>(
+                dependencyNodeStatus: Observable<DependencyNode.Status>(
                     DependencyNode.Status.failure("Something went wrong!")
                 ),
                 projectDetailsStatus: Observable<ProjectDetails.Status>(
@@ -46,7 +46,7 @@ struct MainSplitView_Previews: PreviewProvider {
                 )
             )
             MainSplitView(
-                dependencyTreeStatus: Observable<DependencyNode.Status>(
+                dependencyNodeStatus: Observable<DependencyNode.Status>(
                     DependencyNode.Status.success(
                         state: .init(
                             dependencies: [

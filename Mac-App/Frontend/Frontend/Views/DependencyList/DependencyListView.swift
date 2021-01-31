@@ -9,11 +9,11 @@
 import SwiftUI
 
 public struct DependencyListView: View {
-    @EnvironmentObject private var dependencyTreeStatus: Observable<DependencyNode.Status>
+    @EnvironmentObject private var dependencyNodeStatus: Observable<DependencyNode.Status>
     @State private var selection: Set<DependencyNode.State.Dependency> = []
 
     @ViewBuilder public var body: some View {
-        switch dependencyTreeStatus.input {
+        switch dependencyNodeStatus.input {
         case .initial:
             LoadingView(
                 title: "Processing build files...",

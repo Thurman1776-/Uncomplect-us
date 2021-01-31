@@ -41,16 +41,16 @@ final class DependencyGraphReducerSpec: QuickSpec {
 
             context("when DependencyGraphAction.set gets dispatched") {
                 it("it stores parsed `SwiftDeps`") {
-                    let expectedTree = [
+                    let expectedNode = [
                         DependencyNode.fixture,
                     ]
                     let sut = dependencyGraphReducer(
-                        action: DependencyGraphAction.set(expectedTree),
+                        action: DependencyGraphAction.set(expectedNode),
                         state: graphState
                     )
 
                     expect(sut.list).to(haveCount(1))
-                    expect(sut.list).to(equal(expectedTree))
+                    expect(sut.list).to(equal(expectedNode))
                 }
             }
 
