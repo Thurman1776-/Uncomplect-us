@@ -19,12 +19,12 @@ final class NavigationTransformer: StateTransforming, StateRepresentableViewInpu
     private var currentView: NavigationData.Node?
 
     private let window: NSWindow
-    private let listViewInput: Observable<Frontend.DependencyTree.Status>
+    private let listViewInput: Observable<Frontend.DependencyNode.Status>
     private let projectDetailsViewInput: Observable<Frontend.ProjectDetails.Status>
 
     init(
         window: NSWindow,
-        listViewInput: Observable<Frontend.DependencyTree.Status>,
+        listViewInput: Observable<Frontend.DependencyNode.Status>,
         projectDetailsViewInput: Observable<Frontend.ProjectDetails.Status>
     ) {
         self.window = window

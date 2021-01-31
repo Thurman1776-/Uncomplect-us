@@ -9,8 +9,8 @@
 import SwiftUI
 
 public struct DependencyListView: View {
-    @EnvironmentObject private var dependencyTreeStatus: Observable<DependencyTree.Status>
-    @State private var selection: Set<DependencyTree.State.Dependency> = []
+    @EnvironmentObject private var dependencyTreeStatus: Observable<DependencyNode.Status>
+    @State private var selection: Set<DependencyNode.State.Dependency> = []
 
     @ViewBuilder public var body: some View {
         switch dependencyTreeStatus.input {
@@ -45,7 +45,7 @@ public struct DependencyListView: View {
 
     // MARK: Private API
 
-    private func renderList(using dependencies: [DependencyTree.State.Dependency]) -> some View {
+    private func renderList(using dependencies: [DependencyNode.State.Dependency]) -> some View {
         ForEach(dependencies, id: \.id) { dependency in
             NavigationLink(destination: DependencyDetailView(dependency)) {
                 dependencyItem(dependency)
@@ -53,7 +53,7 @@ public struct DependencyListView: View {
         }
     }
 
-    private func dependencyItem(_ dependency: DependencyTree.State.Dependency) -> some View {
+    private func dependencyItem(_ dependency: DependencyNode.State.Dependency) -> some View {
         VStack(alignment: .leading) {
             HStack {
                 Text("Owner: \(dependency.owner)")

@@ -9,11 +9,11 @@
 import SwiftUI
 
 public struct MainSplitView: View {
-    private var dependencyTreeStatus: Observable<DependencyTree.Status>
+    private var dependencyTreeStatus: Observable<DependencyNode.Status>
     private var projectDetailsStatus: Observable<ProjectDetails.Status>
 
     public init(
-        dependencyTreeStatus: Observable<DependencyTree.Status>,
+        dependencyTreeStatus: Observable<DependencyNode.Status>,
         projectDetailsStatus: Observable<ProjectDetails.Status>
     ) {
         self.dependencyTreeStatus = dependencyTreeStatus
@@ -34,20 +34,20 @@ struct MainSplitView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             MainSplitView(
-                dependencyTreeStatus: Observable<DependencyTree.Status>(DependencyTree.Status.initial),
+                dependencyTreeStatus: Observable<DependencyNode.Status>(DependencyNode.Status.initial),
                 projectDetailsStatus: Observable<ProjectDetails.Status>(ProjectDetails.Status.initial)
             )
             MainSplitView(
-                dependencyTreeStatus: Observable<DependencyTree.Status>(
-                    DependencyTree.Status.failure("Something went wrong!")
+                dependencyTreeStatus: Observable<DependencyNode.Status>(
+                    DependencyNode.Status.failure("Something went wrong!")
                 ),
                 projectDetailsStatus: Observable<ProjectDetails.Status>(
                     ProjectDetails.Status.failure("Could not find files!")
                 )
             )
             MainSplitView(
-                dependencyTreeStatus: Observable<DependencyTree.Status>(
-                    DependencyTree.Status.success(
+                dependencyTreeStatus: Observable<DependencyNode.Status>(
+                    DependencyNode.Status.success(
                         state: .init(
                             dependencies: [
                                 .init(owner: "First", dependencies: ["one", "two", "three"]),

@@ -12,8 +12,8 @@ import Frontend
 import ReSwift
 
 final class ListViewTransformer: StateTransforming, StateRepresentableViewInput, StateSubscription {
-    let stateObserver = StateObserver<Frontend.DependencyTree.State>(state: DependencyTree.State.initialState)
-    private(set) var viewInput: Observable<Frontend.DependencyTree.Status> = .init(.initial)
+    let stateObserver = StateObserver<Frontend.DependencyNode.State>(state: DependencyNode.State.initialState)
+    private(set) var viewInput: Observable<Frontend.DependencyNode.Status> = .init(.initial)
     private var cancellable: AnyCancellable = AnyCancellable {}
 
     func startListening() {
@@ -24,7 +24,7 @@ final class ListViewTransformer: StateTransforming, StateRepresentableViewInput,
         cancellable.cancel()
     }
 
-    func emitNewState(_ state: Frontend.DependencyTree.State) {
+    func emitNewState(_ state: Frontend.DependencyNode.State) {
         if state.dependencies.isEmpty == false {
             viewInput.update(to: .success(state: state))
         } else if let failure = state.failure {
@@ -35,17 +35,17 @@ final class ListViewTransformer: StateTransforming, StateRepresentableViewInput,
 
 // MARK: - Mapper from AppState to subscriber state (view data for UI)
 
-extension Frontend.DependencyTree.State {
+extension Frontend.DependencyNode.State {
     init(appState: AppState) {
         self.init(
             dependencies: appState.dependencyGraphState.list.map {
-                DependencyTree.State.Dependency(
+                DependencyNode.State.Dependency(
                     owner: $0.owner,
                     dependencies: $0.dependencies.map { String($0.name) }
                 )
             },
             filteredDependencies: appState.dependencyGraphState.filteredList.map {
-                DependencyTree.State.Dependency(
+                DependencyNode.State.Dependency(
                     owner: $0.owner,
                     dependencies: $0.dependencies.map { String($0.name) }
                 )
@@ -55,7 +55,7 @@ extension Frontend.DependencyTree.State {
     }
 }
 
-extension Frontend.DependencyTree.State: StateType {}
-extension Frontend.DependencyTree.State {
-    static let initialState = DependencyTree.State(dependencies: [], filteredDependencies: [], failure: nil)
+extension Frontend.DependencyNode.State: StateType {}
+extension Frontend.DependencyNode.State {
+    static let initialState = DependencyNode.State(dependencies: [], filteredDependencies: [], failure: nil)
 }

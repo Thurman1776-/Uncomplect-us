@@ -9,9 +9,9 @@
 import SwiftUI
 
 struct DependencyDetailView: View {
-    private let dependency: DependencyTree.State.Dependency
+    private let dependency: DependencyNode.State.Dependency
 
-    init(_ dependency: DependencyTree.State.Dependency) {
+    init(_ dependency: DependencyNode.State.Dependency) {
         self.dependency = dependency
     }
 

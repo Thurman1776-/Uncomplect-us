@@ -9,9 +9,9 @@
 import SwiftUI
 
 public struct SearchableDependencyListView: View {
-    @ObservedObject private var dependencyTreeStatus: Observable<DependencyTree.Status>
+    @ObservedObject private var dependencyTreeStatus: Observable<DependencyNode.Status>
 
-    public init(dependencyTreeStatus: Observable<DependencyTree.Status>) {
+    public init(dependencyTreeStatus: Observable<DependencyNode.Status>) {
         self.dependencyTreeStatus = dependencyTreeStatus
     }
 

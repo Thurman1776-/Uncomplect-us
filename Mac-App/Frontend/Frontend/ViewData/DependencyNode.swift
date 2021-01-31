@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum DependencyTree {
+public enum DependencyNode {
     // MARK: - View State
 
     public struct State: Equatable {
@@ -47,4 +47,4 @@ public enum DependencyTree {
     }
 }
 
-extension DependencyTree.State.Dependency: Hashable {}
+extension DependencyNode.State.Dependency: Hashable {}
