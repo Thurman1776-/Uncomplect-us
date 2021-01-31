@@ -38,13 +38,13 @@ final class ListViewTransformer: StateTransforming, StateRepresentableViewInput,
 extension Frontend.DependencyTree.State {
     init(appState: AppState) {
         self.init(
-            dependencies: appState.dependencyGraphState.tree.map {
+            dependencies: appState.dependencyGraphState.list.map {
                 DependencyTree.State.Dependency(
                     owner: $0.owner,
                     dependencies: $0.dependencies.map { String($0.name) }
                 )
             },
-            filteredDependencies: appState.dependencyGraphState.filteredTree.map {
+            filteredDependencies: appState.dependencyGraphState.filteredList.map {
                 DependencyTree.State.Dependency(
                     owner: $0.owner,
                     dependencies: $0.dependencies.map { String($0.name) }

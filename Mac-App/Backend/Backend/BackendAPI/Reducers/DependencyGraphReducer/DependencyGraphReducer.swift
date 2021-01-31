@@ -17,7 +17,7 @@ func dependencyGraphReducer(action: Action, state: DependencyGraphState) -> Depe
 
     switch swiftDepsAction {
     case let .set(deps):
-        newState = DependencyGraphState(tree: deps)
+        newState = DependencyGraphState(list: deps)
     case .reset:
         newState = DependencyGraphState.initialState
     case let .failure(message: message):
@@ -26,7 +26,7 @@ func dependencyGraphReducer(action: Action, state: DependencyGraphState) -> Depe
         // TODO: Expand search to include owner's deps in the future
         // Right now it could be very expensive to include everything as
         // children size varies per owner
-        newState.filteredTree = newState.tree.filter { $0.owner.contains(value) }
+        newState.filteredList = newState.list.filter { $0.owner.contains(value) }
     default: break
     }
 

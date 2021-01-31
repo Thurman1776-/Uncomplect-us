@@ -23,7 +23,7 @@ final class DependencyGraphReducerSpec: QuickSpec {
                             state: graphState
                         )
 
-                        expect(sut.tree).to(beEmpty())
+                        expect(sut.list).to(beEmpty())
                     }
                 }
 
@@ -34,7 +34,7 @@ final class DependencyGraphReducerSpec: QuickSpec {
                             state: graphState
                         )
 
-                        expect(sut.tree.count) == graphState.tree.count
+                        expect(sut.list.count) == graphState.list.count
                     }
                 }
             }
@@ -49,13 +49,13 @@ final class DependencyGraphReducerSpec: QuickSpec {
                         state: graphState
                     )
 
-                    expect(sut.tree).to(haveCount(1))
-                    expect(sut.tree).to(equal(expectedTree))
+                    expect(sut.list).to(haveCount(1))
+                    expect(sut.list).to(equal(expectedTree))
                 }
             }
 
             context("when DependencyGraphAction.reset gets dispatched") {
-                it("empties stored tree") {
+                it("empties stored list") {
                     var sut = dependencyGraphReducer(
                         action: DependencyGraphAction.set([
                             DependencyTree.fixture,
@@ -68,7 +68,7 @@ final class DependencyGraphReducerSpec: QuickSpec {
                         state: sut
                     )
 
-                    expect(sut.tree).to(beEmpty())
+                    expect(sut.list).to(beEmpty())
                 }
             }
 
@@ -88,7 +88,7 @@ final class DependencyGraphReducerSpec: QuickSpec {
                         state: sut
                     )
 
-                    expect(sut.tree) == originalState.tree
+                    expect(sut.list) == originalState.list
                     expect(sut.failure).toNot(beNil())
                 }
             }
@@ -101,7 +101,7 @@ final class DependencyGraphReducerSpec: QuickSpec {
                             state: DependencyGraphState.weekFixture
                         )
 
-                        expect(sut.filteredTree).notTo(beEmpty())
+                        expect(sut.filteredList).notTo(beEmpty())
                     }
                 }
 
@@ -112,7 +112,7 @@ final class DependencyGraphReducerSpec: QuickSpec {
                             state: DependencyGraphState.weekFixture
                         )
 
-                        expect(sut.filteredTree).notTo(beEmpty())
+                        expect(sut.filteredList).notTo(beEmpty())
                     }
                 }
 
@@ -123,7 +123,7 @@ final class DependencyGraphReducerSpec: QuickSpec {
                             state: DependencyGraphState.weekFixture
                         )
 
-                        expect(sut.filteredTree).to(beEmpty())
+                        expect(sut.filteredList).to(beEmpty())
                     }
                 }
             }
@@ -140,7 +140,7 @@ extension DependencyTree {
 
 extension DependencyGraphState {
     static let weekFixture = DependencyGraphState(
-        tree: [
+        list: [
             DependencyTree(
                 owner: "weekdays",
                 dependencies: [

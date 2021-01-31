@@ -37,12 +37,12 @@ final class ProjectDetailsTransformer: StateTransforming, StateRepresentableView
 
 extension ProjectDetails.State {
     init(appState: AppState) {
-        let heaviestDependency = appState.dependencyGraphState.tree.sorted(by: {
+        let heaviestDependency = appState.dependencyGraphState.list.sorted(by: {
             first, second -> Bool in
 
             first.dependencies.count > second.dependencies.count
         }).first?.owner
-        let totalDeps = appState.dependencyGraphState.tree.count
+        let totalDeps = appState.dependencyGraphState.list.count
         let paths = appState.dependencyPathsState.paths
 
         self.init(
