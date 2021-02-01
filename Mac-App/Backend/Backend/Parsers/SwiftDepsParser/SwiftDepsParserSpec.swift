@@ -32,10 +32,10 @@ final class SwiftDepsParserSpec: QuickSpec {
                     expect(result).toNotEventually(beEmpty(), timeout: timeout)
                 }
 
-                it("does not store the owner name in the dependencies list") {
+                it("does not store the name in the dependencies list") {
                     let randomItem = result.randomElement()!
                     let randomItemDeps = randomItem.dependencies.map { $0.name }
-                    expect(randomItemDeps.contains(randomItem.owner)).toEventually(beFalse(), timeout: timeout)
+                    expect(randomItemDeps.contains(randomItem.name)).toEventually(beFalse(), timeout: timeout)
                 }
 
                 it("does not include any system/framework symbols") {

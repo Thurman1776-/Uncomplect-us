@@ -17,7 +17,7 @@ struct DependencyDetailView: View {
 
     var body: some View {
         VStack {
-            Text(dependency.owner)
+            Text(dependency.name)
                 .font(.title)
                 .foregroundColor(.lightBlue)
                 .cornerRadius(3.0)
@@ -37,7 +37,7 @@ struct DependencyDetailView_Previews: PreviewProvider {
         Group {
             DependencyDetailView(
                 .init(
-                    owner: "Apple",
+                    name: "Apple",
                     dependencies: ["iOS", "watchOS", "macOS", "tvOS"]
                 )
             )

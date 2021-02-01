@@ -50,9 +50,9 @@ struct MainSplitView_Previews: PreviewProvider {
                     DependencyNode.Status.success(
                         state: .init(
                             dependencies: [
-                                .init(owner: "First", dependencies: ["one", "two", "three"]),
-                                .init(owner: "Second", dependencies: ["one", "two", "three"]),
-                                .init(owner: "Third", dependencies: ["one", "two", "three"]),
+                                .init(name: "First", dependencies: ["one", "two", "three"]),
+                                .init(name: "Second", dependencies: ["one", "two", "three"]),
+                                .init(name: "Third", dependencies: ["one", "two", "three"]),
                             ],
                             filteredDependencies: [],
                             failure: ""

@@ -41,7 +41,7 @@ struct DependencyItemsView_Previews: PreviewProvider {
     static var previews: some View {
         DependencyItemsView(
             dependency: .init(
-                owner: "Apple",
+                name: "Apple",
                 dependencies: ["iOS", "watchOS", "macOS", "tvOS"]
             )
         )

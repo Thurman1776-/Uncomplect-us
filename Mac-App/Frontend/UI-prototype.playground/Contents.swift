@@ -3,7 +3,7 @@ import PlaygroundSupport
 import SwiftUI
 
 let itemView = DependencyItemsView(
-    dependency: DependencyNode.State.Dependency(owner: "Daniel", dependencies: ["orange", "apple", "banana"]),
+    dependency: DependencyNode.State.Dependency(name: "Daniel", dependencies: ["orange", "apple", "banana"]),
     isExpanded: true
 )
 

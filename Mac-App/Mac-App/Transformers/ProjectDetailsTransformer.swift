@@ -41,7 +41,7 @@ extension ProjectDetails.State {
             first, second -> Bool in
 
             first.dependencies.count > second.dependencies.count
-        }).first?.owner
+        }).first?.name
         let totalDeps = appState.dependencyGraphState.list.count
         let paths = appState.dependencyPathsState.paths
 

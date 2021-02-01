@@ -27,12 +27,12 @@ public enum DependencyNode {
         }
 
         public struct Dependency: Equatable, Identifiable {
-            public var id: Int { owner.hashValue }
-            let owner: String
+            public var id: Int { name.hashValue }
+            let name: String
             let dependencies: [String]
 
-            public init(owner: String, dependencies: [String]) {
-                self.owner = owner
+            public init(name: String, dependencies: [String]) {
+                self.name = name
                 self.dependencies = dependencies
             }
         }

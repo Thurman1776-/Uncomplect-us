@@ -8,13 +8,13 @@
 
 typealias SwiftDepsParserType = (_ swiftDeps: [SwiftDeps]) -> [DependencyNode]
 
-/// Parses an array of `SwiftDeps` which represents a simplefied version of `.swiftDeps` YAML files
+/// Parses an array of `SwiftDeps` which represents a simplified version of `.swiftDeps` YAML files
 ///
-/// Parsing omits private declarations, ocurrances of `Self`, system symbols (see `systemSymbols` declaration)
+/// Parsing omits private declarations, occurrences of `Self`, system symbols (see `systemSymbols` declaration)
 /// as well as objects with with common framework prefixes: `NS`, `UI` & `CF` (list might need to be updated later)
 ///
 /// - Parameter swiftDeps: An array of Swift dependencies
-/// - Returns: An array of dependencies mapped in the form of: `owner -> [Dependencies]`
+/// - Returns: An array of dependencies mapped in the form of: `name -> [Dependencies]`
 func parseSwiftDeps(_ swiftDeps: [SwiftDeps]) -> [DependencyNode] {
     var result = [DependencyNode]()
 
@@ -27,9 +27,9 @@ func parseSwiftDeps(_ swiftDeps: [SwiftDeps]) -> [DependencyNode] {
                     .excludeSystemSymbols()
                     .excludeSystemSymbolsPrefixes()
                     .filterOcurrancesOf(name)
-                    .map(DependencyNode.Dependency.init)
+                    .map { DependencyNode(name: $0, dependencies: []) }
 
-                let node = DependencyNode(owner: name, dependencies: deps)
+                let node = DependencyNode(name: name, dependencies: deps)
                 if result.contains(node) == false {
                     result.append(node)
                 }

@@ -40,13 +40,13 @@ extension Frontend.DependencyNode.State {
         self.init(
             dependencies: appState.dependencyGraphState.list.map {
                 DependencyNode.State.Dependency(
-                    owner: $0.owner,
+                    name: $0.name,
                     dependencies: $0.dependencies.map { String($0.name) }
                 )
             },
             filteredDependencies: appState.dependencyGraphState.filteredList.map {
                 DependencyNode.State.Dependency(
-                    owner: $0.owner,
+                    name: $0.name,
                     dependencies: $0.dependencies.map { String($0.name) }
                 )
             },

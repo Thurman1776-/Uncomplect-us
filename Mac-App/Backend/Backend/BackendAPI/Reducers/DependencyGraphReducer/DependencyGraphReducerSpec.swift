@@ -133,8 +133,8 @@ final class DependencyGraphReducerSpec: QuickSpec {
 
 extension DependencyNode {
     static let fixture = DependencyNode(
-        owner: "tests",
-        dependencies: [.init(name: "test_deps")]
+        name: "tests",
+        dependencies: [.init(name: "test_deps", dependencies: [])]
     )
 }
 
@@ -142,18 +142,18 @@ extension DependencyGraphState {
     static let weekFixture = DependencyGraphState(
         list: [
             DependencyNode(
-                owner: "weekdays",
+                name: "weekdays",
                 dependencies: [
-                    .init(name: "montag"),
-                    .init(name: "mittwoch"),
-                    .init(name: "freitag"),
+                    .init(name: "montag", dependencies: []),
+                    .init(name: "mittwoch", dependencies: []),
+                    .init(name: "freitag", dependencies: []),
                 ]
             ),
             DependencyNode(
-                owner: "weekends",
+                name: "weekends",
                 dependencies: [
-                    .init(name: "samstag"),
-                    .init(name: "sonntag"),
+                    .init(name: "samstag", dependencies: []),
+                    .init(name: "sonntag", dependencies: []),
                 ]
             ),
         ],

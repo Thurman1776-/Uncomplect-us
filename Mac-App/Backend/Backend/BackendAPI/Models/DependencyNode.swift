@@ -7,12 +7,6 @@
 //
 
 public struct DependencyNode: Equatable {
-    public let owner: String
-    public let dependencies: [DependencyNode.Dependency]
-}
-
-extension DependencyNode {
-    public struct Dependency: Equatable {
-        public let name: String
-    }
+    public let name: String
+    public let dependencies: [DependencyNode]
 }

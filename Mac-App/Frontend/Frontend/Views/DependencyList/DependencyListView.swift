@@ -56,7 +56,7 @@ public struct DependencyListView: View {
     private func dependencyItem(_ dependency: DependencyNode.State.Dependency) -> some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("Owner: \(dependency.owner)")
+                Text("Owner: \(dependency.name)")
                     .font(.headline)
                     .foregroundColor(.lightBlue)
                 Text("Dependency count: \(dependency.dependencies.count)")
