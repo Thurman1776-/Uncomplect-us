@@ -245,6 +245,14 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		658AEDE125CDFF1600A62110 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				A8E1019A23EF05E600C550E2 /* DependencyNode.swift */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
 		65CE35E22544B7A700196EBF /* RunActionsOnSerialQueueSideEffects */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,7 +274,6 @@
 			isa = PBXGroup;
 			children = (
 				A8199C5023E6CA73000B89F6 /* SwiftDeps.swift */,
-				A8E1019A23EF05E600C550E2 /* DependencyNode.swift */,
 				6505B7FC25C8872F005441BA /* DependencyNodeSpec.swift */,
 			);
 			path = Models;
@@ -480,6 +487,7 @@
 		A8E7626F23DDBBA400BFAD48 /* BackendAPI */ = {
 			isa = PBXGroup;
 			children = (
+				658AEDE125CDFF1600A62110 /* DataStructures */,
 				A8199C4F23E6CA57000B89F6 /* Models */,
 				A8E7627023DDBBB700BFAD48 /* BackendAPI.swift */,
 				A8F12EF523DF63B1001EB945 /* Middleware */,
