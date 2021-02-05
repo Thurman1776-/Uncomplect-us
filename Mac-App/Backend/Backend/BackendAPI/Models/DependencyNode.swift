@@ -36,3 +36,17 @@ public final class DependencyNode: Equatable {
         dependency.parent = self
     }
 }
+
+// MARK: - Debug description
+
+extension DependencyNode: CustomStringConvertible {
+    public var description: String {
+        var text = "\(name)"
+
+        if !dependencies.isEmpty {
+            text += " {" + dependencies.map { $0.description }.joined(separator: ", ") + "} "
+        }
+
+        return text
+    }
+}
