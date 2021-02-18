@@ -35,6 +35,11 @@ public final class DependencyNode: Equatable {
         dependencies.append(dependency)
         dependency.parent = self
     }
+
+    func add(_ dependencies: [DependencyNode]) {
+        self.dependencies.append(contentsOf: dependencies)
+        dependencies.forEach { $0.parent = self }
+    }
 }
 
 // MARK: - Debug description

@@ -29,7 +29,9 @@ func parseSwiftDeps(_ swiftDeps: [SwiftDeps]) -> [DependencyNode] {
                     .filterOcurrancesOf(name)
                     .map { DependencyNode(name: $0, dependencies: []) }
 
-                let node = DependencyNode(name: name, dependencies: deps)
+                let node = DependencyNode(name: name)
+                node.add(deps)
+
                 if result.contains(node) == false {
                     result.append(node)
                 }
