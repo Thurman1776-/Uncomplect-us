@@ -12,7 +12,7 @@ import Quick
 
 final class DependencyNodeSpec: QuickSpec {
     override func spec() {
-        describe("DependencyNodeSpec") {
+        describe("DependencyNode") {
             context("when DependencyNode is initialised") {
                 let name = "backend"
                 var sut: DependencyNode!
