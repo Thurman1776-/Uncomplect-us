@@ -34,7 +34,7 @@ final class DependencyNodeSpec: QuickSpec {
                 }
             }
 
-            context("when DependencyNode gets a child added") {
+            context("when DependencyNode adds a child") {
                 let name = "backend"
                 let depName = "redux"
                 let sut = DependencyNode(name: name)
@@ -58,7 +58,7 @@ final class DependencyNodeSpec: QuickSpec {
                 }
             }
 
-            context("when DependencyNode has more than one children") {
+            context("when DependencyNode adds several children") {
                 let sut = DependencyNode(name: "beverages")
 
                 let hotBeverage = DependencyNode(name: "hot")
