@@ -96,6 +96,37 @@ final class DependencyNodeSpec: QuickSpec {
                     expect(greenTea.parent) == tea
                 }
             }
+
+            context("when Dependency Node adds multiple dependencies") {
+                let name = "Deutschland"
+                let depName_1 = "Düsseldorf"
+                let depName_2 = "München"
+                let depName_3 = "Hamburg"
+                let expectedNumberOfDeps = 3
+                let sut = DependencyNode(name: name)
+
+                beforeEach {
+                    sut.add([
+                        DependencyNode(name: depName_1),
+                        DependencyNode(name: depName_2),
+                        DependencyNode(name: depName_3),
+                    ])
+                }
+
+                it("has the correct name set") {
+                    expect(sut.name).to(equal(name))
+                }
+
+                it("contains correct number of children") {
+                    expect(sut.dependencies.count).to(equal(expectedNumberOfDeps))
+                }
+
+                it("its child have a correct parent set") {
+                    sut.dependencies.forEach { node in
+                        expect(node.parent).to(equal(sut))
+                    }
+                }
+            }
         }
     }
 }
