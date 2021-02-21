@@ -103,14 +103,19 @@ final class DependencyNodeSpec: QuickSpec {
                 let depName_2 = "München"
                 let depName_3 = "Hamburg"
                 let expectedNumberOfDeps = 3
-                let sut = DependencyNode(name: name)
+                var sut: DependencyNode!
 
                 beforeEach {
+                    sut = DependencyNode(name: name)
                     sut.add([
                         DependencyNode(name: depName_1),
                         DependencyNode(name: depName_2),
                         DependencyNode(name: depName_3),
                     ])
+                }
+
+                afterEach {
+                    sut = nil
                 }
 
                 it("has the correct name set") {
