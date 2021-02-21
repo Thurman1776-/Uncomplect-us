@@ -26,7 +26,7 @@ public final class DependencyNode: Equatable {
     public static func == (lhs: DependencyNode, rhs: DependencyNode) -> Bool {
         lhs.name == rhs.name &&
             lhs.dependencies == rhs.dependencies &&
-            lhs.parent == rhs.parent
+            lhs.parent?.name == rhs.parent?.name
     }
 
     // MARK: Internal API
