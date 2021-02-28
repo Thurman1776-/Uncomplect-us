@@ -18,19 +18,20 @@ typealias SwiftDepsParserType = (_ swiftDeps: [SwiftDeps]) -> [DependencyNode]
 func parseSwiftDeps(_ swiftDeps: [SwiftDeps]) -> [DependencyNode] {
     var result = [DependencyNode]()
 
-    swiftDeps.forEach { dep in
-        dep.providesTopLevel.forEach { node in
-            if let name = try? node.represented().string {
-                let deps = dep.dependsTopLevel
+    swiftDeps.forEach { dependency in
+        dependency.providesTopLevel.forEach { root in
+            if let rootName = try? root.represented().string {
+                
+                let children = dependency.dependsTopLevel
                     .filter { $0.tag.description != "!private" }
                     .compactMap { (try? $0.represented().string) }
                     .excludeSystemSymbols()
                     .excludeSystemSymbolsPrefixes()
-                    .filterOcurrancesOf(name)
+                    .filterOcurrancesOf(rootName)
                     .map { DependencyNode(name: $0, dependencies: []) }
 
-                let node = DependencyNode(name: name)
-                node.add(deps)
+                let node = DependencyNode(name: rootName)
+                node.add(children)
 
                 if result.contains(node) == false {
                     result.append(node)
