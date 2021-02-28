@@ -46,7 +46,7 @@ public final class DependencyNode: Equatable {
 
 extension DependencyNode: CustomStringConvertible {
     public var description: String {
-        var text = "\(name)"
+        var text = "\(name) isRoot: \(parent == nil)"
 
         if !dependencies.isEmpty {
             text += " {" + dependencies.map { $0.description }.joined(separator: ", ") + "} "
