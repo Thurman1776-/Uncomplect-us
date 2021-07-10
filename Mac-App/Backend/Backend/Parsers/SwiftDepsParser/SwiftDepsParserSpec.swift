@@ -14,7 +14,7 @@ final class SwiftDepsParserSpec: QuickSpec {
     override func spec() {
         describe("parseSwiftDeps") {
             context("given it takes a valid input") {
-                var result: [DependencyTree] = []
+                var result: [DependencyNode] = []
 
                 beforeEach {
                     // Do not perform same search for each test case as the results are the same
@@ -28,14 +28,14 @@ final class SwiftDepsParserSpec: QuickSpec {
                     }
                 }
 
-                it("returns correctly parsed DependencyTree objects") {
+                it("returns correctly parsed DependencyNode objects") {
                     expect(result).toNotEventually(beEmpty(), timeout: timeout)
                 }
 
-                it("does not store the owner name in the dependencies list") {
+                it("does not store the name in the dependencies list") {
                     let randomItem = result.randomElement()!
                     let randomItemDeps = randomItem.dependencies.map { $0.name }
-                    expect(randomItemDeps.contains(randomItem.owner)).toEventually(beFalse(), timeout: timeout)
+                    expect(randomItemDeps.contains(randomItem.name)).toEventually(beFalse(), timeout: timeout)
                 }
 
                 it("does not include any system/framework symbols") {

@@ -12,9 +12,9 @@ import Yams
 typealias YamlParserType = ([URL]) -> [SwiftDeps]
 
 /// Parses urls that point to `.swiftdeps` YAML files into a simplified version containing
-/// the owner & its dependencies
+/// the name & its dependencies
 /// - Parameter urls: Array containing absolute file system urls to YAML files
-/// - Returns: An array of simplefied YAML contents
+/// - Returns: An array of simplified YAML contents
 func parseYamlUrls(from urls: [URL]) -> [SwiftDeps] {
     createYamlNodes(from: urls.compactMap { contentsOfFile(at: $0) }).compactMap(SwiftDeps.init)
 }

@@ -9,15 +9,15 @@
 import SwiftUI
 
 struct DependencyDetailView: View {
-    private let dependency: DependencyTree.State.Dependency
+    private let dependency: DependencyNode.State.Dependency
 
-    init(_ dependency: DependencyTree.State.Dependency) {
+    init(_ dependency: DependencyNode.State.Dependency) {
         self.dependency = dependency
     }
 
     var body: some View {
         VStack {
-            Text(dependency.owner)
+            Text(dependency.name)
                 .font(.title)
                 .foregroundColor(.lightBlue)
                 .cornerRadius(3.0)
@@ -37,7 +37,7 @@ struct DependencyDetailView_Previews: PreviewProvider {
         Group {
             DependencyDetailView(
                 .init(
-                    owner: "Apple",
+                    name: "Apple",
                     dependencies: ["iOS", "watchOS", "macOS", "tvOS"]
                 )
             )

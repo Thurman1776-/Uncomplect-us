@@ -1,5 +1,5 @@
 //
-//  DependencyTree.swift
+//  DependencyNode.swift
 //  Frontend
 //
 //  Created by Daniel GARCÍA on 23.02.20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum DependencyTree {
+public enum DependencyNode {
     // MARK: - View State
 
     public struct State: Equatable {
@@ -27,12 +27,12 @@ public enum DependencyTree {
         }
 
         public struct Dependency: Equatable, Identifiable {
-            public var id: Int { owner.hashValue }
-            let owner: String
+            public var id: Int { name.hashValue }
+            let name: String
             let dependencies: [String]
 
-            public init(owner: String, dependencies: [String]) {
-                self.owner = owner
+            public init(name: String, dependencies: [String]) {
+                self.name = name
                 self.dependencies = dependencies
             }
         }
@@ -47,4 +47,4 @@ public enum DependencyTree {
     }
 }
 
-extension DependencyTree.State.Dependency: Hashable {}
+extension DependencyNode.State.Dependency: Hashable {}

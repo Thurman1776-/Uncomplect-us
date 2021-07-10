@@ -9,14 +9,14 @@
 import SwiftUI
 
 public struct MainSplitView: View {
-    private var dependencyTreeStatus: Observable<DependencyTree.Status>
+    private var dependencyNodeStatus: Observable<DependencyNode.Status>
     private var projectDetailsStatus: Observable<ProjectDetails.Status>
 
     public init(
-        dependencyTreeStatus: Observable<DependencyTree.Status>,
+        dependencyNodeStatus: Observable<DependencyNode.Status>,
         projectDetailsStatus: Observable<ProjectDetails.Status>
     ) {
-        self.dependencyTreeStatus = dependencyTreeStatus
+        self.dependencyNodeStatus = dependencyNodeStatus
         self.projectDetailsStatus = projectDetailsStatus
     }
 
@@ -25,7 +25,7 @@ public struct MainSplitView: View {
             DetailsView(projectDetailsStatus: projectDetailsStatus)
             Divider()
                 .foregroundColor(.gray)
-            SearchableDependencyListView(dependencyTreeStatus: dependencyTreeStatus)
+            SearchableDependencyListView(dependencyNodeStatus: dependencyNodeStatus)
         }
     }
 }
@@ -34,25 +34,25 @@ struct MainSplitView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             MainSplitView(
-                dependencyTreeStatus: Observable<DependencyTree.Status>(DependencyTree.Status.initial),
+                dependencyNodeStatus: Observable<DependencyNode.Status>(DependencyNode.Status.initial),
                 projectDetailsStatus: Observable<ProjectDetails.Status>(ProjectDetails.Status.initial)
             )
             MainSplitView(
-                dependencyTreeStatus: Observable<DependencyTree.Status>(
-                    DependencyTree.Status.failure("Something went wrong!")
+                dependencyNodeStatus: Observable<DependencyNode.Status>(
+                    DependencyNode.Status.failure("Something went wrong!")
                 ),
                 projectDetailsStatus: Observable<ProjectDetails.Status>(
                     ProjectDetails.Status.failure("Could not find files!")
                 )
             )
             MainSplitView(
-                dependencyTreeStatus: Observable<DependencyTree.Status>(
-                    DependencyTree.Status.success(
+                dependencyNodeStatus: Observable<DependencyNode.Status>(
+                    DependencyNode.Status.success(
                         state: .init(
                             dependencies: [
-                                .init(owner: "First", dependencies: ["one", "two", "three"]),
-                                .init(owner: "Second", dependencies: ["one", "two", "three"]),
-                                .init(owner: "Third", dependencies: ["one", "two", "three"]),
+                                .init(name: "First", dependencies: ["one", "two", "three"]),
+                                .init(name: "Second", dependencies: ["one", "two", "three"]),
+                                .init(name: "Third", dependencies: ["one", "two", "three"]),
                             ],
                             filteredDependencies: [],
                             failure: ""

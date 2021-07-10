@@ -11,22 +11,22 @@ import ReSwift
 // MARK: - State
 
 public struct DependencyGraphState: Equatable {
-    public var tree: [DependencyTree]
-    public var filteredTree: [DependencyTree] = []
+    public var list: [DependencyNode]
+    public var filteredList: [DependencyNode] = []
     public var failure: String?
 }
 
 // MARK: - Initial state
 
 extension DependencyGraphState {
-    static let initialState = DependencyGraphState(tree: [], failure: nil)
+    static let initialState = DependencyGraphState(list: [], failure: nil)
 }
 
 // MARK: - Actions
 
 public enum DependencyGraphAction: Action {
     case mapFrom(deps: [SwiftDeps])
-    case set([DependencyTree])
+    case set([DependencyNode])
     case filter(including: String)
     case reset
     case failure(message: String)

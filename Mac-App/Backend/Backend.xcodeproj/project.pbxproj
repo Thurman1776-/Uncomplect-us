@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6505B7FD25C8872F005441BA /* DependencyNodeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6505B7FC25C8872F005441BA /* DependencyNodeSpec.swift */; };
 		651A859A248CEE7400AD0927 /* DependencyGraphReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D58A8F23F6754000C2AB74 /* DependencyGraphReducerSpec.swift */; };
 		651A859C248CEE9200AD0927 /* DependencyPathsReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7627A23DDE79000BFAD48 /* DependencyPathsReducerSpec.swift */; };
 		651A859E248CEEB500AD0927 /* SwiftDepsReducerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8199C5323E6F3AD000B89F6 /* SwiftDepsReducerSpec.swift */; };
@@ -58,7 +59,7 @@
 		A8CAE99F23DCABC700242ADF /* Bash+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CAE99823DCABA000242ADF /* Bash+Error.swift */; };
 		A8D58A9323F67F8900C2AB74 /* SwiftDepsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D58A9223F67F8900C2AB74 /* SwiftDepsParser.swift */; };
 		A8E1019923EF055600C550E2 /* DependencyGraphState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E1019823EF055600C550E2 /* DependencyGraphState.swift */; };
-		A8E1019B23EF05E600C550E2 /* DependencyTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E1019A23EF05E600C550E2 /* DependencyTree.swift */; };
+		A8E1019B23EF05E600C550E2 /* DependencyNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E1019A23EF05E600C550E2 /* DependencyNode.swift */; };
 		A8E1019E23EF074100C550E2 /* DependencyGraphReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E1019D23EF074100C550E2 /* DependencyGraphReducer.swift */; };
 		A8E7626B23DDB9F000BFAD48 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7626A23DDB9F000BFAD48 /* AppState.swift */; };
 		A8E7626E23DDBA6B00BFAD48 /* DependencyPathsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7626D23DDBA6B00BFAD48 /* DependencyPathsState.swift */; };
@@ -84,6 +85,7 @@
 		17A892613B802C921192B6A3 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Quick.framework; path = Dependencies/macOS/Quick.framework; sourceTree = "<group>"; };
 		28855F46A4EC65D5ECE0955E /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Nimble.framework; path = Dependencies/macOS/Nimble.framework; sourceTree = "<group>"; };
 		43C3EADBF2092BA1C0ED17EA /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ReSwift.framework; path = Dependencies/macOS/ReSwift.framework; sourceTree = "<group>"; };
+		6505B7FC25C8872F005441BA /* DependencyNodeSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyNodeSpec.swift; sourceTree = "<group>"; };
 		65358E56249D09EE0004510F /* ConcurrentWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentWork.swift; sourceTree = "<group>"; };
 		653E150624B9B08B005DD3F1 /* Backend-default.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Backend-default.xctestplan"; sourceTree = "<group>"; };
 		654474A424E6C7460029E04C /* NavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationState.swift; sourceTree = "<group>"; };
@@ -133,7 +135,7 @@
 		A8D58A9223F67F8900C2AB74 /* SwiftDepsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDepsParser.swift; sourceTree = "<group>"; };
 		A8D58A9523F828F100C2AB74 /* SwiftDepsParserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDepsParserSpec.swift; sourceTree = "<group>"; };
 		A8E1019823EF055600C550E2 /* DependencyGraphState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyGraphState.swift; sourceTree = "<group>"; };
-		A8E1019A23EF05E600C550E2 /* DependencyTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyTree.swift; sourceTree = "<group>"; };
+		A8E1019A23EF05E600C550E2 /* DependencyNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyNode.swift; sourceTree = "<group>"; };
 		A8E1019D23EF074100C550E2 /* DependencyGraphReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyGraphReducer.swift; sourceTree = "<group>"; };
 		A8E7626A23DDB9F000BFAD48 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		A8E7626D23DDBA6B00BFAD48 /* DependencyPathsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyPathsState.swift; sourceTree = "<group>"; };
@@ -243,6 +245,14 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		658AEDE125CDFF1600A62110 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				A8E1019A23EF05E600C550E2 /* DependencyNode.swift */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
 		65CE35E22544B7A700196EBF /* RunActionsOnSerialQueueSideEffects */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,7 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				A8199C5023E6CA73000B89F6 /* SwiftDeps.swift */,
-				A8E1019A23EF05E600C550E2 /* DependencyTree.swift */,
+				6505B7FC25C8872F005441BA /* DependencyNodeSpec.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -477,6 +487,7 @@
 		A8E7626F23DDBBA400BFAD48 /* BackendAPI */ = {
 			isa = PBXGroup;
 			children = (
+				658AEDE125CDFF1600A62110 /* DataStructures */,
 				A8199C4F23E6CA57000B89F6 /* Models */,
 				A8E7627023DDBBB700BFAD48 /* BackendAPI.swift */,
 				A8F12EF523DF63B1001EB945 /* Middleware */,
@@ -721,7 +732,7 @@
 				A85514EF23E5E6AA00D3E7F6 /* YamlParser.swift in Sources */,
 				A8E7626E23DDBA6B00BFAD48 /* DependencyPathsState.swift in Sources */,
 				A8CAE99F23DCABC700242ADF /* Bash+Error.swift in Sources */,
-				A8E1019B23EF05E600C550E2 /* DependencyTree.swift in Sources */,
+				A8E1019B23EF05E600C550E2 /* DependencyNode.swift in Sources */,
 				A86348C923F831820053C03D /* SwiftPrimitives.swift in Sources */,
 				654474A524E6C7460029E04C /* NavigationState.swift in Sources */,
 				654474A824E6C9540029E04C /* NavigationReducer.swift in Sources */,
@@ -745,6 +756,7 @@
 				651A85A8248CF07500AD0927 /* YamlParserSpec.swift in Sources */,
 				A8237E6A247A523D003A5994 /* FindProjectOutputDirsSideEffectsSpec.swift in Sources */,
 				A82655022480E1CE009B12D8 /* DependencyGraphSideEffectsSpec.swift in Sources */,
+				6505B7FD25C8872F005441BA /* DependencyNodeSpec.swift in Sources */,
 				A8F7626A23E6A5590014DEB9 /* TestUtils.swift in Sources */,
 				651A859C248CEE9200AD0927 /* DependencyPathsReducerSpec.swift in Sources */,
 				651A85A0248CEFA800AD0927 /* BashSpec.swift in Sources */,
