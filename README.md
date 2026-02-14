@@ -57,3 +57,5 @@ e.g. Backend
 I found this [unmaintained project](https://github.com/PaulTaykalo/objc-dependency-visualizer) a while ago & it became really useful for the problem I was facing back then. As I thought many of us run into the same issue, I decided to build a Mac app for it in Swift (powered by SwiftUI + Redux).
 
 The visual representation will likely change a lot during the time to come, as a result of experimentation & feedback. 
+
+### Project is no longer maintained
